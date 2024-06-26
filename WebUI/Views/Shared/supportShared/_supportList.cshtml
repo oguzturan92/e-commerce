@@ -1,0 +1,59 @@
+@model SupportModel
+
+<div class="title">
+    <h2>DESTEK TALEBİ LİSTESİ</h2>
+</div>
+<div class="content">
+    <div class="table-container">
+        @if (Model.Supports.Count() > 0)
+        {
+            <div class="table-container-alt">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="th-w-auto">Ad Soyad</th>
+                            <th class="th-w-auto mobil-display-none">Mail</th>
+                            <th class="th-w-auto mobil-display-none">Konu</th>
+                            <th class="th-w-auto mobil-display-none">Cevap Durumu</th>
+                            <th class="th-w-auto mobil-display-none">Tarih</th>
+                            <th colspan="2"></th>
+                            @* <th></th> *@
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var support in Model.Supports) {
+                            <tr>
+                                <td>@support.ProjeUser.UserAdi @support.ProjeUser.UserSoyadi</td>
+
+                                <td class="slice mobil-display-none">@support.ProjeUser.Email</td>
+
+                                <td class="slice mobil-display-none">@support.SupportSubject</td>
+
+                                <td class="slice mobil-display-none">@support.SupportState</td>
+
+                                <td class="mobil-display-none">@support.SupportDateTime</td>
+
+                                <td class="td-buton-edit">
+                                    <a asp-controller="Support" asp-action="SupportDetail" asp-route-id="@support.SupportId">
+                                        <img src="/img/admin-img/pencil.png" alt="">
+                                    </a>
+                                </td>
+
+                                <td class="td-buton-del">
+                                    <form asp-controller="Support" asp-action="SupportDelete" asp-route-id="@support.SupportId" method="post">
+                                        <button type="submit" onclick="return silOnayla();">
+                                            <img src="/img/admin-img/delete.png" alt="">
+                                        </button>
+                                    </form>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        } else
+        {
+            <h4>Listelenecek Destek Talebi Bulunamadı</h4>
+        }
+    </div>
+</div>

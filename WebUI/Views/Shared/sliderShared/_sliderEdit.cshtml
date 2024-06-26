@@ -1,0 +1,57 @@
+@model SliderModel
+
+<div class="title">
+    <h2>SLİDER DÜZENLE</h2>
+</div>
+<div class="content">
+    <div class="form-container">
+        <div class="table-btn-geri-box">
+            <a class="table-btn-geri" asp-controller="Slider" asp-action="SliderList">Geri</a>
+        </div>
+        <form class="form-container-alt" asp-controller="Slider" asp-action="SliderEdit" method="post" enctype="multipart/form-data">
+            <input type="hidden" asp-for="SliderId">
+            <input type="hidden" asp-for="SliderDate">
+            <input type="hidden" asp-for="SliderSort">
+            <div class="form-item-1">
+                <label>Ad</label>
+                <input asp-for="SliderName" type="text">
+            </div>
+            <div class="form-item-1">
+                <label>Açıklama</label>
+                <input asp-for="SliderDescription" type="text">
+            </div>
+            <div class="form-item-1">
+                <label>Link</label>
+                <input asp-for="SliderLink" type="text">
+            </div>
+            <div class="form-item-1">
+                <span class="validation" asp-validation-for="SliderImage"></span>
+                <label class="resim-label">Resim * <span class="tavsiye">(önerilen boyut: 1920 x 450)</span></label>
+                <input type="hidden" asp-for="SliderImage"> @* Validationdan sonra sayfa yenilenirse, DB'den gelen BlogImage değerini sakladık *@
+                <img src="~/img/@Model.SliderImage" alt="" class="form-img">
+                <input class="resim-input" type="file" name="file">
+            </div>
+            <div class="form-item-2">
+                <div class="form-item-1">
+                    <label>Onay Durumu</label>
+                    <select asp-for="SliderApproval" class="select">
+                        @if (Model.SliderApproval) {
+                            <option selected value="True">Evet</option>
+                            <option value="False">Hayır</option>
+                        } else {
+                            <option value="True">Evet</option>
+                            <option selected value="False">Hayır</option>
+                        }
+                    </select>
+                </div>
+                <div class="form-item-1">
+                    <label>Geçiş Süresi <span class="tavsiye">(Milisaniye)</span></label>
+                    <input asp-for="SliderTime" type="text" placeholder="Tüm sliderlarda ilk sliderın süresi geçerlidir.">
+                </div>
+            </div>
+            <div class="form-btn-kaydet-box">
+                <button class="form-btn-kaydet" type="submit">Kaydet</button>
+            </div>
+        </form>
+    </div>
+</div>

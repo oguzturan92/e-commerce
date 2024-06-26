@@ -1,0 +1,131 @@
+.user-bg {
+    display: none;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.077);
+
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+}
+#user-close {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+}
+.user-list-box {
+    background-color: #fff;
+    width: 500px;
+    height: auto;
+    padding: 10px;
+    border: 1px solid #eee;
+}
+#user-list-box {
+    border: 1px solid #eee;
+}
+
+.user-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 50px;
+    position: relative;
+}
+.user-form-title {
+    position: absolute;
+    margin: auto;
+    top: 30px;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 18px;
+}
+
+.user-form-item-1 {
+    display: grid;
+    gap: 5px;
+}
+.user-form-item-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+/* LABEL */
+.user-form-item-1 label {
+    font-weight: 300;
+}
+
+/* INPUT */
+.user-form-item-1 input {
+    border: 1px solid #000;
+    border-radius: 0px;
+    outline: none;
+    height: 35px;
+    padding-left: 20px;
+}
+.user-form-item-1 select {
+    height: 40px;
+    border-radius: 0px;
+    outline: none;
+    padding-left: 20px;
+}
+
+.user-form-item-1 input[type=date] {
+    height: 37px;
+}
+
+/* BUTONLAR */
+.user-form-btn-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    position: relative;
+}
+.user-form-btn-kaydet {
+    background-color: #fff;
+    border: 1px solid #000;
+    color: #000;
+    height: 50px;
+    width: 100%;
+    transition: .3s;
+}
+.user-form-btn-kaydet:hover {
+    cursor: pointer;
+    background-color: #c2a18a;
+    border: 1px solid #c2a18a;
+    color: #fff;
+}
+.user-form-btn-geri {
+    background-color: #000;
+    border: 1px solid #000;
+    color: #fff;
+    transition: .3s;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.user-form-btn-geri:hover {
+    cursor: pointer;
+    background-color: #c2a18a;
+    border: 1px solid #c2a18a;
+}
+.sifremi-unuttum-btn {
+    color: #000;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 12px;
+    position: absolute;
+    right: 0px;
+    bottom: -20px;
+}
+.sifremi-unuttum-btn:hover {
+    color: #000;
+    text-decoration: underline;
+}

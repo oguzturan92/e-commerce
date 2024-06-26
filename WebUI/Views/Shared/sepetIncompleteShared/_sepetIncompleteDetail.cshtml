@@ -1,0 +1,169 @@
+@model SepetModel
+
+<div class="title">
+    <h2>SEPET DETAYI</h2>
+</div>
+<div class="content">
+    <div class="form-container">
+        <div class="table-btn-geri-box">
+            <a class="table-btn-geri" asp-controller="Sepet" asp-action="SepetIncompleteList">Geri</a>
+        </div>
+        <form class="form-container-alt">
+            <div class="form-item-2">
+                <div class="form-item-1">
+                    <label for="Sepet.SiparisToplam">Sepet Tutarı</label>
+                    <input value="@((Model.Sepet.SiparisToplam).ToString("c"))" type="text" disabled>
+                </div>
+                <div class="form-item-1">
+                    <label for="Sepet.GenelToplam">Genel Toplam</label>
+                    <input value="@((Model.Sepet.GenelToplam).ToString("c"))" type="text" disabled>
+                </div>
+            </div>
+        </form>
+
+        <div class="table-container-alt" style="margin: 10px 0px;">
+            <table>
+                <thead>
+                    <tr>
+                        <th class="th-w-75 mobil-display-none">Id</th>
+                        <th class="th-w-75 mobil-display-none">Ürün Kodu</th>
+                        <th class="th-w-auto">Ürün Adı</th>
+                        <th class="th-w-75">Özellik</th>
+                        <th class="th-w-75">Adet</th>
+                        <th class="th-w-100 mobil-display-none">Birim Fiyatı</th>
+                        <th class="th-w-100 mobil-display-none">İ. Birim Fiyatı</th>
+                        <th class="th-w-100 mobil-display-none">Kdv Hariç</th>
+                        <th class="th-w-100 mobil-display-none">Kdv Tutarı</th>
+                        <th class="th-w-100">Toplam Fiyat</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.Sepet.SepetLines) {
+                        <tr>
+
+                            <td class="mobil-display-none">@item.Product.ProductId</td>
+
+                            <td class="mobil-display-none">@item.Product.ProductCode</td>
+
+                            <td class="td-yazi">
+                                <a asp-controller="Product" asp-action="ProductDetail" asp-route-url="@item.Product.ProductUrl" asp-route-id="@item.Product.ProductId" target="_blank">@item.Product.ProductName</a>
+                            </td>
+
+                            @if (item.ProductSizeId != 0)
+                            {
+                                <td>@item.Product.ProductSizes.Where(i => i.ProductSizeId == item.ProductSizeId).FirstOrDefault().Size.SizeTitle</td>
+                            } else
+                            {
+                                <td>@item.Product.ProductColor</td>
+                            }
+
+                            <td>@item.ProductQuantity</td>
+
+                            @if (item.ProductSizeId != 0)
+                            {
+                                <td class="mobil-display-none">@item.Product.ProductPrice.ToString("c")</td>
+                            } else
+                            {
+                                <td class="mobil-display-none">@item.Product.ProductPrice.ToString("c")</td>
+                            }
+
+                            @if (item.ProductSizeId != 0)
+                            {
+                                if (item.Product.ProductSizes.Where(i => i.ProductSizeId == item.ProductSizeId).FirstOrDefault().ProductSizePrice != 0)
+                                {
+                                    <td class="mobil-display-none">@item.Product.ProductSizes.Where(i => i.ProductSizeId == item.ProductSizeId).FirstOrDefault().ProductSizePrice.ToString("c")</td>
+                                } else
+                                {
+                                    <td class="mobil-display-none">@item.Product.ProductSalePrice.ToString("c")</td>
+                                }
+                            } else
+                            {
+                                <td class="mobil-display-none">@item.Product.ProductSalePrice.ToString("c")</td>
+                            }
+
+                            @if (item.ProductSizeId != 0)
+                            {
+                                if (item.Product.ProductSizes.Where(i => i.ProductSizeId == item.ProductSizeId).FirstOrDefault().ProductSizePrice != 0)
+                                {
+                                    <td class="mobil-display-none">@((item.Product.ProductSizes.Where(i => i.ProductSizeId == item.ProductSizeId).FirstOrDefault().ProductSizePrice - ((item.Product.ProductSizes.Where(i => i.ProductSizeId == item.ProductSizeId).FirstOrDefault().ProductSizePrice / 100) * item.Product.ProductKdv)).ToString("c"))</td>
+                                } else
+                                {
+                                    if (item.Product.ProductSalePrice != 0)
+                                    {
+                                        <td class="mobil-display-none">@((item.Product.ProductSalePrice - ((item.Product.ProductSalePrice / 100) * item.Product.ProductKdv)).ToString("c"))</td>
+                                    } else
+                                    {
+                                        <td class="mobil-display-none">@((item.Product.ProductPrice - ((item.Product.ProductPrice / 100) * item.Product.ProductKdv)).ToString("c"))</td>
+                                    }
+                                }
+                            } else
+                            {
+                                if (item.Product.ProductSalePrice != 0)
+                                {
+                                    <td class="mobil-display-none">@((item.Product.ProductSalePrice - ((item.Product.ProductSalePrice / 100) * item.Product.ProductKdv)).ToString("c"))</td>
+                                } else
+                                {
+                                    <td class="mobil-display-none">@((item.Product.ProductPrice - ((item.Product.ProductPrice / 100) * item.Product.ProductKdv)).ToString("c"))</td>
+                                }
+                            }
+                            
+                            @if (item.ProductSizeId != 0)
+                            {
+                                if (item.Product.ProductSizes.Where(i => i.ProductSizeId == item.ProductSizeId).FirstOrDefault().ProductSizePrice != 0)
+                                {
+                                    <td class="mobil-display-none">@(((item.Product.ProductSizes.Where(i => i.ProductSizeId == item.ProductSizeId).FirstOrDefault().ProductSizePrice / 100) * item.Product.ProductKdv).ToString("c"))</td>
+                                } else
+                                {
+                                    if (item.Product.ProductSalePrice != 0)
+                                    {
+                                        <td class="mobil-display-none">@(((item.Product.ProductSalePrice / 100) * item.Product.ProductKdv).ToString("c"))</td>
+                                    } else
+                                    {
+                                        <td class="mobil-display-none">@(((item.Product.ProductPrice / 100) * item.Product.ProductKdv).ToString("c"))</td>
+                                    }
+                                }
+                            } else
+                            {
+                                if (item.Product.ProductSalePrice != 0)
+                                {
+                                    <td class="mobil-display-none">@(((item.Product.ProductSalePrice / 100) * item.Product.ProductKdv).ToString("c"))</td>
+                                } else
+                                {
+                                    <td class="mobil-display-none">@(((item.Product.ProductPrice / 100) * item.Product.ProductKdv).ToString("c"))</td>
+                                }
+                            }
+
+                            @if (item.ProductSizeId != 0)
+                            {
+                                if (item.Product.ProductSizes.Where(i => i.ProductSizeId == item.ProductSizeId).FirstOrDefault().ProductSizePrice != 0)
+                                {
+                                    <td class="mobil-display-none">@((item.Product.ProductSizes.Where(i => i.ProductSizeId == item.ProductSizeId).FirstOrDefault().ProductSizePrice * item.ProductQuantity).ToString("c"))</td>
+                                } else
+                                {
+                                    if (item.Product.ProductSalePrice != 0)
+                                    {
+                                        <td class="mobil-display-none">@((item.Product.ProductSalePrice * item.ProductQuantity).ToString("c"))</td>
+                                    } else
+                                    {
+                                        <td class="mobil-display-none">@((item.Product.ProductPrice * item.ProductQuantity).ToString("c"))</td>
+                                    }
+                                }
+                            } else
+                            {
+                                if (item.Product.ProductSalePrice != 0)
+                                {
+                                    <td class="mobil-display-none">@((item.Product.ProductSalePrice * item.ProductQuantity).ToString("c"))</td>
+                                } else
+                                {
+                                    <td class="mobil-display-none">@((item.Product.ProductPrice * item.ProductQuantity).ToString("c"))</td>
+                                }
+                            }
+
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        
+    </div>
+</div>

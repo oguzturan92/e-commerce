@@ -1,0 +1,79 @@
+@model FooterModel
+
+<div class="title">
+    <h2>FOOTER LİSTESİ</h2>
+</div>
+<div class="content">
+    <div class="table-container">
+        <div class="table-btn-ekle-box">
+            <a class="table-btn-ekle" asp-controller="Footer" asp-action="FooterCreate">Ekle</a>
+        </div>
+        @if (Model.Footers.Count() > 0)
+        {
+            <div class="table-container-alt">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="th-w-75">Sıra No</th>
+                            <th class="th-w-auto">Ad</th>
+                            <th class="th-w-75 mobil-display-none">Onay</th>
+                            <th colspan="3"></th>
+                            @* <th></th> *@
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.Footers) {
+                            <tr>
+                                <td class="td-w-75">
+                                    <form asp-controller="Footer" asp-action="FooterList" method="post">
+                                        <input type="hidden" name="FooterId" value="@item.FooterId">
+                                        <input class="input-sort" type="number" name="FooterSort" value="@item.FooterSort">
+                                    </form>
+                                </td>
+                                
+                                <td class="slice">@item.FooterTitle</td>
+
+                                @if (item.FooterApproval) {
+                                    <td class="mobil-display-none">
+                                        <img src="/img/admin-img/check.png" alt="">
+                                    </td>
+                                } else {
+                                    <td class="mobil-display-none">
+                                        <img src="/img/admin-img/xmark.png" alt="">
+                                    </td>
+                                }
+
+                                <td class="td-buton-edit">
+                                    <form asp-controller="FooterAlt" asp-action="FooterAltList" asp-route-id="@item.FooterId" method="get">
+                                        <button type="submit">
+                                            <img src="/img/admin-img/layer.png" alt="">
+                                        </button>
+                                    </form>
+                                </td>
+
+                                <td class="td-buton-edit">
+                                    <form asp-controller="Footer" asp-action="FooterEdit" asp-route-id="@item.FooterId" method="get">
+                                        <button type="submit">
+                                            <img src="/img/admin-img/pencil.png" alt="">
+                                        </button>
+                                    </form>
+                                </td>
+
+                                <td class="td-buton-del">
+                                    <form asp-controller="Footer" asp-action="FooterDelete" asp-route-id="@item.FooterId" method="post">
+                                        <button type="submit" onclick="return silOnayla();">
+                                            <img src="/img/admin-img/delete.png" alt="">
+                                        </button>
+                                    </form>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        } else
+        {
+            <h4>Listelenecek Footer Bulunamadı</h4>
+        }
+    </div>
+</div>

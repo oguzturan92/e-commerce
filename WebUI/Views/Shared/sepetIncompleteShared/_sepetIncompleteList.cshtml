@@ -1,0 +1,124 @@
+@model SepetModel
+
+<div class="title">
+    <h2>SEPET LİSTESİ</h2>
+</div>
+<div class="content">
+    <div class="table-container">
+        <form class="form-container-alt" asp-controller="Sepet" asp-action="SepetIncompleteList" method="get" style="margin-bottom: 10px;">
+            <div class="form-item-1">
+                <label>E Mail</label>
+                <input name="searchEmail" type="email">
+            </div>
+            <div class="form-btn-kaydet-box">
+                <button class="form-btn-kaydet" type="submit">Ara</button>
+            </div>
+        </form>
+        <div class="table-btn-geri-box">
+            <a class="table-btn-geri" asp-controller="Order" asp-action="OrderList">Geri</a>
+        </div>
+        @if (Model.Sepets.Count() > 0)
+        {
+            <div class="table-container-alt">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="th-w-75">Id</th>
+                            <th class="th-w-auto">Sepet Tutarı</th>
+                            <th class="th-w-auto">Genel Toplam</th>
+                            <th class="th-w-auto">Üye</th>
+                            <th colspan="2"></th>
+                            @* <th></th> *@
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var sepet in Model.Sepets) {
+                            <tr>
+                                
+                                <td class="slice">@sepet.SepetId</td>
+
+                                <td class="slice">@sepet.SiparisToplam.ToString("c")</td>
+
+                                <td class="slice">@sepet.GenelToplam.ToString("c")</td>
+
+                                <td>
+                                    <a asp-controller="AdminAccount" asp-action="Edit" asp-route-id="@sepet.ProjeUser.Id" target="_blank">@sepet.ProjeUser.Email</a>
+                                </td>
+
+                                <td class="td-buton-edit">
+                                    <form asp-controller="Sepet" asp-action="SepetIncompleteDetail" asp-route-id="@sepet.SepetId" method="get">
+                                        <button type="submit">
+                                            <img src="/img/admin-img/view.png" alt="">
+                                        </button>
+                                    </form>
+                                </td>
+
+                                <td class="td-buton-del">
+                                    <form asp-controller="Sepet" asp-action="SepetDelete" asp-route-id="@sepet.SepetId" method="post">
+                                        <button type="submit" onclick="return silOnayla();">
+                                            <img src="/img/admin-img/delete.png" alt="">
+                                        </button>
+                                    </form>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        } else
+        {
+            if (Model.UserSepets.Count() > 0)
+            {
+                <div class="table-container-alt">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="th-w-75">Id</th>
+                                <th class="th-w-auto">Sepet Tutarı</th>
+                                <th class="th-w-auto">Genel Toplam</th>
+                                <th class="th-w-auto">Üye</th>
+                                <th colspan="2"></th>
+                                @* <th></th> *@
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var sepet in Model.UserSepets) {
+                                <tr>
+                                    
+                                    <td class="slice">@sepet.SepetId</td>
+
+                                    <td class="slice">@sepet.SiparisToplam.ToString("c")</td>
+
+                                    <td class="slice">@sepet.GenelToplam.ToString("c")</td>
+
+                                    <td>
+                                        <a asp-controller="AdminAccount" asp-action="Edit" asp-route-id="@sepet.ProjeUser.Id" target="_blank">@sepet.ProjeUser.Email</a>
+                                    </td>
+
+                                    <td class="td-buton-edit">
+                                        <form asp-controller="Sepet" asp-action="SepetIncompleteDetail" asp-route-id="@sepet.SepetId" method="get">
+                                            <button type="submit">
+                                                <img src="/img/admin-img/view.png" alt="">
+                                            </button>
+                                        </form>
+                                    </td>
+
+                                    <td class="td-buton-del">
+                                        <form asp-controller="Sepet" asp-action="SepetDelete" asp-route-id="@sepet.SepetId" method="post">
+                                            <button type="submit" onclick="return silOnayla();">
+                                                <img src="/img/admin-img/delete.png" alt="">
+                                            </button>
+                                        </form>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            } else
+            {
+                <h4>Listelenecek Sepet Bulunamadı</h4>
+            }
+        }
+    </div>
+</div>

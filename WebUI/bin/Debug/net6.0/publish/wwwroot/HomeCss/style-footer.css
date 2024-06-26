@@ -1,0 +1,141 @@
+.footer-container {
+    width: 100%;
+    margin-top: 50px;
+    box-shadow: 0px -5px 20px 5px #f7f7f7;
+    background-color: #fff;
+}
+.footer-container-alt {
+    display: flex;
+    flex-direction: column;
+}
+
+/* SUBSCRIBE ------------------------------------------------------------ */
+.footer-box-subs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0px 25px 0px;
+}
+.footer-box-subs p {
+    margin: 0px 0px 10px 0px;
+    font-size: 14px;
+}
+.footer-subscribe {
+    display: flex;
+    max-width: 300px;
+    width: 100%;
+}
+.footer-subscribe-input {
+    padding: 0px;
+    border: 1px solid #000;
+    text-align: center;
+    font-size: 12px;
+    width: 100%;
+    height: 30px;
+    outline: none;
+    border-radius: 0px;
+}
+.footer-subscribe-button {
+    height: 32px;
+    padding: 0px 15px;
+    border: none;
+    background-color: #000;
+    transition: ease-out;
+    transition-duration: .2s;
+    font-size: 13px;
+    cursor: pointer;
+    line-height: 8px;
+}
+.footer-subscribe-button:hover {
+    padding-left: 10px;
+}
+
+/* CONTENT ------------------------------------------------------------ */
+.footer-box-content {
+    display: grid;
+    /* grid-template-columns: repeat(3, 1fr); */
+}
+
+.footer-content-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    padding: 50px 0px;
+}
+.footer-content-item ul {
+    padding: 0px;
+    margin: 0px;
+}
+.footer-content-item li {
+    list-style: none;
+}
+.footer-content-item li:not(:first-child) {
+    margin-top: 10px;
+}
+.footer-content-item h4 {
+    margin: 0px;
+    font-weight: 400;
+}
+.footer-content-item a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 300;
+}
+.footer-content-item a:hover {
+    text-decoration: underline;
+}
+
+/* SUBSCRIBE INPUT PLACEHOLDER YAZISI - JS İÇİNDE KULLANDIK */
+.mail-abone-error-red {
+    transition: .5s;
+    color: #FF3333;
+}
+.mail-abone-error-black {
+    transition: .5s;
+    color: #767676;
+}
+
+
+/* INTRO ----------------------------------------------------- */
+.footer-intro {
+    background-color: #fff;
+    color: #000;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    box-shadow: 0px -5px 20px 0px #f7f7f7;
+}
+.footer-intro a {
+    color: #000;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+@media (max-width:768px) {
+    .footer-box-content {
+        grid-template-columns: repeat(1, 1fr)!important;
+    }
+    .footer-content-item ul {
+        text-align: center;
+    }
+    .footer-content-item {
+        padding: 25px 0px;
+    }
+    .footer-content-item h4 {
+        font-size: 14px;
+    }
+    .footer-content-item a {
+        font-size: 14px;
+    }
+    .footer-box-subs p {
+        text-align: center;
+        font-size: 12px;
+    }
+    .footer-box-subs {
+        padding: 50px 10px 25px 10px;
+    }
+}

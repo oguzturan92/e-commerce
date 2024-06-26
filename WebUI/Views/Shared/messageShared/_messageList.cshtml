@@ -1,0 +1,107 @@
+@model AdminMessageIndexModel
+
+<div class="title">
+    <h2>MESAJ LİSTESİ</h2>
+</div>
+<div class="content">
+    <div class="table-container">
+        @if (Model.Messages.Count() > 0)
+        {
+            <div class="table-container-alt">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="th-w-auto">Ad</th>
+                            <th class="th-w-auto">Soyad</th>
+                            <th class="th-w-auto mobil-display-none">Mail</th>
+                            <th class="th-w-auto mobil-display-none">Tarih</th>
+                            <th colspan="2"></th>
+                            @* <th></th> *@
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.Messages) {
+                            <tr>
+                                <td>@item.MessageName</td>
+                                
+                                <td>@item.MessageSurname</td>
+
+                                <td class="slice mobil-display-none">@item.MessageMail</td>
+
+                                <td class="mobil-display-none">@item.MessageDate</td>
+
+                                <td class="td-buton-edit">
+                                    <a asp-controller="Message" asp-action="MessageDetail" asp-route-id="@item.MessageId">
+                                        <img src="/img/admin-img/view.png" alt="">
+                                    </a>
+                                </td>
+
+                                <td class="td-buton-del">
+                                    <form asp-controller="Message" asp-action="MessageDelete" asp-route-id="@item.MessageId" method="post">
+                                        <button type="submit" onclick="return silOnayla();">
+                                            <img src="/img/admin-img/delete.png" alt="">
+                                        </button>
+                                    </form>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        } else
+        {
+            <h4>Listelenecek Mesaj Bulunamadı</h4>
+        }
+        @if (Model.PageInfo.TotalPages() > 1)
+        {
+            <partial name="~/Views/Shared/adminHomeShared/_pagination.cshtml"/>
+        }
+    </div>
+</div>
+
+@* PAGİNATION JS *@
+<script>
+    var CurrentPage = @Model.PageInfo.CurrentPage
+    var TotalPage = @Model.PageInfo.TotalPages()
+    var url = document.location.pathname;
+
+    var eksi3Box = document.querySelector("#eksi3Box");    
+    var eksi3 = document.querySelector("#eksi3");
+    var eksi1Box = document.querySelector("#eksi1Box");    
+    var eksi1 = document.querySelector("#eksi1");
+    var currentPage = document.querySelector("#currentPage");
+    var arti1Box = document.querySelector("#arti1Box");    
+    var arti1 = document.querySelector("#arti1");
+    var arti3Box = document.querySelector("#arti3Box");    
+    var arti3 = document.querySelector("#arti3");
+
+
+    eksi3.href = url + "?page=" + (CurrentPage - 3)
+
+    eksi1.innerHTML = CurrentPage - 1
+    eksi1.href = url + "?page=" + (CurrentPage - 1)
+
+    currentPage.innerHTML = CurrentPage
+
+    arti1.innerHTML = CurrentPage + 1
+    arti1.href = url + "?page=" + (CurrentPage + 1)
+
+    arti3.href = url + "?page=" + (CurrentPage + 3)
+
+    if (CurrentPage <= 3)
+    {
+        eksi3.removeAttribute("href");
+    }
+    if (CurrentPage <= 1)
+    {
+        eksi1.removeAttribute("href");
+    }
+    if (CurrentPage >= TotalPage)
+    {
+        arti1.removeAttribute("href");
+    }
+    if (CurrentPage > (TotalPage - 3))
+    {
+        arti3.removeAttribute("href");
+    }
+</script>

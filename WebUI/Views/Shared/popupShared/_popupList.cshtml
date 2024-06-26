@@ -1,0 +1,72 @@
+@model PopupModel
+
+<div class="title">
+    <h2>POPUP LİSTESİ</h2>
+</div>
+<div class="content">
+    <div class="table-container">
+        <div class="table-btn-ekle-box">
+            <a class="table-btn-ekle" asp-controller="Popup" asp-action="PopupCreate">Ekle</a>
+        </div>
+        @if (Model.Popups.Count() > 0)
+        {
+            <div class="table-container-alt">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="th-w-75">Sıra No</th>
+                            <th class="th-w-75">Resim</th>
+                            <th class="th-w-auto">Başlık</th>
+                            <th class="th-w-75 mobil-display-none">Onay</th>
+                            <th colspan="2"></th>
+                            @* <th></th> *@
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.Popups) {
+                            <tr>
+                                <td class="td-w-75">
+                                    <form asp-controller="Popup" asp-action="PopupList" method="post">
+                                        <input type="hidden" name="PopupId" value="@item.PopupId">
+                                        <input class="input-sort" type="number" name="AboutSort" value="@item.PopupSort">
+                                    </form>
+                                </td>
+
+                                <td><img src="~/img/@item.PopupImage" alt=""></td>
+
+                                <td class="slice">@item.PopupTitle</td>
+    
+                                @if (item.PopupApproval) {
+                                    <td class="mobil-display-none">
+                                        <img src="/img/admin-img/check.png" alt="">
+                                    </td>
+                                } else {
+                                    <td class="mobil-display-none">
+                                        <img src="/img/admin-img/xmark.png" alt="">
+                                    </td>
+                                }
+
+                                <td class="td-buton-edit">
+                                    <a asp-controller="Popup" asp-action="PopupEdit" asp-route-id="@item.PopupId">
+                                        <img src="/img/admin-img/pencil.png" alt="">
+                                    </a>
+                                </td>
+
+                                <td class="td-buton-del">
+                                    <form asp-controller="Popup" asp-action="PopupDelete" asp-route-id="@item.PopupId" method="post">
+                                        <button type="submit" onclick="return silOnayla();">
+                                            <img src="/img/admin-img/delete.png" alt="">
+                                        </button>
+                                    </form>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        } else
+        {
+            <h4>Listelenecek Popup Bulunamadı</h4>
+        }
+    </div>
+</div>

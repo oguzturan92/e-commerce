@@ -1,0 +1,22 @@
+@model RoleModel
+
+<div class="title">
+    <h2>ROL EKLE</h2>
+</div>
+<div class="content">
+    <div class="form-container">
+        <div class="table-btn-geri-box">
+            <a class="table-btn-geri" asp-controller="Role" asp-action="RoleList">Geri</a>
+        </div>
+        <form class="form-container-alt" asp-controller="Role" asp-action="RoleCreate" method="post">
+            <div class="form-item-1">
+                <span class="validation" asp-validation-for="RoleName"></span>
+                <label>Ad *</label>
+                <input asp-for="RoleName" type="text">
+            </div>
+            <div class="form-btn-kaydet-box">
+                <button class="form-btn-kaydet" type="submit">Kaydet</button>
+            </div>
+        </form>
+    </div>
+</div>

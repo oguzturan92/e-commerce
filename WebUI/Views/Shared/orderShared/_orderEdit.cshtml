@@ -1,0 +1,66 @@
+@model OrderModel
+ 
+<div class="title">
+    <h2>SİPARİŞ DÜZENLE</h2>
+</div>
+<div class="content">
+    <div class="form-container">
+        <div class="table-btn-geri-box">
+            <a class="table-btn-geri" asp-controller="Order" asp-action="OrderList">Geri</a>
+        </div>
+        <form class="form-container-alt" asp-controller="Order" asp-action="OrderEdit" method="post">
+            <input type="hidden" asp-for="Order.OrderId">
+            <div class="form-item-2">
+                <div class="form-item-1">
+                    <label for="Order.OrderDateTime">Sipariş Tarihi</label>
+                    <input value="@Model.Order.OrderDateTime" type="text" disabled>
+                </div>
+                <div class="form-item-1">
+                    <label for="Order.OrderNumber">Sipariş Numarası</label>
+                    <input value="@Model.Order.OrderNumber" type="text" disabled>
+                </div>
+            </div>
+            <div class="form-item-2">
+                <div class="form-item-1">
+                    <label for="Order.OrderState">Sipariş Durumu</label>
+                    <select asp-for="Order.OrderState" class="select">
+                        <option value="Ödeme Bekliyor">Ödeme Bekliyor</option>
+                        <option value="Sipariş Alındı">Sipariş Alındı</option>
+                        <option value="Hazırlanıyor">Hazırlanıyor</option>
+                        <option value="Sipariş Paketlendi">Sipariş Paketlendi</option>
+                        <option value="Kargoya Verildi">Kargoya Verildi</option>
+                        <option value="Tamamlandı">Tamamlandı</option>
+                        <option value="İptal Edildi">İptal Edildi</option>
+                    </select>
+                </div>
+                <div class="form-item-1">
+                    <label for="Order.OrderPaymentType">Ödeme Tipi</label>
+                    <input value="@Model.Order.OrderPaymentType" type="text" disabled>
+                </div>
+            </div>
+            <div class="form-item-1">
+                <label for="Order.OrderGiftCard">Hediye Çeki</label>
+                <input asp-for="Order.OrderGiftCard" type="text" disabled>
+            </div>
+            <div class="form-item-2">
+                <div class="form-item-1">
+                    <label for="Order.OrderTotalPrice">Sipariş Tutarı</label>
+                    <input value="@((Model.Order.OrderTotalPrice).ToString("c"))" type="text" disabled>
+                </div>
+                <div class="form-item-1">
+                    <label for="Order.OrderGenelPrice">Genel Toplam</label>
+                    <input value="@((Model.Order.OrderGenelPrice).ToString("c"))" type="text" disabled>
+                </div>
+            </div>
+            <div class="form-item-1">
+                <label for="Order.OrderNote">Not</label>
+                <div class="form-content">
+                    <p>@Model.Order.OrderNote</p>
+                </div>
+            </div>
+            <div class="form-btn-kaydet-box">
+                <button class="form-btn-kaydet" type="submit">Kaydet</button>
+            </div>
+        </form>
+    </div>
+</div>

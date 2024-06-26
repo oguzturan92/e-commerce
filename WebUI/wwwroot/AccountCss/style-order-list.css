@@ -1,0 +1,186 @@
+
+
+.order-container {
+    width: 100%;
+    padding-top: 100px;
+}
+.order-box {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0px auto;
+    
+}
+.order-list-box {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0px 20px;
+}
+
+
+.order-list-item {
+    box-shadow: 0px 5px 10px 3px #f7f7f7;
+}
+.order-list-item p {
+    margin: 0px;
+}
+
+/*  BAŞLIK -------------------------------------------------- */
+.order-list-item-title {
+    height: 75px;
+    cursor: pointer;
+    padding: 10px 50px;
+}
+.order-liste-item-title-2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+.order-liste-item-title-3 {
+    text-align: center;
+}
+.order-liste-item-title-3 p {
+    font-weight: 300;
+}
+.order-liste-item-title-3 p:first-child {
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+
+/*  İÇERİK -------------------------------------------------- */
+.order-list-item-content {
+    overflow: hidden;
+    max-height: auto;
+    transition: .3s;
+    transition-timing-function: linear;
+}
+.order-list-item-content table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fbfbfb;
+}
+.order-list-item-content tbody {
+
+}
+.order-list-item-content tr {
+    border-top: 1px solid #efefef;
+    height: 150px;
+}
+.order-list-item-content tr th {
+
+}
+.order-list-item-content tr th img {
+    max-height: 75px;
+    max-width: 75px;
+}
+.order-list-item-content tr th .product-name {
+    color: #000;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 16px;
+}
+.order-list-item-content tr th .product-name:hover {
+    text-decoration: underline;
+}
+.order-list-item-content tr th .kolay-iade {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #000;
+    font-size: 13px;
+}
+.order-list-item-content tr th .kolay-iade:hover {
+    background-color: rgb(0, 0, 0, .5);
+}
+.order-list-item-content tr th p {
+    margin-top: 5px;
+    font-size: 14px;
+}
+.order-list-item-content tr th span {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+
+/* SİPARİŞ ÖZET ------------------------------------------------- */
+.order-list-item-özet {
+    padding: 10px;
+}
+.order-list-item-özet-box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+.order-list-item-özet-box-item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 50px 20px;
+    border: 1px solid #efefef;
+    border-radius: 25px;
+
+}
+.order-list-item-özet-box-item span {
+    font-weight: 400;
+    font-size: 14px;
+}
+.order-list-item-özet-box-item p {
+    font-weight: 300;
+}
+
+.order-list-back {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+}
+.order-list-back a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    padding: 10px;
+    background-color: #000;
+    font-size: 13px;
+}
+
+@media (max-width:1000px) {
+    .order-list-box {
+        padding: 0px 10px;
+    }
+    .order-list-item-title {
+        height: auto;
+        padding: 20px 50px;
+    }
+    .order-liste-item-title-2 {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .order-list-item-özet-box {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .order-list-item-content tr {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        padding: 25px 10px;
+        gap: 25px;
+    }
+}
+
+@media (max-width:768px) {
+    .order-liste-item-title-3 p {
+        font-size: 14px;
+    }
+    .order-list-item-content tr th .product-name {
+        font-size: 14px;
+    }
+    .order-list-item-content tr th span {
+        font-size: 14px;
+    }
+    .order-list-item-content tr th .kolay-iade {
+        font-size: 12px;
+    }
+}

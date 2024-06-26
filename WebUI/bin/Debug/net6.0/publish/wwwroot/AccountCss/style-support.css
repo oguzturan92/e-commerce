@@ -1,0 +1,226 @@
+
+
+.support-container {
+    width: 100%;
+    padding-top: 100px;
+}
+.support-box {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0px auto;
+    
+}
+.support-list-box {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0px 20px;
+}
+
+/* YENİ SUPPORT -------------------------------------------------- */
+.support-new-container {
+    box-shadow: 0px 5px 10px 3px #f7f7f7;
+    padding: 10px;
+    display: none;
+}
+.support-new-box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.support-new {
+    display: grid;
+}
+.support-new label {
+    font-weight: 300;
+    margin: 10px 0px;
+}
+.support-new input {
+    border: 1px solid #efefef;
+    border-radius: 25px;
+    outline: none;
+    padding-left: 20px;
+    height: 30px;
+}
+
+.support-new textarea {
+    resize: none;
+    border: 1px solid #efefef;
+    border-radius: 25px;
+    padding: 25px;
+}
+.support-new textarea:focus {
+    outline: none;
+}
+
+
+
+.support-new-message-button {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0px;
+}
+
+.support-new-message-button button {
+    border: 1px solid #000;
+    background-color: #000;
+    color: #fff;
+    padding: 8px 50px;
+    cursor: pointer;
+}
+.support-new-message-button button:last-child {
+    border: 1px solid #f12e2e;
+    background-color: #f12e2e;
+    color: #fff;
+    padding: 8px 50px;
+    cursor: pointer;
+}
+
+
+/* SUPPORT  BAŞLIK -------------------------------------------------- */
+.support-list-item {
+    box-shadow: 0px 5px 10px 3px #f7f7f7;
+}
+.support-list-item p {
+    margin: 0px;
+}
+
+.support-list-item-title {
+    height: 75px;
+    cursor: pointer;
+    padding: 10px 100px;
+}
+.support-liste-item-title-2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+.support-liste-item-title-3 {
+    text-align: center;
+}
+.support-liste-item-title-3 p {
+    font-weight: 300;
+}
+.support-liste-item-title-3 p:first-child {
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+
+/*  SUPPORT YANITLAR -------------------------------------------------- */
+.support-list-message {
+    overflow: hidden;
+    max-height: auto;
+    transition: .3s;
+    transition-timing-function: linear;
+}
+
+.support-list-message-box {
+    padding: 10px;
+}
+.support-list-message {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.support-list-message-item {
+    border: 1px solid #efefef;
+    border-radius: 25px;
+    padding: 20px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.support-list-message-item span {
+    font-weight: 400;
+    font-size: 15px;
+}
+.support-list-message-item p {
+    font-weight: 300;
+    font-size: 17px;
+}
+
+
+/* SUPPORT CEVAPLAMA ------------------------------------------------- */
+.support-message-reply-box {
+    padding: 10px;
+}
+.support-message-reply-textbox {
+    display: grid;
+}
+.support-message-reply-textbox textarea {
+    resize: none;
+    border: 1px solid #efefef;
+    border-radius: 25px;
+    padding: 25px;
+}
+.support-message-reply-textbox textarea:focus {
+    outline: none;
+}
+
+.support-message-reply-button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.support-message-reply-button button {
+    border: 1px solid #000;
+    background-color: #000;
+    color: #fff;
+    padding: 8px 50px;
+    cursor: pointer;
+}
+
+.support-back {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.support-back a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    padding: 10px;
+    background-color: #000;
+    font-size: 13px;
+}
+
+#new-support-button {
+    background-color: #8cd200;
+    color: #fff;
+    border: none;
+    padding: 0px 50px;
+    cursor: pointer;
+}
+
+@media (max-width:1000px) {
+    .support-list-box {
+        padding: 0px 10px;
+    }
+    .support-list-item-title {
+        padding: 10px 50px;
+    }
+    .support-liste-item-title-2 {
+        gap: 20px;
+    }
+}
+@media (max-width:768px) {
+    .support-list-item-title {
+        padding: 10px 25px;
+    }
+    .support-liste-item-title-3 p {
+        font-size: 14px;
+    }
+    .support-message-reply-button button {
+        font-size: 12px;
+    }
+    .support-list-message-item span {
+        font-size: 14px;
+    }
+    .support-list-message-item p {
+        font-size: 14px;
+    }
+}

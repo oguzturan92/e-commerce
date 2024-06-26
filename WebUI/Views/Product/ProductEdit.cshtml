@@ -1,0 +1,20 @@
+@{
+    ViewData["Title"] = "Ürün Düzenle";
+    Layout = "_LayoutAdmin";
+}
+
+    <partial name="~/Views/Shared/productShared/_productEdit.cshtml"/>
+
+    @section Scripts
+    {
+        @* CK EDİTÖR SCRİPTİ *@
+        <script src="//cdn.ckeditor.com/4.21.0/full/ckeditor.js"></script>
+        <script>
+            CKEDITOR.replace( 'CkEditor' );
+        </script>
+    }
+
+    @section Css
+    {
+        <link rel="stylesheet" href="~/AdminCss/style-product-edit-alternativ.css">
+    }

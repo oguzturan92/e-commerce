@@ -1,0 +1,141 @@
+
+
+.eftHavale-container {
+    width: 100%;
+    padding-top: 100px;
+}
+.eftHavale-box {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0px auto;
+    
+}
+.eftHavale-list-box {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0px 20px;
+}
+
+/* YENİ EFTHAVALE -------------------------------------------------- */
+.eftHavale-new-container {
+    box-shadow: 0px 5px 10px 3px #f7f7f7;
+    padding: 10px;
+}
+.eftHavale-new-box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.eftHavale-new {
+    display: grid;
+}
+.eftHavale-new label {
+    font-weight: 300;
+    margin: 10px 0px;
+}
+
+.eftHavale-new input {
+    border: 1px solid #efefef;
+    border-radius: 25px;
+    outline: none;
+    padding-left: 20px;
+    height: 30px;
+}
+.eftHavale-new select {
+    border: 1px solid #efefef;
+    border-radius: 25px;
+    outline: none;
+    padding-left: 20px;
+    height: 34px;
+}
+
+
+
+.eftHavale-new-button {
+    width: 100%;
+    display: flex;
+    margin: 20px 0px;
+}
+
+.eftHavale-new-button button {
+    border: 1px solid #000;
+    background-color: #000;
+    color: #fff;
+    padding: 8px 50px;
+    cursor: pointer;
+}
+
+
+/* EFTHAVALE BAŞLIK -------------------------------------------------- */
+.eftHavale-list-item {
+    box-shadow: 0px 5px 10px 3px #f7f7f7;
+}
+.eftHavale-list-item p {
+    margin: 0px;
+}
+
+.eftHavale-list-item-title {
+    height: 75px;
+    padding: 10px 100px;
+}
+.eftHavale-liste-item-title-2 {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+    height: 100%;
+}
+.eftHavale-liste-item-title-3 {
+    text-align: center;
+}
+.eftHavale-liste-item-title-3 p {
+    font-weight: 300;
+}
+.eftHavale-liste-item-title-3 p:first-child {
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+
+.eftHavale-back {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.eftHavale-back a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    padding: 10px;
+    background-color: #000;
+    font-size: 13px;
+}
+
+
+@media (max-width:1000px) {
+    .eftHavale-list-box {
+        padding: 0px 10px;
+    }
+    .eftHavale-list-item-title {
+        padding: 10px 50px;
+        height: auto;
+    }
+    .eftHavale-new-button {
+        justify-content: center;
+    }
+}
+@media (max-width:768px) {
+    .eftHavale-liste-item-title-2 {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    }
+    .eftHavale-list-item-title {
+        padding: 10px 25px;
+    }
+    .eftHavale-new label {
+        font-size: 14px;
+    }
+    .eftHavale-liste-item-title-3 p {
+        font-size: 14px;
+    }
+}

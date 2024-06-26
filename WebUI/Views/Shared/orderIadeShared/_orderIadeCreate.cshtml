@@ -1,0 +1,131 @@
+@model OrderIadeModel
+
+<div class="orderIade-container">
+    <div class="orderIade-box">
+        <div class="orderIade-list-box">
+            <div class="orderIade-back">
+                <a asp-controller="Order" asp-action="OrderListClient">Geri</a>
+            </div>
+
+            <form class="orderIade-new-container" asp-controller="OrderIade" asp-action="OrderIadeCreate" method="post">
+                <input type="hidden" name="OrderId" value="@Model.Order.OrderId" >
+                <div class="orderIade-new-box">
+                    <div class="orderIade-new">
+                        <span class="validation" asp-validation-for="OrderIadeNedeni"></span>
+                        <label>İade Nedeni</label>
+                        <select asp-for="OrderIadeNedeni">
+                            <option value="" disabled selected>Seçiniz</option>
+                                <option value="Beden Uymadı">Beden Uymadı</option>
+                                <option value="Sipariş İptali">Sipariş İptali</option>
+                                <option value="Yanlış Ürün">Yanlış Ürün</option>
+                                <option value="Görsel Farkı">Görsel Farkı</option>
+                                <option value="Teslimat">Teslimat</option>
+                                <option value="Defolu Ürün">Defolu Ürün</option>
+                        </select>
+                    </div>
+                    <div class="orderIade-new">
+                        <span class="validation" asp-validation-for="BankName"></span>
+                        <label for="bankName">Banka Adı</label>
+                        <input asp-for="BankName" id="bankName" type="text">
+                    </div>
+                    <div class="orderIade-new">
+                        <span class="validation" asp-validation-for="BankIban"></span>
+                        <label for="bankIban">Iban</label>
+                        <input asp-for="BankIban" id="bankIban" type="text">
+                    </div>
+                    <div class="orderIade-new">
+                        <label for="orderIadeNot">Not</label>
+                        <input asp-for="OrderIadeNot" id="orderIadeNot" type="text">
+                    </div>
+                </div>
+
+                <div class="order-iade-items">
+                    <table>
+                        <tbody>
+                            @* @foreach (var orderLine in Model.Order.OrderLines)
+                            {
+                                <input type="hidden" name="OrderLineId" value="@orderLine.OrderLineId" >
+                                <tr>
+                                    <th style="width: 150px;"><img src="/img/@orderLine.ProductImage" alt=""></th>
+                                    <th><a asp-controller="Product" asp-action="ProductDetail" asp-route-url="@orderLine.ProductUrl" class="product-name" target="_blank">@orderLine.ProductName</a></th>
+                                        <th style="width: 250px;">
+                                            <p>Özellik : <span>@orderLine.ProductSize</span></p>
+                                            <p>Adet : <span>@orderLine.OrderLineQuantity</span></p>
+                                            @if (orderLine.OrderLineCampaignPrice == 0)
+                                            {
+                                                <p>Birim Fiyat : <span>@orderLine.OrderLineProductPrice.ToString("c")</span></p>
+                                                <p>Toplam Fiyat : <span>@((orderLine.OrderLineProductPrice * orderLine.OrderLineQuantity).ToString("c"))</span></p>
+                                            } else
+                                            {
+                                                <p>Birim Fiyat : <span>@orderLine.OrderLineCampaignPrice.ToString("c")</span></p>
+                                                <p>Toplam Fiyat : <span>@((orderLine.OrderLineCampaignPrice * orderLine.OrderLineQuantity).ToString("c"))</span></p>
+                                            }
+                                        </th>
+                                    <th>
+                                        <select name="IadeAdedi">
+                                            <option value="" disabled selected>Adet Seçiniz</option>
+                                                @for (int i = 1; i < orderLine.IadeEdilebilirAdet+1; i++)
+                                                {
+                                                    <option value="@i">@i</option>
+                                                }
+                                        </select>
+                                    </th>
+                                    <th>
+                                        <span class="validation" style="font-size: 14px;" asp-validation-for="OrderLineIds"></span>
+                                        <span>@Model.OrderLineIds[0]</span>
+                                        <input type="checkbox" name="OrderLineIds" value="@orderLine.OrderLineId">
+                                    </th>
+                                </tr>
+                            } *@
+
+                            @for (int i = 0; i < Model.Order.OrderLines.Count(); i++)
+                            {
+                                <input type="hidden" name="OrderLineId" value="@Model.Order.OrderLines[i].OrderLineId" >
+                                <tr>
+                                    <th style="width: 150px;"><img src="/img/@Model.Order.OrderLines[i].ProductImage" alt=""></th>
+                                    <th><a asp-controller="Product" asp-action="ProductDetail" asp-route-url="@Model.Order.OrderLines[i].ProductUrl" class="product-name" target="_blank">@Model.Order.OrderLines[i].ProductName</a></th>
+                                        <th style="width: 250px;">
+                                            <p>Özellik : <span>@Model.Order.OrderLines[i].ProductSize</span></p>
+                                            <p>Adet : <span>@Model.Order.OrderLines[i].OrderLineQuantity</span></p>
+                                            @if (Model.Order.OrderLines[i].OrderLineCampaignPrice == 0)
+                                            {
+                                                <p>Birim Fiyat : <span>@Model.Order.OrderLines[i].OrderLineProductPrice.ToString("c")</span></p>
+                                                <p>Toplam Fiyat : <span>@((Model.Order.OrderLines[i].OrderLineProductPrice * Model.Order.OrderLines[i].OrderLineQuantity).ToString("c"))</span></p>
+                                            } else
+                                            {
+                                                <p>Birim Fiyat : <span>@Model.Order.OrderLines[i].OrderLineCampaignPrice.ToString("c")</span></p>
+                                                <p>Toplam Fiyat : <span>@((Model.Order.OrderLines[i].OrderLineCampaignPrice * Model.Order.OrderLines[i].OrderLineQuantity).ToString("c"))</span></p>
+                                            }
+                                        </th>
+                                    <th>
+                                        <select name="IadeAdedi">
+                                            <option value="" disabled selected>Adet Seçiniz</option>
+                                                @for (int a = 1; a < Model.Order.OrderLines[i].IadeEdilebilirAdet+1; a++)
+                                                {
+                                                    <option value="@a">@a</option>
+                                                }
+                                        </select>
+                                    </th>
+                                    <th>
+                                        <span class="validation" style="font-size: 14px;" asp-validation-for="SelectedOrderLineIds"></span>
+                                        <input
+                                            type="checkbox"
+                                            name="SelectedOrderLineIds"
+                                            value="@Model.Order.OrderLines[i].OrderLineId"
+                                            @(Model.SelectedOrderLineIds.Any(r => r == Model.Order.OrderLines[i].OrderLineId) ? "checked" : "")
+                                        >
+                                    </th>
+                                </tr>
+                            }
+                            
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="orderIade-new-button">
+                    <button type="submit">İade Talebi Oluştur</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

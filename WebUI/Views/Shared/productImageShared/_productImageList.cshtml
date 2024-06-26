@@ -1,0 +1,88 @@
+@model ProductImageModel
+
+<div class="title">
+    <h2>RESİM LİSTESİ</h2>
+</div>
+<div class="content">
+    <div class="table-container">
+        <div class="table-btn-ekle-geri-box">
+            <form class="form-img-ekle" asp-controller="ProductImage" asp-action="ProductImageCreate" method="post" enctype="multipart/form-data">
+                <button class="table-btn-ekle-img" type="submit">Ekle</button>
+                <span class="validation" asp-validation-for="ProductImageName"></span>
+                <input class="resim-input" asp-for="ProductImageName" multiple name="files" type="file">
+                <input type="hidden" asp-for="ProductId">
+            </form>
+            <div class="table-btn-2">
+                <form class="form-img-sil" asp-controller="ProductImage" asp-action="ProductImageDeleteAll" asp-route-id="@Model.Product.ProductId" method="post">
+                    <button class="table-btn-tumu-sil" type="submit" onclick="return silOnayla();">Tümünü Sil</button>
+                </form>
+                <a class="table-btn-geri" asp-controller="Product" asp-action="ProductList">Geri</a>
+            </div>
+        </div>
+        @if (Model.ProductImages.Count() > 0)
+        {
+            <div class="table-container-alt">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="th-w-75">Sıra No</th>
+                            <th class="th-w-auto mobil-display-none">Resim Adı</th>
+                            <th class="th-w-75">Resim</th>
+                            <th class="th-w-120">Vitrin</th>
+                            <th colspan="1"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.ProductImages) {
+                            <tr>
+                                <td>
+                                    <form asp-controller="ProductImage" asp-action="ProductImageList" method="post">
+                                        <input type="hidden" name="ProductImageId" value="@item.ProductImageId">
+                                        <input class="input-sort" type="number" name="ProductImageSort" value="@item.ProductImageSort">
+                                    </form>
+                                </td>
+
+                                <td class="slice mobil-display-none">@item.ProductImageName</td>
+
+                                <td><img src="~/img/@item.ProductImageName" alt=""></td>
+
+                                <td>
+                                    <form asp-controller="ProductImage" asp-action="ProductImageVitrin" method="post">
+                                        <input type="hidden" name="ProductId" value="@item.ProductId">
+                                        <input type="hidden" name="ProductImageName" value="@item.ProductImageName">
+                                        @if (Model.Product.ProductImage == item.ProductImageName)
+                                        {
+                                            <button class="vitrin-btn-on" type="submit">Vitrin</button>
+                                        } else
+                                        {
+                                            <button class="vitrin-btn-off" type="submit">Vitrin Yap</button>
+                                        }
+                                    </form>
+                                </td>
+
+                                <td class="td-buton-del">
+                                    <form asp-controller="ProductImage" asp-action="ProductImageDelete" method="post">
+                                        <input type="hidden" name="ProductImageId" value="@item.ProductImageId">
+                                        <input type="hidden" name="ProductId" value="@item.ProductId">
+                                        <button type="submit" onclick="return silOnayla();">
+                                            <img src="/img/admin-img/delete.png" alt="">
+                                        </button>
+                                    </form>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        } else
+        {
+            <h4>Listelenecek Resim Bulunamadı</h4>
+        }
+    </div>
+</div>
+
+<script>
+    @* Vitrin aktif butonuna disable ekledik. *@
+    var vitrin = document.querySelector(".vitrin-btn-on");
+    vitrin.setAttribute("disabled","");
+</script>

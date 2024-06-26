@@ -1,0 +1,18 @@
+@model UserSifremiUnuttumModel
+
+<div class="form-login-container">
+    <form class="form-login-container-alt" asp-controller="AdminAccount" asp-action="SifremiUnuttum" method="post">
+        <div class="form-login-item-1">
+            <h1 class="admin-h1">Şifremi Unuttum</h1>
+        </div>
+        <div class="form-login-item-1">
+            <span class="validation" asp-validation-for="Email"></span>
+            <label>e Mail</label>
+            <input asp-for="Email" type="text">
+        </div>
+        <div class="form-login-item-2">
+            <button class="form-login-btn-gonder" type="submit">Gönder</button>
+            <a class="form-login-btn-giris" asp-controller="AdminAccount" asp-action="Login">Geri</a>
+        </div>
+    </form>
+</div>

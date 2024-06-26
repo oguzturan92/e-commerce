@@ -1,0 +1,110 @@
+#popup-container {
+    position: fixed;
+    top: 0px;
+    background-color: #0000001f;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 11;
+}
+.popup-box {
+    background-color: #ffffff;
+    /* background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(254, 254, 251)); */
+    width: 500px;
+    height: 500px;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin: 0px 25px;
+}
+#popup-xmark {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    background-color: #ffffffb0;
+    text-align: center;
+    width: 28px;
+    height: 28px;
+}
+.xmark-box {
+    /* width: 100px; */
+    /* height: 100px; */
+    /* border: 1px solid #000; */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.xmark-1 {
+    border-bottom: 2px solid #000;
+    width: 20px;
+
+    position: relative;
+    transform: rotate(-45deg);
+    top: 6px;
+}
+.xmark-2 {
+    border-bottom: 2px solid #000;
+    width: 20px;
+
+    position: relative;
+    transform: rotate(45deg);
+    top: -6px;
+}
+
+.popup-box h3 {
+    text-align: center;
+    color: #fff;
+    font-size: 25px;
+    margin: 0px;
+    padding: 0px 50px;
+    letter-spacing: 3px;
+}
+.popup-box p {
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    margin: 0px;
+    padding: 0px 50px;
+    line-height: 1.7;
+    letter-spacing: 3px;
+}
+
+.popup-btn {
+    background-color: #333;
+    color: #fff;
+    padding: 7px;
+    text-decoration: none;
+    margin-bottom: 50px;
+    transition: .3s;
+    display: block;
+    width: 75px;
+    text-align: center;
+}
+.popup-btn:hover {
+    background-color: #777;
+}
+
+@media (max-width: 768px) {
+    .about-detail-box {
+        padding-top: 100px;
+    }
+    .about-detail-content h3 {
+        font-size: 23px;
+    }
+    .about-detail-content p {
+        font-size: 16px;
+    }
+}

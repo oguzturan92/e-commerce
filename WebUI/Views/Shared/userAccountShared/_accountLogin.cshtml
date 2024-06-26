@@ -1,0 +1,30 @@
+@model AccountLoginModel
+
+<div class="my-information-container">
+    <div class="my-information-box">
+
+        <div class="user-form-container">
+            <form class="user-form" asp-controller="UserAccount" asp-action="AccountLogin" method="post">
+                <input type="hidden" name="ReturnUrl" value="@Model.ReturnUrl">
+                <p class="user-form-title">Üye Girişi</p>
+                <div class="user-form-item-1">
+                    <span class="user-validation" asp-validation-for="Email"></span>
+                    <label for="Email">Mail Adresiniz *</label>
+                    <input asp-for="Email" type="Email">
+                </div>
+                <div class="user-form-item-1">
+                    <span class="user-validation" asp-validation-for="Password"></span>
+                    <label for="Password">Şifreniz *</label>
+                    @* <input id="password" name="Password" type="password"> *@
+                    <input asp-for="Password" type="password">
+                </div>
+                <div class="user-form-btn-box">
+                    <button class="user-form-btn-kaydet" type="submit">Giriş Yap</button>
+                    <a class="user-form-btn-geri" asp-controller="UserAccount" asp-action="AccountRegister">Kayıt Ol</a>
+                    <a class="sifremi-unuttum-btn" asp-controller="UserAccount" asp-action="SifremiUnuttum">Şifremi Unuttum</a>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>

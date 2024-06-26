@@ -1,0 +1,80 @@
+@model UserEditModel
+
+<div class="title">
+    <h2>KULLANICI DÜZENLE</h2>
+</div>
+<div class="content">
+    <div class="form-container">
+        <div class="table-btn-geri-box">
+            <a class="table-btn-geri" asp-controller="Admin" asp-action="Home">Geri</a>
+        </div>
+        <form class="form-container-alt" asp-controller="AdminAccount" asp-action="EditAdmin" method="post">
+            <input type="hidden" asp-for="UserId">
+            <input type="hidden" asp-for="UserRegisterDate">
+            <div class="form-item-2">
+                <div class="form-item-1">
+                    <span class="validation" asp-validation-for="UserAdi"></span>
+                    <label>Ad *</label>
+                    <input asp-for="UserAdi" type="text">
+                </div>
+                <div class="form-item-1">
+                    <span class="validation" asp-validation-for="UserSoyadi"></span>
+                    <label>Soyad *</label>
+                    <input asp-for="UserSoyadi" type="text">
+                </div>
+            </div>
+            <div class="form-item-2">
+                <div class="form-item-1">
+                    <span class="validation" asp-validation-for="UserName"></span>
+                    <label>Kullanıcı Adı *</label>
+                    <input asp-for="UserName" type="text">
+                </div>
+                <div class="form-item-1">
+                    <span class="validation" asp-validation-for="UserCinsiyet"></span>
+                    <label>Cinsiyet</label>
+                    <select asp-for="UserCinsiyet" class="select">
+                        @if (Model.UserCinsiyet == "Kadın") {
+                            <option selected value="Kadın">Kadın</option>
+                            <option value="Erkek">Erkek</option>
+                        } else {
+                            <option value="Kadın">Kadın</option>
+                            <option selected value="Erkek">Erkek</option>
+                        }
+                    </select>
+                </div>
+            </div>
+            <div class="form-item-2">
+                <div class="form-item-1">
+                    <span class="validation" asp-validation-for="NewPassword"></span>
+                    <label>Yeni Şifre * (Şifreyi değiştirmek istemiyorsanız boş bırakın)</label>
+                    <input asp-for="NewPassword" value="" type="password">
+                </div>
+                <div class="form-item-1">
+                    <span class="validation" asp-validation-for="NewRePassword"></span>
+                    <label>Yeni Şifre Tekrar *</label>
+                    <input asp-for="NewRePassword" type="password">
+                </div>
+            </div>
+            <div class="form-item-2">
+                <div class="form-item-1">
+                    <span class="validation" asp-validation-for="Email"></span>
+                    <label>e Mail *</label>
+                    <input asp-for="Email" type="text">
+                </div>
+                <div class="form-item-1">
+                    <span class="validation" asp-validation-for="UserRegisterDate"></span>
+                    <label>Kayıt Tarihi</label>
+                    <input name="UserDate" value="@Model.UserRegisterDate" disabled>
+                </div>
+            </div>
+            <div class="form-item-1">
+                <span class="validation" asp-validation-for="PhoneNumber"></span>
+                <label>Telefon Numarası</label>
+                <input asp-for="PhoneNumber" type="text" placeholder="0(xxx) xxx xx xx">
+            </div>
+            <div class="form-btn-kaydet-box">
+                <button class="form-btn-kaydet" type="submit">Kaydet</button>
+            </div>
+        </form>
+    </div>
+</div>

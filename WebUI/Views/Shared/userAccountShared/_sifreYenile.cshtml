@@ -1,0 +1,31 @@
+@model UserSifreYenileModel
+
+<div class="my-information-container">
+    <div class="my-information-box">
+
+        <div class="user-form-container">
+            <form class="user-form" asp-controller="UserAccount" asp-action="SifreYenile" method="post">
+                <input type="hidden" asp-for="Token">
+                <input type="hidden" asp-for="UserId">
+                <p class="user-form-title">Yeni Şifre Oluştur</p>
+                <div class="user-form-item-2">
+                    <div class="user-form-item-1">
+                        <span class="user-validation" asp-validation-for="NewPassword"></span>
+                        <label for="NewPassword">Yeni Şifreniz</label>
+                        <input asp-for="NewPassword" type="text">
+                    </div>
+                    <div class="user-form-item-1">
+                        <span class="user-validation" asp-validation-for="NewRePassword"></span>
+                        <label for="NewRePassword">Yeni Şifreniz Tekrar</label>
+                        <input id="NewRePassword" name="NewRePassword" type="password">
+                    </div>
+                </div>
+                <div class="user-form-btn-box">
+                    <button class="user-form-btn-kaydet" type="submit">Gönder</button>
+                    <a class="user-form-btn-geri" asp-controller="UserAccount" asp-action="AccountIndex">Giriş Yap</a>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>

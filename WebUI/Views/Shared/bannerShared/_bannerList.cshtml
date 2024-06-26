@@ -1,0 +1,74 @@
+@model BannerModel
+
+<div class="title">
+    <h2>BANNER LİSTESİ</h2>
+</div>
+<div class="content">
+    <div class="table-container">
+        <div class="table-btn-ekle-box">
+            <a class="table-btn-ekle" asp-controller="Banner" asp-action="BannerCreate">Ekle</a>
+        </div>
+        @if (Model.Banners.Count() > 0)
+        {
+            <div class="table-container-alt">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="th-w-75">Sıra No</th>
+                            <th class="th-w-75">Resim</th>
+                            <th class="th-w-auto">Ad</th>
+                            <th class="th-w-75 mobil-display-none">Onay</th>
+                            <th colspan="2"></th>
+                            @* <th></th> *@
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.Banners) {
+                            <tr>
+                                <td class="td-w-75">
+                                    <form asp-controller="Banner" asp-action="BannerList" method="post">
+                                        <input type="hidden" name="BannerId" value="@item.BannerId">
+                                        <input class="input-sort" type="number" name="BannerSort" value="@item.BannerSort">
+                                    </form>
+                                </td>
+
+                                <td><img src="~/img/@item.BannerImage" alt=""></td>
+                                
+                                <td class="slice">@item.BannerName</td>
+
+                                @if (item.BannerApproval) {
+                                    <td class="mobil-display-none">
+                                        <img src="/img/admin-img/check.png" alt="">
+                                    </td>
+                                } else {
+                                    <td class="mobil-display-none">
+                                        <img src="/img/admin-img/xmark.png" alt="">
+                                    </td>
+                                }
+
+                                <td class="td-buton-edit">
+                                    <form asp-controller="Banner" asp-action="BannerEdit" asp-route-id="@item.BannerId" method="get">
+                                        <button type="submit">
+                                            <img src="/img/admin-img/pencil.png" alt="">
+                                        </button>
+                                    </form>
+                                </td>
+
+                                <td class="td-buton-del">
+                                    <form asp-controller="Banner" asp-action="BannerDelete" asp-route-id="@item.BannerId" method="post">
+                                        <button type="submit" onclick="return silOnayla();">
+                                            <img src="/img/admin-img/delete.png" alt="">
+                                        </button>
+                                    </form>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        } else
+        {
+            <h4>Listelenecek Banner Bulunamadı</h4>
+        }
+    </div>
+</div>

@@ -1,0 +1,60 @@
+@model SizeModel
+
+<div class="title">
+    <h2>ALT SEÇENEK LİSTESİ</h2>
+</div>
+<div class="content">
+    <div class="table-container">
+        <div class="table-btn-ekle-geri-box">
+            <a class="table-btn-ekle" asp-controller="Size" asp-action="SizeCreate" asp-route-id="@Model.SizeTypeId">Ekle</a>
+            <a class="table-btn-geri" asp-controller="SizeType" asp-action="SizeTypeList">Geri</a>
+        </div>
+        @if (Model.Sizes.Count() > 0)
+        {
+            <div class="table-container-alt">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="th-w-75">Sıra No</th>
+                            <th class="th-w-75 mobil-display-none">Resim</th>
+                            <th class="th-w-auto">Ad</th>
+                            <th colspan="2"></th>
+                            @* <th></th> *@
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.Sizes) {
+                            <tr>
+                                <td class="td-w-75">
+                                    <form asp-controller="Size" asp-action="SizeList" method="post">
+                                        <input type="hidden" name="SizeId" value="@item.SizeId">
+                                        <input class="input-sort" type="number" name="SizeSort" value="@item.SizeSort">
+                                    </form>
+                                </td>
+
+                                <td class="mobil-display-none"><img src="~/img/img-size/@item.SizeImage" alt=""></td>
+                                
+                                <td class="slice">@item.SizeTitle</td>
+
+                                <td class="td-buton-edit">
+                                    <form asp-controller="Size" asp-action="SizeEdit" asp-route-id="@item.SizeId" method="get">
+                                        <button type="submit"><img src="/img/admin-img/pencil.png" alt=""></button>
+                                    </form>
+                                </td>
+
+                                <td class="td-buton-del">
+                                    <form asp-controller="Size" asp-action="SizeDelete" asp-route-id="@item.SizeId" method="post">
+                                        <button type="submit" onclick="return silOnayla();"><img src="/img/admin-img/delete.png" alt=""></button>
+                                    </form>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        } else
+        {
+            <h4>Listelenecek Alt Varyasyon Bulunamadı</h4>
+        }
+    </div>
+</div>

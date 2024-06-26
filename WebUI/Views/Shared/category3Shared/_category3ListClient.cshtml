@@ -1,0 +1,112 @@
+@model ProductListModel
+
+@if (Model.Category3.Category3ListType == "Urun")
+{
+    <div class="product-list-container" id="product-list-container">
+
+        <div class="product-list-filters">
+
+            <div class="list-filter-box">
+
+                <div class="filter-box-title">
+                    <p>@Model.CategoryFilters3.Category3Name</p>
+                    <img src="/img/img-icon-sabit/up-filter.png" alt="">
+                </div>
+                <ul class="filter-category-ul-1">
+                    <div class="filter-category-back">
+                        <img src="/img/img-icon-sabit/turn-left.png" alt=""><a asp-controller="Category2" asp-route-urlUst="@Model.CategoryBackUrlUst" asp-action="Category2ListClient" asp-route-url="@Model.CategoryBackUrl">Geri</a>
+                    </div>
+                </ul>
+
+            </div>
+
+            <form asp-controller="Category3" asp-action="Category3ListClient" asp-route-url="@Model.Category3.Category3Url" method="get">
+            @foreach (var item in Model.SizeTypes)
+            {
+                <div class="list-filter-box">
+
+                    <div class="filter-box-title">
+                        <p>@item.SizeTypeName</p>
+                        <img src="/img/img-icon-sabit/up-filter.png" alt="">
+                    </div>
+                    
+                    <div class="filter-checkbox-box">
+                        @foreach (var item2 in item.Sizes)
+                        {
+                        <button type="submit" class="filter-checkbox">
+                            <input type="checkbox" type="submit"
+                                    name="filters"
+                                    value="@item2.SizeId"
+                                    class="custom-control-input"
+                                    id="Size@(item2.SizeId)"
+                                    @(Model.SelectedFilters.Any(i => i == item2.SizeId) ? "checked" : "")
+                            >
+                            <span class="checkbox"></span>
+                            <label for="Size@(item2.SizeId)" class="filterFormLabel">@item2.SizeTitle</label>
+                        </button>
+                        }
+                    </div>
+                </div>
+            }
+            </form>
+
+        </div>
+
+        <div id="product-list-box" class="product-list-box">
+
+            <div class="product-list-line">
+                <div class="product-list-line-filter">
+                    <img id="product-list-line-filter-img" src="/img/img-icon-sabit/filter.png" alt="">
+                </div>
+                <div class="product-list-line-grid">
+                    <div id="product-list-line-1"><img src="/img/img-icon-sabit/grid-1.png" alt=""></div>
+                    <div id="product-list-line-2"><img src="/img/img-icon-sabit/grid-2.png" alt=""></div>
+                    <div id="product-list-line-3"><img src="/img/img-icon-sabit/grid-3.png" alt=""></div>
+                    <div id="product-list-line-4"><img src="/img/img-icon-sabit/grid-4.png" alt=""></div>
+                </div>
+            </div>
+
+            @if (Model.Products.Count() > 0)
+            {
+                <div class="product-list">
+                    @foreach (var item in Model.Products)
+                    {
+                        <a asp-controller="Product" asp-action="ProductDetail" asp-route-url="@item.ProductUrl" asp-route-id="@item.ProductId" class="product-list-card">
+                            <div class="product-list-card-img">
+                                <img class="img-1" src="/img/@item.ProductImages[0].ProductImageName" alt="">
+                                <img class="img-2" src="/img/@item.ProductImages[1].ProductImageName" alt="">
+                            </div>
+                            <div class="product-list-info">
+                                    @if (item.ProductNew != false)
+                                    {
+                                        <div class="product-list-new">
+                                            <p>Yeni</p>
+                                        </div>
+                                    }
+                                    @if (item.ProductSale != false)
+                                    {
+                                        <div class="product-list-sale">
+                                            <p>İndirim</p>
+                                        </div>
+                                    }
+                            </div>
+                            <div class="product-list-card-content">
+                                <p class="product-list-productname slice-100-50">@item.ProductName</p>
+                                <div class="product-list-card-price-box">
+                                    @if (item.ProductSalePrice == 0)
+                                    {
+                                        <p class="product-list-card-price">@((item.ProductPrice).ToString("c"))</p>
+                                    } else
+                                    {
+                                        <p class="product-list-card-price">@((item.ProductSalePrice).ToString("c"))</p>
+                                        <p class="product-list-card-price-sale">@((item.ProductPrice).ToString("c"))</p>
+                                    }
+                                </div>
+                            </div>
+                        </a>
+                    }
+                </div>
+            }
+        </div>
+    </div>
+}

@@ -1,0 +1,59 @@
+@model CategoryModel
+
+@if (true)
+{
+    <ul class="menu-ul">
+        <li class="menu-li">
+            <a class="menu-a" href="/">ANASAYFA</a>
+        </li>
+        @foreach (var item1 in Model.Categories)
+        {
+        <li class="menu-li">
+            <a class="menu-a"
+                asp-controller="Category"
+                asp-action="CategoryListClient"
+                asp-route-url="@item1.CategoryUrl"
+                >@item1.CategoryName
+            </a>
+                @if (item1.Category2s.Count() > 0)
+                {
+                    <img class="mobil-up" src="/img/img-icon-sabit/up.png" alt="">
+                    <ul class="menu-1" id="menu-1">
+                        @foreach (var item2 in item1.Category2s)
+                        {
+                            <li class="menu-1-li">
+                                <a class="menu-1-a"
+                                    asp-controller="Category2"
+                                    asp-action="Category2ListClient"
+                                    asp-route-urlUst="@item1.CategoryUrl"
+                                    asp-route-url="@item2.Category2Url"
+                                    >@item2.Category2Name
+                                </a>
+
+                                    @if (item2.Category3s.Count() > 0)
+                                    {
+                                        <img class="mobil-up" src="/img/img-icon-sabit/up.png" alt="">
+                                        <ul class="menu-2">
+                                            @foreach (var item3 in item2.Category3s)
+                                            {
+                                                <li class="menu-2-li">
+                                                    <a class="menu-2-a"
+                                                        asp-controller="Category3"
+                                                        asp-action="Category3ListClient"
+                                                        asp-route-urlUst="@item1.CategoryUrl"
+                                                        asp-route-urlUst2="@item2.Category2Url"
+                                                        asp-route-url="@item3.Category3Url"
+                                                        >@item3.Category3Name
+                                                    </a>
+                                                </li>
+                                            }
+                                        </ul>
+                                    }
+                            </li>
+                        }
+                    </ul>
+                }
+        </li>
+        }
+    </ul>
+}

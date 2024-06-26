@@ -1,0 +1,101 @@
+@model DescriptionModel
+
+<div class="title">
+    <h2>AÇIKLAMA LİSTESİ</h2>
+</div>
+<div class="content">
+    <div class="table-container">
+        <div class="table-btn-ekle-box">
+            <a class="table-btn-ekle" asp-controller="Description" asp-action="DescriptionCreate" asp-route-proId="@Model.ProductId">Ekle</a>
+        </div>
+        <div class="form-alternativ-box">
+            <div class="form-alternativ-item">
+                <a asp-controller="Product" asp-action="ProductEdit" asp-route-id="@Model.ProductId" method="get">
+                    Detay
+                </a>
+            </div>
+            <div class="form-alternativ-item">
+                <a asp-controller="Description" asp-action="DescriptionList" asp-route-id="@Model.ProductId" method="get" style="box-shadow: 0px 4px 8px 0px #e6e6e6;">
+                    Metin
+                </a>
+            </div>
+            <div class="form-alternativ-item">
+                <a asp-controller="Variant" asp-action="VariantEdit" asp-route-id="@Model.ProductId" method="get">
+                    Varyant
+                </a>
+            </div>
+            <div class="form-alternativ-item">
+                <a asp-controller="ProductSize" asp-action="ProductSizeEdit" asp-route-id="@Model.ProductId" method="get">
+                    Seçenek
+                </a>
+            </div>
+            <div class="form-alternativ-item">
+                <a asp-controller="List" asp-action="ListList" asp-route-id="@Model.ProductId" method="get">
+                    Liste
+                    <input type="hidden" name="ProductId" value="@Model.ProductId">
+                </a>
+            </div>
+        </div>
+        @if (Model.Descriptions.Count() > 0)
+        {
+            <div class="table-container-alt">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="th-w-75">Sıra No</th>
+                            <th class="th-w-auto">Ad</th>
+                            <th class="th-w-75 mobil-display-none">Onay</th>
+                            <th colspan="2"></th>
+                            @* <th></th> *@
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.Descriptions) {
+                            <tr>
+                                <td class="td-w-75">
+                                    <form asp-controller="Description" asp-action="DescriptionList" method="post">
+                                        <input type="hidden" name="DescriptionId" value="@item.DescriptionId">
+                                        <input type="hidden" name="ProductId" value="@item.ProductId">
+                                        <input class="input-sort" type="number" name="DescriptionSort" value="@item.DescriptionSort">
+                                    </form>
+                                </td>
+                                
+                                <td class="slice">@item.DescriptionName</td>
+
+                                @if (item.DescriptionApproval) {
+                                    <td class="mobil-display-none">
+                                        <img src="/img/admin-img/check.png" alt="">
+                                    </td>
+                                } else {
+                                    <td class="mobil-display-none">
+                                        <img src="/img/admin-img/xmark.png" alt="">
+                                    </td>
+                                }
+
+                                <td class="td-buton-edit">
+                                    <form asp-controller="Description" asp-action="DescriptionEdit" asp-route-id="@item.DescriptionId" method="get">
+                                        <input type="hidden" name="ProductId" value="@item.ProductId">
+                                        <button type="submit">
+                                            <img src="/img/admin-img/pencil.png" alt="">
+                                        </button>
+                                    </form>
+                                </td>
+
+                                <td class="td-buton-del">
+                                    <form asp-controller="Description" asp-action="DescriptionDelete" asp-route-id="@item.DescriptionId" asp-route-proId="@Model.ProductId" method="post">
+                                        <button type="submit" onclick="return silOnayla();">
+                                            <img src="/img/admin-img/delete.png" alt="">
+                                        </button>
+                                    </form>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        } else
+        {
+            <h4>Listelenecek Açıklama Bulunamadı</h4>
+        }
+    </div>
+</div>

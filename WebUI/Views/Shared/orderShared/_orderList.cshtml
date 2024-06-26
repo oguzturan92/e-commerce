@@ -1,0 +1,141 @@
+@model OrderModel
+
+<div class="title">
+    <h2>SİPARİŞ LİSTESİ</h2>
+</div>
+<div class="content">
+    <div class="table-container">
+        <form class="form-container-alt" asp-controller="Order" asp-action="OrderList" method="get" style="margin-bottom: 10px;">
+            <div class="form-item-1">
+                <label>E Mail</label>
+                <input name="searchEmail" type="email">
+            </div>
+            <div class="form-btn-kaydet-box">
+                <button class="form-btn-kaydet" type="submit">Ara</button>
+            </div>
+        </form>
+        <div class="table-btn-ekle-geri-box">
+            <a class="table-btn-tumu-sil" asp-controller="OrderIade" asp-action="OrderIadeList">İade Talepleri</a>
+            <a class="table-btn-beyaz" asp-controller="Sepet" asp-action="SepetIncompleteList">Yarım Kalan Sepetler</a>
+        </div>
+        @if (Model.Orders.Count() > 0)
+        {
+            <div class="table-container-alt">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="th-w-75 mobil-display-none">Id</th>
+                            <th class="th-w-75 mobil-display-none">Sipariş No</th>
+                            <th class="th-w-75 mobil-display-none">Sipariş Durumu</th>
+                            <th class="th-w-75 mobil-display-none">Sipariş Tutarı</th>
+                            <th class="th-w-75">Genel Toplam</th>
+                            <th class="th-w-75">Ödeme Tipi</th>
+                            <th class="th-w-75">Sipariş Tarihi</th>
+                            <th colspan="3"></th>
+                            @* <th></th> *@
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.Orders) {
+                            <tr>
+                                <td class="slice mobil-display-none">@item.OrderId</td>
+                                <td class="slice mobil-display-none">@item.OrderNumber</td>
+                                <td class="slice mobil-display-none">@item.OrderState</td>
+                                <td class="slice mobil-display-none">@item.OrderTotalPrice.ToString("c")</td>
+                                <td class="slice">@item.OrderGenelPrice.ToString("c")</td>
+                                <td class="slice">@item.OrderPaymentType</td>
+                                <td class="slice">@item.OrderDateTime</td>
+
+                                <td class="td-buton-edit">
+                                    <form asp-controller="Order" asp-action="OrderDetail" asp-route-id="@item.OrderId" method="get">
+                                        <button type="submit">
+                                            <img src="/img/admin-img/view.png" alt="">
+                                        </button>
+                                    </form>
+                                </td>
+
+                                <td class="td-buton-edit">
+                                    <form asp-controller="Order" asp-action="OrderEdit" asp-route-id="@item.OrderId" method="get">
+                                        <button type="submit">
+                                            <img src="/img/admin-img/pencil.png" alt="">
+                                        </button>
+                                    </form>
+                                </td>
+
+                                <td class="td-buton-del">
+                                    <form asp-controller="Order" asp-action="OrderDelete" asp-route-id="@item.OrderId" method="post">
+                                        <button type="submit" onclick="return silOnayla();">
+                                            <img src="/img/admin-img/delete.png" alt="">
+                                        </button>
+                                    </form>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        } else
+        {
+            if (Model.UserOrders.Count() > 0)
+            {
+                <div class="table-container-alt">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="th-w-75 mobil-display-none">Id</th>
+                                <th class="th-w-75 mobil-display-none">Sipariş No</th>
+                                <th class="th-w-75 mobil-display-none">Sipariş Durumu</th>
+                                <th class="th-w-75 mobil-display-none">Sipariş Tutarı</th>
+                                <th class="th-w-75">Genel Toplam</th>
+                                <th class="th-w-75">Ödeme Tipi</th>
+                                <th class="th-w-75">Sipariş Tarihi</th>
+                                <th colspan="3"></th>
+                                @* <th></th> *@
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model.UserOrders) {
+                                <tr>
+                                    <td class="slice mobil-display-none">@item.OrderId</td>
+                                    <td class="slice mobil-display-none">@item.OrderNumber</td>
+                                    <td class="slice mobil-display-none">@item.OrderState</td>
+                                    <td class="slice mobil-display-none">@item.OrderTotalPrice.ToString("c")</td>
+                                    <td class="slice">@item.OrderGenelPrice.ToString("c")</td>
+                                    <td class="slice">@item.OrderPaymentType</td>
+                                    <td class="slice">@item.OrderDateTime</td>
+
+                                    <td class="td-buton-edit">
+                                        <form asp-controller="Order" asp-action="OrderDetail" asp-route-id="@item.OrderId" method="get">
+                                            <button type="submit">
+                                                <img src="/img/admin-img/view.png" alt="">
+                                            </button>
+                                        </form>
+                                    </td>
+
+                                    <td class="td-buton-edit">
+                                        <form asp-controller="Order" asp-action="OrderEdit" asp-route-id="@item.OrderId" method="get">
+                                            <button type="submit">
+                                                <img src="/img/admin-img/pencil.png" alt="">
+                                            </button>
+                                        </form>
+                                    </td>
+
+                                    <td class="td-buton-del">
+                                        <form asp-controller="Order" asp-action="OrderDelete" asp-route-id="@item.OrderId" method="post">
+                                            <button type="submit" onclick="return silOnayla();">
+                                                <img src="/img/admin-img/delete.png" alt="">
+                                            </button>
+                                        </form>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            } else
+            {
+                <h4>Listelenecek Sipariş Bulunamadı</h4>
+            }
+        }
+    </div>
+</div>

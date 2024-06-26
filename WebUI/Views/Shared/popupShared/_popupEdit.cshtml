@@ -1,0 +1,53 @@
+@model PopupModel
+
+<div class="title">
+    <h2>POPUP DÜZENLE</h2>
+</div>
+<div class="content">
+    <div class="form-container">
+        <div class="table-btn-geri-box">
+            <a class="table-btn-geri" asp-controller="Popup" asp-action="PopupList">Geri</a>
+        </div>
+        <form class="form-container-alt" asp-controller="Popup" asp-action="PopupEdit" method="post" enctype="multipart/form-data">
+            <input type="hidden" asp-for="PopupId">
+            <input type="hidden" asp-for="PopupSort">
+            <div class="form-item-1">
+                <span class="validation" asp-validation-for="PopupTitle"></span>
+                <label>Ad</label>
+                <input asp-for="PopupTitle" type="text">
+            </div>
+            <div class="form-item-1">
+                <span class="validation" asp-validation-for="PopupDescription"></span>
+                <label>Açıklama</label>
+                <input asp-for="PopupDescription" type="text">
+            </div>
+            <div class="form-item-1">
+                <span class="validation" asp-validation-for="PopupImage"></span>
+                <label class="resim-label">Resim <span class="tavsiye">(önerilen boyut: 500 x 500)</span></label>
+                <input type="hidden" asp-for="PopupImage"> @* Validationdan sonra sayfa yenilenirse, DB'den gelen AboutImage değerini sakladık *@
+                <img src="~/img/@Model.PopupImage" alt="" class="form-img">
+                <input class="resim-input" type="file" name="file">
+            </div>
+            <div class="form-item-1">
+                <span class="validation" asp-validation-for="PopupLink"></span>
+                <label>Link</label>
+                <input asp-for="PopupLink" type="text">
+            </div>
+            <div class="form-item-1">
+                <label>Onay Durumu</label>
+                <select asp-for="PopupApproval" class="select">
+                    @if (Model.PopupApproval) {
+                        <option selected value="True">Evet</option>
+                        <option value="False">Hayır</option>
+                    } else {
+                        <option value="True">Evet</option>
+                        <option selected value="False">Hayır</option>
+                    }
+                </select>
+            </div>
+            <div class="form-btn-kaydet-box">
+                <button class="form-btn-kaydet" type="submit">Kaydet</button>
+            </div>
+        </form>
+    </div>
+</div>

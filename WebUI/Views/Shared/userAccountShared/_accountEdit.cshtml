@@ -1,0 +1,73 @@
+@model AccountEditModel
+
+
+<div class="my-information-container">
+    <div class="my-information-box">
+
+        <div class="user-form-container">
+            <form class="user-form" asp-controller="UserAccount" asp-action="AccountEdit" method="post">
+                <input type="hidden" asp-for="UserId">
+                <div class="user-form-item-2">
+                    <div class="user-form-item-1">
+                        <span class="user-validation" asp-validation-for="UserAdi"></span>
+                        <label for="">Adınız *</label>
+                        <input asp-for="UserAdi" type="text">
+                    </div>
+                    <div class="user-form-item-1">
+                        <span class="user-validation" asp-validation-for="UserSoyadi"></span>
+                        <label for="">Soyadınız *</label>
+                        <input asp-for="UserSoyadi" type="text">
+                    </div>
+                </div>
+                <div class="user-form-item-2">
+                    <div class="user-form-item-1">
+                        <span class="user-validation" asp-validation-for="UserBirthDate"></span>
+                        <label for="">Doğum Tarihiniz (Boş ise 1 kez değiştirilir)</label>
+                        <input type="date" asp-for="UserBirthDate">
+                    </div>
+                    <div class="user-form-item-1">
+                        <span class="user-validation" asp-validation-for="UserCinsiyet"></span>
+                        <label for="">Cinsiyetiniz</label>
+                        <select asp-for="UserCinsiyet">
+                            <option value="Seçiniz" disabled selected>Seçiniz</option>
+                            <option value="Kadın">Kadın</option>
+                            <option value="Erkek">Erkek</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="user-form-item-1">
+                    <span class="user-validation" asp-validation-for="PhoneNumber"></span>
+                    <label for="">Telefon Numaranız</label>
+                    <input asp-for="PhoneNumber" type="number" placeholder="+90(___)-___-__-__">
+                </div>
+                <div class="user-form-item-1">
+                    <span class="user-validation" asp-validation-for="Email"></span>
+                    <label for="">Mail Adresiniz *</label>
+                    <input asp-for="Email" type="email">
+                </div>
+                <div class="user-form-item-1">
+                    <span class="user-validation" asp-validation-for="Password"></span>
+                    <label for="Password">Mevcut Şifreniz</label>
+                    <input asp-for="Password" type="text">
+                </div>
+                <div class="user-form-item-2">
+                    <div class="user-form-item-1">
+                        <span class="user-validation" asp-validation-for="NewPassword"></span>
+                        <label for="NewPassword">Yeni Şifreniz</label>
+                        <input id="NewPassword" name="NewPassword" type="password">
+                    </div>
+                    <div class="user-form-item-1">
+                        <span class="user-validation" asp-validation-for="NewRePassword"></span>
+                        <label for="NewRePassword">Yeni Şifreniz Tekrar</label>
+                        <input id="NewRePassword" name="NewRePassword" type="password">
+                    </div>
+                </div>
+                <div class="user-form-btn-box">
+                    <button class="user-form-btn-kaydet" type="submit">Kaydet</button>
+                    <a class="user-form-btn-geri" asp-controller="UserAccount" asp-action="AccountIndex">Geri</a>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>

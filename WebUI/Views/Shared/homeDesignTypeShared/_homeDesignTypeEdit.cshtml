@@ -1,0 +1,54 @@
+@model HomeDesignTypeModel
+    
+<div class="title">
+    <h2>DİZAYN DÜZENLE</h2>
+</div>
+<div class="content">
+    <div class="form-container">
+        <div class="table-btn-geri-box">
+            <a class="table-btn-geri" asp-controller="HomeDesignType" asp-action="HomeDesignTypeList">Geri</a>
+        </div>
+        <form class="form-container-alt" asp-controller="HomeDesignType" asp-action="HomeDesignTypeEdit" method="post">
+            <input type="hidden" asp-for="HomeDesignTypeId">
+            <input type="hidden" asp-for="HomeDesignTypeSort">
+            <input type="hidden" asp-for="HomeDesignTypeOption">
+            <div class="form-item-1">
+                <span class="validation" asp-validation-for="HomeDesignTypeName"></span>
+                <label>Ad *</label>
+                <input asp-for="HomeDesignTypeName" type="text">
+            </div>
+            <div class="form-item-1">
+                <label>Tasarım Tipi</label>
+                @if (Model.HomeDesignTypeOption == "Banner")
+                {
+                    <select asp-for="HomeDesignTypeBannerList" class="select">
+                        <option value="Tekli">Her bir satırda 1 banner</option>
+                        <option value="Uclu">Her bir satırda 3 banner</option>
+                    </select>
+                }
+                @if (Model.HomeDesignTypeOption == "List")
+                {
+                    <select asp-for="HomeDesignTypeProductList" class="select">
+                        <option value="Standart">Kaydırma yok</option>
+                        <option value="Kaydirmali">Kaydırma var</option>
+                    </select>
+                }
+            </div>
+            <div class="form-item-1">
+                <label>Onay Durumu</label>
+                <select asp-for="HomeDesignTypeApproval" class="select">
+                    @if (Model.HomeDesignTypeApproval) {
+                        <option selected value="True">Evet</option>
+                        <option value="False">Hayır</option>
+                    } else {
+                        <option value="True">Evet</option>
+                        <option selected value="False">Hayır</option>
+                    }
+                </select>
+            </div>
+            <div class="form-btn-kaydet-box">
+                <button class="form-btn-kaydet" type="submit">Kaydet</button>
+            </div>
+        </form>
+    </div>
+</div>

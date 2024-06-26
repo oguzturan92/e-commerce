@@ -1,0 +1,37 @@
+@model DescriptionModel
+    
+<div class="title">
+    <h2>AÇIKLAMA DÜZENLE</h2>
+</div>
+<div class="content">
+    <div class="form-container">
+        <div class="table-btn-geri-box">
+            <a class="table-btn-geri" asp-controller="Description" asp-action="DescriptionList" asp-route-id="@Model.ProductId">Geri</a>
+        </div>
+        <form class="form-container-alt" asp-controller="Description" asp-action="DescriptionEdit" method="post" enctype="multipart/form-data">
+            <input type="hidden" asp-for="DescriptionId">
+            <input type="hidden" asp-for="DescriptionSort">
+            <input type="hidden" asp-for="ProductId">
+            <div class="form-item-1">
+                <span class="validation" asp-validation-for="DescriptionName"></span>
+                <label>Ad *</label>
+                <input asp-for="DescriptionName" type="text">
+            </div>
+            <div class="form-item-1">
+                <span class="validation" asp-validation-for="DescriptionContent"></span>
+                <label>Açıklama</label>
+                <textarea asp-for="DescriptionContent" id="CkEditor"></textarea>
+            </div>
+            <div class="form-item-1">
+                <label>Onay Durumu</label>
+                <select asp-for="DescriptionApproval" class="select">
+                    <option value="True">Evet</option>
+                    <option value="False">Hayır</option>
+                </select>
+            </div>
+            <div class="form-btn-kaydet-box">
+                <button class="form-btn-kaydet" type="submit">Kaydet</button>
+            </div>
+        </form>
+    </div>
+</div>

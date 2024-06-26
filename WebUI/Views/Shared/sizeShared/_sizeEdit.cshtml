@@ -1,0 +1,49 @@
+@model SizeModel
+
+<div class="title">
+    <h2>ALT VARYASYON DÜZENLE</h2>
+</div>
+<div class="content">
+    <div class="form-container">
+        <div class="table-btn-geri-box">
+            <a class="table-btn-geri" asp-controller="Size" asp-action="SizeList" asp-route-id="@Model.SizeTypeId">Geri</a>
+        </div>
+        <form class="form-container-alt" asp-controller="Size" asp-action="SizeEdit" method="post" enctype="multipart/form-data">
+            <input type="hidden" asp-for="SizeId">
+            <input type="hidden" asp-for="SizeSort">
+            <input type="hidden" asp-for="SizeTypeId">
+            <div class="form-item-2">
+                <div class="form-item-1">
+                    <span class="validation" asp-validation-for="SizeTitle"></span>
+                    <label>Ad</label>
+                    <input asp-for="SizeTitle" type="text">
+                </div>
+                <div class="form-item-1">
+                    <span class="validation" asp-validation-for="SizeWriteOrImg"></span>
+                    <label>Listeleme Tipi</label>
+                    <select asp-for="SizeWriteOrImg" class="select">
+                        <option value="Yazi">Yazı</option>
+                        <option value="Resim">Resim</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-item-1">
+                <span class="validation" asp-validation-for="SizeWrite"></span>
+                <label>Yazı</label>
+                <input asp-for="SizeWrite" type="text">
+            </div>
+            <div class="form-item-1">
+                <label class="resim-label">Resim</label>
+                <input type="hidden" asp-for="SizeImage"> @* Validationdan sonra sayfa yenilenirse, DB'den gelen BlogImage değerini sakladık *@
+                @if (Model.SizeImage != null)
+                {
+                    <img src="~/img/img-size/@Model.SizeImage" alt="" class="form-img">
+                }
+                <input class="resim-input" type="file" name="file">
+            </div>
+            <div class="form-btn-kaydet-box">
+                <button class="form-btn-kaydet" type="submit">Kaydet</button>
+            </div>
+        </form>
+    </div>
+</div>

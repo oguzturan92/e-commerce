@@ -1,0 +1,58 @@
+@model SubscribeModel
+
+<div class="title">
+    <h2>ABONE DÜZENLE</h2>
+</div>
+<div class="content">
+    <div class="form-container">
+        <div class="table-btn-geri-box">
+            <a class="table-btn-geri" asp-controller="Subscribe" asp-action="SubscribeList">Geri</a>
+        </div>
+        <form class="form-container-alt" asp-controller="Subscribe" asp-action="SubscribeEdit" method="post">
+            <input type="hidden" asp-for="SubscribeId">
+            <input type="hidden" asp-for="SubscribeDate">
+            <input type="hidden" asp-for="SubscribeToken">
+            <div class="form-item-2">
+                <div class="form-item-1">
+                    <span class="validation" asp-validation-for="SubscribeMail"></span>
+                    <label for="SubscribeMail">e Mail</label>
+                    <input asp-for="SubscribeMail" type="text">
+                </div>
+                <div class="form-item-1">
+                    <span class="validation" asp-validation-for="SubscribeDate"></span>
+                    <label>Kayıt Tarihi</label>
+                    <input asp-for="SubscribeDate" type="text" disabled>
+                </div>
+            </div>
+            <div class="form-item-2">
+                <div class="form-item-1">
+                    <label for="SubscribeMailApproval">e Mail Onay</label>
+                    <select asp-for="SubscribeMailApproval" class="select">
+                        @if (Model.SubscribeMailApproval) {
+                            <option selected value="True">Evet</option>
+                            <option value="False">Hayır</option>
+                        } else {
+                            <option value="True">Evet</option>
+                            <option selected value="False">Hayır</option>
+                        }
+                    </select>
+                </div>
+                <div class="form-item-1">
+                    <label for="SubscribeContactApproval">İletişim Onay</label>
+                    <select asp-for="SubscribeContactApproval" class="select">
+                        @if (Model.SubscribeContactApproval) {
+                            <option selected value="True">Evet</option>
+                            <option value="False">Hayır</option>
+                        } else {
+                            <option value="True">Evet</option>
+                            <option selected value="False">Hayır</option>
+                        }
+                    </select>
+                </div>
+            </div>
+            <div class="form-btn-kaydet-box">
+                <button class="form-btn-kaydet" type="submit">Kaydet</button>
+            </div>
+        </form>
+    </div>
+</div>

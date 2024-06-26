@@ -1,0 +1,61 @@
+@model AdresModel
+
+<div class="title">
+    <h2>ADRES LİSTESİ</h2>
+</div>
+<div class="content">
+    <div class="table-container">
+        <div class="table-btn-geri-box">
+            <a class="table-btn-geri" asp-controller="AdminAccount" asp-action="IndexAccount">Geri</a>
+        </div>
+        @if (Model.Adreses.Count() > 0)
+        {
+            <div class="table-container-alt">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="th-w-auto">Ad Soyad</th>
+                            <th class="th-w-auto">Fatura Tipi</th>
+                            <th class="th-w-auto">İlçe</th>
+                            <th class="th-w-auto">İl</th>
+                            <th colspan="2"></th>
+                            @* <th></th> *@
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.Adreses) {
+                            <tr>
+                                <td class="slice">@item.AdresNameSurname</td>
+                                
+                                <td class="slice">@item.AdresFaturaType</td>
+
+                                <td class="slice">@item.AdresCounty</td>
+
+                                <td class="slice">@item.AdresCity</td>
+
+                                <td class="td-buton-edit">
+                                    <form asp-controller="Adres" asp-action="AdresEditUser" asp-route-id="@item.AdresId" method="get">
+                                        <button type="submit">
+                                            <img src="/img/admin-img/pencil.png" alt="">
+                                        </button>
+                                    </form>
+                                </td>
+
+                                <td class="td-buton-del">
+                                    <form asp-controller="Adres" asp-action="AdresDeleteUser" asp-route-id="@item.AdresId" method="post">
+                                        <button type="submit" onclick="return silOnayla();">
+                                            <img src="/img/admin-img/delete.png" alt="">
+                                        </button>
+                                    </form>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        } else
+        {
+            <h4>Listelenecek Adres Bulunamadı</h4>
+        }
+    </div>
+</div>

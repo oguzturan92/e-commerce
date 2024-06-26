@@ -1,0 +1,48 @@
+@model CargoModel
+
+<div class="title">
+    <h2>BANKA HESABI EKLE</h2>
+</div>
+<div class="content">
+    <div class="form-container">
+        <div class="table-btn-geri-box">
+            <a class="table-btn-geri" asp-controller="Cargo" asp-action="CargoList">Geri</a>
+        </div>
+        <form class="form-container-alt" asp-controller="Cargo" asp-action="CargoCreate" method="post">
+            <div class="form-item-3">
+                <div class="form-item-1">
+                    <span class="validation" asp-validation-for="CargoName"></span>
+                    <label>Ad *</label>
+                    <input asp-for="CargoName" type="text">
+                </div>
+                <div class="form-item-1">
+                    <span class="validation" asp-validation-for="CargoFreePrice"></span>
+                    <label>Ücretsiz Kargo Limiti *</label>
+                    <input asp-for="CargoFreePrice" type="text">
+                </div>
+                <div class="form-item-1">
+                    <span class="validation" asp-validation-for="CargoPrice"></span>
+                    <label>Kargo Ücreti *</label>
+                    <input asp-for="CargoPrice" type="text">
+                </div>
+            </div>
+            <div class="form-item-2">
+                <div class="form-item-1">
+                    <span class="validation" asp-validation-for="CargoSort"></span>
+                    <label>Sıra Numarası</label>
+                    <input asp-for="CargoSort" type="text">
+                </div>
+                <div class="form-item-1">
+                    <label>Onay Durumu</label>
+                    <select asp-for="CargoApproval" class="select">
+                        <option value="False">Hayır</option>
+                        <option value="True">Evet</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-btn-kaydet-box">
+                <button class="form-btn-kaydet" type="submit">Kaydet</button>
+            </div>
+        </form>
+    </div>
+</div>

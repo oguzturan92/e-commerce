@@ -1,0 +1,121 @@
+
+.admin-container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+.nav-container {
+    min-height: 100vh;
+    min-width: 200px;
+    background-color: #2C3E50;
+}
+.content-container {
+    position: relative;
+    background-color: #f5f5f5;
+    flex: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* YUKARISI, MOBİLDE DE KULLANLIYOR */
+
+/* NAVBAR ------------------------------------------------------------------------- */
+.admin-user {
+    margin: 20px;
+    padding: 0px;
+}
+.admin-user li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #2C3E50;
+    margin: 0px;
+    border-bottom: 1px solid #fff;
+}
+
+.admin-user i{
+    color: #fff;
+}
+.admin-user li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px solid #ffffff1f;
+    padding: 10px 0px;
+}
+
+#admin-nav-ul {
+    margin: 0px;
+    padding: 0px;
+}
+#admin-nav-ul li {
+    list-style: none;
+}
+#admin-nav-ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px solid #ffffff1f;
+    padding: 10px 25px;
+    font-size: 14px;
+}
+#admin-nav-ul li a:hover {
+    background-color: #44607d;
+    border-left: 7px solid #1dd144;
+    padding-left: 18px;
+}
+#admin-nav-ul li:last-child a:hover {
+    background-color: #44607d;
+    border-left: 7px solid #E6644A;
+    padding-left: 18px;
+}
+.admin-nav-active {
+    background-color: #44607d;
+    border-left: 7px solid #1dd144;
+    padding-left: 18px!important;
+}
+
+
+/* CONTENT ------------------------------------------------------------------------- */
+.title {
+    margin-top: 20px;
+    background-color: #fff;
+    width: 100%;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.title p {
+    margin: 0px;
+}
+
+
+@media (max-width: 992px) {
+    .nav-container {
+        min-width: 150px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .title {
+        height: 50px;
+    }
+    .title h2 {
+        margin: 0px;
+        font-size: 20px;
+    }
+    .admin-container {
+        flex-direction: column;
+    }
+    .nav-container {
+        display: none;
+    }
+    .mobil-display-none {
+        display: none;
+    }
+}

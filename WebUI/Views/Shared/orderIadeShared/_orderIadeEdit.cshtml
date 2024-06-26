@@ -1,0 +1,109 @@
+@model OrderIadeModel
+
+<div class="title">
+    <h2>İADE DÜZENLE</h2>
+</div>
+<div class="content">
+    <div class="form-container">
+        <div class="table-btn-geri-box">
+            <a class="table-btn-geri" asp-controller="OrderIade" asp-action="OrderIadeList">Geri</a>
+        </div>
+        <form class="form-container-alt" asp-controller="OrderIade" asp-action="OrderIadeEdit" method="post">
+            <input type="hidden" asp-for="OrderIade.OrderId">
+            <input type="hidden" asp-for="OrderIade.OrderLineId">
+            <input type="hidden" asp-for="OrderIade.OrderIadeId">
+            <div class="form-item-1">
+                <label for="Order.OrderNote">İade Nedeni</label>
+                <input value="@Model.OrderIade.OrderIadeNedeni" type="text" disabled>
+            </div>
+            <div class="form-item-1">
+                <label for="Order.OrderNote">Not</label>
+                <div class="form-content">
+                    <p>@Model.OrderIade.OrderIadeNot</p>
+                </div>
+            </div>
+            <div class="form-item-1">
+                <label for="Order.OrderNote">Banka Adı</label>
+                <input value="@Model.OrderIade.BankName" type="text" disabled>
+            </div>
+            <div class="form-item-1">
+                <label for="Order.OrderNote">Iban</label>
+                <input value="@Model.OrderIade.BankIban" type="text" disabled>
+            </div>
+            <div class="form-item-2">
+                <div class="form-item-1">
+                    <label for="Order.OrderDateTime">İade Başvuru Tarihi</label>
+                    <input value="@Model.OrderIade.OrderIadeDate" type="text" disabled>
+                </div>
+                <div class="form-item-1">
+                    <label for="Order.OrderNumber">Sipariş Numarası</label>
+                    <input value="@Model.OrderIade.OrderId" type="text" disabled>
+                </div>
+            </div>
+
+        <div class="table-container-alt" style="margin: 10px 0px;">
+            <table>
+                <thead>
+                    <tr>
+                        <th class="th-w-50">Id</th>
+                        <th class="th-w-75">Ürün Kodu</th>
+                        <th class="th-w-auto">Ürün Adı</th>
+                        <th class="th-w-75">Özellik</th>
+                        <th class="th-w-75">İade Adet</th>
+                        <th class="th-w-100">Birim Fiyatı</th>
+                        <th class="th-w-100">İ. Fiyatı</th>
+                        <th class="th-w-100">İade Tutarı</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>@Model.OrderIade.IadeUrunId</td>
+                        <td>@Model.OrderIade.IadeUrunKodu</td>
+                        <td class="td-yazi">
+                            <a asp-controller="Product" asp-action="ProductDetail" asp-route-id="@Model.OrderIade.IadeUrunId" target="_blank">@Model.OrderIade.IadeUrunAdi</a>
+                        </td>
+                        <td>@Model.OrderIade.IadeUrunOzellik</td>
+                        <td>@Model.OrderIade.IadeUrunAdet</td>
+                        <td>@Model.OrderIade.IadeUrunBirimFiyati.ToString("c")</td>
+                        <td>@Model.OrderIade.IadeUrunIndirimFiyati.ToString("c")</td>
+                        @if (Model.OrderIade.IadeUrunIndirimFiyati != 0)
+                        {
+                            <td>@((Model.OrderIade.IadeUrunIndirimFiyati * Model.OrderIade.IadeUrunAdet).ToString("c"))</td>
+                        } else
+                        {
+                            <td>@((Model.OrderIade.IadeUrunBirimFiyati * Model.OrderIade.IadeUrunAdet).ToString("c"))</td>
+                        }
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+            <div class="form-item-1">
+                <label>İade Onayı</label>
+                    @if (Model.OrderIade.OrderIadeApproval == "Ret" || Model.OrderIade.OrderIadeApproval == "Onay")
+                    {
+                        <select asp-for="OrderIade.OrderIadeApproval" disabled class="select">
+                            <option value="Bekliyor" disabled>Bekliyor</option>
+                                <option value="Ret" disabled>Ret</option>
+                                <option value="Onay" disabled>Onay</option>
+                        </select>
+                    } else
+                    {
+                        <select asp-for="OrderIade.OrderIadeApproval" class="select">
+                            <option value="Bekliyor" disabled>Bekliyor</option>
+                                <option value="Ret">Ret</option>
+                                <option value="Onay">Onay</option>
+                        </select>
+                    }
+                        @* <select asp-for="OrderIade.OrderIadeApproval" class="select">
+                            <option value="Bekliyor" disabled>Bekliyor</option>
+                                <option value="Ret">Ret</option>
+                                <option value="Onay">Onay</option>
+                        </select> *@
+            </div>
+            <div class="form-btn-kaydet-box">
+                <button class="form-btn-kaydet" type="submit">Kaydet</button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,52 @@
+@model EftHavaleModel
+
+<div class="title">
+    <h2>HAVALE BİLDİRİM LİSTESİ</h2>
+</div>
+<div class="content">
+    <div class="table-container">
+        @if (Model.EftHavales.Count() > 0)
+        {
+            <div class="table-container-alt">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="th-w-auto">Tarih</th>
+                            <th class="th-w-120 mobil-display-none">Sipariş No</th>
+                            <th class="th-w-120">Banka</th>
+                            <th class="th-w-120">Tutar</th>
+                            <th class="th-w-auto mobil-display-none">Not</th>
+                            <th colspan="1"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.EftHavales) {
+                            <tr>
+                                <td>@item.EftHavaleDateTime</td>
+                                
+                                <td class="mobil-display-none">@item.EftHavaleOrderNumber</td>
+
+                                <td>@item.EftHavaleBankName</td>
+
+                                <td>@item.EftHavaleOrderPrice</td>
+
+                                <td class="mobil-display-none">@item.EftHavaleContent</td>
+
+                                <td class="td-buton-del">
+                                    <form asp-controller="EftHavale" asp-action="EftHavaleDelete" asp-route-id="@item.EftHavaleId" method="post">
+                                        <button type="submit" onclick="return silOnayla();">
+                                            <img src="/img/admin-img/delete.png" alt="">
+                                        </button>
+                                    </form>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        } else
+        {
+            <h4>Listelenecek Havale Bildirimi Bulunamadı</h4>
+        }
+    </div>
+</div>

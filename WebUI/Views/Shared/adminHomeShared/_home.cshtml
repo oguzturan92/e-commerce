@@ -1,0 +1,39 @@
+@model AdminHomeModel
+
+<div class="title">
+    <h2>ANA SAYFA</h2>
+</div>
+<div class="content">
+    <div class="table-container">
+        <div class="home-boxes">
+            <a asp-controller="Product" asp-action="ProductList" class="home-box-a box-1">
+                <div>
+                    <h3>Ürün</h3>
+                    <p>@Model.Product</p>
+                </div>
+                <i class="fa-solid fa-bookmark"></i>
+            </a>
+            <a asp-controller="Message" asp-action="MessageList" class="home-box-a box-2">
+                <div>
+                    <h3>Mesaj</h3>
+                    <p>@Model.Message</p>
+                </div>
+                <i class="fa-solid fa-envelope"></i>
+            </a>
+            <a asp-controller="Subscribe" asp-action="SubscribeList" class="home-box-a box-4">
+                <div>
+                    <h3>Abone</h3>
+                    <p>@Model.Subscribe</p>
+                </div>
+                <i class="fa-solid fa-book"></i>
+            </a>
+            <a asp-controller="AdminAccount" asp-action="IndexAccount" class="home-box-a box-5">
+                <div>
+                    <h3>Kullanıcı</h3>
+                    <p>@Model.User</p>
+                </div>
+                <i class="fa-solid fa-user"></i>
+            </a>
+        </div>
+    </div>
+</div>

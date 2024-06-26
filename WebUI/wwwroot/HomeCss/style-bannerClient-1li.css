@@ -1,0 +1,87 @@
+
+
+.banner-single-container {
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.banner-single-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.banner-single-img {
+    width: 100%;
+    height: 100%;
+    transition: .5s;
+}
+.banner-single-item:hover .banner-single-img {
+    transform: scale(1.01);
+}
+
+.banner-single-bg {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    opacity: 0;
+    transition: .5s;
+}
+.banner-single-item:hover .banner-single-bg {
+    opacity: .3;
+}
+
+.banner-single-content {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    transition: .3s;
+}
+.banner-single-item:hover .banner-single-content {
+    top: 50%;
+}
+
+.banner-single-content h3 {
+    color: #fff;
+    margin: 20px;
+    font-size: 40px;
+    font-weight: 300;
+}
+
+.banner-single-content button {
+    color: #fff;
+    text-decoration: none;
+    background-color: #ffffff00;
+    border: 1px solid #fff;
+    padding: 15px 50px;
+    transition: .5s;
+    display: block;
+    margin: auto;
+    font-size: 20px;
+    opacity: 0;
+    cursor: pointer;
+}
+.banner-single-content button:hover {
+    color: #c2a18a;
+    background-color: #fff;
+}
+.banner-single-item:hover .banner-single-content button {
+    opacity: 1;
+}
+
+@media (max-width:768px) {
+    .banner-single-content button {
+        display: none;
+    }
+    .banner-single-item:hover .banner-single-content {
+        top: 55%;
+    }
+    .banner-single-content h3 {
+        font-size: 20px;
+    }
+}

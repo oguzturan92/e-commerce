@@ -1,0 +1,680 @@
+@model ProductDetailModel
+
+<div class="product-detail-container" id="product-detail-container">
+    <div class="product-detail-container-alt">
+        <div class="product-category-name">
+
+            @if (Model.CategoryTree.ProductCategories.Count() != 0)
+            {
+                @foreach (var item in Model.CategoryTree.ProductCategories)
+                {
+                    <p><a asp-controller="Category"
+                        asp-action="CategoryListClient"
+                        asp-route-url="@item.Category.CategoryUrl">
+                            @item.Category.CategoryName
+                        </a>
+                    </p>
+
+                    @if (Model.CategoryTree.ProductCategory2s.Count() != 0)
+                    {
+                        @foreach (var item2 in Model.CategoryTree.ProductCategory2s)
+                        {
+                            <p>
+                                <span>></span>
+                                <a asp-controller="Category2"
+                                    asp-action="Category2ListClient"
+                                    asp-route-urlUst="@item.Category.CategoryUrl"
+                                    asp-route-url="@item2.Category2.Category2Url">
+                                        @item2.Category2.Category2Name
+                                </a>
+                            </p>
+
+                            @if (Model.CategoryTree.ProductCategory3s.Count() != 0)
+                            {
+                                @foreach (var item3 in Model.CategoryTree.ProductCategory3s)
+                                {
+                                    <p>
+                                        <span>></span>
+                                        <a asp-controller="Category3"
+                                            asp-action="Category3ListClient"
+                                            asp-route-urlUst="@item.Category.CategoryUrl"
+                                            asp-route-urlUst2="@item2.Category2.Category2Url"
+                                            asp-route-url="@item3.Category3.Category3Url">
+                                                @item3.Category3.Category3Name
+                                        </a>
+                                    </p>
+                                }
+                            }
+
+                        }
+                    }
+
+                }
+            }
+
+            @if (Model.CategoryTree.ProductCategory2s.Count() != 0)
+            {
+                @foreach (var item in Model.CategoryTree.ProductCategory2s)
+                {
+                    <p>
+                        <span>></span>
+                        @* <a asp-controller="Category2"
+                            asp-action="Category2ListClient"
+                            asp-route-urlUst="@item.Category2.Category.CategoryUrl"
+                            asp-route-url="@item.Category2.Category2Url">
+                                @item.Category2.Category2Name
+                        </a> *@
+                        @* @item.Category2.Category.CategoryUrl *@
+                    </p>
+                }
+            }
+
+            @* @if (Model.CategoryTree.ProductCategory3s.Count() != 0)
+            {
+                @foreach (var item in Model.CategoryTree.ProductCategory3s)
+                {
+                    <p>
+                        <span>></span>
+                        <a asp-controller="Category3"
+                            asp-action="Category3ListClient"
+                            asp-route-urlUst="@item.Category3.Category2.Category.CategoryUrl"
+                            asp-route-urlUst2="@item.Category3.Category2.Category2Url"
+                            asp-route-url="@item.Category3.Category3Url">
+                                @item.Category3.Category3Name
+                        </a>
+                    </p>
+                }
+            } *@
+            
+        </div>
+
+        <div id="product-img-zoom-box">
+            <div class="product-img-zoom-alt">
+                <span id="product-img-zoom-close">X</span>
+                <div id="product-img-zoom-img">
+                        <img src="/img/@Model.Product.ProductImages[0].ProductImageName" alt="">
+
+                        <span id="product-img-zoom-left"><</span>
+                        <span id="product-img-zoom-right">></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-detail-box">
+
+            <div class="product-detail-img">
+                <div class="product-detail-img-alt">
+                    <div id="product-detail-img-1">
+                        <img src="/img/@Model.Product.ProductImage" alt="">
+                    </div>
+                    <div class="product-detail-img-2">
+                        <div id="product-detail-img-2-alt">
+                            <div id="product-detail-imgs">
+                                <input type="hidden" id="image-count" value="@Model.Product.ProductImages.Count()">
+                                @foreach (var item in Model.Product.ProductImages)
+                                {
+                                    <img class="product-detail-imgs-2" src="/img/@item.ProductImageName" alt="">
+                                }
+                            </div>
+                        </div>
+                        <span id="product-detail-img-left"><</span>
+                        <span id="product-detail-img-right">></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-detail-content">
+                <div class="product-detail-content-box">
+                    <h2 class="product-detail-name">@Model.Product.ProductName.</h2>
+                    <p class="product-detail-productCode"><span>Ürün Kodu: </span>@Model.Product.ProductCode</p>
+                    <input id="proId" type="hidden" name="@Model.Product.ProductId">
+                    <div class="product-detail-price">
+                        @if (Model.Product.ProductSalePrice == 0)
+                        {
+                            <p>@((Model.Product.ProductPrice).ToString("c"))</p>
+                        } else
+                        {
+                            <p>@((Model.Product.ProductSalePrice).ToString("c"))</p>
+                            <p>@((Model.Product.ProductPrice).ToString("c"))</p>
+                        }
+                    </div>
+                    <p class="product-detail-short-name">@Model.Product.ProductShortName</p>
+                    <form class="product-detail-add-cart" asp-controller="Cart" asp-action="AddToCart">
+                        <input type="hidden" name="productId" value="@Model.Product.ProductId">
+                        <div class="product-detail-add-cart-quantity">
+                            <span id="quantity-down">-</span>
+                            <input id="quantity" type="number" name="quantity" value="1" min="1">
+                            <span id="quantity-up">+</span>
+                        </div>
+                        <input type="hidden" id="productSizeId" name="productSizeId" value="0">
+                        <button class="product-detail-add-cart-btn" type="submit">Sepete Ekle</button>
+                        <button class="product-detail-gelince-haber-ver" type="submit">Gelince Haber Ver</button>
+                        <a class="product-detail-favorite-box" href="#">
+                            <img class="favorite-1" src="/img/img-icon-sabit/favorite.png" alt="">
+                            <img class="favorite-2" src="/img/img-icon-sabit/favorite-hover.png" alt="">
+                            <span id="favorite-button-add"></span>
+                        </a>
+                    </form>
+
+                    @if (!string.IsNullOrEmpty(Model.Product.ProductColor))
+                    {
+                        <div class="product-detail-static-color">
+                            <div class="product-detail-static-color-inputs">
+                                <input type="radio" id="" value="@Model.Product.ProductColor">
+                                <label for="">@Model.Product.ProductColor</label>
+                            </div>
+                        </div>
+                    }
+
+                    @if (Model.SizeType != null)
+                    {
+                        <div class="product-detail-size">
+                            <h4>@Model.SizeType.SizeTypeName</h4>
+                            <div class="product-detail-size-inputs">
+                            @foreach (var size in Model.SizeType.Sizes)
+                            {
+                                if (size.SizeWriteOrImg == "Yazi")
+                                {
+                                    @foreach (var item in size.ProductSizes)
+                                    {
+                                        <input
+                                            type="radio"
+                                            id="@size.SizeId"
+                                            name="@Model.SizeType.SizeTypeName"
+                                            @(item.ProductSizeStock == 0 ? "disabled":"")
+                                        >
+                                        <label class="productSizeId" for="@size.SizeId" value="@item.ProductSizeId" @(item.ProductSizeStock == 0 ? "style=opacity:.3;":"")>@size.SizeWrite</label>
+                                    }
+                                }
+                                if (size.SizeWriteOrImg == "Resim")
+                                {
+                                    @foreach (var item in size.ProductSizes)
+                                    {
+                                        <input
+                                            type="radio"
+                                            id="@size.SizeId"
+                                            name="@Model.SizeType.SizeTypeName"
+                                            @(item.ProductSizeStock == 0 ? "disabled":"")
+                                        >
+                                        <label class="productSizeId" for="@size.SizeId" value="@item.ProductSizeId"><img src="/img/img-size/@size.SizeImage" alt=""></label>
+                                    }
+                                }
+                            }
+                            </div>
+                        </div>
+                    }
+
+                    @if (Model.VariantProducts.Count() > 0)
+                    {
+                        <div class="product-detail-variant-box">
+                            <h4>Seçenekler</h4>
+                            <ul class="product-detail-variant">
+                            @foreach (var item in Model.VariantProducts)
+                            {
+                                <li>
+                                    <a asp-controller="Product" asp-action="ProductDetail" asp-route-url="@item.ProductUrl" asp-route-id="@item.ProductId">
+                                        <img src="/img/@item.ProductImage" alt="@item.ProductName">
+                                    </a>
+                                </li>
+                            }
+                            </ul>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+
+        @if (Model.Product.Descriptions.Count() > 0)
+        {
+            <div class="product-detail-description-container">
+                <div class="product-detail-description-box">
+                    @if (Model.Product.Descriptions != null)
+                    {
+                        @for (int i = 0; i < Model.Product.Descriptions.Count(); i++)
+                        {
+                            <a id="@i" class="product-detail-description-box-a">@Model.Product.Descriptions[i].DescriptionName</a>
+                        }
+                    }
+                </div>
+                <div class="product-detail-description-content">
+                    @if (Model.Product.Descriptions != null)
+                    {
+                        @for (int i = 0; i < Model.Product.Descriptions.Count(); i++)
+                        {
+                            <div id="@i" class="product-detail-description-box-p">
+                                @Html.Raw(Model.Product.Descriptions[i].DescriptionContent)
+                            </div>
+                        }
+                    }
+                </div>
+            </div>
+        }
+
+        @foreach (var liste in Model.Lists)
+        {
+            @if (liste.ListType == "Standart" && liste.ProductLists.Count() > 0)
+            {
+                <div style="margin-top: 50px;">
+                    <p class="prd-dtl-list-container-name">@liste.ListTitle</p>
+                    <div class="prd-dtl-list-container" style="grid-template-columns: repeat(@liste.ListColumn, 1fr);">
+                        @foreach (var item in liste.ProductLists)
+                        {
+                        <div class="prd-dtl-list-card">
+                            <a asp-controller="Product" asp-action="ProductDetail" asp-route-url="@item.Product.ProductUrl" asp-route-id="@item.Product.ProductId">
+                                @if (item.Product.ProductImages.Count() == 1)
+                                {
+                                    <img style="display: block;" class="img-1" src="/img/@item.Product.ProductImages[0].ProductImageName" alt="@item.Product.ProductImages[0].ProductImageName">
+                                }
+                                @if (item.Product.ProductImages.Count() > 1)
+                                {
+                                    <img class="img-1" src="/img/@item.Product.ProductImages[0].ProductImageName" alt="@item.Product.ProductImages[0].ProductImageName">
+                                    <img class="img-2" src="/img/@item.Product.ProductImages[1].ProductImageName" alt="@item.Product.ProductImages[1].ProductImageName">
+                                }
+                            </a>
+                            <div class="prd-dtl-list-info">
+                                @if (item.Product.ProductNew)
+                                {
+                                    <div class="prd-dtl-list-new">
+                                        <p>Yeni</p>
+                                    </div>
+                                }
+                                @if (item.Product.ProductSale)
+                                {
+                                    <div class="prd-dtl-list-sale">
+                                        <p>İndirim</p>
+                                    </div>
+                                }
+                            </div>
+                            <div class="prd-dtl-list-content-container">
+                                <div class="prd-dtl-list-content">
+                                    <p class="prd-dtl-list-content-p">@item.Product.ProductName</p>
+                                    <div class="prd-dtl-list-price">
+                                        @if (item.Product.ProductSalePrice == 0)
+                                        {
+                                            <p class="prd-dtl-list-price-p1">@((item.Product.ProductPrice).ToString("c"))</p>  
+                                        } else
+                                        {
+                                            <p class="prd-dtl-list-price-p1">@((item.Product.ProductSalePrice).ToString("c"))</p>
+                                            <p class="prd-dtl-list-price-p2">@((item.Product.ProductPrice).ToString("c"))</p>
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        }
+                    </div>
+                </div>
+            }
+
+            @if (liste.ListType == "Kaydirmali" && liste.ProductLists.Count() > 0)
+            {
+                <div style="margin-top: 50px;">
+                    <p class="prd-dtl-list-container-name">@liste.ListTitle</p>
+                    <div class="prd-dtl-list-splide-container">
+                        <div id="main-carousel" class="splide">
+                            <div class="splide__track">
+                                <ul class="splide__list">
+                                    @foreach (var item in liste.ProductLists)
+                                    {
+                                        <li class="splide__slide">
+                                            <div class="prd-dtl-list-card">
+                                                <a asp-controller="Product" asp-action="ProductDetail" asp-route-url="@item.Product.ProductUrl" asp-route-id="@item.Product.ProductId">
+                                                    @if (item.Product.ProductImages.Count() == 1)
+                                                    {
+                                                        <img style="display: block;" class="img-1" src="/img/@item.Product.ProductImages[0].ProductImageName" alt="@item.Product.ProductImages[0].ProductImageName">
+                                                    }
+                                                    @if (item.Product.ProductImages.Count() > 1)
+                                                    {
+                                                        <img class="img-1" src="/img/@item.Product.ProductImages[0].ProductImageName" alt="@item.Product.ProductImages[0].ProductImageName">
+                                                        <img class="img-2" src="/img/@item.Product.ProductImages[1].ProductImageName" alt="@item.Product.ProductImages[1].ProductImageName">
+                                                    }
+                                                </a>
+                                                <div class="prd-dtl-list-info">
+                                                    @if (item.Product.ProductNew)
+                                                    {
+                                                        <div class="prd-dtl-list-new">
+                                                            <p>Yeni</p>
+                                                        </div>
+                                                    }
+                                                    @if (item.Product.ProductSale)
+                                                    {
+                                                        <div class="prd-dtl-list-sale">
+                                                            <p>İndirim</p>
+                                                        </div>
+                                                    }
+                                                </div>
+                                                <div class="prd-dtl-list-content-container">
+                                                    <div class="prd-dtl-list-content">
+                                                        <p class="prd-dtl-list-content-p">@item.Product.ProductName</p>
+                                                        <div class="prd-dtl-list-price">
+                                                            @if (item.Product.ProductSalePrice == 0)
+                                                            {
+                                                                <p class="prd-dtl-list-price-p1">@((item.Product.ProductPrice).ToString("c"))</p>  
+                                                            } else
+                                                            {
+                                                                <p class="prd-dtl-list-price-p1">@((item.Product.ProductSalePrice).ToString("c"))</p>
+                                                                <p class="prd-dtl-list-price-p2">@((item.Product.ProductPrice).ToString("c"))</p>
+                                                            }
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    }
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        }
+    </div>
+</div>
+
+<div class="favorite-bg" id="favorite-bg">
+    <div class="favorite-list-box">
+        <div id="favorite-list-box">
+            <table>
+                <tbody id="favorite-tbody">
+                    @* Favori Listesi *@
+                </tbody>
+            </table>
+            <div class="favorite-tablo-btn">
+                <a id="favorite-btn-add">Yeni Oluştur</a>
+                <a id="default-favorite-add">Varsayılana Ekle</a>
+            </div>
+        </div>
+        <div class="favorite-new-text-box" id="favorite-new-text-box">
+            <input type="text" id="favoriteName">
+            <button id="favorite-create-add-btn">Oluştur ve Ekle</button>
+        </div>
+    </div>
+    <div id="favorite-close"></div>
+</div>
+
+<div class="user-bg" id="user-bg">
+    <div class="user-list-box">
+        <div id="user-list-box">
+
+            <div>
+                <div class="user-form">
+                    <p class="user-form-title">Üye Girişi</p>
+                    <div class="user-form-item-1">
+                        <span class="user-validation" id="mail-message"></span>
+                        <label for="">Mail Adresiniz</label>
+                        <input id="user-login-mail" name="" type="Email">
+                    </div>
+                    <div class="user-form-item-1">
+                        <span class="user-validation" id="password-message"></span>
+                        <label for="">Şifreniz</label>
+                        <input id="user-login-password" name="" type="password">
+                    </div>
+                    <div class="user-form-btn-box">
+                        <button class="user-form-btn-kaydet" id="ajax-login-btn">Giriş Yap</button>
+                        <a class="user-form-btn-geri" asp-controller="UserAccount" asp-action="AccountRegister">Kayıt Ol</a>
+                        <a class="sifremi-unuttum-btn" asp-controller="UserAccount" asp-action="SifremiUnuttum">Şifremi Unuttum</a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <div id="user-close"></div>
+</div>
+
+
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script src="~/js/sweetalert2.min.js"></script>
+<script>
+    var productSizeIdCart = document.querySelector("#productSizeId");
+    var productSizeIds = document.querySelectorAll(".productSizeId");
+    var addCart = document.querySelector(".product-detail-add-cart-btn");
+    var gelinceHaberVer = document.querySelector(".product-detail-gelince-haber-ver");
+    for (let productSizeId of productSizeIds)
+    {
+        productSizeId.addEventListener("click", function () {
+            var cartValue = productSizeId.getAttribute("value");
+            productSizeIdCart.setAttribute("value", cartValue);
+            
+            if (productSizeId.previousElementSibling.getAttribute("disabled") != null)
+            {
+                addCart.style.display = "none";
+                gelinceHaberVer.style.display = "block";
+                productSizeIdCart.setAttribute("value", 0);
+            } else {
+                addCart.style.display = "block";
+                gelinceHaberVer.style.display = "none";
+            }
+        })
+    }
+
+</script>
+
+<script>
+
+    var favoriteClose = document.querySelector("#favorite-close");
+
+    var favoriteBg = document.querySelector("#favorite-bg");
+
+    var favoriteList = document.querySelector("#favorite-list-box");
+
+    var favoriteBtnAdd = document.querySelector("#favorite-btn-add");
+
+    var favoriteNewText = document.querySelector("#favorite-new-text-box");
+
+    favoriteClose.addEventListener( 'click', function () {
+        favoriteBg.style.display = "none"
+        favoriteList.style.display = "block"
+        favoriteNewText.style.display = "none"
+    });
+    favoriteBtnAdd.addEventListener( 'click', function () {
+        favoriteList.style.display = "none"
+        favoriteNewText.style.display = "grid"
+    });
+
+    @* User Login *@
+    var userBg = document.querySelector("#user-bg");
+    var userClose = document.querySelector("#user-close");
+    userClose.addEventListener( 'click', function () {
+        userBg.style.display = "none"
+    });
+
+    var proId = @Model.Product.ProductId;
+    $("#favorite-button-add").click(function () {
+
+        $.ajax({
+            type: "Get",
+            url: "/Favorite/FavoriteGetList/",
+            success: function(func1) {
+                let sonuc = jQuery.parseJSON(func1);
+                $("#favorite-tbody").html("");
+                $("#favorite-bg").css("display", "flex");
+
+                $.each(sonuc, function (i, item) {
+                    $('#favorite-tbody').append(
+                        '<tr>' + 
+                            '<th>' + item.FavoriteTitle + '</th>' + 
+                            '<th>' + 
+                                "<a class=favoriAdd value=" + item.FavoriteId + "> Ekle </a>" + 
+                            '</th>' + 
+                        '</tr>'
+                    );
+                });
+
+                $(".favoriAdd").click(function () {
+                    $("#favorite-bg").css("display", "none");
+                    $.ajax({
+                        type: "Get",
+                        url: "/Favorite/FavoriteAddProduct/",
+                        data: { id:$(this).attr('value'),
+                                proId: proId
+                        },
+                        success: function(e) {
+                            let users = jQuery.parseJSON(e);
+                            Swal.fire({
+                                icon: 'success',
+                                title: 'Favori grubuna eklendi.',
+                                showConfirmButton: false,
+                                timer: 1500,
+                                showClass: {
+                                    popup: 'animate__animated animate__fadeInDown animate__fast'
+                                }
+                            })
+                        },
+                        error: function(e) {
+                            Swal.fire({
+                                icon: 'warning',
+                                title: 'Bu ürün bu gruba zaten eklenmiş ya da favori grubu silinmiş olabilir.',
+                                showConfirmButton: false,
+                                timer: 2500,
+                                showClass: {
+                                    popup: 'animate__animated animate__fadeInDown animate__fast'
+                                }
+                            })
+                        }
+                    });
+                });
+            },
+            error: function(e) {
+                $("#user-bg").css("display", "flex");
+                $("#ajax-login-btn").click(function () {
+                    
+                    $.ajax({
+                        type: "Get",
+                        url: "/UserAccount/AccountLoginAjax/",
+                        data: { mail:$("#user-login-mail").val(),
+                                password:$("#user-login-password").val()
+                        },
+                        success: function(e) {
+                            let users = jQuery.parseJSON(e);
+                            $("#user-bg").css("display", "none");
+                            Swal.fire({
+                                icon: 'success',
+                                title: 'Giriş Başarılı.',
+                                showConfirmButton: false,
+                                timer: 1500,
+                                showClass: {
+                                    popup: 'animate__animated animate__fadeInDown animate__fast'
+                                }
+                            })
+                        },
+                        error: function(e) {
+                            if($("#user-login-mail").val() == "")
+                            {
+                                $("#mail-message").text("Mail boş geçilemez")
+                                var timeMessageMail = function(){
+                                    $("#mail-message").text("")
+                                };
+                                setTimeout(timeMessageMail, 1500);
+                            } else
+                            {
+                                if($("#user-login-password").val() == "")
+                                {
+                                    $("#password-message").text("Şifre boş geçilemez")
+                                    var timeMessagePassword = function(){
+                                        $("#password-message").text("")
+                                    };
+                                    setTimeout(timeMessagePassword, 1500);
+                                } else {
+                                    window.location.href = "/UserAccount/AccountLogin";
+                                }
+                            }
+                        }
+                    });
+                        
+                });
+            }
+        });
+
+    });
+
+    $("#favorite-create-add-btn").click(function () {
+        $("#favorite-bg").css("display", "none");
+        $("#favorite-list-box").css("display", "block");
+        $("#favorite-new-text-box").css("display", "none");
+        
+        $.ajax({
+            type: "Get",
+            url: "/Favorite/FavoriteCreateAndAdd/",
+            data: { proId: proId,
+                    favoriteName: $(favoriteName).val()
+            },
+            success: function(e) {
+                let sonuc = jQuery.parseJSON(e);
+                $(favoriteName).val("");
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Favori grubuna eklendi.',
+                    showConfirmButton: false,
+                    timer: 1500,
+                    showClass: {
+                        popup: 'animate__animated animate__fadeInDown animate__fast'
+                    }
+                })
+            }
+        });
+    });
+
+    $("#default-favorite-add").click(function () {
+        $("#favorite-bg").css("display", "none");
+        $("#favorite-list-box").css("display", "block");
+        $("#favorite-new-text-box").css("display", "none");
+        
+        $.ajax({
+            type: "Get",
+            url: "/Favorite/FavoriteDefaultAdnAdd/",
+            data: { proId: proId },
+            success: function(e) {
+                let sonuc = jQuery.parseJSON(e);
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Favori grubuna eklendi.',
+                    showConfirmButton: false,
+                    timer: 1500,
+                    showClass: {
+                        popup: 'animate__animated animate__fadeInDown animate__fast'
+                    }
+                })
+            }
+        });
+    });
+
+</script>
+
+<script>
+    document.addEventListener( 'DOMContentLoaded', function () {
+
+        var siplides = document.getElementsByClassName("splide");
+        for(let splideItem of siplides) {
+
+            const splide = new Splide( splideItem, {
+                type   : 'slide',
+                focus  : 'left',
+                pagination  : false,
+                autoplay: true,
+                pauseOnHover: false,
+                arrows: true,
+                gap: 10,
+                perPage: 4,
+                interval: number = 4000,
+                speed: number = 1000,
+                rewindSpeed: 1000,
+                rewind: boolean = true,
+                breakpoints : {
+                    1000: {
+                        perPage: 3
+                    },
+                    768: {
+                        perPage: 2
+                    },
+                    500: {
+                        perPage: 2
+                    }
+                }
+            });
+            splide.mount();
+        }
+
+    });
+
+</script>

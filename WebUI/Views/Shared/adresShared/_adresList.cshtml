@@ -1,0 +1,37 @@
+@model AdresModel
+
+<div class="address-container">
+    <div class="address-box">
+
+        <div class="address-form-container">
+            <div class="address-back">
+                <a asp-controller="UserAccount" asp-action="AccountIndex">Geri</a>
+            </div>
+            @if (Model.Adreses.Count() > 0)
+            {
+                <table>
+                    <tbody>
+                        @foreach (var item in Model.Adreses)
+                        {
+                            <tr>
+                                <th>@item.AdresTitle</th>
+                                <th><a asp-controller="Adres" asp-action="AdresEdit" asp-route-id="@item.AdresId">Düzenle</a></th>
+                                <th><a asp-controller="Adres" asp-action="AdresDelete" asp-route-id="@item.AdresId">Sil</a></th>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+                <div class="address-add">
+                    <a asp-controller="Adres" asp-action="AdresCreate">Adres Ekle</a>
+                </div>
+            } else
+            {
+                <p>Kayıtlı Adres Bulunamadı</p>
+                <div class="address-add">
+                    <a asp-controller="Adres" asp-action="AdresCreate">Adres Ekle</a>
+                </div>
+            }
+        </div>
+
+    </div>
+</div>

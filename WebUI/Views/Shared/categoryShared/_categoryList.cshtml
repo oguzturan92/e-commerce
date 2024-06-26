@@ -1,0 +1,83 @@
+@model CategoryModel
+
+<div class="title">
+    <h2>ANA KATEGORİ LİSTESİ</h2>
+</div>
+<div class="content">
+    <div class="table-container">
+        <div class="table-btn-ekle-box">
+            <a class="table-btn-ekle" asp-controller="Category" asp-action="CategoryCreate">Ekle</a>
+        </div>
+        @if (Model.Categories.Count() > 0)
+        {
+            <div class="table-container-alt">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="th-w-75">Sıra No</th>
+                            <th class="th-w-75">Resim</th>
+                            <th class="th-w-auto">Ad</th>
+                            <th class="th-w-75">Alt Kategori</th>
+                            <th class="th-w-75 mobil-display-none">Onay</th>
+                            <th colspan="2"></th>
+                            @* <th></th> *@
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.Categories) {
+                            <tr>
+                                <td class="td-w-75">
+                                    <form asp-controller="Category" asp-action="CategoryList" method="post">
+                                        <input type="hidden" name="CategoryId" value="@item.CategoryId">
+                                        <input class="input-sort" type="number" name="CategorySort" value="@item.CategorySort">
+                                    </form>
+                                </td>
+
+                                <td><img src="~/img/@item.CategoryImage" alt=""></td>
+
+                                <td class="slice">@item.CategoryName</td>
+
+                                <td class="td-buton-category-detail">
+                                    <form asp-controller="Category2" asp-action="Category2List" asp-route-id="@item.CategoryId" method="get">
+                                        <button type="submit">
+                                            <img src="/img/admin-img/layer.png" alt="">
+                                        </button>
+                                    </form>
+                                </td>
+
+                                @if (item.CategoryApproval) {
+                                    <td class="mobil-display-none">
+                                        <img src="/img/admin-img/check.png" alt="">
+                                    </td>
+                                } else {
+                                    <td class="mobil-display-none">
+                                        <img src="/img/admin-img/xmark.png" alt="">
+                                    </td>
+                                }
+
+                                <td class="td-buton-edit">
+                                    <form asp-controller="Category" asp-action="CategoryEdit" asp-route-id="@item.CategoryId" method="get">
+                                        <button type="submit">
+                                            <img src="/img/admin-img/pencil.png" alt="">
+                                        </button>
+                                    </form>
+                                </td>
+
+                                <td class="td-buton-del">
+                                    <form asp-controller="Category" asp-action="CategoryDelete" asp-route-id="@item.CategoryId" method="post">
+                                        <button type="submit" onclick="return silOnayla();">
+                                            <img src="/img/admin-img/delete.png" alt="">
+                                        </button>
+                                    </form>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        } else
+        {
+            <h4>Listelenecek Kategori Bulunamadı</h4>
+        }
+    </div>
+</div>

@@ -1,0 +1,46 @@
+@model AccountRegisterModel
+
+<div class="my-information-container">
+    <div class="my-information-box">
+
+        <div class="user-form-container">
+            <form class="user-form" asp-controller="UserAccount" asp-action="AccountRegister" method="post">
+                <p class="user-form-title">Hızlı Kayıt Ol</p>
+                <div class="user-form-item-2">
+                    <div class="user-form-item-1">
+                        <span class="user-validation" asp-validation-for="UserAdi"></span>
+                        <label for="UserAdi">Adınız *</label>
+                        <input asp-for="UserAdi" type="text">
+                    </div>
+                    <div class="user-form-item-1">
+                        <span class="user-validation" asp-validation-for="UserSoyadi"></span>
+                        <label for="UserSoyadi">Soyadınız *</label>
+                        <input asp-for="UserSoyadi" type="text">
+                    </div>
+                </div>
+                <div class="user-form-item-1">
+                    <span class="user-validation" asp-validation-for="Email"></span>
+                    <label for="Email">Mail Adresiniz *</label>
+                    <input asp-for="Email" type="Email">
+                </div>
+                <div class="user-form-item-2">
+                    <div class="user-form-item-1">
+                        <span class="user-validation" asp-validation-for="Password"></span>
+                        <label for="password">Şifreniz *</label>
+                        <input id="password" name="Password" type="password">
+                    </div>
+                    <div class="user-form-item-1">
+                        <span class="user-validation" asp-validation-for="Password"></span>
+                        <label for="password">Şifreniz Tekrar *</label>
+                        <input id="password" name="Password" type="password">
+                    </div>
+                </div>
+                <div class="user-form-btn-box">
+                    <button class="user-form-btn-kaydet" type="submit">Kayıt Ol</button>
+                    <a class="user-form-btn-geri" asp-controller="UserAccount" asp-action="AccountLogin">Giriş Yap</a>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>

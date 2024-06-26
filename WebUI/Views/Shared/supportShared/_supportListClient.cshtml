@@ -1,0 +1,88 @@
+@model SupportModel
+
+<div class="support-container">
+    <div class="support-box">
+        <div class="support-list-box">
+            <div class="support-back">
+                <a asp-controller="UserAccount" asp-action="AccountIndex">Geri</a>
+                <button id="new-support-button" type="button">Yeni Talep</button>
+            </div>
+
+            <form class="support-new-container" asp-controller="Support" asp-action="SupportCreateClient" method="post">
+                <div class="support-new-box">
+                    <div class="support-new">
+                        <span class="validation" asp-validation-for="SupportSubject"></span>
+                        <label for="">Konu *</label>
+                        <input name="SupportSubject" type="text">
+                    </div>
+                    <div class="support-new">
+                        <span class="validation" asp-validation-for="SupportLineContent"></span>
+                        <label for="">Destek Talebiniz *</label>
+                        <textarea name="SupportLineContent" rows="7"></textarea>
+                    </div>
+                </div>
+                <div class="support-new-message-button">
+                    <button type="submit">Gönder</button>
+                    <button id="cancel-support-button" type="button">Vazgeç</button>
+                </div>
+            </form>
+
+            @if (Model.Supports.Count() > 0)
+            {
+                @foreach (var support in Model.Supports)
+                {
+                    <div class="support-list-item">
+                        <div class="support-list-item-title">
+                            <div class="support-liste-item-title-2">
+                                <div class="support-liste-item-title-3">
+                                    <p>Oluşturma Tarihi</p>
+                                    <p>@support.SupportDateTime</p>
+                                </div>
+                                <div class="support-liste-item-title-3">
+                                    <p>Konu</p>
+                                    <p>@support.SupportSubject</p>
+                                </div>
+                                <div class="support-liste-item-title-3">
+                                    <p>Cevap Durumu</p>
+                                    <p>@support.SupportState</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="support-list-message">
+
+                            <form class="support-message-reply-box" asp-controller="Support" asp-action="SupportLineReply" method="post">
+                                <input type="hidden" name="SupportId" value="@support.SupportId">
+                                <input type="hidden" name="SupportSubject" value="@support.SupportSubject">
+                                <div class="support-message-reply-textbox">
+                                    <textarea name="SupportLineContent" id="" rows="5"></textarea>
+                                </div>
+                                <div class="support-message-reply-button">
+                                    <button type="submit">Gönder</button>
+                                </div>
+                            </form>
+
+                            <div class="support-list-message-box">
+                                <div class="support-list-message">
+                                    @foreach (var reply in support.SupportLines)
+                                    {
+                                        <div class="support-list-message-item" style=@(reply.SupportLineAnswering == "Müşteri Hizmetleri" ? "background-color:#efefef;":"")>
+                                            <p><span>Cevap Tarihi : </span>@reply.SupportLineDateTime</p>
+                                            <p><span>@reply.SupportLineAnswering :</span></p>
+                                            <p>@reply.SupportLineContent</p>
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                }
+            } else
+            {
+                <p>Daha önce bir destek talebi oluşturulmamış.</p>
+            }
+
+        </div>
+    </div>
+</div>

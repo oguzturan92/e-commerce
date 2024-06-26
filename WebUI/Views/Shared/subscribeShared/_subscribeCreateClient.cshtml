@@ -1,0 +1,80 @@
+
+
+    <div class="footer-box-subs">
+        <p>Fırsatlardan Haberdar Olmak İçin Bültene Abone Ol</p>
+        <div class="footer-subscribe">
+            <input type="email" id="SubscribeMail" class="footer-subscribe-input" placeholder="e-mail">
+            <button type="button" id="eMailBtn" class="footer-subscribe-button">
+                <img src="~/img/img-icon-sabit/right.png" alt="">
+            </button>
+        </div>
+    </div>
+
+
+@* script linki üstte olacak *@
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script>
+
+    $("#eMailBtn").click(async function () {
+        let values = {
+            SubscribeMail: $("#SubscribeMail").val()
+        };
+        const { value: accept } = await
+            Swal.fire({
+                title: 'İletişim izni',
+                input: 'checkbox',
+                inputValue: 1,
+                inputPlaceholder:
+                    '<a target="_blank" href="/kvkk" class="kvkk-a">Şartları ve koşulları</a> kabul ediyorum.',
+                confirmButtonColor: '#5c5c5c',
+                confirmButtonText: 'Kayıt Ol',
+                inputValidator: (result) => {
+                    return !result && 'Lütfen iletişim iznini onaylayınız..'
+                }
+            })
+
+        if (accept) {
+            $.ajax({
+                type: "Post", // Gideği metot türü Post
+                url: "/Subscribe/SubscribeCreateClient/", // Gideceği Controller ve Action bilgisi
+                data: values, // Veri olarak, values değişkeninden gelen değerleri alacak
+                success: function(func) {
+                    let result = jQuery.parseJSON(func);
+                    $("#SubscribeMail").val(""); // value değerini sıfırlar
+                        Swal.fire({ // Sweetalert mesajı
+                            icon: 'success',
+                            text: 'Lütfen kayıt işleminin tamamlanması için e-mail adresinize gelen onay linkine tıklayın.',
+                            confirmButtonColor: '#5c5c5c',
+                            showConfirmButton: true
+                        })
+                },
+                error: function(func) {
+
+                    Swal.fire({ // Sweetalert mesajı
+                        icon: 'error',
+                        text: 'Geçerli ve daha önce kayıt olmadığınız bir mail adresi giriniz.',
+                        confirmButtonColor: '#5c5c5c',
+                        showConfirmButton: true
+                    })
+                    
+                    @* $("#SubscribeMail").addClass("mail-abone-error-red"); // class ekler *@
+
+                    @* if(values.SubscribeMail == "") {
+                        $("#SubscribeMail").val("e-mail");
+                    }
+
+                    setTimeout(function(){ // 1 saniye sonra black classı ekler ve 1,5 saniye sonra hepsini siler
+                        $("#SubscribeMail").addClass("mail-abone-error-black");
+                    }, 1000);
+
+                    setTimeout(function(){
+                        $("#SubscribeMail").removeClass("mail-abone-error-red");
+                        $("#SubscribeMail").removeClass("mail-abone-error-black");
+                        $("#SubscribeMail").val(values.SubscribeMail);
+                    }, 1500); *@
+                }
+            });
+        }
+    });
+
+</script>

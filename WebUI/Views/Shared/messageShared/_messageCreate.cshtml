@@ -1,0 +1,83 @@
+
+<div class="message-form">
+    <p>İletişim Formu</p>
+    <div class="message-form-tumu">
+        <div class="message-form-content">
+            <div class="form-2">
+                <input type="text" id="messageName" placeholder="Adınız">
+                <input type="text" id="messageSurname" placeholder="Soyadınız">
+            </div>
+            <div class="form-2">
+                <input type="text" id="messageMail" placeholder="Mail Adresiniz *">
+                <input type="number" id="messagePhone" placeholder="Telefon Numaranız">
+            </div>
+            <div class="form-1">
+                <input type="email" id="messageContent" placeholder="Mesajınız *">
+            </div>
+        </div>
+        
+        <button type="button" id="mesajBtn" class="message-form-btn">Gönder</button>
+            
+    </div>
+</div>
+
+@* script linki üstte olacak *@
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script>
+
+    $("#mesajBtn").click(async function () { // eMailBtn'e tıklandığında
+        let entity = { // values adında değişken tanımladık
+            MessageName: $("#messageName").val(), // Email(DB'de denk geleceği colon adı) alanına, eMailInput'un value değerini attık
+            MessageSurname: $("#messageSurname").val(),
+            MessagePhone: $("#messagePhone").val(),
+            MessageMail: $("#messageMail").val(),
+            MessageContent: $("#messageContent").val()
+        };
+        const { value: accept } = await
+            Swal.fire({
+                title: 'İletişim izni',
+                input: 'checkbox',
+                inputValue: 1,
+                inputPlaceholder:
+                    '<a target="_blank" href="/kvkk" class="kvkk-a">Şartları ve koşulları</a> kabul ediyorum.',
+                confirmButtonColor:
+                    '#5c5c5c',
+                confirmButtonText:
+                    'Gönder',
+                inputValidator: (result) => {
+                    return !result && 'Lütfen iletişim iznini onaylayınız..'
+                }
+            })
+        if (accept) {
+            $.ajax({
+                type: "Post", // Gideceği metot türü Post
+                url: "/Message/MessageCreate/", // Gideceği Controller ve Action bilgisi
+                data: entity, // Veri olarak, values değişkeninden gelen değerleri alacak
+                success: function(func) {
+                    let result = jQuery.parseJSON(func);
+                    $("#messageName").val("");
+                    $("#messageSurname").val("");
+                    $("#messagePhone").val("");
+                    $("#messageMail").val("");
+                    $("#messageContent").val(""); // value değerini sıfırlar
+                        Swal.fire({ // Sweetalert mesajı
+                            icon: 'success',
+                            title: 'Mesajınız iletilmiştir.',
+                            showConfirmButton: false,
+                            timer: 1500
+                        })
+                },
+                error: function(func) {
+                    Swal.fire({ // Sweetalert mesajı
+                        icon: 'error',
+                        html: 'Lütfen bilgilerinizi kontrol edip tekrar deneyin.',
+                        showConfirmButton: true,
+                        confirmButtonText: "Tamam",
+                        confirmButtonColor: "#111111"
+                    })
+                }
+            });
+        }
+    });
+
+</script>

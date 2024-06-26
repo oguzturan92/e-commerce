@@ -1,0 +1,72 @@
+@model GiftCardModel
+
+<div class="title">
+    <h2>HEDİYE ÇEKİ LİSTESİ</h2>
+</div>
+<div class="content">
+    <div class="table-container">
+        <div class="table-btn-ekle-box">
+            <a class="table-btn-ekle" asp-controller="GiftCard" asp-action="GiftCardCreate">Ekle</a>
+        </div>
+        @if (Model.GiftCards.Count() > 0)
+        {
+            <div class="table-container-alt">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="th-w-auto">Ad</th>
+                            <th class="th-w-auto">Oran</th>
+                            <th class="th-w-auto">Tutar</th>
+                            <th class="th-w-auto">Tarih</th>
+                            <th class="th-w-75 mobil-display-none">Onay</th>
+                            <th colspan="2"></th>
+                            @* <th></th> *@
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var giftCard in Model.GiftCards) {
+                            <tr>                                
+                                <td class="slice">@giftCard.GiftCardTitle</td>
+
+                                <td class="slice">@giftCard.GiftCardOran</td>
+
+                                <td class="slice">@giftCard.GiftCardMiktar</td>
+
+                                <td class="slice">@giftCard.GiftCardDateTime</td>
+
+                                @if (giftCard.GiftCardApproval) {
+                                    <td class="mobil-display-none">
+                                        <img src="/img/admin-img/check.png" alt="">
+                                    </td>
+                                } else {
+                                    <td class="mobil-display-none">
+                                        <img src="/img/admin-img/xmark.png" alt="">
+                                    </td>
+                                }
+
+                                <td class="td-buton-edit">
+                                    <form asp-controller="GiftCard" asp-action="GiftCardEdit" asp-route-id="@giftCard.GiftCardId" method="get">
+                                        <button type="submit">
+                                            <img src="/img/admin-img/pencil.png" alt="">
+                                        </button>
+                                    </form>
+                                </td>
+
+                                <td class="td-buton-del">
+                                    <form asp-controller="GiftCard" asp-action="GiftCardDelete" asp-route-id="@giftCard.GiftCardId" method="post">
+                                        <button type="submit" onclick="return silOnayla();">
+                                            <img src="/img/admin-img/delete.png" alt="">
+                                        </button>
+                                    </form>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        } else
+        {
+            <h4>Listelenecek Hediye Çeki Bulunamadı</h4>
+        }
+    </div>
+</div>

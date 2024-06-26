@@ -1,0 +1,203 @@
+@model HomeModel
+
+@foreach (var item in Model.HomeDesignTypes)
+{
+    if (item.Banners.Count() > 0)
+    {
+        if (item.HomeDesignTypeBannerList == "Tekli")
+        {
+            <div class="banner-single-container">
+                @foreach (var itemBanner in item.Banners)
+                {
+                    <a href="@itemBanner.BannerLink" class="banner-single-item">
+                        <div class="banner-single-img-box">
+                            <img class="banner-single-img" src="/img/@itemBanner.BannerImage" alt="">
+                            <span class="banner-single-bg"></span>
+                        </div>
+                        <div class="banner-single-content">
+                            <h3>@itemBanner.BannerName</h3>
+                            <button>Buton</button>
+                        </div>
+                    </a>
+                }
+            </div>
+        }
+        if (item.HomeDesignTypeBannerList == "Uclu")
+        {
+            <div class="banner-grid-container">
+                <div class="banner-grid">
+                    @foreach (var itemBanner in item.Banners)
+                    {            
+                        <div class="banner-item">
+                            <img class="banner-item-img" src="/img/@itemBanner.BannerImage" alt="">
+                            <div class="banner-item-content">
+                                <h3>@itemBanner.BannerName</h3>
+                                @if (!string.IsNullOrEmpty(itemBanner.BannerLink))
+                                {
+                                    <a href="@itemBanner.BannerLink">Buton</a>
+                                    <div class="banner-btn-bottom"></div>
+                                }
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        }
+    }
+    if (item.ProductHomeDesignTypes.Count() > 0)
+    {
+        if (item.HomeDesignTypeProductList == "Standart")
+        {
+            <p class="product-container-name">@item.HomeDesignTypeName</p>
+            <div class="product-container">
+                <div class="product-container-box">
+                    @foreach (var itemP in item.ProductHomeDesignTypes)
+                    {
+                        <a asp-controller="Product" asp-action="ProductDetail" asp-route-url="@itemP.Product.ProductUrl" asp-route-id="@itemP.Product.ProductId" class="product-card">
+                            <div>
+                                @if (itemP.Product.ProductImages.Count() == 1)
+                                {
+                                    <img style="display: block;" class="img-1" src="/img/@itemP.Product.ProductImages[0].ProductImageName" alt="@itemP.Product.ProductImages[0].ProductImageName">
+                                }
+                                @if (itemP.Product.ProductImages.Count() > 1)
+                                {
+                                    <img class="img-1" src="/img/@itemP.Product.ProductImages[0].ProductImageName" alt="@itemP.Product.ProductImages[0].ProductImageName">
+                                    <img class="img-2" src="/img/@itemP.Product.ProductImages[1].ProductImageName" alt="@itemP.Product.ProductImages[1].ProductImageName">
+                                }
+                            </div>
+                            <div class="product-info">
+                                @if (itemP.Product.ProductNew)
+                                {
+                                    <div class="product-new">
+                                        <p>Yeni</p>
+                                    </div>
+                                }
+                                @if (itemP.Product.ProductSale)
+                                {
+                                    <div class="product-sale">
+                                        <p>İndirim</p>
+                                    </div>
+                                }
+                            </div>
+                            <div class="product-content-container">
+                                <div class="product-content">
+                                    <p class="product-content-p">@itemP.Product.ProductName</p>
+                                    <div class="product-price">
+                                        @if (itemP.Product.ProductSalePrice == 0)
+                                        {
+                                            <p class="product-price-p1">@((itemP.Product.ProductPrice).ToString("c"))</p>
+                                        } else
+                                        {
+                                            <p class="product-price-p1">@((itemP.Product.ProductSalePrice).ToString("c"))</p>
+                                            <p class="product-price-p2">@((itemP.Product.ProductPrice).ToString("c"))</p>
+                                        }
+                                        @* <div class="product-fav" href="#">
+                                            <img src="~/img/img-icon-sabit/heart.png" alt="">
+                                        </div> *@
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    }
+                </div>
+            </div>
+        }
+        if (item.HomeDesignTypeProductList == "Kaydirmali")
+        {
+            <p class="product-container-name">@item.HomeDesignTypeName</p>
+            <div class="product-splide-container">
+                <div id="main-carousel" class="splide">
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            @foreach (var itemP1 in item.ProductHomeDesignTypes)
+                            {
+                                <li class="splide__slide">
+                                    <div class="product-card">
+                                        <a asp-controller="Product" asp-action="ProductDetail" asp-route-url="@itemP1.Product.ProductUrl" asp-route-id="@itemP1.Product.ProductId">
+                                            @if (itemP1.Product.ProductImages.Count() == 1)
+                                            {
+                                                <img style="display: block;" class="img-1" src="/img/@itemP1.Product.ProductImages[0].ProductImageName" alt="@itemP1.Product.ProductImages[0].ProductImageName">
+                                            }
+                                            @if (itemP1.Product.ProductImages.Count() > 1)
+                                            {
+                                                <img class="img-1" src="/img/@itemP1.Product.ProductImages[0].ProductImageName" alt="@itemP1.Product.ProductImages[0].ProductImageName">
+                                                <img class="img-2" src="/img/@itemP1.Product.ProductImages[1].ProductImageName" alt="@itemP1.Product.ProductImages[1].ProductImageName">
+                                            }
+                                        </a>
+                                        <div class="product-info">
+                                            @if (itemP1.Product.ProductNew)
+                                            {
+                                                <div class="product-new">
+                                                    <p>Yeni</p>
+                                                </div>
+                                            }
+                                            @if (itemP1.Product.ProductSale)
+                                            {
+                                                <div class="product-sale">
+                                                    <p>İndirim</p>
+                                                </div>
+                                            }
+                                        </div>
+                                        <div class="product-content-container">
+                                            <div class="product-content">
+                                                <p class="product-content-p">@itemP1.Product.ProductName</p>
+                                                <div class="product-price">
+                                                    @if (itemP1.Product.ProductSalePrice == 0)
+                                                    {
+                                                        <p class="product-price-p1">@((itemP1.Product.ProductPrice).ToString("c"))</p>
+                                                    } else
+                                                    {
+                                                        <p class="product-price-p1">@((itemP1.Product.ProductSalePrice).ToString("c"))</p>
+                                                        <p class="product-price-p2">@((itemP1.Product.ProductPrice).ToString("c"))</p>
+                                                    }
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            }
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        }
+    }
+}
+
+<script>
+    document.addEventListener( 'DOMContentLoaded', function () {
+
+        var siplides = document.getElementsByClassName("splide");
+        for(let splideItem of siplides) {
+
+                const splide = new Splide( splideItem, {
+                    type   : 'slide',
+                    focus  : 'left',
+                    pagination  : false,
+                    autoplay: true,
+                    pauseOnHover: false,
+                    arrows: true,
+                    gap: 10,
+                    perPage: 4,
+                    interval: number = 400000,
+                    speed: number = 1000,
+                    rewindSpeed: 1000,
+                    rewind: boolean = true,
+                    breakpoints : {
+                        1000: {
+                            perPage: 3
+                        },
+                        768: {
+                            perPage: 2
+                        },
+                        500: {
+                            perPage: 2
+                        }
+                    }
+                });
+                splide.mount();
+
+        }
+
+    } );
+</script>

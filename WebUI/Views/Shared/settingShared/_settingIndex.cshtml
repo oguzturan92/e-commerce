@@ -1,0 +1,51 @@
+@model SettingModel
+    
+<div class="title">
+    <h2>AYARLAR</h2>
+</div>
+<div class="content">
+    <div class="form-container">
+        <form class="form-container-alt" asp-controller="Setting" asp-action="SettingIndex" method="post" enctype="multipart/form-data">
+            <input type="hidden" asp-for="SettingId">
+            <div class="form-item-1">
+                <span class="validation" asp-validation-for="SettingSeoTitle"></span>
+                <label>Site Seo Başlık</label>
+                <input asp-for="SettingSeoTitle" type="text">
+            </div>
+            <div class="form-item-1">
+                <span class="validation" asp-validation-for="SettingSeoDescription"></span>
+                <label>Site Seo Açıklama</label>
+                <input asp-for="SettingSeoDescription" type="text">
+            </div>
+            <div class="form-item-1">
+                <span class="validation" asp-validation-for="SettingSeoKeyword"></span>
+                <label>Site Seo Anahtar Kelime</label>
+                <input asp-for="SettingSeoKeyword" type="text">
+            </div>
+            <div class="form-item-2">
+                <div class="form-item-1">
+                    <span class="validation" asp-validation-for="SettingLogo"></span>
+                    <label class="resim-label">Logo <span class="tavsiye">(önerilen: 300x300px)</span></label>
+                    <input type="hidden" asp-for="SettingLogo">
+                    <img src="~/img/img-logo/@Model.SettingLogo" alt="" class="form-img">
+                    <input class="resim-input" type="file" name="fileLogo">
+                </div>
+                <div class="form-item-1">
+                    <span class="validation" asp-validation-for="SettingFavicon"></span>
+                    <label class="resim-label">Favicon <span class="tavsiye">(önerilen: 16x16px)</span></label>
+                    <input type="hidden" asp-for="SettingFavicon">
+                    <img src="~/@Model.SettingFavicon" alt="" class="form-img">
+                    <input class="resim-input" type="file" name="fileFavicon">
+                </div>
+            </div>
+            <div class="form-item-1">
+                <span class="validation" asp-validation-for="SettingKvkk"></span>
+                <label>Kvkk</label>
+                <textarea asp-for="SettingKvkk" id="CkEditor"></textarea>
+            </div>
+            <div class="form-btn-kaydet-box">
+                <button class="form-btn-kaydet" type="submit">Kaydet</button>
+            </div>
+        </form>
+    </div>
+</div>

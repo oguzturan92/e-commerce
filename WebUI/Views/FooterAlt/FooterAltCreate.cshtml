@@ -1,0 +1,15 @@
+@{
+    ViewData["Title"] = "Alt Footer Ekle";
+    Layout = "_LayoutAdmin";
+}
+
+    <partial name="~/Views/Shared/footerAltShared/_footerAltCreate.cshtml"/>
+
+    @section Scripts
+    {
+        @* CK EDİTÖR SCRİPTİ *@
+        <script src="//cdn.ckeditor.com/4.21.0/full/ckeditor.js"></script>
+        <script>
+            CKEDITOR.replace( 'CkEditor' );
+        </script>
+    }

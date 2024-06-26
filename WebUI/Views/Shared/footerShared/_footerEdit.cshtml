@@ -1,0 +1,34 @@
+@model FooterModel
+
+<div class="title">
+    <h2>FOOTER DÜZENLE</h2>
+</div>
+<div class="content">
+    <div class="form-container">
+        <div class="table-btn-geri-box">
+            <a class="table-btn-geri" asp-controller="Footer" asp-action="FooterList">Geri</a>
+        </div>
+        <form class="form-container-alt" asp-controller="Footer" asp-action="FooterEdit" method="post">
+            <input type="hidden" asp-for="FooterId">
+            <input type="hidden" asp-for="FooterSort">
+            <div class="form-item-2">
+                <div class="form-item-1">
+                    <span class="validation" asp-validation-for="FooterTitle"></span>
+                    <label>Başlık *</label>
+                    <input asp-for="FooterTitle" type="text">
+                </div>
+                <div class="form-item-1">
+                    <span class="validation" asp-validation-for="FooterApproval"></span>
+                    <label>Onay Durumu</label>
+                    <select asp-for="FooterApproval" class="select">
+                        <option value="True">Evet</option>
+                        <option value="False">Hayır</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-btn-kaydet-box">
+                <button class="form-btn-kaydet" type="submit">Kaydet</button>
+            </div>
+        </form>
+    </div>
+</div>

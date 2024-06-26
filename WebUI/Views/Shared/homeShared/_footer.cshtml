@@ -1,0 +1,14 @@
+
+    <footer class="footer-container">
+        <div class="footer-container-alt">
+            
+            @await Html.PartialAsync("~/Views/Shared/subscribeShared/_subscribeCreateClient.cshtml")
+
+            @await Component.InvokeAsync("Footer")
+
+            <div class="footer-intro">
+                <span>Bu site <a href="https://www.softo.com.tr" target="_blank">www.softo.com.tr</a> tarafından hazırlanmıştır.</span>
+            </div>
+
+        </div>
+    </footer>

@@ -1,0 +1,68 @@
+@model FooterAltModel
+
+<div class="title">
+    <h2>ALT FOOTER LİSTESİ</h2>
+</div>
+<div class="content">
+    <div class="table-container">
+        <div class="table-btn-ekle-geri-box">
+            <a class="table-btn-ekle" asp-controller="FooterAlt" asp-action="FooterAltCreate" asp-route-id="@Model.FooterId">Ekle</a>
+            <a class="table-btn-geri" asp-controller="Footer" asp-action="FooterList">Geri</a>
+        </div>
+        @if (Model.FooterAlts.Count() > 0)
+        {
+            <div class="table-container-alt">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="th-w-75">Sıra No</th>
+                            <th class="th-w-auto">Ad</th>
+                            <th class="th-w-75 mobil-display-none">Onay</th>
+                            <th colspan="2"></th>
+                            @* <th></th> *@
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.FooterAlts) {
+                            <tr>
+                                <td class="td-w-75">
+                                    <form asp-controller="FooterAlt" asp-action="FooterAltList" method="post">
+                                        <input type="hidden" name="FooterAltId" value="@item.FooterAltId">
+                                        <input class="input-sort" type="number" name="FooterAltSort" value="@item.FooterAltSort">
+                                    </form>
+                                </td>
+                                
+                                <td class="td-yazi"><a href="@item.FooterAltLink" target="_blank" class="slice">@item.FooterAltTitle</a></td>
+
+                                @if (item.FooterAltApproval) {
+                                    <td class="mobil-display-none">
+                                        <img src="/img/admin-img/check.png" alt="">
+                                    </td>
+                                } else {
+                                    <td class="mobil-display-none">
+                                        <img src="/img/admin-img/xmark.png" alt="">
+                                    </td>
+                                }
+
+                                <td class="td-buton-edit">
+                                    <form asp-controller="FooterAlt" asp-action="FooterAltEdit" asp-route-id="@item.FooterAltId" method="get">
+                                        <button type="submit"><img src="/img/admin-img/pencil.png" alt=""></button>
+                                    </form>
+                                </td>
+
+                                <td class="td-buton-del">
+                                    <form asp-controller="FooterAlt" asp-action="FooterAltDelete" asp-route-id="@item.FooterAltId" method="post">
+                                        <button type="submit" onclick="return silOnayla();"><img src="/img/admin-img/delete.png" alt=""></button>
+                                    </form>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        } else
+        {
+            <h4>Listelenecek Alt Footer Bulunamadı</h4>
+        }
+    </div>
+</div>

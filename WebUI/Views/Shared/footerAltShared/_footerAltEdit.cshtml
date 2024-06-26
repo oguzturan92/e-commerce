@@ -1,0 +1,60 @@
+@model FooterAltModel
+
+<div class="title">
+    <h2>ALT FOOTER DÜZENLE</h2>
+</div>
+<div class="content">
+    <div class="form-container">
+        <div class="table-btn-geri-box">
+            <a class="table-btn-geri" asp-controller="FooterAlt" asp-action="FooterAltList" asp-route-id="@Model.FooterId">Geri</a>
+        </div>
+        <form class="form-container-alt" asp-controller="FooterAlt" asp-action="FooterAltEdit" method="post">
+            <input type="hidden" asp-for="FooterId">
+            <input type="hidden" asp-for="FooterAltId">
+            <input type="hidden" asp-for="FooterAltSort">
+            <div class="form-item-1">
+                <span class="validation" asp-validation-for="FooterAltSeoTitle"></span>
+                <label>Seo Başlık</label>
+                <input asp-for="FooterAltSeoTitle" type="text">
+            </div>
+            <div class="form-item-1">
+                <span class="validation" asp-validation-for="FooterAltSeoDescription"></span>
+                <label>Seo Açıklama</label>
+                <input asp-for="FooterAltSeoDescription" type="text">
+            </div>
+            <div class="form-item-1">
+                <span class="validation" asp-validation-for="FooterAltSeoKeyword"></span>
+                <label>Seo Anahtar Kelime</label>
+                <input asp-for="FooterAltSeoKeyword" type="text">
+            </div>
+            <div class="form-item-1">
+                <span class="validation" asp-validation-for="FooterAltTitle"></span>
+                <label>Başlık *</label>
+                <input asp-for="FooterAltTitle" type="text">
+            </div>
+            <div class="form-item-1">
+                <span class="validation" asp-validation-for="FooterAltContent"></span>
+                <label>Açıklama</label>
+                <textarea asp-for="FooterAltContent" id="CkEditor"></textarea>
+            </div>
+            <div class="form-item-2">
+                <div class="form-item-1">
+                    <span class="validation" asp-validation-for="FooterAltLink"></span>
+                    <label>Url</label>
+                    <input asp-for="FooterAltLink" type="text">
+                </div>
+                <div class="form-item-1">
+                    <span class="validation" asp-validation-for="FooterAltApproval"></span>
+                    <label>Onay Durumu</label>
+                    <select asp-for="FooterAltApproval" class="select">
+                        <option value="True">Evet</option>
+                        <option value="False">Hayır</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-btn-kaydet-box">
+                <button class="form-btn-kaydet" type="submit">Kaydet</button>
+            </div>
+        </form>
+    </div>
+</div>

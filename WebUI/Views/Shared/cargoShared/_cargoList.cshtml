@@ -1,0 +1,77 @@
+@model CargoModel
+
+<div class="title">
+    <h2>KARGO LİSTESİ</h2>
+</div>
+<div class="content">
+    <div class="table-container">
+        <div class="table-btn-ekle-box">
+            <a class="table-btn-ekle" asp-controller="Cargo" asp-action="CargoCreate">Ekle</a>
+        </div>
+        @if (Model.Cargos.Count() > 0)
+        {
+            <div class="table-container-alt">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="th-w-75">Sıra No</th>
+                            <th class="th-w-auto">Ad</th>
+                            <th class="th-w-auto">Alt Limit</th>
+                            <th class="th-w-auto">Kargo Ücreti</th>
+                            <th class="th-w-75">Onay</th>
+                            <th colspan="2"></th>
+                            @* <th></th> *@
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var entity in Model.Cargos) {
+                            <tr>
+                                <td class="td-w-75">
+                                    <form asp-controller="Cargo" asp-action="CargoList" method="post">
+                                        <input type="hidden" name="CargoId" value="@entity.CargoId">
+                                        <input class="input-sort" type="number" name="CargoSort" value="@entity.CargoSort">
+                                    </form>
+                                </td>
+                                
+                                <td class="slice">@entity.CargoName</td>
+
+                                <td class="slice">@entity.CargoFreePrice.ToString("c")</td>
+
+                                <td class="slice">@entity.CargoPrice.ToString("c")</td>
+
+                                @if (entity.CargoApproval) {
+                                    <td class="mobil-display-none">
+                                        <img src="/img/admin-img/check.png" alt="">
+                                    </td>
+                                } else {
+                                    <td class="mobil-display-none">
+                                        <img src="/img/admin-img/xmark.png" alt="">
+                                    </td>
+                                }
+
+                                <td class="td-buton-edit">
+                                    <form asp-controller="Cargo" asp-action="CargoEdit" asp-route-id="@entity.CargoId" method="get">
+                                        <button type="submit">
+                                            <img src="/img/admin-img/pencil.png" alt="">
+                                        </button>
+                                    </form>
+                                </td>
+
+                                <td class="td-buton-del">
+                                    <form asp-controller="Cargo" asp-action="CargoDelete" asp-route-id="@entity.CargoId" method="post">
+                                        <button type="submit" onclick="return silOnayla();">
+                                            <img src="/img/admin-img/delete.png" alt="">
+                                        </button>
+                                    </form>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        } else
+        {
+            <h4>Listelenecek Kargo Bulunamadı</h4>
+        }
+    </div>
+</div>

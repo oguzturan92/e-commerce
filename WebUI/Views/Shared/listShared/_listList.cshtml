@@ -1,0 +1,117 @@
+@model ListModel
+
+<div class="title">
+    <h2>LİSTELER</h2>
+</div>
+<div class="content">
+    <div class="table-container">
+        <div class="table-btn-ekle-box">
+            <a class="table-btn-ekle" asp-controller="List" asp-action="ListCreate" asp-route-id="@Model.ProductId">Ekle</a>
+        </div>
+        <div class="form-alternativ-box">
+            <div class="form-alternativ-item">
+                <a asp-controller="Product" asp-action="ProductEdit" asp-route-id="@Model.ProductId" method="get">
+                    Detay
+                </a>
+            </div>
+            <div class="form-alternativ-item">
+                <a asp-controller="Description" asp-action="DescriptionList" asp-route-id="@Model.ProductId" method="get">
+                    Metin
+                </a>
+            </div>
+            <div class="form-alternativ-item">
+                <a asp-controller="Variant" asp-action="VariantEdit" asp-route-id="@Model.ProductId" method="get">
+                    Varyant
+                </a>
+            </div>
+            <div class="form-alternativ-item">
+                <a asp-controller="ProductSize" asp-action="ProductSizeEdit" asp-route-id="@Model.ProductId" method="get">
+                    Seçenek
+                </a>
+            </div>
+            <div class="form-alternativ-item">
+                <a asp-controller="List" asp-action="ListList" asp-route-id="@Model.ProductId" method="get" style="box-shadow: 0px 4px 8px 0px #e6e6e6;">
+                    Liste
+                    <input type="hidden" name="ProductId" value="@Model.ProductId">
+                </a>
+            </div>
+        </div>
+        @if (Model.Lists.Count() > 0)
+        {
+            <div class="table-container-alt">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="th-w-75 mobil-display-none">Sıra No</th>
+                            <th class="th-w-auto">Başlık</th>
+                            <th class="th-w-auto">Konum</th>
+                            <th class="th-w-auto">Tip</th>
+                            <th class="th-w-75 mobil-display-none">Onay</th>
+                            <th colspan="3"></th>
+                            @* <th></th> *@
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.Lists) {
+                            <tr>
+                                <td class="td-w-75 mobil-display-none">
+                                    <form asp-controller="List" asp-action="ListList" method="post">
+                                        <input type="hidden" asp-for="ProductId">
+                                        <input type="hidden" name="ListId" value="@item.ListId">
+                                        <input class="input-sort" type="number" name="ListSort" value="@item.ListSort">
+                                    </form>
+                                </td>
+                                
+                                <td class="slice">@item.ListTitle</td>
+
+                                <td class="slice">@item.ListLocation</td>
+
+                                <td class="slice">@item.ListType</td>
+
+                                @if (item.ListApproval) {
+                                    <td class="mobil-display-none">
+                                        <img src="/img/admin-img/check.png" alt="">
+                                    </td>
+                                } else {
+                                    <td class="mobil-display-none">
+                                        <img src="/img/admin-img/xmark.png" alt="">
+                                    </td>
+                                }
+
+                                <td class="td-buton-edit">
+                                    <form asp-controller="List" asp-action="ListProductList" asp-route-id="@item.ListId" method="get">
+                                        <input type="hidden" name="proId" value="@Model.ProductId">
+                                        <button type="submit">
+                                            <img src="/img/admin-img/layer.png" alt="">
+                                        </button>
+                                    </form>
+                                </td>
+
+                                <td class="td-buton-edit">
+                                    <form asp-controller="List" asp-action="ListEdit" asp-route-id="@item.ListId" method="get">
+                                        <input type="hidden" name="proId" value="@Model.ProductId">
+                                        <button type="submit">
+                                            <img src="/img/admin-img/pencil.png" alt="">
+                                        </button>
+                                    </form>
+                                </td>
+
+                                <td class="td-buton-del">
+                                    <form asp-controller="List" asp-action="ListDelete" asp-route-id="@item.ListId" method="post">
+                                        <input type="hidden" name="proId" value="@Model.ProductId">
+                                        <button type="submit" onclick="return silOnayla();">
+                                            <img src="/img/admin-img/delete.png" alt="">
+                                        </button>
+                                    </form>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        } else
+        {
+            <h4>Listelenecek Liste Bulunamadı</h4>
+        }
+    </div>
+</div>

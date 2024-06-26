@@ -1,0 +1,74 @@
+@model HomeDesignTypeModel
+
+<div class="title">
+    <h2>DİZAYN LİSTESİ</h2>
+</div>
+<div class="content">
+    <div class="table-container">
+        <div class="table-btn-ekle-box">
+            <a class="table-btn-ekle" asp-controller="HomeDesignType" asp-action="HomeDesignTypeCreate">Ekle</a>
+        </div>
+        @if (Model.HomeDesignTypes.Count() > 0)
+        {
+            <div class="table-container-alt">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="th-w-75">Sıra No</th>
+                            <th class="th-w-auto">Ad</th>
+                            <th class="th-w-auto">Tip</th>
+                            <th class="th-w-75 mobil-display-none">Onay</th>
+                            <th colspan="2"></th>
+                            @* <th></th> *@
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.HomeDesignTypes) {
+                            <tr>
+                                <td class="td-w-75">
+                                    <form asp-controller="HomeDesignType" asp-action="HomeDesignTypeList" method="post">
+                                        <input type="hidden" name="HomeDesignTypeId" value="@item.HomeDesignTypeId">
+                                        <input class="input-sort" type="number" name="HomeDesignTypeSort" value="@item.HomeDesignTypeSort">
+                                    </form>
+                                </td>
+                                
+                                <td class="slice">@item.HomeDesignTypeName</td>
+
+                                <td class="slice">@item.HomeDesignTypeOption</td>
+
+                                @if (item.HomeDesignTypeApproval) {
+                                    <td class="mobil-display-none">
+                                        <img src="/img/admin-img/check.png" alt="">
+                                    </td>
+                                } else {
+                                    <td class="mobil-display-none">
+                                        <img src="/img/admin-img/xmark.png" alt="">
+                                    </td>
+                                }
+
+                                <td class="td-buton-edit">
+                                    <form asp-controller="HomeDesignType" asp-action="HomeDesignTypeEdit" asp-route-id="@item.HomeDesignTypeId" method="get">
+                                        <button type="submit">
+                                            <img src="/img/admin-img/pencil.png" alt="">
+                                        </button>
+                                    </form>
+                                </td>
+
+                                <td class="td-buton-del">
+                                    <form asp-controller="HomeDesignType" asp-action="HomeDesignTypeDelete" asp-route-id="@item.HomeDesignTypeId" method="post">
+                                        <button type="submit" onclick="return silOnayla();">
+                                            <img src="/img/admin-img/delete.png" alt="">
+                                        </button>
+                                    </form>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        } else
+        {
+            <h4>Listelenecek Anasayfa Dizayn Bulunamadı</h4>
+        }
+    </div>
+</div>

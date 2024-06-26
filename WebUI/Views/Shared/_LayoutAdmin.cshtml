@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="robots" content="noindex">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <title>@ViewData["Title"]</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap" rel="stylesheet">
+
+    @RenderSection("Css", false)
+
+    <link rel="stylesheet" href="~/css/sweetalert2.min.css" />
+
+    <link rel="stylesheet" href="~/AdminCss/style-home.css" />
+    <link rel="stylesheet" href="~/AdminCss/style-navbar-web.css" />
+    <link rel="stylesheet" href="~/AdminCss/style-navbar-mobil.css" />
+    <link rel="stylesheet" href="~/AdminCss/style-table.css" />
+    <link rel="stylesheet" href="~/AdminCss/style-form.css" />
+
+    <link rel="stylesheet" href="~/AdminCss/all.css" />
+    <link rel="stylesheet" href="~/AdminCss/animate.css" />
+    
+    @* SİL *@
+    <link rel="stylesheet" href="~/BlogCss/style-pagination.css" />
+</head>
+<body>
+
+    <div class="admin-container">
+        <partial name="~/Views/Shared/adminHomeShared/_navbarMobil.cshtml"/>
+        <partial name="~/Views/Shared/adminHomeShared/_navbarWeb.cshtml"/>
+        
+        <main class="content-container">
+            <div>
+                @if (TempData["icon"] != null)
+                {
+                    <script type="text/javascript">
+                        window.onload = function () { 
+                            const Toast = Swal.mixin({
+                                toast: true,
+                                position: 'top-right',
+                                showConfirmButton: false,
+                                timer: 1500,
+                                timerProgressBar: true,
+                                didOpen: (toast) => {
+                                    toast.addEventListener('mouseenter', Swal.stopTimer)
+                                    toast.addEventListener('mouseleave', Swal.resumeTimer)
+                                }
+                            })
+                            Toast.fire({
+                                icon: '@TempData["icon"]',
+                                title: '@TempData["title"]'
+                            })
+                        };  
+                    </script>
+                }
+                @if (TempData["iconOK"] != null)
+                {
+                    <script type="text/javascript">
+                        window.onload = function () { 
+                            Swal.fire({
+                                icon: '@TempData["iconOK"]',
+                                title: '@TempData["iconTitle"]',
+                                html: '@TempData["iconText"]',
+                                confirmButtonText: "Tamam",
+                                confirmButtonColor: "#2c3e50"
+                            })
+                        };  
+                    </script>
+                }
+            </div>
+            @RenderBody()
+        </main>
+    </div>
+
+    @* jquery Her Zaman Js Dosyalarından Üstte Olacak. Yoksa $() İle Başlayan Js Kodları Çalışmaz *@
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/js/sweetalert2.min.js"></script>
+
+    @RenderSection("Scripts", false)
+    
+    @* Validation Js için gerekli jquery linki (Proje içinde, validation dosyasında vardı. Buraya aldık) *@
+    @* <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script> *@
+
+    <script src="~/js/admin-genel.js"></script>
+    <script src="~/js/admin-navbar-web.js"></script>
+    <script src="~/js/admin-navbar-mobil.js"></script>
+
+</body>
+</html>

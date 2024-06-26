@@ -1,0 +1,200 @@
+
+
+
+.cart-payment-container {
+    max-width: 1200px;
+    padding: 100px 50px 0px;
+    margin: 0px auto;
+}
+.cart-paymentcontainer-alt {
+    display: flex;
+    gap: 10px;
+}
+
+/* LEFT ----------------------------- */
+.cart-payment-left {
+    flex: 75%;
+}
+
+.cart-payment-title {
+    border: 1px solid #000;
+    height: 50px;
+    display: flex;
+    padding: 0px 20px;
+}
+.cart-payment-title label {
+    height: 100%;
+    width: 100%;
+    line-height: 50px;
+    cursor: pointer;
+}
+
+.cart-payment-content {
+    box-shadow: 0px 5px 10px 3px #f7f7f7;
+    margin-bottom: 40px;
+}
+
+
+.cart-payment-content-creditCart {
+    padding: 20px;
+}
+.cart-payment-creditCart {
+    max-width: 500px;
+    width: 100%;
+}
+.cart-payment-creditCart-right {
+
+}
+
+.cart-payment-eft {
+    padding: 25px;
+}
+.cart-payment-eft-banks {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.cart-payment-eft-banks-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 50px;
+    padding: 25px;
+    border: 1px solid #000;
+}
+.cart-payment-eft-banks-item div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.cart-payment-eft-banks-item div p {
+    font-weight: 300;
+    margin: 0px;
+}
+
+
+
+
+
+
+
+
+/* RIGHT ----------------------------- */
+.cart-payment-right {
+    flex: 25%;
+}
+
+.cart-payment-right-box {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border: 1px solid #eee;
+    padding: 15px;
+}
+
+.cart-payment-right-item {
+    display: flex;
+    justify-content: space-between;
+}
+.cart-payment-right-item p {
+    margin: 10px 0px;
+}
+
+.cart-payment-right-go-payment {
+    background-color: #c2a18a;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    padding: 16px;
+    transition: .3s;
+    border: 1px solid #c2a18a;
+    cursor: pointer;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 16px;
+}
+.cart-payment-right-go-payment:hover {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #000;
+}
+
+
+
+
+
+
+/* ODEME FORMU -------------------------------------- */
+.cart-payment-creditCart-left-payment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.payment-form-item-1 {
+    display: grid;
+    gap: 5px;
+}
+.payment-form-item-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+.payment-form-item-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+/* LABEL */
+.payment-form-item-1 label {
+    font-weight: 300;
+}
+
+/* INPUT */
+.payment-form-item-1 input {
+    border: 1px solid #000;
+    border-radius: 0px;
+    outline: none;
+    height: 35px;
+    padding: 0px;
+}
+.payment-form-item-1 select {
+    height: 40px;
+    border-radius: 0px;
+    outline: none;
+    padding-left: 20px;
+}
+
+.payment-form-item-1 input[type=date] {
+    height: 37px;
+}
+
+
+@media (max-width:1000px) {
+    .cart-payment-container {
+        padding: 100px 10px 0px;
+    }
+    .cart-paymentcontainer-alt {
+        flex-direction: column;
+    }
+    .payment-form-item-2 { 
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (max-width:768px) {
+    .cart-payment-title label {
+        font-size: 14px;
+    }
+    .payment-form-item-1 label {
+        font-size: 14px;
+    }
+    .cart-payment-right-item p {
+        font-size: 14px;
+    }
+    .cart-payment-right-go-payment {
+        font-size: 12px;
+    }
+}

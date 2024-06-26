@@ -1,0 +1,40 @@
+
+
+<header class="header-container">
+    <div class="header-left">
+        <a href="/">
+            <img src="~/img/img-logo/logo.png" alt="">
+        </a>
+    </div>
+    <div class="header-middle">
+        @await Component.InvokeAsync("CategoryList")
+    </div>
+    <div class="header-right">
+        <span id="search-box-close">
+            <span id="search-box-close-btn" class="">X</span>
+        </span>
+        <form id="search-form" asp-controller="Home" asp-action="Search" method="get">
+            <img src="/img/img-icon-sabit/search.png" alt="">
+            <div id="search-box">
+                <div id="search-alt-box">
+                    <input type="text" name="q" maxlength="25" placeholder="Beyaz tişört...">
+                </div>
+            </div>
+        </form>
+        <a asp-controller="UserAccount" asp-action="AccountIndex">
+            @if (User.Identity.IsAuthenticated)
+            {
+                <img src="/img/img-icon-sabit/user-plus.png" alt="">
+            } else
+            {
+                <img src="/img/img-icon-sabit/user.png" alt="">
+            }
+        </a>
+        <a class="cart-icon-number-box" asp-controller="Cart" asp-action="CartIndex">
+            <img src="/img/img-icon-sabit/sepet.png" alt="">
+            <div class="cart-icon-number">
+                <span>@(await Component.InvokeAsync("CartList"))</span>
+            </div>
+        </a>
+    </div>
+</header>

@@ -1,0 +1,988 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = WebUI
+build_property.RootNamespace = WebUI
+build_property.ProjectDir = C:\Users\oğuzhan\Desktop\Tamamlananlar\E-Ticaret\WebUI\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\oğuzhan\Desktop\Tamamlananlar\E-Ticaret\WebUI
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/AdminAccount/Accessdenied.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5BY2NvdW50XEFjY2Vzc2RlbmllZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/AdminAccount/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5BY2NvdW50XEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/AdminAccount/EditAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5BY2NvdW50XEVkaXRBZG1pbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/AdminAccount/EmailOnay.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5BY2NvdW50XEVtYWlsT25heS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/AdminAccount/IndexAccount.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5BY2NvdW50XEluZGV4QWNjb3VudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/AdminAccount/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5BY2NvdW50XExvZ2luLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/AdminAccount/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5BY2NvdW50XFJlZ2lzdGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/AdminAccount/SifremiUnuttum.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5BY2NvdW50XFNpZnJlbWlVbnV0dHVtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/AdminAccount/SifreYenile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5BY2NvdW50XFNpZnJlWWVuaWxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Admin/Home.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSG9tZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Adres/AdresCreate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRyZXNcQWRyZXNDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Adres/AdresEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRyZXNcQWRyZXNFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Adres/AdresEditUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRyZXNcQWRyZXNFZGl0VXNlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Adres/AdresList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRyZXNcQWRyZXNMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Adres/AdresListUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRyZXNcQWRyZXNMaXN0VXNlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/BankAccount/BankAccountCreate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFua0FjY291bnRcQmFua0FjY291bnRDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/BankAccount/BankAccountEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFua0FjY291bnRcQmFua0FjY291bnRFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/BankAccount/BankAccountList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFua0FjY291bnRcQmFua0FjY291bnRMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Banner/BannerCreate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFubmVyXEJhbm5lckNyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Banner/BannerEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFubmVyXEJhbm5lckVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Banner/BannerList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFubmVyXEJhbm5lckxpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Cargo/CargoCreate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyZ29cQ2FyZ29DcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Cargo/CargoEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyZ29cQ2FyZ29FZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Cargo/CargoList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyZ29cQ2FyZ29MaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Cart/CartAdres.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxDYXJ0QWRyZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Cart/CartIndex.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxDYXJ0SW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Cart/Odeme.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxPZGVtZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Category2/Category2Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnkyXENhdGVnb3J5MkNyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Category2/Category2Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnkyXENhdGVnb3J5MkVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Category2/Category2List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnkyXENhdGVnb3J5Mkxpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Category2/Category2ListClient.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnkyXENhdGVnb3J5Mkxpc3RDbGllbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Category3/Category3Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnkzXENhdGVnb3J5M0NyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Category3/Category3Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnkzXENhdGVnb3J5M0VkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Category3/Category3List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnkzXENhdGVnb3J5M0xpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Category3/Category3ListClient.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnkzXENhdGVnb3J5M0xpc3RDbGllbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Category/CategoryCreate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcQ2F0ZWdvcnlDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Category/CategoryEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcQ2F0ZWdvcnlFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Category/CategoryList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcQ2F0ZWdvcnlMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Category/CategoryListClient.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcQ2F0ZWdvcnlMaXN0Q2xpZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Description/DescriptionCreate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVzY3JpcHRpb25cRGVzY3JpcHRpb25DcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Description/DescriptionEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVzY3JpcHRpb25cRGVzY3JpcHRpb25FZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Description/DescriptionList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVzY3JpcHRpb25cRGVzY3JpcHRpb25MaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/EftHavale/EftHavaleForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRWZ0SGF2YWxlXEVmdEhhdmFsZUZvcm0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/EftHavale/EftHavaleList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRWZ0SGF2YWxlXEVmdEhhdmFsZUxpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Error/Error404.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXJyb3JcRXJyb3I0MDQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Favorite/FavoriteList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmF2b3JpdGVcRmF2b3JpdGVMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/FooterAlt/FooterAltCreate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRm9vdGVyQWx0XEZvb3RlckFsdENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/FooterAlt/FooterAltDetailClient.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRm9vdGVyQWx0XEZvb3RlckFsdERldGFpbENsaWVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/FooterAlt/FooterAltEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRm9vdGVyQWx0XEZvb3RlckFsdEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/FooterAlt/FooterAltList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRm9vdGVyQWx0XEZvb3RlckFsdExpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Footer/FooterCreate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRm9vdGVyXEZvb3RlckNyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Footer/FooterEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRm9vdGVyXEZvb3RlckVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Footer/FooterList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRm9vdGVyXEZvb3Rlckxpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/GiftCard/GiftCardCreate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2lmdENhcmRcR2lmdENhcmRDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/GiftCard/GiftCardEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2lmdENhcmRcR2lmdENhcmRFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/GiftCard/GiftCardList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2lmdENhcmRcR2lmdENhcmRMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/GiftCard/GiftCardListClient.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2lmdENhcmRcR2lmdENhcmRMaXN0Q2xpZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/HomeDesignType/HomeDesignTypeCreate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZURlc2lnblR5cGVcSG9tZURlc2lnblR5cGVDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/HomeDesignType/HomeDesignTypeEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZURlc2lnblR5cGVcSG9tZURlc2lnblR5cGVFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/HomeDesignType/HomeDesignTypeList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZURlc2lnblR5cGVcSG9tZURlc2lnblR5cGVMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Home/Search.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTZWFyY2guY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/List/ListCreate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlzdFxMaXN0Q3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/List/ListEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlzdFxMaXN0RWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/List/ListList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlzdFxMaXN0TGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/List/ListProductList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlzdFxMaXN0UHJvZHVjdExpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Message/MessageDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVzc2FnZVxNZXNzYWdlRGV0YWlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Message/MessageList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVzc2FnZVxNZXNzYWdlTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/OrderIade/OrderIadeCreate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJJYWRlXE9yZGVySWFkZUNyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/OrderIade/OrderIadeEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJJYWRlXE9yZGVySWFkZUVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/OrderIade/OrderIadeList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJJYWRlXE9yZGVySWFkZUxpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/OrderIade/OrderIadeListClient.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJJYWRlXE9yZGVySWFkZUxpc3RDbGllbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Order/OrderDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcT3JkZXJEZXRhaWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Order/OrderEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcT3JkZXJFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Order/OrderList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcT3JkZXJMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Order/OrderListClient.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcT3JkZXJMaXN0Q2xpZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Popup/PopupCreate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9wdXBcUG9wdXBDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Popup/PopupEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9wdXBcUG9wdXBFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Popup/PopupList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9wdXBcUG9wdXBMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/ProductImage/ProductImageList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdEltYWdlXFByb2R1Y3RJbWFnZUxpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/ProductSize/ProductSizeEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFNpemVcUHJvZHVjdFNpemVFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Product/ProductCreate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxQcm9kdWN0Q3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Product/ProductDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxQcm9kdWN0RGV0YWlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Product/ProductEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxQcm9kdWN0RWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Product/ProductList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxQcm9kdWN0TGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Role/RoleCreate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZVxSb2xlQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Role/RoleEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZVxSb2xlRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Role/RoleList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZVxSb2xlTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Sepet/SepetIncompleteDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VwZXRcU2VwZXRJbmNvbXBsZXRlRGV0YWlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Sepet/SepetIncompleteList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VwZXRcU2VwZXRJbmNvbXBsZXRlTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Setting/SettingIndex.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2V0dGluZ1xTZXR0aW5nSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Setting/SettingKvkk.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2V0dGluZ1xTZXR0aW5nS3Zray5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/adminAccountShared/_accessdenied.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGFkbWluQWNjb3VudFNoYXJlZFxfYWNjZXNzZGVuaWVkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/adminAccountShared/_edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGFkbWluQWNjb3VudFNoYXJlZFxfZWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/adminAccountShared/_editAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGFkbWluQWNjb3VudFNoYXJlZFxfZWRpdEFkbWluLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/adminAccountShared/_indexAccount.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGFkbWluQWNjb3VudFNoYXJlZFxfaW5kZXhBY2NvdW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/adminAccountShared/_login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGFkbWluQWNjb3VudFNoYXJlZFxfbG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/adminAccountShared/_register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGFkbWluQWNjb3VudFNoYXJlZFxfcmVnaXN0ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/adminAccountShared/_sifremiUnuttum.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGFkbWluQWNjb3VudFNoYXJlZFxfc2lmcmVtaVVudXR0dW0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/adminAccountShared/_sifreYenile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGFkbWluQWNjb3VudFNoYXJlZFxfc2lmcmVZZW5pbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/adminHomeShared/_home.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGFkbWluSG9tZVNoYXJlZFxfaG9tZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/adminHomeShared/_navbarMobil.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGFkbWluSG9tZVNoYXJlZFxfbmF2YmFyTW9iaWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/adminHomeShared/_navbarWeb.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGFkbWluSG9tZVNoYXJlZFxfbmF2YmFyV2ViLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/adminHomeShared/_pagination.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGFkbWluSG9tZVNoYXJlZFxfcGFnaW5hdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/adresShared/_adresCreate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGFkcmVzU2hhcmVkXF9hZHJlc0NyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/adresShared/_adresEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGFkcmVzU2hhcmVkXF9hZHJlc0VkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/adresShared/_adresEditUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGFkcmVzU2hhcmVkXF9hZHJlc0VkaXRVc2VyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/adresShared/_adresList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGFkcmVzU2hhcmVkXF9hZHJlc0xpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/adresShared/_adresListUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGFkcmVzU2hhcmVkXF9hZHJlc0xpc3RVc2VyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/bankAccountShared/_bankAccountCreate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGJhbmtBY2NvdW50U2hhcmVkXF9iYW5rQWNjb3VudENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/bankAccountShared/_bankAccountEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGJhbmtBY2NvdW50U2hhcmVkXF9iYW5rQWNjb3VudEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/bankAccountShared/_bankAccountList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGJhbmtBY2NvdW50U2hhcmVkXF9iYW5rQWNjb3VudExpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/bannerShared/_bannerCreate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGJhbm5lclNoYXJlZFxfYmFubmVyQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/bannerShared/_bannerEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGJhbm5lclNoYXJlZFxfYmFubmVyRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/bannerShared/_bannerList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGJhbm5lclNoYXJlZFxfYmFubmVyTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/cargoShared/_cargoCreate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGNhcmdvU2hhcmVkXF9jYXJnb0NyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/cargoShared/_cargoEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGNhcmdvU2hhcmVkXF9jYXJnb0VkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/cargoShared/_cargoList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGNhcmdvU2hhcmVkXF9jYXJnb0xpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/cartShared/_cartAdresIndex.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGNhcnRTaGFyZWRcX2NhcnRBZHJlc0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/cartShared/_cartIndex.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGNhcnRTaGFyZWRcX2NhcnRJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/cartShared/_odeme.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGNhcnRTaGFyZWRcX29kZW1lLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/category2Shared/_category2Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGNhdGVnb3J5MlNoYXJlZFxfY2F0ZWdvcnkyQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/category2Shared/_category2Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGNhdGVnb3J5MlNoYXJlZFxfY2F0ZWdvcnkyRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/category2Shared/_category2List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGNhdGVnb3J5MlNoYXJlZFxfY2F0ZWdvcnkyTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/category2Shared/_category2ListClient.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGNhdGVnb3J5MlNoYXJlZFxfY2F0ZWdvcnkyTGlzdENsaWVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/category3Shared/_category3Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGNhdGVnb3J5M1NoYXJlZFxfY2F0ZWdvcnkzQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/category3Shared/_category3Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGNhdGVnb3J5M1NoYXJlZFxfY2F0ZWdvcnkzRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/category3Shared/_category3List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGNhdGVnb3J5M1NoYXJlZFxfY2F0ZWdvcnkzTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/category3Shared/_category3ListClient.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGNhdGVnb3J5M1NoYXJlZFxfY2F0ZWdvcnkzTGlzdENsaWVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/categoryShared/_categoryCreate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGNhdGVnb3J5U2hhcmVkXF9jYXRlZ29yeUNyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/categoryShared/_categoryEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGNhdGVnb3J5U2hhcmVkXF9jYXRlZ29yeUVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/categoryShared/_categoryList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGNhdGVnb3J5U2hhcmVkXF9jYXRlZ29yeUxpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/categoryShared/_categoryListClient.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGNhdGVnb3J5U2hhcmVkXF9jYXRlZ29yeUxpc3RDbGllbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/Components/CategoryList/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcQ2F0ZWdvcnlMaXN0XERlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/Components/Footer/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcRm9vdGVyXERlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/Components/Popup/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcUG9wdXBcRGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/descriptionShared/_descriptionCreate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGRlc2NyaXB0aW9uU2hhcmVkXF9kZXNjcmlwdGlvbkNyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/descriptionShared/_descriptionEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGRlc2NyaXB0aW9uU2hhcmVkXF9kZXNjcmlwdGlvbkVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/descriptionShared/_descriptionList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGRlc2NyaXB0aW9uU2hhcmVkXF9kZXNjcmlwdGlvbkxpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/eftHavaleShared/_eftHavaleForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGVmdEhhdmFsZVNoYXJlZFxfZWZ0SGF2YWxlRm9ybS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/eftHavaleShared/_eftHavaleList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGVmdEhhdmFsZVNoYXJlZFxfZWZ0SGF2YWxlTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/favoriteShared/_favoriteList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGZhdm9yaXRlU2hhcmVkXF9mYXZvcml0ZUxpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/footerAltShared/_footerAltCreate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGZvb3RlckFsdFNoYXJlZFxfZm9vdGVyQWx0Q3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/footerAltShared/_footerAltDetailClient.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGZvb3RlckFsdFNoYXJlZFxfZm9vdGVyQWx0RGV0YWlsQ2xpZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/footerAltShared/_footerAltEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGZvb3RlckFsdFNoYXJlZFxfZm9vdGVyQWx0RWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/footerAltShared/_footerAltList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGZvb3RlckFsdFNoYXJlZFxfZm9vdGVyQWx0TGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/footerShared/_footerCreate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGZvb3RlclNoYXJlZFxfZm9vdGVyQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/footerShared/_footerEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGZvb3RlclNoYXJlZFxfZm9vdGVyRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/footerShared/_footerList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGZvb3RlclNoYXJlZFxfZm9vdGVyTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/giftCardShared/_giftCardCreate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGdpZnRDYXJkU2hhcmVkXF9naWZ0Q2FyZENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/giftCardShared/_giftCardEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGdpZnRDYXJkU2hhcmVkXF9naWZ0Q2FyZEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/giftCardShared/_giftCardList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGdpZnRDYXJkU2hhcmVkXF9naWZ0Q2FyZExpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/giftCardShared/_giftCardListClient.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGdpZnRDYXJkU2hhcmVkXF9naWZ0Q2FyZExpc3RDbGllbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/homeDesignTypeShared/_homeDesignTypeCreate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGhvbWVEZXNpZ25UeXBlU2hhcmVkXF9ob21lRGVzaWduVHlwZUNyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/homeDesignTypeShared/_homeDesignTypeEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGhvbWVEZXNpZ25UeXBlU2hhcmVkXF9ob21lRGVzaWduVHlwZUVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/homeDesignTypeShared/_homeDesignTypeList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGhvbWVEZXNpZ25UeXBlU2hhcmVkXF9ob21lRGVzaWduVHlwZUxpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/homeShared/_footer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGhvbWVTaGFyZWRcX2Zvb3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/homeShared/_homeDesignType.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGhvbWVTaGFyZWRcX2hvbWVEZXNpZ25UeXBlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/homeShared/_navbarMobil.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGhvbWVTaGFyZWRcX25hdmJhck1vYmlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/homeShared/_navbarWeb.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGhvbWVTaGFyZWRcX25hdmJhcldlYi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/homeShared/_search.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGhvbWVTaGFyZWRcX3NlYXJjaC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/listShared/_listCreate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGxpc3RTaGFyZWRcX2xpc3RDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/listShared/_listEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGxpc3RTaGFyZWRcX2xpc3RFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/listShared/_listList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGxpc3RTaGFyZWRcX2xpc3RMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/listShared/_listProductList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGxpc3RTaGFyZWRcX2xpc3RQcm9kdWN0TGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/messageShared/_messageCreate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXG1lc3NhZ2VTaGFyZWRcX21lc3NhZ2VDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/messageShared/_messageDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXG1lc3NhZ2VTaGFyZWRcX21lc3NhZ2VEZXRhaWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/messageShared/_messageList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXG1lc3NhZ2VTaGFyZWRcX21lc3NhZ2VMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/orderIadeShared/_orderIadeCreate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXG9yZGVySWFkZVNoYXJlZFxfb3JkZXJJYWRlQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/orderIadeShared/_orderIadeEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXG9yZGVySWFkZVNoYXJlZFxfb3JkZXJJYWRlRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/orderIadeShared/_orderIadeList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXG9yZGVySWFkZVNoYXJlZFxfb3JkZXJJYWRlTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/orderIadeShared/_orderIadeListClient.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXG9yZGVySWFkZVNoYXJlZFxfb3JkZXJJYWRlTGlzdENsaWVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/orderShared/_orderDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXG9yZGVyU2hhcmVkXF9vcmRlckRldGFpbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/orderShared/_orderEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXG9yZGVyU2hhcmVkXF9vcmRlckVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/orderShared/_orderList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXG9yZGVyU2hhcmVkXF9vcmRlckxpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/orderShared/_orderListClient.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXG9yZGVyU2hhcmVkXF9vcmRlckxpc3RDbGllbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/popupShared/_popupCreate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXHBvcHVwU2hhcmVkXF9wb3B1cENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/popupShared/_popupEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXHBvcHVwU2hhcmVkXF9wb3B1cEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/popupShared/_popupList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXHBvcHVwU2hhcmVkXF9wb3B1cExpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/productImageShared/_productImageList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXHByb2R1Y3RJbWFnZVNoYXJlZFxfcHJvZHVjdEltYWdlTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/productShared/_productCreate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXHByb2R1Y3RTaGFyZWRcX3Byb2R1Y3RDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/productShared/_productDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXHByb2R1Y3RTaGFyZWRcX3Byb2R1Y3REZXRhaWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/productShared/_productEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXHByb2R1Y3RTaGFyZWRcX3Byb2R1Y3RFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/productShared/_productList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXHByb2R1Y3RTaGFyZWRcX3Byb2R1Y3RMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/productSizeShared/_productSizeEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXHByb2R1Y3RTaXplU2hhcmVkXF9wcm9kdWN0U2l6ZUVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/roleShared/_roleCreate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXHJvbGVTaGFyZWRcX3JvbGVDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/roleShared/_roleEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXHJvbGVTaGFyZWRcX3JvbGVFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/roleShared/_roleList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXHJvbGVTaGFyZWRcX3JvbGVMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/sepetIncompleteShared/_sepetIncompleteDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXHNlcGV0SW5jb21wbGV0ZVNoYXJlZFxfc2VwZXRJbmNvbXBsZXRlRGV0YWlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/sepetIncompleteShared/_sepetIncompleteList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXHNlcGV0SW5jb21wbGV0ZVNoYXJlZFxfc2VwZXRJbmNvbXBsZXRlTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/settingShared/_settingIndex.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXHNldHRpbmdTaGFyZWRcX3NldHRpbmdJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/settingShared/_SettingKvkk.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXHNldHRpbmdTaGFyZWRcX1NldHRpbmdLdmtrLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/sizeShared/_sizeCreate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXHNpemVTaGFyZWRcX3NpemVDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/sizeShared/_sizeEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXHNpemVTaGFyZWRcX3NpemVFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/sizeShared/_sizeList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXHNpemVTaGFyZWRcX3NpemVMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/sizeTypeShared/_sizeTypeCreate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXHNpemVUeXBlU2hhcmVkXF9zaXplVHlwZUNyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/sizeTypeShared/_sizeTypeEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXHNpemVUeXBlU2hhcmVkXF9zaXplVHlwZUVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/sizeTypeShared/_sizeTypeList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXHNpemVUeXBlU2hhcmVkXF9zaXplVHlwZUxpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/sliderShared/_sliderCreate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXHNsaWRlclNoYXJlZFxfc2xpZGVyQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/sliderShared/_sliderEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXHNsaWRlclNoYXJlZFxfc2xpZGVyRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/sliderShared/_sliderList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXHNsaWRlclNoYXJlZFxfc2xpZGVyTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/sliderShared/_sliderListClient.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXHNsaWRlclNoYXJlZFxfc2xpZGVyTGlzdENsaWVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/subscribeShared/_subscribeCreate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXHN1YnNjcmliZVNoYXJlZFxfc3Vic2NyaWJlQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/subscribeShared/_subscribeCreateClient.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXHN1YnNjcmliZVNoYXJlZFxfc3Vic2NyaWJlQ3JlYXRlQ2xpZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/subscribeShared/_subscribeEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXHN1YnNjcmliZVNoYXJlZFxfc3Vic2NyaWJlRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/subscribeShared/_subscribeList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXHN1YnNjcmliZVNoYXJlZFxfc3Vic2NyaWJlTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/supportShared/_supportDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXHN1cHBvcnRTaGFyZWRcX3N1cHBvcnREZXRhaWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/supportShared/_supportList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXHN1cHBvcnRTaGFyZWRcX3N1cHBvcnRMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/supportShared/_supportListClient.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXHN1cHBvcnRTaGFyZWRcX3N1cHBvcnRMaXN0Q2xpZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/userAccountShared/_accountEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXHVzZXJBY2NvdW50U2hhcmVkXF9hY2NvdW50RWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/userAccountShared/_accountIndex.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXHVzZXJBY2NvdW50U2hhcmVkXF9hY2NvdW50SW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/userAccountShared/_accountLogin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXHVzZXJBY2NvdW50U2hhcmVkXF9hY2NvdW50TG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/userAccountShared/_accountRegister.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXHVzZXJBY2NvdW50U2hhcmVkXF9hY2NvdW50UmVnaXN0ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/userAccountShared/_sifremiUnuttum.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXHVzZXJBY2NvdW50U2hhcmVkXF9zaWZyZW1pVW51dHR1bS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/userAccountShared/_sifreYenile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXHVzZXJBY2NvdW50U2hhcmVkXF9zaWZyZVllbmlsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/variantShared/_variantEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXHZhcmlhbnRTaGFyZWRcX3ZhcmlhbnRFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/_LayoutAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRBZG1pbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/_LayoutUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRVc2VyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/SizeType/SizeTypeCreate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2l6ZVR5cGVcU2l6ZVR5cGVDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/SizeType/SizeTypeEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2l6ZVR5cGVcU2l6ZVR5cGVFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/SizeType/SizeTypeList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2l6ZVR5cGVcU2l6ZVR5cGVMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Size/SizeCreate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2l6ZVxTaXplQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Size/SizeEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2l6ZVxTaXplRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Size/SizeList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2l6ZVxTaXplTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Slider/SliderCreate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2xpZGVyXFNsaWRlckNyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Slider/SliderEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2xpZGVyXFNsaWRlckVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Slider/SliderList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2xpZGVyXFNsaWRlckxpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Subscribe/SubscribeCreate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3Vic2NyaWJlXFN1YnNjcmliZUNyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Subscribe/SubscribeEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3Vic2NyaWJlXFN1YnNjcmliZUVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Subscribe/SubscribeList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3Vic2NyaWJlXFN1YnNjcmliZUxpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Support/SupportDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VwcG9ydFxTdXBwb3J0RGV0YWlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Support/SupportList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VwcG9ydFxTdXBwb3J0TGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Support/SupportListClient.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VwcG9ydFxTdXBwb3J0TGlzdENsaWVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/UserAccount/AccountEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlckFjY291bnRcQWNjb3VudEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/UserAccount/AccountIndex.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlckFjY291bnRcQWNjb3VudEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/UserAccount/AccountLogin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlckFjY291bnRcQWNjb3VudExvZ2luLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/UserAccount/AccountRegister.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlckFjY291bnRcQWNjb3VudFJlZ2lzdGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/UserAccount/SifremiUnuttum.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlckFjY291bnRcU2lmcmVtaVVudXR0dW0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/UserAccount/SifreYenile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlckFjY291bnRcU2lmcmVZZW5pbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/Variant/VariantEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmFyaWFudFxWYXJpYW50RWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oğuzhan/Desktop/Tamamlananlar/E-Ticaret/WebUI/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 

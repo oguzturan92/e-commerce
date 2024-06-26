@@ -1,0 +1,11 @@
+@{
+    ViewData["Title"] = "Üye Şifremi Unuttum";
+    Layout = "_Layout";
+}
+
+    @await Html.PartialAsync("~/Views/Shared/userAccountShared/_sifremiUnuttum.cshtml")
+
+    @section Css
+    {
+        <link rel="stylesheet" href="~/AccountCss/my-information.css" />
+    }

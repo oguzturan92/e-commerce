@@ -1,0 +1,61 @@
+@model HomeModel
+
+@if (Model.Sliders.Count() < 1)
+{
+    @foreach (var item in Model.Sliders)
+    {
+        <a href="@item.SliderLink" class="slider-box">
+            <img src="~/img/@item.SliderImage" alt="@item.SliderImage">
+            <div class="slider-content">
+                <h2>@item.SliderName</h2>
+                <p>@item.SliderDescription</p>
+            </div>
+        </a>
+    }
+} else
+{
+    <div class="slider-container" id="slider-container" value="@Model.Sliders[0].SliderTime">
+        <div id="slider-left" class="left-icon-box">
+            <div class="left-icon-1"></div>
+            <div class="left-icon-2"></div>
+        </div>
+        <div class="slider-carousel">
+
+            @foreach (var item in Model.Sliders)
+            {
+                @* <a class="slider-a" href="@Model.Sliders[i].SliderLink"> *@
+                <div class="slider-a" href="#">
+              
+                    @* <video autoplay loop muted playsinline>
+                        <source src="~/img/@Model.Sliders[i].SliderImage" type="video/mp4">
+                    </video> *@
+                    @* not : video için a etiketi koy. img'yi a etiketi içine aldık *@
+                    <a href="">
+                        <img src="/img/@item.SliderImage" alt="#">
+                    </a>
+                
+                    <div class="slider-content">
+                        <h2>@item.SliderName</h2>
+                        <p>@item.SliderDescription</p>
+                        <a href="@item.SliderLink">Buton
+                            <span class="btn-icon">
+                                <div class="btn-icon-1"></div>
+                                <div class="btn-icon-2"></div>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            }
+
+        </div>
+        <div id="slider-right" class="right-icon-box">
+            <div class="right-icon-1"></div>
+            <div class="right-icon-2"></div>
+        </div>
+    </div>
+}
+
+
+<script>
+    var imagesCount = @Model.Sliders.Count();
+</script>

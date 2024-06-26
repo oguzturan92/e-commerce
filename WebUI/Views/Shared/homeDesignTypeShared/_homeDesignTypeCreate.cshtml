@@ -1,0 +1,42 @@
+@model HomeDesignTypeModel
+
+<div class="title">
+    <h2>DİZAYN EKLE</h2>
+</div>
+<div class="content">
+    <div class="form-container">
+        <div class="table-btn-geri-box">
+            <a class="table-btn-geri" asp-controller="HomeDesignType" asp-action="HomeDesignTypeList">Geri</a>
+        </div>
+        <form class="form-container-alt" asp-controller="HomeDesignType" asp-action="HomeDesignTypeCreate" method="post">
+            <div class="form-item-1">
+                <span class="validation" asp-validation-for="HomeDesignTypeName"></span>
+                <label>Ad *</label>
+                <input asp-for="HomeDesignTypeName" type="text">
+            </div>
+            <div class="form-item-3">
+                <div class="form-item-1">
+                    <label>Sıra Numarası</label>
+                    <input asp-for="HomeDesignTypeSort" type="text">
+                </div>
+                <div class="form-item-1">
+                    <label>Listeleme Tipi</label>
+                    <select asp-for="HomeDesignTypeOption" class="select">
+                        <option value="Banner">Banner</option>
+                        <option value="List">Ürün Listesi</option>
+                    </select>
+                </div>
+                <div class="form-item-1">
+                    <label>Onay Durumu</label>
+                    <select asp-for="HomeDesignTypeApproval" class="select">
+                        <option value="True">Evet</option>
+                        <option value="False" selected>Hayır</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-btn-kaydet-box">
+                <button class="form-btn-kaydet" type="submit">Kaydet</button>
+            </div>
+        </form>
+    </div>
+</div>

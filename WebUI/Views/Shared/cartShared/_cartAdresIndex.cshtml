@@ -1,0 +1,230 @@
+@model CartAdresModel
+
+<form id="address-list" class="cart-address-container" asp-controller="Cart" asp-action="CartAdres" method="post">
+    <div class="cart-address-box">
+        <div class="cart-address-left">
+            <p class="cart-address-list-title">Teslimat Adresi</p>
+            <div class="cart-address-list">
+                @foreach (var adres in Model.Adreses)
+                {
+                    <div class="cart-address-item">
+                        <div class="cart-address-item-radio-box">
+                            <label for="@adres.AdresId">@adres.AdresTitle</label>
+                            <input type="radio" name="AdresId" id="@adres.AdresId" value="@adres.AdresId" class="addressId" @(Model.SeciliAdresId == adres.AdresId ? "checked" : "")>
+                        </div>
+                        <div class="cart-address-item-city-box">
+                            <p>@adres.AdresContent</p>
+                            <p>@adres.AdresCounty / @adres.AdresCity</p>
+                        </div>
+                    </div>
+                }
+                <div class="cart-address-fatura-add">
+                    <label for="fatura">Fatura Adresim Farklı Olsun</label>
+                    <input type="checkbox" name="AdresFatura" value="true" id="fatura">
+                </div>
+                <div class="cart-address-add-box">
+                    <a class="address-add-btn">Yeni Adres Ekle</a>
+                    <button type="submit" class="cart-go-payment">Ödemeye İlerle</button>
+                </div>
+            </div>
+        </div>
+    
+        <div class="cart-address-fatura">
+            <p class="cart-address-list-title">Fatura Adresi</p>
+            <div class="cart-address-list">
+                @foreach (var adres in Model.Adreses)
+                {
+                    <div class="cart-address-item">
+                        <div class="cart-address-item-radio-box fatura-input-select">
+                            <label for="@adres.AdresId + 1">@adres.AdresTitle</label>
+                            <input type="radio" name="AdresIdFatura" id="@adres.AdresId + 1" value="@adres.AdresId" class="addressId" @(Model.SeciliAdresId == adres.AdresId ? "checked" : "")>
+                        </div>
+                        <div class="cart-address-item-city-box">
+                            <p>@adres.AdresContent</p>
+                            <p>@adres.AdresCounty / @adres.AdresCity</p>
+                        </div>
+                    </div>
+                }
+                <div class="cart-address-add-box" id="cart-fatura-add">
+                    <a class="address-add-btn">Yeni Adres Ekle</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+<div id="address-new-form" class="cart-address-container">
+    <div class="cart-address-left">
+        <div class="cart-address-add">
+            <form class="user-form" asp-controller="Adres" asp-action="AdresCreate" method="post">
+                <input type="hidden" name="cart" value="0">
+                <div class="user-form-fatura-tipi">
+                    <label for="bireysel">Bireysel</label>
+                    <input type="radio" name="AdresFaturaType" id="bireysel" value="bireysel" checked>
+                    <label for="kurumsal">Kurumsal</label>
+                    <input type="radio" name="AdresFaturaType" id="kurumsal" value="kurumsal">
+                </div>
+                <div class="user-form-item-1">
+                    <label>Başlık</label>
+                    <input name="AdresTitle" type="text">
+                </div>
+                <div class="user-form-item-1">
+                    <label>Ad Soyad</label>
+                    <input name="AdresNameSurname" type="text">
+                </div>
+                <div class="user-form-item-1">
+                    <label>Adres</label>
+                    <input name="AdresContent" type="text">
+                </div>
+                <div class="user-form-item-3">
+                    <div class="user-form-item-1">
+                        <label>İlçe</label>
+                        <input name="AdresCounty" type="text">
+                    </div>
+                    <div class="user-form-item-1">
+                        <label>İl *</label>
+                        <select name="AdresCity" class="select">
+                            <option value="" selected disabled>Seçiniz</option>
+                            <option value="İstanbul">İstanbul</option>
+                            <option value="Ankara">Ankara</option>
+                            <option value="İzmir">İzmir</option>
+                            <option value="Adana">Adana</option>
+                            <option value="Adıyaman">Adıyaman</option>
+                            <option value="Afyon">Afyon</option>
+                            <option value="Ağrı">Ağrı</option>
+                            <option value="Aksaray">Aksaray</option>
+                            <option value="Antalya">Antalya</option>
+                            <option value="Ardahan">Ardahan</option>
+                            <option value="Artvin">Artvin</option>
+                            <option value="Aydın">Aydın</option>
+                            <option value="Balıkesir">Balıkesir</option>
+                            <option value="Bartın">Bartın</option>
+                            <option value="Batman">Batman</option>
+                            <option value="Bayburt">Bayburt</option>
+                            <option value="Bilecik">Bilecik</option>
+                            <option value="Bingöl">Bingöl</option>
+                            <option value="Bitlis">Bitlis</option>
+                            <option value="Bolu">Bolu</option>
+                            <option value="Burdur">Burdur</option>
+                            <option value="Bursa">Bursa</option>
+                            <option value="Çanakkale">Çanakkale</option>
+                            <option value="Çankırı">Çankırı</option>
+                            <option value="Çorum">Çorum</option>
+                            <option value="Denizli">Denizli</option>
+                            <option value="Diyarbakır">Diyarbakır</option>
+                            <option value="Düzce">Düzce</option>
+                            <option value="Edirne">Edirne</option>
+                            <option value="Elazığ">Elazığ</option>
+                            <option value="Erzincan">Erzincan</option>
+                            <option value="Erzurum">Erzurum</option>
+                            <option value="Eskişehir">Eskişehir</option>
+                            <option value="Gaziantep">Gaziantep</option>
+                            <option value="Giresun">Giresun</option>
+                            <option value="Gümüşhane">Gümüşhane</option>
+                            <option value="Hakkari">Hakkari</option>
+                            <option value="Elazığ">Elazığ</option>
+                            <option value="Hatay">Hatay</option>
+                            <option value="Iğdır">Iğdır</option>
+                            <option value="Isparta">Isparta</option>
+                            <option value="Mersin">Mersin</option>
+                            <option value="Karabük">Karabük</option>
+                            <option value="Karaman">Karaman</option>
+                            <option value="Kars">Kars</option>
+                            <option value="Kastamonu">Kastamonu</option>
+                            <option value="Kayseri">Kayseri</option>
+                            <option value="Kırıkkale">Kırıkkale</option>
+                            <option value="Kırklareli">Kırklareli</option>
+                            <option value="Kırşehir">Kırşehir</option>
+                            <option value="Kilis">Kilis</option>
+                            <option value="Kocaeli">Kocaeli</option>
+                            <option value="Konya">Konya</option>
+                            <option value="Kütahya">Kütahya</option>
+                            <option value="Malatya">Malatya</option>
+                            <option value="Manisa">Manisa</option>
+                            <option value="Kahramanmaraş">Kahramanmaraş</option>
+                            <option value="Mardin">Mardin</option>
+                            <option value="Muğla">Muğla</option>
+                            <option value="Muş">Muş</option>
+                            <option value="Nevşehir">Nevşehir</option>
+                            <option value="Niğde">Niğde</option>
+                            <option value="Ordu">Ordu</option>
+                            <option value="Osmaniye">Osmaniye</option>
+                            <option value="Rize">Rize</option>
+                            <option value="Sakarya">Sakarya</option>
+                            <option value="Samsun">Samsun</option>
+                            <option value="Siirt">Siirt</option>
+                            <option value="Sinop">Sinop</option>
+                            <option value="Sivas">Sivas</option>
+                            <option value="Tekirdağ">Tekirdağ</option>
+                            <option value="Tokat">Tokat</option>
+                            <option value="Trabzon">Trabzon</option>
+                            <option value="Tunceli">Tunceli</option>
+                            <option value="Şanlıurfa">Şanlıurfa</option>
+                            <option value="Şırnak">Şırnak</option>
+                            <option value="Uşak">Uşak</option>
+                            <option value="Van">Van</option>
+                            <option value="Yalova">Yalova</option>
+                            <option value="Yozgat">Yozgat</option>
+                            <option value="Zonguldak">Zonguldak</option>
+                        </select>
+                    </div>
+                    <div class="user-form-item-1">
+                        <label>Posta Kodu</label>
+                        <input name="AdresPostCode" type="text">
+                    </div>
+                </div>
+                <div class="user-form-item-1">
+                    <label>Telefon Numarası</label>
+                    <input name="AdresPhoneNumber" type="text">
+                </div>
+                <div class="user-form-item-1">
+                    <label>TC Kimlik No <span style="font-size: 12px;">(Yasa gereği KDV hariç 5.000TL ve üzeri alışverişlerinizde TC Kimlik No zorunludur.)</span></label>
+                    <input name="AdresTcNo" type="text">
+                </div>
+                <div class="user-form-btn-box">
+                    <button class="user-form-btn-kaydet" type="submit">Kaydet</button>
+                    <a id="user-form-btn-geri">Geri</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+</div>
+
+<script>
+    var adresList = document.querySelector("#address-list");
+    var adresNewAdd = document.querySelectorAll(".address-add-btn");
+    var adresNew = document.querySelector("#address-new-form");
+    var adresBackBtn = document.querySelector("#user-form-btn-geri");
+
+    for (let a of adresNewAdd) {
+        a.addEventListener("click", function () {
+            adresList.style.display = "none"
+            adresNew.style.display = "flex"
+        });
+        adresBackBtn.addEventListener("click", function () {
+            adresList.style.display = "block"
+            adresNew.style.display = "none"
+        });
+    }
+
+    var faturaFarkli = document.querySelector("#fatura");
+    var cartAdresFatura = document.querySelector(".cart-address-fatura");
+    var inputs = document.querySelectorAll(".fatura-input-select input");
+    console.log(inputs);
+
+    faturaFarkli.addEventListener("click", function () {
+        if (faturaFarkli.checked) {
+            cartAdresFatura.style.display = "block";
+            for (let a of inputs) {
+                a.setAttribute("name", "AdresIdFatura");
+            }
+        } else {
+            cartAdresFatura.style.display = "none";
+            for (let a of inputs) {
+                a.setAttribute("name", "");
+            }
+        }
+    });
+
+</script>

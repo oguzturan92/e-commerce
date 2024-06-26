@@ -1,0 +1,19 @@
+@model PopupModel
+
+@if (Model.Popup != null)
+{
+    <div id="popup-container">
+        <div style="background-image: url('../img/@Model.Popup.PopupImage');" class="popup-box">
+            <h3>@Model.Popup.PopupTitle</h3>
+            <p>@Model.Popup.PopupDescription</p>
+            @if (Model.Popup.PopupLink != null)
+            {
+                <a href="@Model.Popup.PopupLink" class="popup-btn">Detay</a>
+            }
+            <div id="popup-xmark" class="xmark-box">
+                <div class="xmark-1"></div>
+                <div class="xmark-2"></div>
+            </div>
+        </div>
+    </div>
+}

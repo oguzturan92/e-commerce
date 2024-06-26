@@ -1,0 +1,81 @@
+@model EftHavaleModel
+
+<div class="eftHavale-container">
+    <div class="eftHavale-box">
+        <div class="eftHavale-list-box">
+            <div class="eftHavale-back">
+                <a asp-controller="UserAccount" asp-action="AccountIndex">Geri</a>
+            </div>
+
+            <form class="eftHavale-new-container" asp-controller="EftHavale" asp-action="EftHavaleForm" method="post">
+                <div class="eftHavale-new-box">
+                    <div class="eftHavale-new">
+                        <span class="validation" asp-validation-for="EftHavaleOrderNumber"></span>
+                        <label for="">Sipariş No *</label>
+                        <select asp-for="EftHavaleOrderNumber">
+                            <option value="" disabled selected>Sipariş seçiniz</option>
+                            @foreach (var order in Model.Orders)
+                            {
+                                <option value="@order">@order</option>
+                            }
+                        </select>
+                    </div>
+                    <div class="eftHavale-new">
+                        <span class="validation" asp-validation-for="EftHavaleBankName"></span>
+                        <label for="">Banka</label>
+                        <select asp-for="EftHavaleBankName">
+                            <option value="" disabled selected>Banka seçiniz</option>
+                            @foreach (var bank in Model.BankAccounts)
+                            {
+                                <option value="@bank.BankAccountName">@bank.BankAccountName</option>
+                            }
+                        </select>
+                    </div>
+                    <div class="eftHavale-new">
+                        <span class="validation" asp-validation-for="EftHavaleOrderPrice"></span>
+                        <label for="">Tutar</label>
+                        <input asp-for="EftHavaleOrderPrice" type="text">
+                    </div>
+                    <div class="eftHavale-new">
+                        <label for="">Not</label>
+                        <input asp-for="EftHavaleContent" type="text">
+                    </div>
+                </div>
+                <div class="eftHavale-new-button">
+                    <button type="submit">Gönder</button>
+                </div>
+            </form>
+
+            @foreach (var item in Model.EftHavales)
+            {
+                <div class="eftHavale-list-item">
+                    <div class="eftHavale-list-item-title">
+                        <div class="eftHavale-liste-item-title-2">
+                            <div class="eftHavale-liste-item-title-3">
+                                <p>Oluşturma Tarihi</p>
+                                <p>@item.EftHavaleDateTime</p>
+                            </div>
+                            <div class="eftHavale-liste-item-title-3">
+                                <p>Sipariş No</p>
+                                <p>@item.EftHavaleOrderNumber</p>
+                            </div>
+                            <div class="eftHavale-liste-item-title-3">
+                                <p>Banka</p>
+                                <p>@item.EftHavaleBankName</p>
+                            </div>
+                            <div class="eftHavale-liste-item-title-3">
+                                <p>Tutar</p>
+                                <p>@item.EftHavaleOrderPrice ₺</p>
+                            </div>
+                            <div class="eftHavale-liste-item-title-3">
+                                <p>Not</p>
+                                <p>@item.EftHavaleContent</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+
+        </div>
+    </div>
+</div>

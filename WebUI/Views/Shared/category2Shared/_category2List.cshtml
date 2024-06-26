@@ -1,0 +1,85 @@
+@model Category2Model
+
+<div class="title">
+    <h2>ALT KATEGORİ LİSTESİ</h2>
+</div>
+<div class="content">
+    <div class="table-container">
+        <div class="table-btn-ekle-geri-box">
+            <a class="table-btn-ekle" asp-controller="Category2" asp-action="Category2Create" asp-route-id="@Model.CategoryId">Ekle</a>
+            <a class="table-btn-geri" asp-controller="Category" asp-action="CategoryList">Geri</a>
+        </div>
+        @if (Model.Category2s.Count() > 0)
+        {
+            <div class="table-container-alt">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="th-w-75">Sıra No</th>
+                            <th class="th-w-75">Resim</th>
+                            <th class="th-w-auto">Ad</th>
+                            <th class="th-w-75">Alt Kategori</th>
+                            <th class="th-w-75 mobil-display-none">Onay</th>
+                            <th colspan="2"></th>
+                            @* <th></th> *@
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.Category2s) {
+                            <tr>
+                                <td class="td-w-75">
+                                    <form asp-controller="Category2" asp-action="Category2List" method="post">
+                                        <input type="hidden" name="Category2Id" value="@item.Category2Id">
+                                        <input class="input-sort" type="number" name="Category2Sort" value="@item.Category2Sort">
+                                    </form>
+                                </td>
+
+                                <td><img src="~/img/@item.Category2Image" alt=""></td>
+
+                                <td class="slice">@item.Category2Name</td>
+
+                                <td class="td-buton-category-detail">
+                                    <form asp-controller="Category3" asp-action="Category3List" asp-route-id="@item.Category2Id" method="get">
+                                        <input type="hidden" name="categoryId" value="@item.CategoryId">
+                                        <button type="submit">
+                                            <img src="/img/admin-img/layer.png" alt="">
+                                        </button>
+                                    </form>
+                                </td>
+
+                                @if (item.Category2Approval) {
+                                    <td class="mobil-display-none">
+                                        <img src="/img/admin-img/check.png" alt="">
+                                    </td>
+                                } else {
+                                    <td class="mobil-display-none">
+                                        <img src="/img/admin-img/xmark.png" alt="">
+                                    </td>
+                                }
+
+                                <td class="td-buton-edit">
+                                    <form asp-controller="Category2" asp-action="Category2Edit" asp-route-id="@item.Category2Id" method="get">
+                                        <button type="submit">
+                                            <img src="/img/admin-img/pencil.png" alt="">
+                                        </button>
+                                    </form>
+                                </td>
+
+                                <td class="td-buton-del">
+                                    <form asp-controller="Category2" asp-action="Category2Delete" asp-route-id="@item.Category2Id" method="post">
+                                        <button type="submit" onclick="return silOnayla();">
+                                            <img src="/img/admin-img/delete.png" alt="">
+                                        </button>
+                                    </form>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        } else
+        {
+            <h4>Listelenecek Kategori Bulunamadı</h4>
+        }
+    </div>
+</div>

@@ -1,0 +1,14 @@
+@model FooterAltModel
+@{
+    ViewData["Title"] = @Model.FooterAlt.FooterAltSeoTitle;
+    ViewData["Description"] = @Model.FooterAlt.FooterAltSeoDescription;
+    ViewData["Keyword"] = @Model.FooterAlt.FooterAltSeoKeyword;
+    Layout = "_Layout";
+}
+
+    <partial name="~/Views/Shared/footerAltShared/_footerAltDetailClient.cshtml"/>
+
+    @section Css
+    {
+        <link rel="stylesheet" href="~/ClientCss/style-footer-alt-detail.css" />
+    }

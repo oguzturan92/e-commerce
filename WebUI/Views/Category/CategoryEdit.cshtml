@@ -1,0 +1,15 @@
+@{
+    ViewData["Title"] = "Kategori Düzenle";
+    Layout = "_LayoutAdmin";
+}
+
+    <partial name="~/Views/Shared/categoryShared/_categoryEdit.cshtml"/>
+
+    @section Scripts
+    {
+        @* CK EDİTÖR SCRİPTİ *@
+        <script src="//cdn.ckeditor.com/4.21.0/full/ckeditor.js"></script>
+        <script>
+            CKEDITOR.replace( 'CkEditor' );
+        </script>
+    }

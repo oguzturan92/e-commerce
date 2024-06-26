@@ -1,0 +1,135 @@
+
+
+.giftCard-container {
+    width: 100%;
+    padding-top: 100px;
+}
+.giftCard-box {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0px auto;
+    
+}
+.giftCard-list-box {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0px 20px;
+}
+
+/* YENİ EFTHAVALE -------------------------------------------------- */
+.giftCard-new-container {
+    box-shadow: 0px 5px 10px 3px #f7f7f7;
+    padding: 10px;
+}
+.giftCard-new-box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.giftCard-new {
+    display: grid;
+}
+.giftCard-new label {
+    font-weight: 300;
+    margin: 10px 0px;
+}
+
+.giftCard-new input {
+    border: 1px solid #efefef;
+    border-radius: 25px;
+    outline: none;
+    padding-left: 20px;
+    height: 30px;
+}
+.giftCard-new select {
+    border: 1px solid #efefef;
+    border-radius: 25px;
+    outline: none;
+    padding-left: 20px;
+    height: 34px;
+}
+
+
+
+.giftCard-new-button {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0px;
+}
+
+.giftCard-new-button button {
+    border: 1px solid #000;
+    background-color: #000;
+    color: #fff;
+    padding: 8px 50px;
+    cursor: pointer;
+}
+
+
+/* EFTHAVALE BAŞLIK -------------------------------------------------- */
+.giftCard-list-item {
+    box-shadow: 0px 5px 10px 3px #f7f7f7;
+}
+.giftCard-list-item p {
+    margin: 0px;
+}
+
+.giftCard-list-item-title {
+    height: 75px;
+    padding: 10px 100px;
+}
+.giftCard-liste-item-title-2 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    height: 100%;
+}
+.giftCard-liste-item-title-3 {
+    text-align: center;
+}
+.giftCard-liste-item-title-3 p {
+    font-weight: 300;
+}
+.giftCard-liste-item-title-3 p:first-child {
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+
+.giftCard-back {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.giftCard-back a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    padding: 10px;
+    background-color: #000;
+    font-size: 13px;
+}
+
+
+@media (max-width:1000px) {
+    .giftCard-list-box {
+        padding: 0px 10px;
+    }
+    .giftCard-list-item-title {
+        padding: 10px 50px;
+    }
+}
+@media (max-width:768px) {
+    .giftCard-list-item-title {
+        padding: 10px 25px;
+        height: auto;
+    }
+    .giftCard-liste-item-title-2 {
+        gap: 10px;
+    }
+    .giftCard-liste-item-title-3 p {
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,22 @@
+@model UserSifremiUnuttumModel
+
+<div class="my-information-container">
+    <div class="my-information-box">
+
+        <div class="user-form-container">
+            <form class="user-form" asp-controller="UserAccount" asp-action="SifremiUnuttum" method="post">
+                <p class="user-form-title">Şifremi Unuttum</p>
+                <div class="user-form-item-1">
+                    <span class="user-validation" asp-validation-for="Email"></span>
+                    <label for="Email">Mail Adresiniz *</label>
+                    <input asp-for="Email" type="email">
+                </div>
+                <div class="user-form-btn-box">
+                    <button class="user-form-btn-kaydet" type="submit">Gönder</button>
+                    <a class="user-form-btn-geri" asp-controller="UserAccount" asp-action="AccountLogin">Giriş Yap</a>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>

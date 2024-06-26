@@ -1,0 +1,218 @@
+@model ProductModel
+
+<div class="title">
+    <h2>ÜRÜN DÜZENLE</h2>
+</div>
+<div class="content">
+    <div class="form-container">
+        <div class="table-btn-geri-box">
+            <a class="table-btn-geri" asp-controller="Product" asp-action="ProductList">Geri</a>
+        </div>
+            <div class="form-alternativ-box">
+                <div class="form-alternativ-item">
+                    <a asp-controller="Product" asp-action="ProductEdit" asp-route-id="@Model.ProductId" method="get" style="box-shadow: 0px 4px 8px 0px #e6e6e6;">
+                        Detay
+                    </a>
+                </div>
+                <div class="form-alternativ-item">
+                    <a asp-controller="Description" asp-action="DescriptionList" asp-route-id="@Model.ProductId" method="get">
+                        Metin
+                    </a>
+                </div>
+                <div class="form-alternativ-item">
+                    <a asp-controller="Variant" asp-action="VariantEdit" asp-route-id="@Model.ProductId" method="get">
+                        Varyant
+                    </a>
+                </div>
+                <div class="form-alternativ-item">
+                    <a asp-controller="ProductSize" asp-action="ProductSizeEdit" asp-route-id="@Model.ProductId" method="get">
+                        Seçenek
+                        @* <input type="hidden" name="ProductId" value="@Model.ProductId"> *@
+                    </a>
+                </div>
+                <div class="form-alternativ-item">
+                    <a asp-controller="List" asp-action="ListList" asp-route-id="@Model.ProductId" method="get">
+                        Liste
+                        <input type="hidden" name="ProductId" value="@Model.ProductId">
+                    </a>
+                </div>
+            </div>
+        <form class="form-container-alt" asp-controller="Product" asp-action="ProductEdit" method="post" enctype="multipart/form-data">
+            <input type="hidden" asp-for="ProductId">
+            <input type="hidden" asp-for="ProductImage">
+            <input type="hidden" asp-for="ProductSort">
+            <input type="hidden" asp-for="ProductSale">
+            
+
+            <div class="form-item-1">
+                <span class="validation" asp-validation-for="ProductSeoTitle"></span>
+                <label>Seo Başlık</label>
+                <input asp-for="ProductSeoTitle" type="text">
+            </div>
+            <div class="form-item-1">
+                <span class="validation" asp-validation-for="ProductSeoDescription"></span>
+                <label>Seo Açıklama</label>
+                <input asp-for="ProductSeoDescription" type="text">
+            </div>
+            <div class="form-item-1">
+                <span class="validation" asp-validation-for="ProductSeoKeyword"></span>
+                <label>Seo Anahtar Kelime</label>
+                <input asp-for="ProductSeoKeyword" type="text">
+            </div>
+            <div class="form-item-1">
+                <span class="validation" asp-validation-for="ProductCode"></span>
+                <label>Ürün Kodu *</label>
+                <input asp-for="ProductCode" type="text">
+            </div>
+            <div class="form-item-1">
+                <span class="validation" asp-validation-for="ProductName"></span>
+                <label>Ad *</label>
+                <input asp-for="ProductName" type="text">
+            </div>
+            <div class="form-item-1">
+                <span class="validation" asp-validation-for="ProductShortName"></span>
+                <label>Özet *</label>
+                <input asp-for="ProductShortName" type="text">
+            </div>
+            <div class="form-item-1">
+                <span class="validation" asp-validation-for="ProductUrl"></span>
+                <label>Url *</label>
+                <input asp-for="ProductUrl" type="text">
+            </div>
+            <div class="form-item-2">
+                <div class="form-item-1">
+                    <span class="validation" asp-validation-for="ProductColor"></span>
+                    <label>Renk</label>
+                    <input asp-for="ProductColor" type="text">
+                </div>
+                <div class="form-item-1">
+                    <span class="validation" asp-validation-for="ProductStock"></span>
+                    <label>Stok</label>
+                    <input asp-for="ProductStock" type="text">
+                </div>
+            </div>
+            <div class="form-item-3">
+                <div class="form-item-1">
+                    <span class="validation" asp-validation-for="ProductPrice"></span>
+                    <label>Fiyat</label>
+                    <input asp-for="ProductPrice" type="text">
+                </div>
+                <div class="form-item-1">
+                    <span class="validation" asp-validation-for="ProductSalePrice"></span>
+                    <label>İndirimli Fiyat</label>
+                    <input asp-for="ProductSalePrice" type="text">
+                </div>
+                <div class="form-item-1">
+                    <span class="validation" asp-validation-for="ProductKdv"></span>
+                    <label>Kdv Oranı %</label>
+                    <input asp-for="ProductKdv" type="text">
+                </div>
+            </div>
+            <div class="form-item-1">
+                <span class="validation" asp-validation-for="ProductImages"></span>
+                <label>Resim * <span class="tavsiye">(önerilen boyut: 750 x 500)</span></label>
+                <div class="edit-img-box">
+                    @foreach (var item in Model.ProductImages)
+                    {
+                        <input type="hidden" name="ProductImages" value="@item.ProductImageName">
+                        @* Validationdan sonra sayfa yenilenirse, DB'den gelen ProductImage değerini sakladık (Burda gitmedi. Edit Pst içinden yolladım model'e) *@
+                        <img src="~/img/@item.ProductImageName" alt="" class="form-img">
+                    }
+                </div>
+                <input class="resim-input" multiple name="files" type="file">
+            </div>
+            <div class="form-item-2">
+                <div class="form-item-1">
+                    <label>Yeni Etiketi</label>
+                    <select asp-for="ProductNew" class="select">
+                        <option value="True">Evet</option>
+                        <option value="False">Hayır</option>
+                    </select>
+                </div>
+                <div class="form-item-1">
+                    <label>Onay Durumu</label>
+                    <select asp-for="ProductApproval" class="select">
+                        <option value="True">Evet</option>
+                        <option value="False">Hayır</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-item-1">
+                <div>Dizayn Tipi</div>
+                <div class="form-checkbox">
+                    @for (int i = 0; i < Model.SelectedListHomeDesignTypes.Count(); i++)
+                    {
+                        <input type="hidden" name="SelectedListHomeDesignTypes[@i].HomeDesignTypeId" value="@Model.SelectedListHomeDesignTypes[@i].HomeDesignTypeId">
+                        <input type="hidden" name="SelectedListHomeDesignTypes[@i].HomeDesignTypeName" value="@Model.SelectedListHomeDesignTypes[@i].HomeDesignTypeName">
+                    }
+
+                    @foreach (var item in Model.ListHomeDesignTypes) {
+                        <div class="checkbox">
+                            <input type="checkbox"
+                                    name="designIds"
+                                    value="@item.HomeDesignTypeId"
+                                    class="custom-control-input"
+                                    id="HomeDesignType@(item.HomeDesignTypeId)"
+                                    @(Model.SelectedListHomeDesignTypes.Any(i => i.HomeDesignTypeId == item.HomeDesignTypeId) ? "checked" : "")
+                            >   
+                            <label for="HomeDesignType@(item.HomeDesignTypeId)">@item.HomeDesignTypeName</label>
+                        </div>
+                    }
+                </div>
+            </div>
+            <div class="form-item-1">
+                <div>Kategori Seçiniz</div>
+                <div class="form-checkbox">
+                    @* For ile, blog düzenleme yaparken, sayfa validation'dan geri döndüğünde, seçilen kategorileri tekrar sayfada listeler. *@
+                    @for (int i = 0; i < Model.SelectedCategories.Count(); i++)
+                    {
+                        <input type="hidden" name="SelectedCategories[@i].CategoryId" value="@Model.SelectedCategories[@i].CategoryId">
+                        <input type="hidden" name="SelectedCategories[@i].CategoryName" value="@Model.SelectedCategories[@i].CategoryName">
+                    }
+
+                    @foreach (var item in Model.ListCategories) {
+                        <div class="checkbox">
+                            <input type="checkbox"
+                                    name="categoryIds"
+                                    value="@item.CategoryId"
+                                    class="custom-control-input"
+                                    id="Category@(item.CategoryId)"
+                                    @(Model.SelectedCategories.Any(i => i.CategoryId == item.CategoryId) ? "checked" : "")
+                            >   
+                            <label for="Category@(item.CategoryId)">@item.CategoryName</label>
+                        </div>
+                        @foreach (var item2 in item.Category2s)
+                        {
+                            <div class="checkbox" style="margin-left: 15px;">
+                                <input type="checkbox"
+                                        name="categoryIds2"
+                                        value="@item2.Category2Id"
+                                        class="custom-control-input"
+                                        id="Category2@(item2.Category2Id)"
+                                        @(Model.SelectedCategory2s.Any(i => i.Category2Id == item2.Category2Id) ? "checked" : "")
+                                >   
+                                <label for="Category2@(item2.Category2Id)">@item2.Category2Name</label>
+                            </div>
+                            @foreach (var item3 in item2.Category3s)
+                            {
+                                <div class="checkbox" style="margin-left: 30px;">
+                                    <input type="checkbox"
+                                            name="categoryIds3"
+                                            value="@item3.Category3Id"
+                                            class="custom-control-input"
+                                            id="Category3@(item3.Category3Id)"
+                                            @(Model.SelectedCategory3s.Any(i => i.Category3Id == item3.Category3Id) ? "checked" : "")
+                                    >   
+                                    <label for="Category3@(item3.Category3Id)">@item3.Category3Name</label>
+                                </div>
+                            }
+                        }
+                    }
+                </div>
+            </div>
+            <div class="form-btn-kaydet-box">
+                <button class="form-btn-kaydet" type="submit">Kaydet</button>
+            </div>
+        </form>
+    </div>
+</div>

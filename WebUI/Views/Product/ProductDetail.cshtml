@@ -1,0 +1,42 @@
+@model ProductDetailModel
+@{
+    ViewData["Title"] = @Model.Product.ProductSeoTitle;
+    ViewData["Description"] = @Model.Product.ProductSeoDescription;
+    ViewData["Keyword"] = @Model.Product.ProductSeoKeyword;
+    Layout = "_Layout";
+}
+
+    <partial name="~/Views/Shared/productShared/_productDetail.cshtml"/>
+
+    @section Scripts
+    {
+        <script src="~/js/proje-detail-image-slider.js"></script>
+        <script src="~/js/proje-detail.js"></script>
+        <script src="~/splide/dist/js/splide.min.js"></script>
+
+        @if (TempData["sepet"] != null)
+        {
+            <script type="text/javascript">
+                window.onload = function () { 
+                    Swal.fire({
+                        icon: 'success',
+                        html: 'Ürün Sepete Eklendi',
+                        showConfirmButton: false,
+                        timer: 1000
+                    })
+                };
+            </script>
+        }
+    }
+
+    @section Css
+    {
+        <link rel="stylesheet" href="~/ClientCss/style-detail.css" />
+        <link rel="stylesheet" href="~/ClientCss/style-detail-description.css" />
+        <link rel="stylesheet" href="~/ClientCss/style-detail-image-slider.css" />
+        <link rel="stylesheet" href="~/ClientCss/style-detail-product-list.css" />
+        <link rel="stylesheet" href="~/ClientCss/style-favorite-ajax.css" />
+        <link rel="stylesheet" href="~/ClientCss/style-login-ajax.css" />
+        <link rel="stylesheet" href="~/ClientCss/style-product-edit-alternativ.css">
+        <link rel="stylesheet" href="~/splide/dist/css/splide.min.css">
+    }

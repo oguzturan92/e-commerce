@@ -1,0 +1,1857 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\.package-lock.json",
+      "PackagePath": "staticwebassets\\.package-lock.json"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\AccountCss\\my-information.css",
+      "PackagePath": "staticwebassets\\AccountCss\\my-information.css"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\AccountCss\\style-account.css",
+      "PackagePath": "staticwebassets\\AccountCss\\style-account.css"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\AccountCss\\style-adres.css",
+      "PackagePath": "staticwebassets\\AccountCss\\style-adres.css"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\AccountCss\\style-eftHavale.css",
+      "PackagePath": "staticwebassets\\AccountCss\\style-eftHavale.css"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\AccountCss\\style-favorite.css",
+      "PackagePath": "staticwebassets\\AccountCss\\style-favorite.css"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\AccountCss\\style-giftCard.css",
+      "PackagePath": "staticwebassets\\AccountCss\\style-giftCard.css"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\AccountCss\\style-order-list.css",
+      "PackagePath": "staticwebassets\\AccountCss\\style-order-list.css"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\AccountCss\\style-orderIade-list.css",
+      "PackagePath": "staticwebassets\\AccountCss\\style-orderIade-list.css"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\AccountCss\\style-orderIade.css",
+      "PackagePath": "staticwebassets\\AccountCss\\style-orderIade.css"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\AccountCss\\style-support.css",
+      "PackagePath": "staticwebassets\\AccountCss\\style-support.css"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\AdminCss\\all.css",
+      "PackagePath": "staticwebassets\\AdminCss\\all.css"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\AdminCss\\animate.css",
+      "PackagePath": "staticwebassets\\AdminCss\\animate.css"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\AdminCss\\style-form.css",
+      "PackagePath": "staticwebassets\\AdminCss\\style-form.css"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\AdminCss\\style-home.css",
+      "PackagePath": "staticwebassets\\AdminCss\\style-home.css"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\AdminCss\\style-navbar-mobil.css",
+      "PackagePath": "staticwebassets\\AdminCss\\style-navbar-mobil.css"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\AdminCss\\style-navbar-web.css",
+      "PackagePath": "staticwebassets\\AdminCss\\style-navbar-web.css"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\AdminCss\\style-product-edit-alternativ.css",
+      "PackagePath": "staticwebassets\\AdminCss\\style-product-edit-alternativ.css"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\AdminCss\\style-table.css",
+      "PackagePath": "staticwebassets\\AdminCss\\style-table.css"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\ClientCss\\style-cart-adres.css",
+      "PackagePath": "staticwebassets\\ClientCss\\style-cart-adres.css"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\ClientCss\\style-cart-payment.css",
+      "PackagePath": "staticwebassets\\ClientCss\\style-cart-payment.css"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\ClientCss\\style-cart.css",
+      "PackagePath": "staticwebassets\\ClientCss\\style-cart.css"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\ClientCss\\style-detail-description.css",
+      "PackagePath": "staticwebassets\\ClientCss\\style-detail-description.css"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\ClientCss\\style-detail-image-slider.css",
+      "PackagePath": "staticwebassets\\ClientCss\\style-detail-image-slider.css"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\ClientCss\\style-detail-product-list.css",
+      "PackagePath": "staticwebassets\\ClientCss\\style-detail-product-list.css"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\ClientCss\\style-detail.css",
+      "PackagePath": "staticwebassets\\ClientCss\\style-detail.css"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\ClientCss\\style-favorite-ajax.css",
+      "PackagePath": "staticwebassets\\ClientCss\\style-favorite-ajax.css"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\ClientCss\\style-footer-alt-detail.css",
+      "PackagePath": "staticwebassets\\ClientCss\\style-footer-alt-detail.css"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\ClientCss\\style-list-filter.css",
+      "PackagePath": "staticwebassets\\ClientCss\\style-list-filter.css"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\ClientCss\\style-list.css",
+      "PackagePath": "staticwebassets\\ClientCss\\style-list.css"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\ClientCss\\style-login-ajax.css",
+      "PackagePath": "staticwebassets\\ClientCss\\style-login-ajax.css"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\ClientCss\\style-message.css",
+      "PackagePath": "staticwebassets\\ClientCss\\style-message.css"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\HomeCss\\all.css",
+      "PackagePath": "staticwebassets\\HomeCss\\all.css"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\HomeCss\\style-bannerClient-1li.css",
+      "PackagePath": "staticwebassets\\HomeCss\\style-bannerClient-1li.css"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\HomeCss\\style-bannerClient-3lu.css",
+      "PackagePath": "staticwebassets\\HomeCss\\style-bannerClient-3lu.css"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\HomeCss\\style-error.css",
+      "PackagePath": "staticwebassets\\HomeCss\\style-error.css"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\HomeCss\\style-footer.css",
+      "PackagePath": "staticwebassets\\HomeCss\\style-footer.css"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\HomeCss\\style-home-product-list.css",
+      "PackagePath": "staticwebassets\\HomeCss\\style-home-product-list.css"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\HomeCss\\style-navbar-mobil.css",
+      "PackagePath": "staticwebassets\\HomeCss\\style-navbar-mobil.css"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\HomeCss\\style-navbar-web.css",
+      "PackagePath": "staticwebassets\\HomeCss\\style-navbar-web.css"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\HomeCss\\style-pagination.css",
+      "PackagePath": "staticwebassets\\HomeCss\\style-pagination.css"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\HomeCss\\style-popup.css",
+      "PackagePath": "staticwebassets\\HomeCss\\style-popup.css"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\HomeCss\\style-search.css",
+      "PackagePath": "staticwebassets\\HomeCss\\style-search.css"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\HomeCss\\style-slider.css",
+      "PackagePath": "staticwebassets\\HomeCss\\style-slider.css"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\UserCss\\style-account-formlar.css",
+      "PackagePath": "staticwebassets\\UserCss\\style-account-formlar.css"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\css\\sweetalert2.min.css",
+      "PackagePath": "staticwebassets\\css\\sweetalert2.min.css"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\img\\1-product-1-1.jpg",
+      "PackagePath": "staticwebassets\\img\\1-product-1-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\img\\1-product-2-1.jpg",
+      "PackagePath": "staticwebassets\\img\\1-product-2-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\img\\1920-2.jpg",
+      "PackagePath": "staticwebassets\\img\\1920-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\img\\1920-3.jpg",
+      "PackagePath": "staticwebassets\\img\\1920-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\img\\1920-4.jpg",
+      "PackagePath": "staticwebassets\\img\\1920-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\img\\600-2.jpg",
+      "PackagePath": "staticwebassets\\img\\600-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\img\\750-1.jpg",
+      "PackagePath": "staticwebassets\\img\\750-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\img\\750-2.jpg",
+      "PackagePath": "staticwebassets\\img\\750-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\img\\admin-img\\adres.png",
+      "PackagePath": "staticwebassets\\img\\admin-img\\adres.png"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\img\\admin-img\\check.png",
+      "PackagePath": "staticwebassets\\img\\admin-img\\check.png"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\img\\admin-img\\delete.png",
+      "PackagePath": "staticwebassets\\img\\admin-img\\delete.png"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\img\\admin-img\\gri-halka.png",
+      "PackagePath": "staticwebassets\\img\\admin-img\\gri-halka.png"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\img\\admin-img\\image.png",
+      "PackagePath": "staticwebassets\\img\\admin-img\\image.png"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\img\\admin-img\\kirmizi-halka.png",
+      "PackagePath": "staticwebassets\\img\\admin-img\\kirmizi-halka.png"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\img\\admin-img\\layer.png",
+      "PackagePath": "staticwebassets\\img\\admin-img\\layer.png"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\img\\admin-img\\minus-red.png",
+      "PackagePath": "staticwebassets\\img\\admin-img\\minus-red.png"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\img\\admin-img\\pencil.png",
+      "PackagePath": "staticwebassets\\img\\admin-img\\pencil.png"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\img\\admin-img\\plus-blue.png",
+      "PackagePath": "staticwebassets\\img\\admin-img\\plus-blue.png"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\img\\admin-img\\view.png",
+      "PackagePath": "staticwebassets\\img\\admin-img\\view.png"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\img\\admin-img\\xmark.png",
+      "PackagePath": "staticwebassets\\img\\admin-img\\xmark.png"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\img\\admin-img\\yesil-halka.png",
+      "PackagePath": "staticwebassets\\img\\admin-img\\yesil-halka.png"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\img\\category-image.jpg",
+      "PackagePath": "staticwebassets\\img\\category-image.jpg"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\img\\img-icon-sabit\\delete-list.png",
+      "PackagePath": "staticwebassets\\img\\img-icon-sabit\\delete-list.png"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\img\\img-icon-sabit\\favorite-hover.png",
+      "PackagePath": "staticwebassets\\img\\img-icon-sabit\\favorite-hover.png"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\img\\img-icon-sabit\\favorite.png",
+      "PackagePath": "staticwebassets\\img\\img-icon-sabit\\favorite.png"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\img\\img-icon-sabit\\filter.png",
+      "PackagePath": "staticwebassets\\img\\img-icon-sabit\\filter.png"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\img\\img-icon-sabit\\grid-1.png",
+      "PackagePath": "staticwebassets\\img\\img-icon-sabit\\grid-1.png"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\img\\img-icon-sabit\\grid-2.png",
+      "PackagePath": "staticwebassets\\img\\img-icon-sabit\\grid-2.png"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\img\\img-icon-sabit\\grid-3.png",
+      "PackagePath": "staticwebassets\\img\\img-icon-sabit\\grid-3.png"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\img\\img-icon-sabit\\grid-4.png",
+      "PackagePath": "staticwebassets\\img\\img-icon-sabit\\grid-4.png"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\img\\img-icon-sabit\\heart.png",
+      "PackagePath": "staticwebassets\\img\\img-icon-sabit\\heart.png"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\img\\img-icon-sabit\\layer.png",
+      "PackagePath": "staticwebassets\\img\\img-icon-sabit\\layer.png"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\img\\img-icon-sabit\\minus.png",
+      "PackagePath": "staticwebassets\\img\\img-icon-sabit\\minus.png"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\img\\img-icon-sabit\\plus.png",
+      "PackagePath": "staticwebassets\\img\\img-icon-sabit\\plus.png"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\img\\img-icon-sabit\\right.png",
+      "PackagePath": "staticwebassets\\img\\img-icon-sabit\\right.png"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\img\\img-icon-sabit\\scroll-up.png",
+      "PackagePath": "staticwebassets\\img\\img-icon-sabit\\scroll-up.png"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\img\\img-icon-sabit\\search.png",
+      "PackagePath": "staticwebassets\\img\\img-icon-sabit\\search.png"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\img\\img-icon-sabit\\sepet.png",
+      "PackagePath": "staticwebassets\\img\\img-icon-sabit\\sepet.png"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\img\\img-icon-sabit\\turn-left.png",
+      "PackagePath": "staticwebassets\\img\\img-icon-sabit\\turn-left.png"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\img\\img-icon-sabit\\up-filter.png",
+      "PackagePath": "staticwebassets\\img\\img-icon-sabit\\up-filter.png"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\img\\img-icon-sabit\\up.png",
+      "PackagePath": "staticwebassets\\img\\img-icon-sabit\\up.png"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\img\\img-icon-sabit\\user-plus.png",
+      "PackagePath": "staticwebassets\\img\\img-icon-sabit\\user-plus.png"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\img\\img-icon-sabit\\user.png",
+      "PackagePath": "staticwebassets\\img\\img-icon-sabit\\user.png"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\img\\img-icon-sabit\\view.png",
+      "PackagePath": "staticwebassets\\img\\img-icon-sabit\\view.png"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\img\\img-icon-sabit\\x-mark.png",
+      "PackagePath": "staticwebassets\\img\\img-icon-sabit\\x-mark.png"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\img\\img-logo\\logo.png",
+      "PackagePath": "staticwebassets\\img\\img-logo\\logo.png"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\img\\img-size\\beyaz.jpg",
+      "PackagePath": "staticwebassets\\img\\img-size\\beyaz.jpg"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\img\\img-size\\mavi.jpg",
+      "PackagePath": "staticwebassets\\img\\img-size\\mavi.jpg"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\img\\img-size\\sari.jpg",
+      "PackagePath": "staticwebassets\\img\\img-size\\sari.jpg"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\img\\img-size\\siyah.jpg",
+      "PackagePath": "staticwebassets\\img\\img-size\\siyah.jpg"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\img\\img-size\\turuncu.jpg",
+      "PackagePath": "staticwebassets\\img\\img-size\\turuncu.jpg"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\img\\popup.jpg",
+      "PackagePath": "staticwebassets\\img\\popup.jpg"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\img\\product-1-1.jpg",
+      "PackagePath": "staticwebassets\\img\\product-1-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\img\\product-1-2.jpg",
+      "PackagePath": "staticwebassets\\img\\product-1-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\img\\product-10-1.jpg",
+      "PackagePath": "staticwebassets\\img\\product-10-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\img\\product-10-2.jpg",
+      "PackagePath": "staticwebassets\\img\\product-10-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\img\\product-10-3.jpg",
+      "PackagePath": "staticwebassets\\img\\product-10-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\img\\product-10-4.jpg",
+      "PackagePath": "staticwebassets\\img\\product-10-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\img\\product-11-1.jpg",
+      "PackagePath": "staticwebassets\\img\\product-11-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\img\\product-11-2.jpg",
+      "PackagePath": "staticwebassets\\img\\product-11-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\img\\product-11-3.jpg",
+      "PackagePath": "staticwebassets\\img\\product-11-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\img\\product-12-1.jpg",
+      "PackagePath": "staticwebassets\\img\\product-12-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\img\\product-12-2.jpg",
+      "PackagePath": "staticwebassets\\img\\product-12-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\img\\product-2-1.jpg",
+      "PackagePath": "staticwebassets\\img\\product-2-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\img\\product-2-2.jpg",
+      "PackagePath": "staticwebassets\\img\\product-2-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\img\\product-3-1.jpg",
+      "PackagePath": "staticwebassets\\img\\product-3-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\img\\product-3-2.jpg",
+      "PackagePath": "staticwebassets\\img\\product-3-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\img\\product-4-1.jpg",
+      "PackagePath": "staticwebassets\\img\\product-4-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\img\\product-4-2.jpg",
+      "PackagePath": "staticwebassets\\img\\product-4-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\img\\product-5-1.jpg",
+      "PackagePath": "staticwebassets\\img\\product-5-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\img\\product-6-1.jpg",
+      "PackagePath": "staticwebassets\\img\\product-6-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\img\\product-6-2.jpg",
+      "PackagePath": "staticwebassets\\img\\product-6-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\img\\product-7-1.jpg",
+      "PackagePath": "staticwebassets\\img\\product-7-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\img\\product-7-2.jpg",
+      "PackagePath": "staticwebassets\\img\\product-7-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\img\\product-8-1.jpg",
+      "PackagePath": "staticwebassets\\img\\product-8-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\img\\product-8-2.jpg",
+      "PackagePath": "staticwebassets\\img\\product-8-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\img\\product-9-1.jpg",
+      "PackagePath": "staticwebassets\\img\\product-9-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\img\\product-9-2.jpg",
+      "PackagePath": "staticwebassets\\img\\product-9-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\js\\admin-genel.js",
+      "PackagePath": "staticwebassets\\js\\admin-genel.js"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\js\\admin-navbar-mobil.js",
+      "PackagePath": "staticwebassets\\js\\admin-navbar-mobil.js"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\js\\admin-navbar-web.js",
+      "PackagePath": "staticwebassets\\js\\admin-navbar-web.js"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\js\\proje-account-favorite.js",
+      "PackagePath": "staticwebassets\\js\\proje-account-favorite.js"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\js\\proje-detail-image-slider.js",
+      "PackagePath": "staticwebassets\\js\\proje-detail-image-slider.js"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\js\\proje-detail.js",
+      "PackagePath": "staticwebassets\\js\\proje-detail.js"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\js\\proje-home.js",
+      "PackagePath": "staticwebassets\\js\\proje-home.js"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\js\\proje-list-filter.js",
+      "PackagePath": "staticwebassets\\js\\proje-list-filter.js"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\js\\proje-list.js",
+      "PackagePath": "staticwebassets\\js\\proje-list.js"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\js\\proje-login-ajax.js",
+      "PackagePath": "staticwebassets\\js\\proje-login-ajax.js"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\js\\proje-navbar-mobil.js",
+      "PackagePath": "staticwebassets\\js\\proje-navbar-mobil.js"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\js\\proje-order.js",
+      "PackagePath": "staticwebassets\\js\\proje-order.js"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\js\\proje-popup.js",
+      "PackagePath": "staticwebassets\\js\\proje-popup.js"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\js\\proje-search.js",
+      "PackagePath": "staticwebassets\\js\\proje-search.js"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\js\\proje-slice.js",
+      "PackagePath": "staticwebassets\\js\\proje-slice.js"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\js\\proje-slider.js",
+      "PackagePath": "staticwebassets\\js\\proje-slider.js"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\js\\proje-support.js",
+      "PackagePath": "staticwebassets\\js\\proje-support.js"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\js\\sweetalert2.min.js",
+      "PackagePath": "staticwebassets\\js\\sweetalert2.min.js"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\js\\wow.min.js",
+      "PackagePath": "staticwebassets\\js\\wow.min.js"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\LICENSE",
+      "PackagePath": "staticwebassets\\splide"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\README.md",
+      "PackagePath": "staticwebassets\\splide\\README.md"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\dist\\css\\splide-core.min.css",
+      "PackagePath": "staticwebassets\\splide\\dist\\css\\splide-core.min.css"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\dist\\css\\splide.min.css",
+      "PackagePath": "staticwebassets\\splide\\dist\\css\\splide.min.css"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\dist\\css\\themes\\splide-default.min.css",
+      "PackagePath": "staticwebassets\\splide\\dist\\css\\themes\\splide-default.min.css"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\dist\\css\\themes\\splide-sea-green.min.css",
+      "PackagePath": "staticwebassets\\splide\\dist\\css\\themes\\splide-sea-green.min.css"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\dist\\css\\themes\\splide-skyblue.min.css",
+      "PackagePath": "staticwebassets\\splide\\dist\\css\\themes\\splide-skyblue.min.css"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\dist\\js\\splide-renderer.min.js",
+      "PackagePath": "staticwebassets\\splide\\dist\\js\\splide-renderer.min.js"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\dist\\js\\splide-renderer.min.js.map",
+      "PackagePath": "staticwebassets\\splide\\dist\\js\\splide-renderer.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\dist\\js\\splide.cjs.js",
+      "PackagePath": "staticwebassets\\splide\\dist\\js\\splide.cjs.js"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\dist\\js\\splide.esm.js",
+      "PackagePath": "staticwebassets\\splide\\dist\\js\\splide.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\dist\\js\\splide.js",
+      "PackagePath": "staticwebassets\\splide\\dist\\js\\splide.js"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\dist\\js\\splide.min.js",
+      "PackagePath": "staticwebassets\\splide\\dist\\js\\splide.min.js"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\dist\\js\\splide.min.js.gz",
+      "PackagePath": "staticwebassets\\splide\\dist\\js\\splide.min.js.gz"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\dist\\js\\splide.min.js.map",
+      "PackagePath": "staticwebassets\\splide\\dist\\js\\splide.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\dist\\js\\utils\\splide-utils.cjs.js",
+      "PackagePath": "staticwebassets\\splide\\dist\\js\\utils\\splide-utils.cjs.js"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\dist\\js\\utils\\splide-utils.esm.js",
+      "PackagePath": "staticwebassets\\splide\\dist\\js\\utils\\splide-utils.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\dist\\types\\index.d.ts",
+      "PackagePath": "staticwebassets\\splide\\dist\\types\\index.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\package.json",
+      "PackagePath": "staticwebassets\\splide\\package.json"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\css\\core\\foundation\\animations.scss",
+      "PackagePath": "staticwebassets\\splide\\src\\css\\core\\foundation\\animations.scss"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\css\\core\\index.scss",
+      "PackagePath": "staticwebassets\\splide\\src\\css\\core\\index.scss"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\css\\core\\object\\modifiers\\draggable.scss",
+      "PackagePath": "staticwebassets\\splide\\src\\css\\core\\object\\modifiers\\draggable.scss"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\css\\core\\object\\modifiers\\fade.scss",
+      "PackagePath": "staticwebassets\\splide\\src\\css\\core\\object\\modifiers\\fade.scss"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\css\\core\\object\\modifiers\\index.scss",
+      "PackagePath": "staticwebassets\\splide\\src\\css\\core\\object\\modifiers\\index.scss"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\css\\core\\object\\modifiers\\rtl.scss",
+      "PackagePath": "staticwebassets\\splide\\src\\css\\core\\object\\modifiers\\rtl.scss"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\css\\core\\object\\modifiers\\ttb.scss",
+      "PackagePath": "staticwebassets\\splide\\src\\css\\core\\object\\modifiers\\ttb.scss"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\css\\core\\object\\objects\\container.scss",
+      "PackagePath": "staticwebassets\\splide\\src\\css\\core\\object\\objects\\container.scss"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\css\\core\\object\\objects\\index.scss",
+      "PackagePath": "staticwebassets\\splide\\src\\css\\core\\object\\objects\\index.scss"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\css\\core\\object\\objects\\list.scss",
+      "PackagePath": "staticwebassets\\splide\\src\\css\\core\\object\\objects\\list.scss"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\css\\core\\object\\objects\\pagination.scss",
+      "PackagePath": "staticwebassets\\splide\\src\\css\\core\\object\\objects\\pagination.scss"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\css\\core\\object\\objects\\progress.scss",
+      "PackagePath": "staticwebassets\\splide\\src\\css\\core\\object\\objects\\progress.scss"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\css\\core\\object\\objects\\root.scss",
+      "PackagePath": "staticwebassets\\splide\\src\\css\\core\\object\\objects\\root.scss"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\css\\core\\object\\objects\\slide.scss",
+      "PackagePath": "staticwebassets\\splide\\src\\css\\core\\object\\objects\\slide.scss"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\css\\core\\object\\objects\\spinner.scss",
+      "PackagePath": "staticwebassets\\splide\\src\\css\\core\\object\\objects\\spinner.scss"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\css\\core\\object\\objects\\sr.scss",
+      "PackagePath": "staticwebassets\\splide\\src\\css\\core\\object\\objects\\sr.scss"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\css\\core\\object\\objects\\toggle.scss",
+      "PackagePath": "staticwebassets\\splide\\src\\css\\core\\object\\objects\\toggle.scss"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\css\\core\\object\\objects\\track.scss",
+      "PackagePath": "staticwebassets\\splide\\src\\css\\core\\object\\objects\\track.scss"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\css\\template\\default\\foundation\\colors.scss",
+      "PackagePath": "staticwebassets\\splide\\src\\css\\template\\default\\foundation\\colors.scss"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\css\\template\\default\\foundation\\mixins.scss",
+      "PackagePath": "staticwebassets\\splide\\src\\css\\template\\default\\foundation\\mixins.scss"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\css\\template\\default\\index.scss",
+      "PackagePath": "staticwebassets\\splide\\src\\css\\template\\default\\index.scss"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\css\\template\\default\\object\\modifiers\\index.scss",
+      "PackagePath": "staticwebassets\\splide\\src\\css\\template\\default\\object\\modifiers\\index.scss"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\css\\template\\default\\object\\modifiers\\nav.scss",
+      "PackagePath": "staticwebassets\\splide\\src\\css\\template\\default\\object\\modifiers\\nav.scss"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\css\\template\\default\\object\\modifiers\\rtl.scss",
+      "PackagePath": "staticwebassets\\splide\\src\\css\\template\\default\\object\\modifiers\\rtl.scss"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\css\\template\\default\\object\\modifiers\\ttb.scss",
+      "PackagePath": "staticwebassets\\splide\\src\\css\\template\\default\\object\\modifiers\\ttb.scss"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\css\\template\\default\\object\\objects\\arrow.scss",
+      "PackagePath": "staticwebassets\\splide\\src\\css\\template\\default\\object\\objects\\arrow.scss"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\css\\template\\default\\object\\objects\\index.scss",
+      "PackagePath": "staticwebassets\\splide\\src\\css\\template\\default\\object\\objects\\index.scss"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\css\\template\\default\\object\\objects\\pagination.scss",
+      "PackagePath": "staticwebassets\\splide\\src\\css\\template\\default\\object\\objects\\pagination.scss"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\css\\template\\default\\object\\objects\\progress.scss",
+      "PackagePath": "staticwebassets\\splide\\src\\css\\template\\default\\object\\objects\\progress.scss"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\css\\template\\default\\object\\objects\\slide.scss",
+      "PackagePath": "staticwebassets\\splide\\src\\css\\template\\default\\object\\objects\\slide.scss"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\css\\template\\default\\object\\objects\\toggle.scss",
+      "PackagePath": "staticwebassets\\splide\\src\\css\\template\\default\\object\\objects\\toggle.scss"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\css\\themes\\default\\index.scss",
+      "PackagePath": "staticwebassets\\splide\\src\\css\\themes\\default\\index.scss"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\css\\themes\\sea-green\\index.scss",
+      "PackagePath": "staticwebassets\\splide\\src\\css\\themes\\sea-green\\index.scss"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\css\\themes\\sea-green\\object\\objects\\arrow.scss",
+      "PackagePath": "staticwebassets\\splide\\src\\css\\themes\\sea-green\\object\\objects\\arrow.scss"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\css\\themes\\sea-green\\object\\objects\\index.scss",
+      "PackagePath": "staticwebassets\\splide\\src\\css\\themes\\sea-green\\object\\objects\\index.scss"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\css\\themes\\sea-green\\object\\objects\\root.scss",
+      "PackagePath": "staticwebassets\\splide\\src\\css\\themes\\sea-green\\object\\objects\\root.scss"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\css\\themes\\skyblue\\index.scss",
+      "PackagePath": "staticwebassets\\splide\\src\\css\\themes\\skyblue\\index.scss"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\components\\Arrows\\Arrows.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\components\\Arrows\\Arrows.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\components\\Arrows\\path.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\components\\Arrows\\path.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\components\\Arrows\\test\\loop.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\components\\Arrows\\test\\loop.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\components\\Arrows\\test\\slide.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\components\\Arrows\\test\\slide.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\components\\Autoplay\\Autoplay.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\components\\Autoplay\\Autoplay.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\components\\Autoplay\\constants.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\components\\Autoplay\\constants.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\components\\Autoplay\\test\\autoToggle.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\components\\Autoplay\\test\\autoToggle.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\components\\Autoplay\\test\\button.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\components\\Autoplay\\test\\button.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\components\\Autoplay\\test\\event.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\components\\Autoplay\\test\\event.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\components\\Autoplay\\test\\general.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\components\\Autoplay\\test\\general.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\components\\Clones\\Clones.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\components\\Clones\\Clones.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\components\\Clones\\test\\general.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\components\\Clones\\test\\general.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\components\\Controller\\Controller.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\components\\Controller\\Controller.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\components\\Controller\\test\\getAdjacent.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\components\\Controller\\test\\getAdjacent.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\components\\Controller\\test\\getEnd.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\components\\Controller\\test\\getEnd.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\components\\Controller\\test\\isBusy.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\components\\Controller\\test\\isBusy.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\components\\Controller\\test\\loop.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\components\\Controller\\test\\loop.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\components\\Controller\\test\\rewind.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\components\\Controller\\test\\rewind.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\components\\Controller\\test\\scroll.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\components\\Controller\\test\\scroll.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\components\\Controller\\test\\slide.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\components\\Controller\\test\\slide.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\components\\Controller\\test\\toIndex.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\components\\Controller\\test\\toIndex.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\components\\Controller\\test\\toPage.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\components\\Controller\\test\\toPage.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\components\\Cover\\Cover.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\components\\Cover\\Cover.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\components\\Direction\\Direction.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\components\\Direction\\Direction.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\components\\Direction\\test\\general.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\components\\Direction\\test\\general.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\components\\Drag\\Drag.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\components\\Drag\\Drag.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\components\\Drag\\constants.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\components\\Drag\\constants.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\components\\Drag\\test\\general.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\components\\Drag\\test\\general.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\components\\Drag\\test\\rewind.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\components\\Drag\\test\\rewind.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\components\\Elements\\Elements.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\components\\Elements\\Elements.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\components\\Elements\\test\\attributes.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\components\\Elements\\test\\attributes.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\components\\Elements\\test\\focus.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\components\\Elements\\test\\focus.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\components\\Elements\\test\\general.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\components\\Elements\\test\\general.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\components\\Keyboard\\Keyboard.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\components\\Keyboard\\Keyboard.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\components\\Keyboard\\test\\general.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\components\\Keyboard\\test\\general.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\components\\Layout\\Layout.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\components\\Layout\\Layout.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\components\\Layout\\test\\general.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\components\\Layout\\test\\general.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\components\\Layout\\test\\ltr.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\components\\Layout\\test\\ltr.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\components\\Layout\\test\\rtl.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\components\\Layout\\test\\rtl.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\components\\Layout\\test\\ttb.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\components\\Layout\\test\\ttb.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\components\\LazyLoad\\LazyLoad.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\components\\LazyLoad\\LazyLoad.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\components\\LazyLoad\\constants.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\components\\LazyLoad\\constants.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\components\\LazyLoad\\test\\nearby.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\components\\LazyLoad\\test\\nearby.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\components\\LazyLoad\\test\\sequential.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\components\\LazyLoad\\test\\sequential.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\components\\Live\\Live.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\components\\Live\\Live.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\components\\Live\\test\\general.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\components\\Live\\test\\general.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\components\\Media\\Media.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\components\\Media\\Media.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\components\\Media\\test\\general.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\components\\Media\\test\\general.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\components\\Move\\Move.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\components\\Move\\Move.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\components\\Move\\test\\general.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\components\\Move\\test\\general.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\components\\Move\\test\\move.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\components\\Move\\test\\move.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\components\\Pagination\\Pagination.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\components\\Pagination\\Pagination.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\components\\Pagination\\test\\direction.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\components\\Pagination\\test\\direction.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\components\\Pagination\\test\\general.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\components\\Pagination\\test\\general.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\components\\Pagination\\test\\placeholder.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\components\\Pagination\\test\\placeholder.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\components\\Pagination\\test\\tab.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\components\\Pagination\\test\\tab.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\components\\Scroll\\Scroll.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\components\\Scroll\\Scroll.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\components\\Scroll\\constants.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\components\\Scroll\\constants.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\components\\Scroll\\test\\general.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\components\\Scroll\\test\\general.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\components\\Slides\\Slide.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\components\\Slides\\Slide.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\components\\Slides\\Slides.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\components\\Slides\\Slides.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\components\\Slides\\test\\add.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\components\\Slides\\test\\add.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\components\\Slides\\test\\filter.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\components\\Slides\\test\\filter.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\components\\Slides\\test\\general.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\components\\Slides\\test\\general.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\components\\Slides\\test\\remove.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\components\\Slides\\test\\remove.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\components\\Slides\\test\\slide.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\components\\Slides\\test\\slide.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\components\\Sync\\Sync.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\components\\Sync\\Sync.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\components\\Sync\\test\\navigation.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\components\\Sync\\test\\navigation.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\components\\Sync\\test\\sync.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\components\\Sync\\test\\sync.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\components\\Wheel\\Wheel.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\components\\Wheel\\Wheel.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\components\\Wheel\\test\\general.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\components\\Wheel\\test\\general.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\components\\Wheel\\test\\inertia.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\components\\Wheel\\test\\inertia.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\components\\index.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\components\\index.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\components\\types.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\components\\types.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\constants\\arrows.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\constants\\arrows.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\constants\\attributes.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\constants\\attributes.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\constants\\classes.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\constants\\classes.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\constants\\defaults.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\constants\\defaults.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\constants\\directions.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\constants\\directions.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\constants\\events.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\constants\\events.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\constants\\i18n.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\constants\\i18n.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\constants\\listener-options.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\constants\\listener-options.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\constants\\media.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\constants\\media.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\constants\\project.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\constants\\project.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\constants\\states.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\constants\\states.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\constants\\types.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\constants\\types.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\constructors\\EventBinder\\EventBinder.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\constructors\\EventBinder\\EventBinder.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\constructors\\EventBinder\\test\\bind.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\constructors\\EventBinder\\test\\bind.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\constructors\\EventBinder\\test\\destroy.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\constructors\\EventBinder\\test\\destroy.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\constructors\\EventBinder\\test\\dispatch.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\constructors\\EventBinder\\test\\dispatch.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\constructors\\EventBinder\\test\\unbind.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\constructors\\EventBinder\\test\\unbind.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\constructors\\EventInterface\\EventInterface.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\constructors\\EventInterface\\EventInterface.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\constructors\\EventInterface\\test\\general.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\constructors\\EventInterface\\test\\general.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\constructors\\RequestInterval\\RequestInterval.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\constructors\\RequestInterval\\RequestInterval.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\constructors\\RequestInterval\\test\\general.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\constructors\\RequestInterval\\test\\general.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\constructors\\State\\State.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\constructors\\State\\State.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\constructors\\Throttle\\Throttle.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\constructors\\Throttle\\Throttle.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\constructors\\Throttle\\test\\Throttle.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\constructors\\Throttle\\test\\Throttle.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\constructors\\index.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\constructors\\index.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\core\\Splide\\Splide.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\core\\Splide\\Splide.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\core\\Splide\\test\\general.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\core\\Splide\\test\\general.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\renderer\\SplideRenderer\\SplideRenderer.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\renderer\\SplideRenderer\\SplideRenderer.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\renderer\\Style\\Style.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\renderer\\Style\\Style.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\renderer\\constants\\classes.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\renderer\\constants\\classes.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\renderer\\constants\\defaults.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\renderer\\constants\\defaults.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\renderer\\types\\types.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\renderer\\types\\types.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\transitions\\Fade\\Fade.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\transitions\\Fade\\Fade.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\transitions\\Slide\\Slide.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\transitions\\Slide\\Slide.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\transitions\\index.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\transitions\\index.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\types\\components.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\types\\components.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\types\\events.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\types\\events.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\types\\general.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\types\\general.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\types\\index.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\types\\index.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\types\\options.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\types\\options.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\types\\utils.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\types\\utils.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\arrayLike\\find\\find.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\arrayLike\\find\\find.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\arrayLike\\find\\find.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\arrayLike\\find\\find.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\arrayLike\\index.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\arrayLike\\index.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\arrayLike\\slice\\slice.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\arrayLike\\slice\\slice.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\arrayLike\\slice\\slice.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\arrayLike\\slice\\slice.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\array\\empty\\empty.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\array\\empty\\empty.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\array\\empty\\empty.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\array\\empty\\empty.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\array\\forEach\\forEach.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\array\\forEach\\forEach.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\array\\forEach\\forEach.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\array\\forEach\\forEach.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\array\\includes\\includes.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\array\\includes\\includes.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\array\\includes\\includes.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\array\\includes\\includes.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\array\\index.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\array\\index.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\array\\push\\push.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\array\\push\\push.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\array\\push\\push.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\array\\push\\push.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\array\\toArray\\toArray.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\array\\toArray\\toArray.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\array\\toArray\\toArray.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\array\\toArray\\toArray.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\dom\\addClass\\addClass.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\dom\\addClass\\addClass.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\dom\\addClass\\addClass.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\dom\\addClass\\addClass.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\dom\\append\\append.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\dom\\append\\append.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\dom\\append\\append.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\dom\\append\\append.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\dom\\before\\before.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\dom\\before\\before.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\dom\\before\\before.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\dom\\before\\before.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\dom\\child\\child.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\dom\\child\\child.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\dom\\child\\child.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\dom\\child\\child.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\dom\\children\\children.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\dom\\children\\children.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\dom\\children\\children.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\dom\\children\\children.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\dom\\closest\\closest.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\dom\\closest\\closest.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\dom\\closest\\closest.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\dom\\closest\\closest.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\dom\\create\\create.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\dom\\create\\create.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\dom\\create\\create.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\dom\\create\\create.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\dom\\display\\display.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\dom\\display\\display.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\dom\\display\\display.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\dom\\display\\display.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\dom\\focus\\focus.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\dom\\focus\\focus.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\dom\\focus\\focus.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\dom\\focus\\focus.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\dom\\getAttribute\\getAttribute.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\dom\\getAttribute\\getAttribute.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\dom\\getAttribute\\getAttribute.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\dom\\getAttribute\\getAttribute.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\dom\\hasClass\\hasClass.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\dom\\hasClass\\hasClass.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\dom\\hasClass\\hasClass.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\dom\\hasClass\\hasClass.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\dom\\index.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\dom\\index.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\dom\\matches\\matches.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\dom\\matches\\matches.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\dom\\matches\\matches.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\dom\\matches\\matches.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\dom\\measure\\measure.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\dom\\measure\\measure.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\dom\\normalizeKey\\normalizeKey.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\dom\\normalizeKey\\normalizeKey.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\dom\\normalizeKey\\normalizeKey.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\dom\\normalizeKey\\normalizeKey.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\dom\\parseHtml\\parseHtml.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\dom\\parseHtml\\parseHtml.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\dom\\parseHtml\\parseHtml.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\dom\\parseHtml\\parseHtml.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\dom\\prevent\\prevent.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\dom\\prevent\\prevent.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\dom\\prevent\\prevent.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\dom\\prevent\\prevent.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\dom\\queryAll\\queryAll.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\dom\\queryAll\\queryAll.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\dom\\queryAll\\queryAll.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\dom\\queryAll\\queryAll.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\dom\\query\\query.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\dom\\query\\query.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\dom\\query\\query.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\dom\\query\\query.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\dom\\rect\\rect.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\dom\\rect\\rect.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\dom\\rect\\rect.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\dom\\rect\\rect.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\dom\\removeAttribute\\removeAttribute.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\dom\\removeAttribute\\removeAttribute.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\dom\\removeAttribute\\removeAttribute.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\dom\\removeAttribute\\removeAttribute.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\dom\\removeClass\\removeClass.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\dom\\removeClass\\removeClass.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\dom\\removeClass\\removeClass.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\dom\\removeClass\\removeClass.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\dom\\remove\\remove.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\dom\\remove\\remove.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\dom\\remove\\remove.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\dom\\remove\\remove.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\dom\\setAttribute\\setAttribute.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\dom\\setAttribute\\setAttribute.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\dom\\setAttribute\\setAttribute.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\dom\\setAttribute\\setAttribute.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\dom\\style\\style.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\dom\\style\\style.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\dom\\style\\style.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\dom\\style\\style.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\dom\\timeOf\\timeOf.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\dom\\timeOf\\timeOf.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\dom\\timeOf\\timeOf.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\dom\\timeOf\\timeOf.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\dom\\toggleClass\\toggleClass.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\dom\\toggleClass\\toggleClass.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\dom\\toggleClass\\toggleClass.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\dom\\toggleClass\\toggleClass.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\dom\\unit\\unit.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\dom\\unit\\unit.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\dom\\unit\\unit.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\dom\\unit\\unit.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\error\\assert\\assert.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\error\\assert\\assert.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\error\\error\\error.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\error\\error\\error.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\error\\index.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\error\\index.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\function\\apply\\apply.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\function\\apply\\apply.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\function\\apply\\apply.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\function\\apply\\apply.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\function\\index.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\function\\index.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\function\\nextTick\\nextTick.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\function\\nextTick\\nextTick.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\function\\noop\\noop.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\function\\noop\\noop.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\function\\raf\\raf.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\function\\raf\\raf.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\index.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\index.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\math\\approximatelyEqual\\approximatelyEqual.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\math\\approximatelyEqual\\approximatelyEqual.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\math\\approximatelyEqual\\approximatelyEqual.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\math\\approximatelyEqual\\approximatelyEqual.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\math\\between\\between.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\math\\between\\between.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\math\\between\\between.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\math\\between\\between.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\math\\clamp\\clamp.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\math\\clamp\\clamp.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\math\\clamp\\clamp.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\math\\clamp\\clamp.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\math\\index.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\math\\index.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\math\\math\\math.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\math\\math\\math.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\math\\sign\\sign.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\math\\sign\\sign.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\math\\sign\\sign.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\math\\sign\\sign.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\object\\assign\\assign.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\object\\assign\\assign.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\object\\assign\\assign.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\object\\assign\\assign.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\object\\forOwn\\forOwn.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\object\\forOwn\\forOwn.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\object\\forOwn\\forOwn.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\object\\forOwn\\forOwn.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\object\\index.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\object\\index.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\object\\merge\\merge.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\object\\merge\\merge.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\object\\merge\\merge.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\object\\merge\\merge.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\object\\omit\\omit.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\object\\omit\\omit.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\object\\omit\\omit.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\object\\omit\\omit.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\object\\ownKeys\\ownKeys.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\object\\ownKeys\\ownKeys.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\string\\camelToKebab\\camelToKebab.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\string\\camelToKebab\\camelToKebab.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\string\\camelToKebab\\camelToKebab.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\string\\camelToKebab\\camelToKebab.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\string\\format\\format.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\string\\format\\format.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\string\\format\\format.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\string\\format\\format.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\string\\index.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\string\\index.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\string\\pad\\pad.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\string\\pad\\pad.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\string\\pad\\pad.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\string\\pad\\pad.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\string\\uniqueId\\uniqueId.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\string\\uniqueId\\uniqueId.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\string\\uniqueId\\uniqueId.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\string\\uniqueId\\uniqueId.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\type\\type.test.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\type\\type.test.ts"
+    },
+    {
+      "Id": "C:\\Users\\proje\\E-Ticaret\\WebUI\\wwwroot\\splide\\src\\js\\utils\\type\\type.ts",
+      "PackagePath": "staticwebassets\\splide\\src\\js\\utils\\type\\type.ts"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.WebUI.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.WebUI.props",
+      "PackagePath": "build\\WebUI.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.WebUI.props",
+      "PackagePath": "buildMultiTargeting\\WebUI.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.WebUI.props",
+      "PackagePath": "buildTransitive\\WebUI.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

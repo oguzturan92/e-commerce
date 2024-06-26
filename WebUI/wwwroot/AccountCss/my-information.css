@@ -1,0 +1,148 @@
+
+
+.my-information-container {
+    width: 100%;
+    padding-top: 100px;
+}
+
+.my-information-box {
+    margin: 0px auto;
+    max-width: 600px;
+    width: 100%;
+}
+
+/* FORM */
+
+.user-form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    border: 1px solid #d2d2d2;
+    padding: 50px;
+    position: relative;
+}
+.user-form-title {
+    position: absolute;
+    margin: auto;
+    top: 30px;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 18px;
+}
+
+.user-form-item-1 {
+    display: grid;
+    gap: 5px;
+}
+.user-form-item-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+/* LABEL */
+.user-form-item-1 label {
+    font-weight: 300;
+}
+
+/* INPUT */
+.user-form-item-1 input {
+    border: 1px solid #000;
+    border-radius: 0px;
+    outline: none;
+    height: 35px;
+    padding-left: 20px;
+}
+.user-form-item-1 select {
+    height: 40px;
+    border-radius: 0px;
+    outline: none;
+    padding-left: 20px;
+}
+
+.user-form-item-1 input[type=date] {
+    height: 37px;
+}
+
+/* BUTONLAR */
+.user-form-btn-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    position: relative;
+    margin-top: 10px;
+}
+.user-form-btn-kaydet {
+    background-color: #fff;
+    border: 1px solid #000;
+    color: #000;
+    height: 50px;
+    width: 100%;
+    transition: .3s;
+}
+.user-form-btn-kaydet:hover {
+    cursor: pointer;
+    background-color: #c2a18a;
+    border: 1px solid #c2a18a;
+    color: #fff;
+}
+.user-form-btn-geri {
+    background-color: #000;
+    border: 1px solid #000;
+    color: #fff;
+    transition: .3s;
+    height: 50px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.user-form-btn-geri:hover {
+    cursor: pointer;
+    background-color: #c2a18a;
+    border: 1px solid #c2a18a;
+}
+.user-form-btn-box .sifremi-unuttum-btn {
+    color: #000;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 12px;
+    position: absolute;
+    right: 0px;
+    bottom: -20px;
+}
+.user-form-btn-box .sifremi-unuttum-btn:hover {
+    color: #000;
+    text-decoration: underline;
+}
+
+@media (max-width:1000px) {
+    .user-form {
+        padding: 25px;
+    }
+    .user-form-container {
+        padding: 0px 10px;
+    }
+    .user-form-item-2 {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .user-form-btn-box {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (max-width:768px) {
+    .user-form-item-1 label {
+        font-size: 14px;
+    }
+    .user-form-btn-geri {
+        font-size: 12px;
+    }
+    .user-form-fatura-tipi label {
+        font-size: 14px;
+    }
+    .user-form-title {
+        font-size: inherit;
+        top: 10px;
+    }
+}

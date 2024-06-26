@@ -1,0 +1,60 @@
+@model BankAccountModel
+
+<div class="title">
+    <h2>BANKA HESAP LİSTESİ</h2>
+</div>
+<div class="content">
+    <div class="table-container">
+        <div class="table-btn-ekle-box">
+            <a class="table-btn-ekle" asp-controller="BankAccount" asp-action="BankAccountCreate">Ekle</a>
+        </div>
+        @if (Model.BankAccounts.Count() > 0)
+        {
+            <div class="table-container-alt">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="th-w-75">Sıra No</th>
+                            <th class="th-w-auto">Ad</th>
+                            <th colspan="2"></th>
+                            @* <th></th> *@
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var bank in Model.BankAccounts) {
+                            <tr>
+                                <td class="td-w-75">
+                                    <form asp-controller="BankAccount" asp-action="BankAccountList" method="post">
+                                        <input type="hidden" name="BankAccountId" value="@bank.BankAccountId">
+                                        <input class="input-sort" type="number" name="BankAccountSort" value="@bank.BankAccountSort">
+                                    </form>
+                                </td>
+                                
+                                <td class="slice">@bank.BankAccountName</td>
+
+                                <td class="td-buton-edit">
+                                    <form asp-controller="BankAccount" asp-action="BankAccountEdit" asp-route-id="@bank.BankAccountId" method="get">
+                                        <button type="submit">
+                                            <img src="/img/admin-img/pencil.png" alt="">
+                                        </button>
+                                    </form>
+                                </td>
+
+                                <td class="td-buton-del">
+                                    <form asp-controller="BankAccount" asp-action="BankAccountDelete" asp-route-id="@bank.BankAccountId" method="post">
+                                        <button type="submit" onclick="return silOnayla();">
+                                            <img src="/img/admin-img/delete.png" alt="">
+                                        </button>
+                                    </form>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        } else
+        {
+            <h4>Listelenecek Banka Hesabı Bulunamadı</h4>
+        }
+    </div>
+</div>

@@ -1,0 +1,29 @@
+@model SizeTypeModel
+
+<div class="title">
+    <h2>SEÇENEK EKLE</h2>
+</div>
+<div class="content">
+    <div class="form-container">
+        <div class="table-btn-geri-box">
+            <a class="table-btn-geri" asp-controller="SizeType" asp-action="SizeTypeList">Geri</a>
+        </div>
+        <form class="form-container-alt" asp-controller="SizeType" asp-action="SizeTypeCreate" method="post">
+            <div class="form-item-2">
+                <div class="form-item-1">
+                    <span class="validation" asp-validation-for="SizeTypeName"></span>
+                    <label>Ad</label>
+                    <input asp-for="SizeTypeName" type="text">
+                </div>
+                <div class="form-item-1">
+                    <span class="validation" asp-validation-for="SizeTypeSort"></span>
+                    <label>Sıra Numarası</label>
+                    <input asp-for="SizeTypeSort" type="text">
+                </div>
+            </div>
+            <div class="form-btn-kaydet-box">
+                <button class="form-btn-kaydet" type="submit">Kaydet</button>
+            </div>
+        </form>
+    </div>
+</div>

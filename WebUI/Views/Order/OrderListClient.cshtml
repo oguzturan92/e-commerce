@@ -1,0 +1,16 @@
+@{
+    ViewData["Title"] = "Sipariş Listesi";
+    Layout = "_Layout";
+}
+
+    <partial name="~/Views/Shared/orderShared/_orderListClient.cshtml"/>
+
+    @section Scripts
+    {
+        <script src="~/js/proje-order.js"></script>
+    }
+
+    @section Css
+    {
+        <link rel="stylesheet" href="~/AccountCss/style-order-list.css" />
+    }

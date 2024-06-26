@@ -1,0 +1,44 @@
+
+<div class="navbar-box">
+    <div class="bar-left">
+        <a asp-controller="UserAccount" asp-action="AccountIndex">
+            @if (User.Identity.IsAuthenticated)
+            {
+                <img src="/img/img-icon-sabit/user-plus.png" alt="">
+            } else
+            {
+                <img src="/img/img-icon-sabit/user.png" alt="">
+            }
+        </a>
+        <a class="cart-icon-number-box" asp-controller="Cart" asp-action="CartIndex">
+            <img src="/img/img-icon-sabit/sepet.png" alt="">
+            <div class="cart-icon-number">
+                <span>@(await Component.InvokeAsync("CartList"))</span>
+            </div>
+        </a>
+    </div>
+    <a href="/" class="bar"><img class="bar-logo" src="~/img/img-logo/logo.png" alt=""></a>
+    <div id="onOff" class="onoff">
+        <span id="search-box-close-mobil">
+            <span id="search-box-close-btn-mobil" class="">X</span>
+        </span>
+        <form id="search-form-mobil" asp-controller="Home" asp-action="Search" method="get">
+            <img src="/img/img-icon-sabit/search.png" alt="">
+            <div id="search-box-mobil">
+                <div id="search-alt-box-mobil">
+                    <input type="text" name="q" maxlength="25" placeholder="Beyaz tişört...">
+                </div>
+            </div>
+        </form>
+        <div class="onoff-2">
+            <input id="checkbox" type="checkbox">
+            <div class="onoff-items onoff-item-1"></div>
+            <div class="onoff-items onoff-item-2"></div>
+            <div class="onoff-items onoff-item-3"></div>
+        </div>
+    </div>
+    <div id="bg-js-opacity"></div>
+    <div id="menu" class="menu">
+        @await Component.InvokeAsync("CategoryList")
+    </div>
+</div>

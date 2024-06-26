@@ -1,0 +1,125 @@
+@model CreditCardModel
+
+<form class="cart-payment-container" asp-controller="Cart" asp-action="Odeme" method="post">
+    <div class="cart-paymentcontainer-alt">
+        <div class="cart-payment-left">
+            <div class="cart-payment-box">
+
+                <div class="cart-payment-item">
+                    <div class="cart-payment-title">
+                        <label for="krediKarti">Kredi Kartı</label>
+                        <input type="radio" name="PaymentType" value="KrediKartı" id="krediKarti">
+                    </div>
+                    <div class="cart-payment-content-creditCart">
+
+                        <div class="cart-payment-creditCart">
+                            <div class="cart-payment-creditCart-left-payment-form">
+                                <div class="payment-form-item-1">
+                                    <span class="validation" asp-validation-for="CreditCardName"></span>
+                                    <label for="">Kart Sahibinin Adı Soyadı</label>
+                                    <input asp-for="CreditCardName" type="text">
+                                </div>
+                                <div class="payment-form-item-1">
+                                    <span class="validation" asp-validation-for="CreditCardNumber"></span>
+                                    <label for="">Kredi Kartı Numarası (16 haneli)</label>
+                                    <input asp-for="CreditCardNumber" type="text">
+                                </div>
+                                <div class="payment-form-item-2">
+                                    <div class="payment-form-item-1">
+                                        <span class="validation" asp-validation-for="CreditCardMonth"></span>
+                                        <label for="">Son Kullanma Tarihi(Ay)</label>
+                                        <input asp-for="CreditCardMonth" type="text">
+                                    </div>
+                                    <div class="payment-form-item-1">
+                                        <span class="validation" asp-validation-for="CreditCardYear"></span>
+                                        <label for="">Son Kullanma Tarihi(Yıl)</label>
+                                        <input asp-for="CreditCardYear" type="text">
+                                    </div>
+                                </div>
+                                <div class="payment-form-item-1">
+                                    <span class="validation" asp-validation-for="CreditCardCvc"></span>
+                                    <label for="">Güvenlik Kodu</label>
+                                    <input asp-for="CreditCardCvc" type="text" placeholder=" Kredi Kartı Arkasındaki Son 3 Hane ">
+                                </div>
+                            </div>
+
+                            <div class="cart-payment-creditCart-right">
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <div class="cart-payment-item">
+                    <div class="cart-payment-title">
+                        <label for="eftHavale">Eft / Havale</label>
+                        <input type="radio" name="PaymentType" value="EftHavale" id="eftHavale">
+                    </div>
+                    <div class="cart-payment-content">
+
+                        <div class="cart-payment-eft">
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur eius nihil ex magnam dolores, nemo beatae est, laboriosam odio assumenda corporis sit modi, placeat quia adipisci quaerat tempora nam eos!</p>
+                            
+                            <div class="cart-payment-eft-banks">
+                                <div class="cart-payment-eft-banks-item">
+                                    @foreach (var bank in Model.BankAccounts)
+                                    {
+                                        <div>
+                                            @* <p>Lorem ipsum dolor sit amet.</p> *@
+                                            <p>@bank.BankAccountName</p>
+                                            <p>@bank.BankAccountIban</p>
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="cart-payment-right">
+            <div class="cart-payment-right-box">
+                <div class="cart-payment-right-item">
+                    <p>Sipariş Toplamı</p>
+                    <p>@Model.SiparisToplam.ToString("c") ₺</p>
+                </div>
+                <div class="cart-payment-right-item">
+                    <p>Genel Toplam</p>
+                    <p>@Model.GenelToplam.ToString("c") ₺</p>
+                </div>
+                <button class="cart-payment-right-go-payment" type="submit">Ödeme Yap</button>
+            </div>
+        </div>
+    </div>
+</form>
+
+<script>
+    var payementType = document.querySelectorAll(".cart-payment-item")
+    payementType[0].children[0].children[1].checked = true;
+    @* for (let a of payementType) {
+        a.addEventListener("click", function() {
+            for (let a of payementType) {
+                a.children[0].children[1].checked = false;
+            }
+            a.children[0].children[1].checked = true;
+        })
+    } *@
+
+
+    @* var payment = document.querySelectorAll(".cart-payment-eft-banks-item")
+    payment[0].children[2].checked = true;
+    for (let b of payment) {
+        b.addEventListener("click", function() {
+            for (let b of payment) {
+                b.children[2].checked = false;
+            }
+            b.children[2].checked = true;
+        })
+    } *@
+        
+</script>

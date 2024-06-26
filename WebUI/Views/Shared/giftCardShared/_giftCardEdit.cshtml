@@ -1,0 +1,92 @@
+@model GiftCardModel
+
+<div class="title">
+    <h2>HEDİYE ÇEKİ DÜZENLE</h2>
+</div>
+<div class="content">
+    <div class="form-container">
+        <div class="table-btn-geri-box">
+            <a class="table-btn-geri" asp-controller="GiftCard" asp-action="GiftCardList">Geri</a>
+        </div>
+        <form class="form-container-alt" asp-controller="GiftCard" asp-action="GiftCardEdit" method="get">
+            <div class="form-item-2">
+                <div class="form-item-1">
+                    <span class="validation" asp-validation-for="userName"></span>
+                    <label>Kullanıcı Adı İle Ara</label>
+                    <input asp-for="userName" type="text">
+                </div>
+                <div class="form-item-1">
+                    <span class="validation" asp-validation-for="userEmail"></span>
+                    <label>E-mail İle Ara</label>
+                    <input asp-for="userEmail" type="text">
+                </div>
+            </div>
+            <div class="form-btn-kaydet-box">
+                <button class="form-btn-kaydet" type="submit">Ara</button>
+            </div>
+        </form>
+        <form class="form-container-alt" asp-controller="GiftCard" asp-action="GiftCardEdit" method="post">
+            <div class="form-item-1">
+                <div>Tanımlı Kullanıcılar</div>
+                @if (Model.GiftCardUsers.Count() > 0)
+                {
+                    <div class="form-checkbox">
+                        @foreach (var item in Model.GiftCardUsers) {
+                            <div class="checkbox">
+                                <input type="checkbox"
+                                        name="projeUserIds"
+                                        value="@item.ProjeUserId"
+                                        class="custom-control-input"
+                                        id="@(item.ProjeUserId)"
+                                        @(Model.SelectedGiftCardUsers.Any(i => i.Id == item.ProjeUserId) ? "checked" : "")
+                                >   
+                                <label for="@(item.ProjeUserId)">
+                                    @item.ProjeUser.UserAdi @item.ProjeUser.UserSoyadi - @item.ProjeUser.Email - @item.ProjeUser.UserName</label>
+                            </div>
+                        }
+                    </div>
+                } else
+                {
+                    <h4>Belirli Bir Kullanıcıya Eşleştirmek İçin Kullanıcı Araması Yapın. Tüm Kullanıcılar İçin Boş Bırakın</h4>
+                }
+            </div>
+            
+            <input type="hidden" asp-for="GiftCardId">
+            <input type="hidden" asp-for="GiftCardDateTime">
+            <div class="form-item-3">
+                <div class="form-item-1">
+                    <span class="validation" asp-validation-for="GiftCardTitle"></span>
+                    <label>Ad *</label>
+                    <input asp-for="GiftCardTitle" type="text">
+                </div>
+                <div class="form-item-1">
+                    <span class="validation" asp-validation-for="GiftCardOran"></span>
+                    <label>Oran %</label>
+                    <input asp-for="GiftCardOran" type="text">
+                </div>
+                <div class="form-item-1">
+                    <span class="validation" asp-validation-for="GiftCardMiktar"></span>
+                    <label>Tutar ₺</label>
+                    <input asp-for="GiftCardMiktar" type="text">
+                </div>
+            </div>
+            <div class="form-item-2">
+                <div class="form-item-1">
+                    <span class="validation" asp-validation-for="GiftCardLimit"></span>
+                    <label>Kullanım Sayısı</label>
+                    <input asp-for="GiftCardLimit" type="number">
+                </div>
+                <div class="form-item-1">
+                    <label>Onay Durumu</label>
+                    <select asp-for="GiftCardApproval" class="select">
+                        <option value="True">Evet</option>
+                        <option value="False">Hayır</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-btn-kaydet-box">
+                <button class="form-btn-kaydet" type="submit">Kaydet</button>
+            </div>
+        </form>
+    </div>
+</div>

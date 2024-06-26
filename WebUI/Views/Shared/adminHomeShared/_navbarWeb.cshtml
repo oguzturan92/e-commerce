@@ -1,0 +1,36 @@
+
+
+<div class="nav-container">
+    <ul class="admin-user">
+        <li>
+            <i class="fa-solid fa-user"></i>
+            <a asp-controller="AdminAccount" asp-action="EditAdmin" asp-route-userName="@User.Identity.Name">@User.Identity.Name</a>
+        </li>
+    </ul>
+    <ul id="admin-nav-ul">
+        <li><a target="_blank" href="/">SİTE</a></li>
+        <li><a asp-controller="Admin" asp-action="Home">ANA SAYFA</a></li>
+        <li><a asp-controller="Order" asp-action="OrderList">SİPARİŞLER</a></li>
+        <li><a asp-controller="HomeDesignType" asp-action="HomeDesignTypeList">DİZAYN</a></li>
+        <li><a asp-controller="Slider" asp-action="SliderList">SLIDER</a></li>
+        <li><a asp-controller="Banner" asp-action="BannerList">BANNER</a></li>
+        <li><a asp-controller="Product" asp-action="ProductList">ÜRÜN</a></li>
+        <li><a asp-controller="SizeType" asp-action="SizeTypeList">SEÇENEK</a></li>
+        <li><a asp-controller="Category" asp-action="CategoryList">KATEGORİ</a></li>
+        @* @if (User.IsInRole("Admin")) { *@
+            <li><a asp-controller="AdminAccount" asp-action="IndexAccount">KULLANICI</a></li>
+            <li><a asp-controller="Role" asp-action="RoleList">ROL</a></li>
+        @* } *@
+        <li><a asp-controller="Popup" asp-action="PopupList">POPUP</a></li>
+        <li><a asp-controller="GiftCard" asp-action="GiftCardList">HEDİYE ÇEKİ</a></li>
+        <li><a asp-controller="EftHavale" asp-action="EftHavaleList">HAVALE BİLDİRİM</a></li>
+        <li><a asp-controller="Support" asp-action="SupportList">DESTEK</a></li>
+        <li><a asp-controller="Message" asp-action="MessageList">MESAJ</a></li>
+        <li><a asp-controller="Subscribe" asp-action="SubscribeList">ABONE</a></li>
+        <li><a asp-controller="Footer" asp-action="FooterList">FOOTER</a></li>
+        <li><a asp-controller="BankAccount" asp-action="BankAccountList">BANKA HESAPLARI</a></li>
+        <li><a asp-controller="Cargo" asp-action="CargoList">KARGO</a></li>
+        <li><a asp-controller="Setting" asp-action="SettingIndex">AYARLAR</a></li>
+        <li><a asp-controller="AdminAccount" asp-action="Logout">ÇIKIŞ</a></li>
+    </ul>
+</div>

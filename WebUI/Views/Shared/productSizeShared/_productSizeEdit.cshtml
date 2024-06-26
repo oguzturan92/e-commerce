@@ -1,0 +1,103 @@
+@model ProductSizeModel
+
+<div class="title">
+    <h2>VARYASYON DÜZENLE</h2>
+</div>
+<div class="content">
+    <div class="form-container">
+        <div class="form-alternativ-box">
+            <div class="form-alternativ-item">
+                <a asp-controller="Product" asp-action="ProductEdit" asp-route-id="@Model.ProductIdGelen" method="get">
+                    Detay
+                </a>
+            </div>
+            <div class="form-alternativ-item">
+                <a asp-controller="Description" asp-action="DescriptionList" asp-route-id="@Model.ProductIdGelen" method="get">
+                    Metin
+                </a>
+            </div>
+            <div class="form-alternativ-item">
+                <a asp-controller="Variant" asp-action="VariantEdit" asp-route-id="@Model.ProductIdGelen" method="get">
+                    Varyant
+                </a>
+            </div>
+            <div class="form-alternativ-item">
+                <a asp-controller="ProductSize" asp-action="ProductSizeEdit" asp-route-id="@Model.ProductIdGelen" method="get" style="box-shadow: 0px 4px 8px 0px #e6e6e6;">
+                    Seçenek
+                </a>
+            </div>
+            <div class="form-alternativ-item">
+                <a asp-controller="List" asp-action="ListList" asp-route-id="@Model.ProductIdGelen" method="get">
+                    Liste
+                    <input type="hidden" name="ProductId" value="@Model.ProductId">
+                </a>
+            </div>
+        </div>
+        <form class="form-container-alt" asp-controller="ProductSize" asp-action="ProductSizeEdit"  method="post">
+            <input type="hidden" asp-for="ProductIdGelen">
+            <div class="form-item-1">
+                @foreach (var item in Model.SizeTypes)
+                {
+                    <select name="sizeIds" class="select" style="margin-top: 5px;">
+                        <option value="" disabled selected>@item.SizeTypeName Seçiniz</option>
+                        @for (int i = 0; i < item.Sizes.Count(); i++)
+                        {
+                            <option value="@item.Sizes[i].SizeId">
+                                @item.Sizes[i].SizeTitle
+                            </option>
+                        }
+                    </select>
+                }
+            </div>
+            <div class="form-item-2">
+                <div class="form-item-1">
+                    <span class="validation" asp-validation-for="ProductSizePrice"></span>
+                    <label>Fiyat</label>
+                    <input asp-for="ProductSizePrice" type="text">
+                </div>
+                <div class="form-item-1">
+                    <span class="validation" asp-validation-for="ProductSizeStock"></span>
+                    <label>Stok</label>
+                    <input asp-for="ProductSizeStock" type="text">
+                </div>
+            </div>
+            <div class="form-btn-kaydet-box">
+                <button class="form-btn-kaydet" type="submit">Ekle</button>
+            </div>
+        </form>
+        @if (Model.EklenmisSizes != null)
+        {
+           <div class="table-container-alt">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="th-w-auto mobil-display-none">Varyasyon Adı</th>
+                            <th class="th-w-75 mobil-display-none">Fiyat</th>
+                            <th class="th-w-75 mobil-display-none">Stok</th>
+                            <th colspan="1"></th>
+                            @* <th></th> *@
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.EklenmisSizes)
+                        {
+                            <tr>
+                                <td class="slice">@item.Size.SizeTitle</td>
+
+                                <td class="slice">@item.ProductSizePrice</td>
+
+                                <td class="slice">@item.ProductSizeStock</td>
+
+                                <td class="td-buton-del">
+                                    <form asp-controller="ProductSize" asp-action="ProductSizeDelete" asp-route-id="@item.ProductSizeId" method="post">
+                                        <button type="submit"><img src="/img/admin-img/delete.png" alt=""></button>
+                                    </form>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        }
+    </div>
+</div>

@@ -1,0 +1,29 @@
+@model HomeModel
+@{
+    ViewData["Title"] = @Model.Setting.SettingSeoTitle;
+    ViewData["Description"] = @Model.Setting.SettingSeoDescription;
+    ViewData["Keyword"] = @Model.Setting.SettingSeoKeyword;
+    Layout = "_Layout";
+}
+    @await Component.InvokeAsync("Popup")
+    
+    <partial name="~/Views/Shared/sliderShared/_sliderListClient.cshtml"/>
+
+    <partial name="~/Views/Shared/homeShared/_homeDesignType.cshtml"/>
+
+    @section Scripts
+    {
+        <script src="~/js/proje-popup.js"></script>
+        <script src="~/js/proje-slider.js"></script>
+        <script src="~/splide/dist/js/splide.min.js"></script>
+    }
+
+    @section Css
+    {
+        <link rel="stylesheet" href="~/splide/dist/css/splide.min.css" />
+        <link rel="stylesheet" href="~/HomeCss/style-slider.css" />
+        <link rel="stylesheet" href="~/HomeCss/style-bannerClient-1li.css" />
+        <link rel="stylesheet" href="~/HomeCss/style-bannerClient-3lu.css" />
+        <link rel="stylesheet" href="~/HomeCss/style-home-product-list.css" />
+        <link rel="stylesheet" href="~/HomeCss/style-popup.css" />
+    }

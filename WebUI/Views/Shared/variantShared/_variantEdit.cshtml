@@ -1,0 +1,133 @@
+@model VariantModel
+
+<div class="title">
+    <h2>VARYANT DÜZENLE</h2>
+</div>
+<div class="content">
+    <div class="form-container">
+        <div class="form-alternativ-box">
+            <div class="form-alternativ-item">
+                <a asp-controller="Product" asp-action="ProductEdit" asp-route-id="@Model.ProductId" method="get">
+                    Detay
+                </a>
+            </div>
+            <div class="form-alternativ-item">
+                <a asp-controller="Description" asp-action="DescriptionList" asp-route-id="@Model.ProductId" method="get">
+                    Metin
+                </a>
+            </div>
+            <div class="form-alternativ-item">
+                <a asp-controller="Variant" asp-action="VariantEdit" asp-route-id="@Model.ProductId" method="get" style="box-shadow: 0px 4px 8px 0px #e6e6e6;">
+                    Varyant
+                </a>
+            </div>
+            <div class="form-alternativ-item">
+                <a asp-controller="ProductSize" asp-action="ProductSizeEdit" asp-route-id="@Model.ProductId" method="get">
+                    Seçenek
+                </a>
+            </div>
+            <div class="form-alternativ-item">
+                <a asp-controller="List" asp-action="ListList" asp-route-id="@Model.ProductId" method="get">
+                    Liste
+                    <input type="hidden" name="ProductId" value="@Model.ProductId">
+                </a>
+            </div>
+        </div>
+        <form class="form-container-alt" asp-controller="Variant" asp-action="VariantEdit" asp-route-id="@Model.ProductId" method="get">
+            <div class="form-item-2">
+                <div class="form-item-1">
+                    <label>Ürün Adı İle Ara</label>
+                    <input name="searchName" type="text">
+                </div>
+                <div class="form-item-1">
+                    <label>Ürün Id İle Ara</label>
+                    <input name="searchId" type="number">
+                </div>
+            </div>
+            <div class="form-btn-kaydet-box">
+                <button class="form-btn-kaydet" type="submit">Ara</button>
+            </div>
+        </form>
+        <form class="form-container-alt" asp-controller="Variant" asp-action="VariantEdit" method="post">
+            <input type="hidden" asp-for="ProductId">
+            @foreach (var item in Model.Products)
+            {
+                <input type="hidden" name="allProId" value="@item.ProductId">
+            }
+            <div class="form-item-1">
+                <div>Ürünler</div>
+                @if (Model.Products.Count() > 0)
+                {
+                    <div class="form-checkbox">
+                        @foreach (var item in Model.Products) {
+                            <div class="checkbox">
+                                <input type="checkbox"
+                                        name="selectIds"
+                                        value="@item.ProductId"
+                                        class="custom-control-input"
+                                        id="Products@(item.ProductId)"
+                                        @(Model.VariantSelected.Any(i => i.ProductId == item.ProductId) ? "checked" : "")
+                                >   
+                                <label for="Products@(item.ProductId)">@item.ProductName</label>
+                            </div>
+                        }
+                    </div>
+                } else
+                {
+                    <h4>Listelenecek Ürün Bulunamadı</h4>
+                }
+            </div>
+            <div class="form-item-1">
+                <div>Varyant Ürünler</div>
+                @if (Model.VariantSelected.Count() > 0)
+                {
+                    <div class="table-container-alt">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th class="th-w-75">Id</th>
+                                    <th class="th-w-75 mobil-display-none">Resim</th>
+                                    <th class="th-w-auto">Ad</th>
+                                    <th class="th-w-75">Fiyat</th>
+                                    <th class="th-w-75">İ.Fiyat</th>
+                                    <th class="th-w-75 mobil-display-none">Onay</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model.VariantSelected) {
+                                    <tr>
+                                        <td class="td-yazi">@item.ProductId</td>
+
+                                        <td class="mobil-display-none"><img src="~/img/@item.ProductImage" alt=""></td>
+                                        
+                                        <td class="td-yazi"><a asp-controller="Product" asp-action="ProductDetail" asp-route-id="@item.ProductId" asp-route-url="@item.ProductUrl" target="_blank" class="slice">@item.ProductName</a></td>
+
+                                        <td class="td-yazi">@item.ProductPrice</td>
+
+                                        <td class="td-yazi">@item.ProductSalePrice</td>
+
+                                        @if (item.ProductApproval) {
+                                            <td class="mobil-display-none">
+                                                <img src="/img/admin-img/check.png" alt="">
+                                            </td>
+                                        } else {
+                                            <td class="mobil-display-none">
+                                                <img src="/img/admin-img/xmark.png" alt="">
+                                            </td>
+                                        }
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                } else
+                {
+                    <h4>Eklenmiş Varyant Bulunamadı</h4>
+                }
+            </div>
+            <div class="form-btn-kaydet-box">
+                <button class="form-btn-kaydet" type="submit">Kaydet</button>
+            </div>
+        </form>
+    </div>
+</div>

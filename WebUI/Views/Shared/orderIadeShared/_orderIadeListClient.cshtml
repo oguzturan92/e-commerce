@@ -1,0 +1,112 @@
+@model OrderModel
+
+<div class="order-container">
+    <div class="order-box">
+        <div class="order-list-box">
+        <div class="order-list-back">
+            <a asp-controller="UserAccount" asp-action="AccountIndex">Geri</a>
+        </div>
+        @if (Model.Orders.Count() > 0)
+        {
+            @foreach (var order in Model.Orders)
+            {
+                <div class="order-list-item">
+                    <div class="order-list-item-title">
+                        <div class="order-liste-item-title-2">
+                            <div class="order-liste-item-title-3">
+                                <p>Sipariş No</p>
+                                <p>@order.OrderNumber</p>
+                            </div>
+                            <div class="order-liste-item-title-3">
+                                <p>Sipariş Tarihi</p>
+                                <p>@order.OrderDateTime</p>
+                            </div>
+                            <div class="order-liste-item-title-3">
+                                <p>Sipariş Tutarı</p>
+                                <p>@order.OrderGenelPrice.ToString("c")</p>
+                            </div>
+                            <div class="order-liste-item-title-3">
+                                <p>Ödeme Tipi</p>
+                                <p>@order.OrderPaymentType</p>
+                            </div>
+                            <div class="order-liste-item-title-3">
+                                <p>Sipariş Durumu</p>
+                                <p>@order.OrderState</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="order-list-item-content">
+
+                        <table>
+                            <tbody>
+
+                                @foreach (var iadeLine in order.OrderIades)
+                                {
+                                    <tr>
+                                        <th style="width: 150px;"><img src="/img/@iadeLine.IadeUrunImage" alt=""></th>
+                                        <th><a asp-controller="Product" asp-action="ProductDetail" asp-route-url="@iadeLine.IadeUrunUrl" class="product-name" target="_blank">@iadeLine.IadeUrunAdi</a></th>
+                                        <th style="width: 250px;">
+                                            <p>Özellik : <span>@iadeLine.IadeUrunOzellik</span></p>
+                                            <p>Adet : <span>@iadeLine.IadeUrunAdet</span></p>
+                                            @if (iadeLine.IadeUrunIndirimFiyati == 0)
+                                            {
+                                                <p>Birim Fiyat : <span>@iadeLine.IadeUrunBirimFiyati.ToString("c")</span></p>
+                                                <p>İade Tutarı : <span>@((iadeLine.IadeUrunBirimFiyati * iadeLine.IadeUrunAdet).ToString("c"))</span></p>
+                                            } else
+                                            {
+                                                <p>Birim Fiyat : <span>@iadeLine.IadeUrunIndirimFiyati.ToString("c")</span></p>
+                                                <p>İade Tutarı : <span>@((iadeLine.IadeUrunIndirimFiyati * iadeLine.IadeUrunAdet).ToString("c"))</span></p>
+                                            }
+                                        </th>
+                                        <th>İade sonucu : <span>@iadeLine.OrderIadeApproval</span></th>
+                                    </tr>
+                                    <tr class="order-iade-bank">                                        
+                                        <th></th>
+                                        <th>Banka Adı : <span>@iadeLine.BankName</span></th>
+                                        <th>Banka Iban : <span>@iadeLine.BankIban</span></th>
+                                        <th></th>
+                                    </tr>
+                                }
+                                
+                            </tbody>
+                        </table>
+
+                        @* <div class="order-list-item-özet">
+                            <div class="order-list-item-özet-box">
+                                <div class="order-list-item-özet-box-item">
+                                    <p><span>Teslimat Adresi</span></p>
+                                    <p>@order.OrderAdress[0].Adres.AdresTitle</p>
+                                    <p>@order.OrderAdress[0].Adres.AdresNameSurname</p>
+                                    <p>@order.OrderAdress[0].Adres.AdresPhoneNumber</p>
+                                    <p>@order.OrderAdress[0].Adres.AdresContent</p>
+                                    <p>@order.OrderAdress[0].Adres.AdresCounty / @order.OrderAdress[0].Adres.AdresCity</p>
+                                </div>
+                                <div class="order-list-item-özet-box-item">
+                                    <p><span>Fatura Adresi</span></p>
+                                    <p>@order.OrderAdress[1].Adres.AdresTitle</p>
+                                    <p>@order.OrderAdress[1].Adres.AdresNameSurname</p>
+                                    <p>@order.OrderAdress[1].Adres.AdresPhoneNumber</p>
+                                    <p>@order.OrderAdress[1].Adres.AdresContent</p>
+                                    <p>@order.OrderAdress[1].Adres.AdresCounty / @order.OrderAdress[1].Adres.AdresCity</p>
+                                </div>
+                                <div class="order-list-item-özet-box-item">
+                                    <p><span>Sipariş Özeti</span></p>
+                                    <p><span>Ara Toplam : @order.OrderTotalPrice.ToString("c")</span> </p>
+                                    <p><span>Toplam KDV :</span> </p>
+                                    <p><span>Toplam : @order.OrderGenelPrice.ToString("c")</span> </p>
+                                </div>
+                            </div>
+                        </div> *@
+
+                    </div>
+                </div>
+            }
+        } else
+        {
+            <p>İade Talebiniz Bulunmamaktadır</p>
+        }
+        </div>
+    </div>
+</div>

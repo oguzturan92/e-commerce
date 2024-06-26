@@ -1,0 +1,11 @@
+@{
+    ViewData["Title"] = "Üye Şifre Yenile";
+    Layout = "_Layout";
+}
+
+    @await Html.PartialAsync("~/Views/Shared/userAccountShared/_sifreYenile.cshtml")
+
+    @section Css
+    {
+        <link rel="stylesheet" href="~/AccountCss/my-information.css" />
+    }

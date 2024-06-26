@@ -1,0 +1,30 @@
+@model SupportModel
+
+<div class="title">
+    <h2>DESTEK TALEBİ YANITLA</h2>
+</div>
+<div class="content">
+    <div class="form-container">
+        <div class="table-btn-geri-box">
+            <a class="table-btn-geri" asp-controller="Support" asp-action="SupportList">Geri</a>
+        </div>
+        <form class="form-container-alt" asp-controller="Support" asp-action="SupportReply" method="post" enctype="multipart/form-data">
+            <input type="hidden" asp-for="Support.SupportId">
+            <input type="hidden" name="SupportSubject" value="@Model.Support.SupportSubject">
+            <div class="form-item-1">
+                <textarea class="support-message-line-textarea" name="SupportLineContent" id="CkEditor"></textarea>
+            </div>
+            <div class="form-btn-kaydet-box">
+                <button class="form-btn-kaydet" type="submit">Yanıtla</button>
+            </div>
+            @foreach (var supportLine in Model.Support.SupportLines)
+            {
+                <div class="form-item-1 support-message-line" style=@(supportLine.SupportLineAnswering == "Müşteri Hizmetleri" ? "background-color:#efefef;":"")>
+                    <label><span>Mesaj Tarihi : </span>@supportLine.SupportLineDateTime</label>
+                    <label><span>Gönderen : </span>@supportLine.SupportLineAnswering</label>
+                    <label>@supportLine.SupportLineContent</label>
+                </div>
+            }
+        </form>
+    </div>
+</div>

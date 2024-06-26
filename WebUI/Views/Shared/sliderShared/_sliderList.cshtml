@@ -1,0 +1,74 @@
+@model SliderModel
+
+<div class="title">
+    <h2>SLİDER LİSTESİ</h2>
+</div>
+<div class="content">
+    <div class="table-container">
+        <div class="table-btn-ekle-box">
+            <a class="table-btn-ekle" asp-controller="Slider" asp-action="SliderCreate">Ekle</a>
+        </div>
+        @if (Model.Sliders.Count() > 0)
+        {
+            <div class="table-container-alt">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="th-w-75">Sıra No</th>
+                            <th class="th-w-75">Resim</th>
+                            <th class="th-w-auto mobil-display-none">Ad</th>
+                            <th class="th-w-75 mobil-display-none">Onay</th>
+                            <th colspan="2"></th>
+                            @* <th></th> *@
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.Sliders) {
+                            <tr>
+                                <td class="td-w-75">
+                                    <form asp-controller="Slider" asp-action="SliderList" method="post">
+                                        <input type="hidden" name="SliderId" value="@item.SliderId">
+                                        <input class="input-sort" type="number" name="SliderSort" value="@item.SliderSort">
+                                    </form>
+                                </td>
+
+                                <td><img src="~/img/@item.SliderImage" alt=""></td>
+                                
+                                <td class="slice">@item.SliderName</td>
+
+                                @if (@item.SliderApproval) {
+                                    <td class="mobil-display-none">
+                                        <img src="/img/admin-img/check.png" alt="">
+                                    </td>
+                                } else {
+                                    <td class="mobil-display-none">
+                                        <img src="/img/admin-img/xmark.png" alt="">
+                                    </td>
+                                }
+
+                                <td class="td-buton-edit">
+                                    <form asp-controller="Slider" asp-action="SliderEdit" asp-route-id="@item.SliderId" method="get">
+                                        <button type="submit">
+                                            <img src="/img/admin-img/pencil.png" alt="">
+                                        </button>
+                                    </form>
+                                </td>
+
+                                <td class="td-buton-del">
+                                    <form asp-controller="Slider" asp-action="SliderDelete" asp-route-id="@item.SliderId" method="post">
+                                        <button type="submit" onclick="return silOnayla();">
+                                            <img src="/img/admin-img/delete.png" alt="">
+                                        </button>
+                                    </form>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        } else
+        {
+            <h4>Listelenecek Slider Bulunamadı</h4>
+        }
+    </div>
+</div>

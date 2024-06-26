@@ -1,0 +1,57 @@
+@model RoleModel
+
+<div class="title">
+    <h2>ROL LİSTESİ</h2>
+</div>
+<div class="content">
+    <div class="table-container">
+        <div class="table-btn-ekle-box">
+            <a class="table-btn-ekle" asp-controller="Role" asp-action="RoleCreate">Ekle</a>
+        </div>
+        @if (Model.Roles.Count() > 0)
+        {
+            <div class="table-container-alt">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="th-w-auto">Rol Adı</th>
+                            <th colspan="2"></th>
+                            @* <th></th> *@
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.Roles) {
+                            <tr>                                
+                                <td>@item.Name</td>
+
+                                <td class="td-buton-edit">
+                                    <form asp-controller="Role" asp-action="RoleEdit" asp-route-id="@item.Id" method="get">
+                                    @if (item.Name != "Admin") {
+                                        <button type="submit">
+                                            <img src="/img/admin-img/pencil.png" alt="">
+                                        </button>
+                                    }
+                                    </form>
+                                </td>
+                                        
+                                <td class="td-buton-del">
+                                    <form asp-controller="Role" asp-action="RoleDelete" asp-route-id="@item.Id" method="post">
+                                    @if (item.Name != "Admin") {
+                                        <input type="hidden" name="Id" value="@item.Id">
+                                        <button type="submit" onclick="return silOnayla();">
+                                            <img src="/img/admin-img/delete.png" alt="">
+                                        </button>
+                                    }
+                                    </form>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        } else
+        {
+            <h4>Listelenecek Rol Bulunamadı</h4>
+        }
+    </div>
+</div>

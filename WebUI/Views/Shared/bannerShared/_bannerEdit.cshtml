@@ -1,0 +1,56 @@
+@model BannerModel
+    
+<div class="title">
+    <h2>BANNER DÜZENLE</h2>
+</div>
+<div class="content">
+    <div class="form-container">
+        <div class="table-btn-geri-box">
+            <a class="table-btn-geri" asp-controller="Banner" asp-action="BannerList">Geri</a>
+        </div>
+        <form class="form-container-alt" asp-controller="Banner" asp-action="BannerEdit" method="post" enctype="multipart/form-data">
+            <input type="hidden" asp-for="BannerId">
+            <input type="hidden" asp-for="BannerSort">
+            <div class="form-item-1">
+                <span class="validation" asp-validation-for="BannerName"></span>
+                <label>Ad *</label>
+                <input asp-for="BannerName" type="text">
+            </div>
+            <div class="form-item-1">
+                <label>Açıklama</label>
+                <input asp-for="BannerDescription" type="text">
+            </div>
+            <div class="form-item-1">
+                <label>Link</label>
+                <input asp-for="BannerLink" type="text">
+            </div>
+            <div class="form-item-1">
+                <span class="validation" asp-validation-for="BannerImage"></span>
+                <label class="resim-label">Resim *</label>
+                <input type="hidden" asp-for="BannerImage"> @* Validationdan sonra sayfa yenilenirse, DB'den gelen BannerImage değerini sakladık *@
+                <img src="~/img/@Model.BannerImage" alt="" class="form-img">
+                <input class="resim-input" type="file" name="file">
+            </div>
+            <div class="form-item-2">
+                <div class="form-item-1">
+                    <label>Dizayn Tipi</label>
+                    <select asp-for="HomeDesignTypeId" class="select">
+                        @foreach (var item in Model.ListHomeDesignTypes) {
+                            <option value="@item.HomeDesignTypeId">@item.HomeDesignTypeName</option>
+                        }
+                    </select>
+                </div>
+                <div class="form-item-1">
+                    <label>Onay Durumu</label>
+                    <select asp-for="BannerApproval" class="select">
+                        <option value="True">Evet</option>
+                        <option value="False">Hayır</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-btn-kaydet-box">
+                <button class="form-btn-kaydet" type="submit">Kaydet</button>
+            </div>
+        </form>
+    </div>
+</div>

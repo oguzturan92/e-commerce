@@ -1,0 +1,330 @@
+@model SepetModel
+
+<div class="cart-index">
+    <div class="cart-container">
+        @if (Model.CartGet != null)
+        {
+            if (Model.CartGet.Product.Count() > 0)
+            {
+                <div class="cart-left">
+                    
+                    <div class="cart-item-box">
+                        @foreach (var item in Model.CartGet.Product)
+                        {
+                            <div class="cart-item">
+                                <div class="cart-item-img">
+                                    <img class="cart-product-img" src="~/img/@item.Product.ProductImage" alt="">
+                                </div>
+                                <div class="cart-item-content">
+
+                                    <span class="cart-item-content-name">
+                                        <a target="_blank" asp-controller="Product" asp-action="ProductDetail" asp-route-url="@item.Product.ProductUrl">@item.Product.ProductName</a>
+                                    </span>
+                                    
+                                    <span class="cart-item-content-size">@item.SizeName</span>
+
+                                    
+                                    <span class="cart-item-content-price-1">
+                                        <span class="cart-item-total-price-box">
+                                            @item.ProductPrice.ToString("c")
+                                        </span>
+                                    </span>
+
+                                    <span class="cart-item-content-quantity">
+                                        <form asp-controller="Cart" asp-action="CartItemNumber" method="post">
+                                            <div class="cart-index-item-quantity">
+                                                <input type="hidden" name="ProductId" value="@item.Product.ProductId">
+                                                <input type="hidden" name="ProductSizeId" value="@item.ProductSizeId">
+
+                                                <span class="cart-item-quantity-down">-</span>
+                                                <input type="number" name="ProductQuantity" class="cart-item-quantity" value="@item.ProductQuantity" min="1">
+                                                <span class="cart-item-quantity-up">+</span>
+                                            </div>
+
+                                            <button id="cart-item-quantity-btn" type="submit">Güncelle</button>
+                                        </form>
+                                    </span>
+
+                                    <span class="cart-item-content-price-2">
+                                        <span class="cart-item-total-price-box">
+                                            @((item.ProductPrice * item.ProductQuantity).ToString("c"))
+                                        </span>
+                                    </span>
+
+                                </div>
+
+                                <span class="cart-item-content-delete">
+                                    <form asp-controller="Cart" asp-action="RemoveFromCart" asp-route-productId="@item.Product.ProductId" asp-route-productSizeId="@item.ProductSizeId" method="post">
+                                        <button class="cart-left-product-delete" type="submit">
+                                            <img src="~/img/img-icon-sabit/x-mark.png" alt="">
+                                        </button>
+                                    </form>
+                                </span>
+
+                            </div>
+                        }
+                    </div>
+                    <form class="cart-product-delete-all-form" asp-controller="Cart" asp-action="RemoveFromCartAll">
+                        <button type="submit">Sepeti Temizle</button>
+                    </form>
+                </div>
+
+                <div class="cart-right">
+                    <div class="cart-right-box">
+                        <div class="cart-right-item">
+                            <p>Sipariş Toplamı :</p>
+                            <p>@Model.CartGet.TotalPrice().ToString("c")</p>
+                        </div>
+                        <div class="cart-right-item">
+                            <p>Genel Toplam :</p>
+                            <p>@Model.CartGet.TotalPrice().ToString("c")</p>
+                        </div>
+                        <div class="cart-right-form">
+                            <form asp-controller="UserAccount" asp-action="AccountIndex">
+                                <label for="">Hediye Çeki</label>
+                                <div class="cart-right-form-box">
+                                    <input type="text" name="giftCardTitle" id="">
+                                    <button type="submit">Ekle</button>
+                                </div>
+                                <span class="validation-cart" asp-validation-for="GiftCardTitle"></span>
+                            </form>
+                        </div>
+                        <a class="cart-right-go-site" asp-controller="Home" asp-action="Index">Alışverişe Devam Et</a>
+                        <a class="cart-right-go-payment" asp-controller="Cart" asp-action="CartAdres">Sepeti Onayla</a>
+                    </div>
+                </div>
+            } else
+            {
+                <div class="cart-no-product">
+                    <h3>Sepetinizde Ürün Bulunmuyor</h3>
+                    <div>
+                        <a href="/">Alışverişe Başla</a>
+                    </div>
+                </div>
+            }
+        }
+        @if (Model.Sepet != null)
+        {
+            if (Model.Sepet.SepetLines.Count() > 0)
+            {
+                <div class="cart-left">
+                    
+                    <div class="cart-item-box">
+                        @foreach (var sepetLine in Model.Sepet.SepetLines)
+                        {
+                            var productLine = sepetLine.Product.ProductSizes.Where(i => i.ProductSizeId == sepetLine.ProductSizeId).FirstOrDefault();
+
+                            <div class="cart-item">
+                                <div class="cart-item-img">
+                                    <img class="cart-product-img" src="~/img/@sepetLine.Product.ProductImage" alt="">
+                                </div>
+                                <div class="cart-item-content">
+
+                                    <span class="cart-item-content-name">
+                                        <a target="_blank" asp-controller="Product" asp-action="ProductDetail" asp-route-id="@sepetLine.Product.ProductId" asp-route-url="@sepetLine.Product.ProductUrl">@sepetLine.Product.ProductName</a>
+                                    </span>
+
+                                    @if (sepetLine.Product.ProductSizes.Any(i => i.Size != null))
+                                    {
+                                        <span class="cart-item-content-size">@sepetLine.Product.ProductSizes.Where(i => i.ProductSizeId == sepetLine.ProductSizeId).FirstOrDefault().Size.SizeTitle</span>
+                                    } else {
+                                        <span class="cart-item-content-size">@sepetLine.Product.ProductColor</span>
+                                    }
+
+                                    <span class="cart-item-content-price-1">
+                                        @if (sepetLine.Product.ProductSizes.Any(i => i.ProductSizeId != 0))
+                                        { // Ürünün bedeni varsa, ürün beden fiyatına bakarız.
+                                            if (productLine.ProductSizePrice != 0)
+                                            { // Ürün bedeni fiyatı sıfır değil ise ürün beden fiyatını alırız.
+                                                <span class="cart-item-total-price-box">
+                                                    @productLine.ProductSizePrice.ToString("c")
+                                                    <span>@sepetLine.ProductCampaignPrice.ToString("c")</span>
+                                                </span>
+                                            } else
+                                            { // Ürün beden fiyatı sıfır ise ürün fiyatına bakarız.
+                                                if (sepetLine.Product.ProductSalePrice != 0)
+                                                { // Ürün fiyatı indirimli ise indirim fiyatını alırız.
+                                                    <span class="cart-item-total-price-box">
+                                                        @sepetLine.Product.ProductSalePrice.ToString("c")
+                                                        <span>@sepetLine.ProductCampaignPrice.ToString("c")</span>
+                                                    </span>
+                                                } else
+                                                { // Ürün fiyatı indirimli değil ise indirimsiz fiyatını alırız.
+                                                    <span class="cart-item-total-price-box">
+                                                        @sepetLine.Product.ProductPrice.ToString("c")
+                                                        <span>@sepetLine.ProductCampaignPrice.ToString("c")</span>
+                                                    </span>
+                                                }
+                                            }
+                                        } else
+                                        { // Ürünün bedeni yoksa, ürün fiyatına bakarız.
+                                            if (sepetLine.Product.ProductSalePrice != 0)
+                                            { // Ürün fiyatı indirimli ise indirim fiyatını alırız.
+                                                <span class="cart-item-total-price-box">
+                                                    @sepetLine.Product.ProductSalePrice.ToString("c")
+                                                    <span>@sepetLine.ProductCampaignPrice.ToString("c")</span>
+                                                </span>
+                                            } else
+                                            { // Ürün fiyatı indirimli değil ise indirimsiz fiyatını alırız.
+                                                <span class="cart-item-total-price-box">
+                                                    @sepetLine.Product.ProductPrice.ToString("c")
+                                                    <span>@sepetLine.ProductCampaignPrice.ToString("c")</span>
+                                                </span>
+                                            }
+                                        }
+                                    </span>
+
+                                    <span class="cart-item-content-quantity">
+                                        <form asp-controller="Cart" asp-action="CartItemNumber" method="post">
+                                            <div class="cart-index-item-quantity">
+                                                <input type="hidden" name="SepetLineId" value="@sepetLine.SepetLineId">
+                                                <input type="hidden" name="ProductId" value="@sepetLine.ProductId">
+
+                                                <span class="cart-item-quantity-down">-</span>
+                                                <input type="number" name="ProductQuantity" class="cart-item-quantity" value="@sepetLine.ProductQuantity" min="1">
+                                                <span class="cart-item-quantity-up">+</span>
+                                            </div>
+                                            <button id="cart-item-quantity-btn" type="submit">Güncelle</button>
+                                        </form>
+                                    </span>
+
+                                    <span class="cart-item-content-price-2">
+                                        @if (sepetLine.Product.ProductSizes.Any(i => i.ProductSizeId != 0))
+                                        { // Ürünün bedeni varsa, ürün beden fiyatına bakarız.
+                                            if (productLine.ProductSizePrice != 0)
+                                            { // Ürün bedeni fiyatı sıfır değil ise ürün beden fiyatını alırız.
+                                                    <span class="cart-item-total-price-box">
+                                                        @((productLine.ProductSizePrice * sepetLine.ProductQuantity).ToString("c"))
+                                                        <span>@((sepetLine.ProductCampaignPrice * sepetLine.ProductQuantity).ToString("c"))</span>
+                                                    </span>
+                                            } else
+                                            { // Ürün bedeni fiyatı sıfır ise ürün fiyatına bakarız.
+                                                if (sepetLine.Product.ProductSalePrice != 0)
+                                                { // Ürün fiyatı indirimli ise indirim fiyatını alırız.
+                                                    <span class="cart-item-total-price-box">
+                                                        @((sepetLine.Product.ProductSalePrice * sepetLine.ProductQuantity).ToString("c"))
+                                                        <span>@((sepetLine.ProductCampaignPrice * sepetLine.ProductQuantity).ToString("c"))</span>
+                                                    </span>
+                                                } else
+                                                { // Ürün fiyatı indirimli değil ise indirimsiz fiyatını alırız.
+                                                    <span class="cart-item-total-price-box">
+                                                        @((sepetLine.Product.ProductPrice * sepetLine.ProductQuantity).ToString("c"))
+                                                        <span>@((sepetLine.ProductCampaignPrice * sepetLine.ProductQuantity).ToString("c"))</span>
+                                                    </span>
+                                                }
+                                            }
+                                        } else
+                                        { // Ürünün bedeni yoksa, ürün fiyatına bakarız.
+                                            if (sepetLine.Product.ProductSalePrice != 0)
+                                            { // Ürün fiyatı indirimli ise indirim fiyatını alırız.
+                                                <span class="cart-item-total-price-box">
+                                                    @((sepetLine.Product.ProductSalePrice * sepetLine.ProductQuantity).ToString("c"))
+                                                    <span>@((sepetLine.ProductCampaignPrice * sepetLine.ProductQuantity).ToString("c"))</span>
+                                                </span>
+                                            } else
+                                            { // Ürün fiyatı indirimli değil ise indirimsiz fiyatını alırız.
+                                                <span class="cart-item-total-price-box">
+                                                    @((sepetLine.Product.ProductPrice * sepetLine.ProductQuantity).ToString("c"))
+                                                    <span>@((sepetLine.ProductCampaignPrice * sepetLine.ProductQuantity).ToString("c"))</span>
+                                                </span>
+                                            }
+                                        }
+                                    </span>
+
+                                </div>
+
+                                <span class="cart-item-content-delete">
+                                    <form asp-controller="Cart" asp-action="RemoveFromCart" asp-route-productId="@sepetLine.Product.ProductId" asp-route-sepetLineId="@sepetLine.SepetLineId" asp-route-productSizeId="@sepetLine.ProductSizeId" method="post">
+                                        <button class="cart-left-product-delete" type="submit">
+                                            <img src="~/img/img-icon-sabit/x-mark.png" alt="">
+                                        </button>
+                                    </form>
+                                </span>
+
+                            </div>
+                        }
+                    </div>
+                    <form class="cart-product-delete-all-form" asp-controller="Cart" asp-action="RemoveFromCartAll">
+                        <button type="submit">Sepeti Temizle</button>
+                    </form>
+                </div>
+
+                <div class="cart-right">
+                    <div class="cart-right-box">
+                        <div class="cart-right-item">
+                            <p>Sipariş Toplamı :</p>
+                            <p>@Model.Sepet.SiparisToplam.ToString("c")</p>
+                        </div>
+                        <div class="cart-right-item-small">
+                            <p>Kargo :</p>
+                            @if (Model.Sepet.CargoPrice == 0)
+                            {
+                                <p style="color: #6fdc6a;">Ücretsiz</p>
+                            } else
+                            {
+                                <p>@Model.Sepet.CargoPrice.ToString("c")</p>
+                            }
+                        </div>
+                        <div class="cart-right-item">
+                            <p>Genel Toplam :</p>
+                            <p>@Model.Sepet.GenelToplam.ToString("c")</p>
+                        </div>
+                        @if (!string.IsNullOrEmpty(Model.Sepet.GiftCardTitle))
+                        {
+                            <div class="gift-card-index">
+                                <p class="gift-card-p1">Kullanılan Hediye Çeki</p>
+                                <div class="gift-card-index-box">
+                                    <p>@Model.Sepet.GiftCardTitle - <span style="font-weight: 400; font-size: 14px;">@Model.Sepet.GiftCardContent</span></p>
+                                    <a asp-controller="Cart" asp-action="CartIndex">Çeki İptal Et</a>
+                                </div>
+                            </div>
+                        }
+                        <div class="cart-right-form">
+                            <form asp-controller="Cart" asp-action="CartIndex">
+                                <label for="">Hediye Çeki</label>
+                                <div class="cart-right-form-box">
+                                    <input type="text" name="giftCardTitle" id="">
+                                    <button type="submit">Ekle</button>
+                                </div>
+                                <span class="validation-cart" asp-validation-for="GiftCardTitle"></span>
+                            </form>
+                        </div>
+                        <a class="cart-right-go-site" asp-controller="Home" asp-action="Index">Alışverişe Devam Et</a>
+                        <a class="cart-right-go-payment" asp-controller="Cart" asp-action="CartAdres">Sepeti Onayla</a>
+                    </div>
+                </div>
+            } else
+            {
+                <div class="cart-no-product">
+                    <h3>Sepetinizde Ürün Bulunmuyor</h3>
+                    <div>
+                        <a href="/">Alışverişe Başla</a>
+                    </div>
+                </div>
+            }
+        }
+    </div>
+</div>
+
+<script>
+    var ups = document.querySelectorAll(".cart-item-quantity-up");
+    var downs = document.querySelectorAll(".cart-item-quantity-down");
+
+    for (let up of ups) {
+        up.addEventListener("click", function() {
+            var quantity = up.previousElementSibling.value;
+            var qty = parseInt(quantity) + 1;
+            up.previousElementSibling.value = qty;
+        });
+    }
+
+    for (let down of downs) {
+        down.addEventListener("click", function() {
+            var quantity = down.nextElementSibling.value;
+            if (quantity > 1) {
+                var qty = quantity - 1;
+                down.nextElementSibling.value = qty;
+            }
+        });
+    }
+</script>

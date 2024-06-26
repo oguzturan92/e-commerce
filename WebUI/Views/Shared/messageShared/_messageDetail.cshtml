@@ -1,0 +1,42 @@
+@model Message
+ 
+<div class="title">
+    <h2>MESAJ DETAYI</h2>
+</div>
+<div class="content">
+    <div class="form-container">
+        <div class="table-btn-geri-box">
+            <a class="table-btn-geri" asp-controller="Message" asp-action="MessageList">Geri</a>
+        </div>
+        <form class="form-container-alt">
+            <div class="form-item-1">
+                <label for="MessageDate">Mesaj Tarihi</label>
+                <input asp-for="MessageDate" type="text" disabled>
+            </div>
+            <div class="form-item-2">
+                <div class="form-item-1">
+                    <label for="MessageName">Adı</label>
+                    <input asp-for="MessageName" type="text" disabled>
+                </div>
+                <div class="form-item-1">
+                    <label for="MessageSurname">Soyad</label>
+                    <input asp-for="MessageSurname" type="text" disabled>
+                </div>
+            </div>
+            <div class="form-item-2">
+                <div class="form-item-1">
+                    <label for="MessagePhone">Telefon Numarası</label>
+                    <input asp-for="MessagePhone" type="text" disabled>
+                </div>
+                <div class="form-item-1">
+                    <label for="MessageMail">e Mail</label>
+                    <input asp-for="MessageMail" type="text" disabled>
+                </div>
+            </div>
+            <div class="form-item-1">
+                <label for="MessageContent">Mesaj</label>
+                <textarea asp-for="MessageContent" cols="30" rows="10" class="form-textarea" disabled></textarea>
+            </div>
+        </form>
+    </div>
+</div>

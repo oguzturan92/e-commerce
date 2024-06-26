@@ -1,0 +1,183 @@
+
+
+@media (min-width:1001px) {
+    .header-container {
+        width: 100%;
+        height: 100px;
+        box-shadow: 0px 5px 20px 0px #f7f7f7;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+    }
+    
+    /* ---------------------------------------------------------------------------------------------- */
+    .header-left {
+        grid-column: 1/ span 3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+    }
+    .header-left a {
+        max-width: 200px;
+        max-height: 50px;
+        margin: 0px 10px;
+    }
+    .header-left img {
+        width: 100%;
+    }
+    
+    /* ---------------------------------------------------------------------------------------------- */
+    .header-right {
+        grid-column: 10/ span 3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+        height: 100px;
+    }
+    .header-right #search-form {
+        text-decoration: none;
+        height: 20px;
+        cursor: pointer;
+    }
+    .header-right #search-form img {
+        height: 20px;
+    }
+
+    .cart-icon-number-box {
+        position: relative;
+    }
+    .cart-icon-number {
+        color: #fff;
+        position: absolute;
+        right: -12px;
+        top: -12px;
+        background-color: #000;
+        border-radius: 100px;
+        font-size: 15px;
+        width: 15px;
+        text-align: center;
+    }
+    
+    /* ---------------------------------------------------------------------------------------------- */
+    .header-middle {
+        grid-column: 4/ span 6;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    /* ANA MENU -------------------------------------------------- */
+    .header-middle .menu-ul {
+        margin: 0px;
+        padding: 0px;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        gap: 5px;
+    }
+    .header-middle .menu-ul .menu-li {
+        list-style: none;
+        text-align: center;
+    }
+    .header-middle .menu-ul .menu-li .menu-a {
+        text-decoration: none;
+        font-weight: 400;
+        color: #000;
+        transition: .3s;
+        display: block;
+        padding: 43px 0px;
+    }
+    .header-middle .menu-ul .menu-li .menu-a:hover {
+        color: #c2a18a;
+    }
+    
+    /* ANA MENUYE HOVER OLDUĞUNDA */
+    .header-middle .menu-ul .menu-li .menu-a:hover ~ .menu-1 {
+        display: flex;
+        animation-name: a1;
+        animation-duration: .1s;
+        animation-timing-function: ease-out;
+    }
+    .header-middle .menu-1:hover {
+        display: flex;
+    }
+    
+    @keyframes a1 {
+        0% {
+            opacity: 0;
+            top: 125px;
+        }
+        100% {
+            opacity: 1;
+            top: 100px;
+        }
+    }
+    
+    /* ALT MENU -------------------------------------------------- */
+    .header-middle .menu-1 {
+        background-color: #f5f5f5;
+        padding: 50px 0px;
+        position: absolute;
+        left: 0px;
+        top: 100px;
+        display: none;
+        
+        flex-direction: column;
+        max-height: 400px;
+        width: 100%;
+        flex-wrap: wrap;
+        text-align: center;
+        z-index: 2;
+    }
+    .header-middle .menu-1 .menu-1-li {
+        list-style: none;
+        padding: 15px 0px;
+    }
+    .header-middle .menu-1 .menu-1-li .menu-1-a {
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 16px;
+        color: #000;
+        transition: .3s;
+        height: 35px;
+        display: block;
+        line-height: 35px;
+    }
+    .header-middle .menu-1 .menu-1-li .menu-1-a:hover {
+        color: #c2a18a;
+    }
+    
+    
+    /*  EN ALT MENU -------------------------------------------------- */
+    .header-middle .menu-2 {
+        padding: 0px;
+    }
+    .header-middle .menu-2-li {
+        list-style: none;
+    }
+    .header-middle .menu-2-li .menu-2-a {
+        text-decoration: none;
+        font-weight: 400;
+        font-size: 14px;
+        color: #000;
+        transition: .3s;
+        height: 25px;
+        display: block;
+        line-height: 25px;
+    }
+    .header-middle .menu-2-li .menu-2-a:hover {
+        color: #c2a18a;
+    }
+
+    .mobil-up {
+        display: none;
+    }
+
+}
+
+@media (max-width:1000px) {
+    .header-container {
+        display: none;
+    }
+}

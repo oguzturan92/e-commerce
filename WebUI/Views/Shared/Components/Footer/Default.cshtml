@@ -1,0 +1,27 @@
+@model FooterModel
+
+@if (Model.Footers != null)
+{
+    <div class="footer-box-content" style="grid-template-columns: repeat(@Model.Footers.Count(), 1fr);">
+        @foreach (var item in Model.Footers)
+        {
+            <div class="footer-content-item">
+                <ul>
+                    <li><h4>@item.FooterTitle</h4></li>
+                    @foreach (var item2 in item.FooterAlts)
+                    {
+                        <li>
+                            <a
+                                asp-controller="FooterAlt"
+                                asp-action="FooterAltDetailClient"
+                                asp-route-url="@item2.FooterAltLink"
+                            >
+                                @item2.FooterAltTitle
+                            </a>
+                        </li>
+                    }
+                </ul>
+            </div>
+        }
+    </div>
+}

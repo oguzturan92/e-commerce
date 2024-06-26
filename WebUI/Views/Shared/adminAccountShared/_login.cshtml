@@ -1,0 +1,24 @@
+@model UserLoginModel
+
+<div class="form-login-container">
+    <form class="form-login-container-alt" asp-controller="AdminAccount" asp-action="Login" method="post">
+        <input type="hidden" name="ReturnUrl" value="@Model.ReturnUrl"> @* Get Login ile getirilen ReturnUrl alanını, Post'a gönderebilmek için burda saklıyoruz *@
+        <div class="form-login-item-1">
+            <h1 class="admin-h1">Admin Giriş</h1>
+        </div>
+        <div class="form-login-item-1">
+            <span class="validation" asp-validation-for="Email"></span>
+            <label>e Mail *</label>
+            <input asp-for="Email" type="text">
+        </div>
+        <div class="form-login-item-1">
+            <span class="validation" asp-validation-for="Password"></span>
+            <label>Şifre *</label>
+            <input asp-for="Password" type="password">
+        </div>
+        <div class="form-login-item-2">
+            <button class="form-login-btn-giris" type="submit">Giriş</button>
+            <a class="form-login-btn-sifremi-unuttum" asp-controller="AdminAccount" asp-action="SifremiUnuttum">Şifremi Unuttum</a>
+        </div>
+    </form>
+</div>

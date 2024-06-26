@@ -1,0 +1,51 @@
+@model FavoriteModel
+
+<div class="favorite-list-container">
+    <div class="favorite-box">
+        <div class="favorite-list-box">
+
+            <div class="favorite-list-back">
+                <a asp-controller="UserAccount" asp-action="AccountIndex">Geri</a>
+            </div>
+
+            @if (Model.Favorites.Count() > 0)
+            {
+                @foreach (var favori in Model.Favorites)
+                {            
+                    <div class="favorite-filter-box">
+                        <div class="favorite-box-title">
+                            <p>@favori.FavoriteTitle</p>
+                            <div class="favorite-box-title-buttons">
+                                <a asp-controller="Favorite" asp-action="FavoriGroupDelete" asp-route-favoriId="@favori.FavoriteId"><img src="/img/img-icon-sabit/delete-list.png" alt=""></a>
+                                <img class="favorite-title-img" src="/img/img-icon-sabit/plus.png" alt="">
+                            </div>
+                        </div>
+
+                        <div class="favorite-box-list">
+                            <table>
+                                <tbody>
+
+                                    @foreach (var urunler in favori.FavoriteProducts)
+                                    {
+                                        <tr>
+                                            <th style="width: 125px;"><img src="/img/@urunler.Product.ProductImage" alt=""></th>
+                                            <th><a class="favorite-product-name" asp-controller="Product" asp-action="ProductDetail" asp-route-url="@urunler.Product.ProductUrl" target="_blank">@urunler.Product.ProductName</a></th>
+                                            <th style="width: 75px;">@urunler.Product.ProductPrice</th>
+                                            <th style="width: 75px;">@urunler.Product.ProductSalePrice</th>
+                                            <th style="width: 75px;"><a asp-controller="Favorite" asp-action="FavoriteDelete" asp-route-favoriId="@favori.FavoriteId" asp-route-productId="@urunler.Product.ProductId"><img src="/img/img-icon-sabit/x-mark.png" alt=""></a></th>
+                                        </tr>
+                                    }
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                }
+            } else
+            {
+                <p>Favori Listesi Oluşturulmamış</p>
+            }
+
+        </div>
+    </div>
+</div>

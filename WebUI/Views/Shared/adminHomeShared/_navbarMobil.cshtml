@@ -1,0 +1,45 @@
+
+
+    <div class="mobil-navbar-box">
+        <a href="/admin/anasayfa" class="bar"><img class="bar-logo" src="~/img/img-logo/logo.png" alt=""></a>
+        <div id="onOff" class="onoff">
+            <input id="checkbox" type="checkbox">
+            <div class="onoff-item-1"></div>
+            <div class="onoff-item-2"></div>
+            <div class="onoff-item-3"></div>
+        </div>
+        <div id="bg-js-opacity"></div>
+        <div id="menu" class="menu">
+            <div class="search-user">
+            </div>
+            <ul class="ul-1">
+                <li class="li-1-admin">
+                    <a class="a-1-admin" asp-controller="AdminAccount" asp-action="EditAdmin" asp-route-userName="@User.Identity.Name"><i class="fa-solid fa-user"></i>@User.Identity.Name</a>
+                </li>
+                <li class="li-1"><a class="a-1" target="_blank" href="/">SİTE</a></li>
+                <li class="li-1"><a class="a-1" asp-controller="Admin" asp-action="Home">ANA SAYFA</a></li>
+                <li class="li-1"><a class="a-1" asp-controller="Order" asp-action="OrderList">SİPARİŞLER</a></li>
+                <li class="li-1"><a class="a-1" asp-controller="HomeDesignType" asp-action="HomeDesignTypeList">DİZAYN</a></li>
+                <li class="li-1"><a class="a-1" asp-controller="Slider" asp-action="SliderList">SLIDER</a></li>
+                <li class="li-1"><a class="a-1" asp-controller="Banner" asp-action="BannerList">BANNER</a></li>
+                <li class="li-1"><a class="a-1" asp-controller="Product" asp-action="ProductList">ÜRÜN</a></li>
+                <li class="li-1"><a class="a-1" asp-controller="SizeType" asp-action="SizeTypeList">SEÇENEK</a></li>
+                <li class="li-1"><a class="a-1" asp-controller="Category" asp-action="CategoryList">KATEGORİ</a></li>
+                @* @if (User.IsInRole("Admin")) { *@
+                    <li class="li-1"><a class="a-1" asp-controller="AdminAccount" asp-action="IndexAccount">KULLANICI</a></li>
+                    <li class="li-1"><a class="a-1" asp-controller="Role" asp-action="RoleList">ROL</a></li>
+                @* } *@
+                <li class="li-1"><a class="a-1" asp-controller="Popup" asp-action="PopupList">POPUP</a></li>
+                <li class="li-1"><a class="a-1" asp-controller="GiftCard" asp-action="GiftCardList">HEDİYE ÇEKİ</a></li>
+                <li class="li-1"><a class="a-1" asp-controller="EftHavale" asp-action="EftHavaleList">HAVALE BİLDİRİM</a></li>
+                <li class="li-1"><a class="a-1" asp-controller="Support" asp-action="SupportList">DESTEK</a></li>
+                <li class="li-1"><a class="a-1" asp-controller="Message" asp-action="MessageList">MESAJ</a></li>
+                <li class="li-1"><a class="a-1" asp-controller="Subscribe" asp-action="SubscribeList">ABONE</a></li>
+                <li class="li-1"><a class="a-1" asp-controller="Footer" asp-action="FooterList">FOOTER</a></li>
+                <li class="li-1"><a class="a-1" asp-controller="BankAccount" asp-action="BankAccountList">BANKA HESAPLARI</a></li>
+                <li class="li-1"><a class="a-1" asp-controller="Cargo" asp-action="CargoList">KARGO</a></li>
+                <li class="li-1"><a class="a-1" asp-controller="Setting" asp-action="SettingIndex">AYARLAR</a></li>
+                <li class="li-1"><a class="a-1" asp-controller="AdminAccount" asp-action="Logout">ÇIKIŞ</a></li>
+            </ul>
+        </div>
+    </div>

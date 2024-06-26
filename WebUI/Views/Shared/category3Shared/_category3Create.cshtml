@@ -1,0 +1,81 @@
+@model Category3Model
+
+<div class="title">
+    <h2>ALT KATEGORİ EKLE</h2>
+</div>
+<div class="content">
+    <div class="form-container">
+        <div class="table-btn-geri-box">
+            <a class="table-btn-geri" asp-controller="Category3" asp-action="Category3List" asp-route-id="@Model.Category2Id" asp-route-categoryId="@Model.CategoryId">Geri</a>
+        </div>
+        <form class="form-container-alt" asp-controller="Category3" asp-action="Category3Create"  method="post" enctype="multipart/form-data">
+            <input type="hidden" asp-for="Category2Id">
+            <input type="hidden" asp-for="CategoryId">
+            <div class="form-item-1">
+                <span class="validation" asp-validation-for="Category3SeoTitle"></span>
+                <label>Seo Başlık</label>
+                <input asp-for="Category3SeoTitle" type="text">
+            </div>
+            <div class="form-item-1">
+                <span class="validation" asp-validation-for="Category3SeoDescription"></span>
+                <label>Seo Açıklama</label>
+                <input asp-for="Category3SeoDescription" type="text">
+            </div>
+            <div class="form-item-1">
+                <span class="validation" asp-validation-for="Category3SeoKeyword"></span>
+                <label>Seo Anahtar Kelime</label>
+                <input asp-for="Category3SeoKeyword" type="text">
+            </div>
+            <div class="form-item-1">
+                <span class="validation" asp-validation-for="Category3Name"></span>
+                <label>Ad *</label>
+                <input asp-for="Category3Name" type="text">
+            </div>
+            <div class="form-item-1">
+                <span class="validation" asp-validation-for="Category3Url"></span>
+                <label>Url *</label>
+                <input asp-for="Category3Url" type="text" placeholder="gitmek-istedigim-en-guzel-bolge">
+            </div>
+            <div class="form-item-1">
+                <span class="validation" asp-validation-for="Category3Description"></span>
+                <label>Açıklama</label>
+                <textarea asp-for="Category3Description" id="CkEditor"></textarea>
+            </div>
+            <div class="form-item-1">
+                <label class="resim-label">Resim <span class="tavsiye">(önerilen boyut: 1920 x 200)</span></label>
+                <input class="resim-input" asp-for="Category3Image" name="file" type="file">
+            </div>
+            <div class="form-item-2">
+                <div class="form-item-1">
+                    <label>Ana Menü Görünürlük</label>
+                    <select asp-for="Category3Visibility" class="select">
+                        <option value="MenuTrue">Ana Menüde Görünsün</option>
+                        <option value="MenuFalse">Ana Menüde Görünmesin</option>
+                    </select>
+                </div>
+                <div class="form-item-1">
+                    <label>Sıra Numarası</label>
+                    <input asp-for="Category3Sort" type="text">
+                </div>
+            </div>
+            <div class="form-item-2">
+                <div class="form-item-1">
+                    <label>Listeleme Tipi</label>
+                    <select asp-for="Category3ListType" class="select">
+                        <option value="Urun">Ürün Listesi</option>
+                    </select>
+                </div>
+                <div class="form-item-1">
+                    <label>Onay Durumu</label>
+                    <select asp-for="Category3Approval" class="select">
+                        <option value="True">Onaylı</option>
+                        <option value="False">Onaylı Değil</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-btn-kaydet-box">
+                <button class="form-btn-kaydet" type="submit">Kaydet</button>
+            </div>
+        </form>
+    </div>
+</div>

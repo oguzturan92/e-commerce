@@ -1,0 +1,36 @@
+@model AccountIndexModel
+
+<div class="account-container">
+    <div class="account-boxes">
+        <p>MERHABA @Model.UserAdi.ToUpper() @Model.UserSoyadi.ToUpper()</p>
+        <div class="account-box">
+            <div class="account-item">
+                <a asp-controller="Order" asp-action="OrderListClient">Siparişlerim</a>
+            </div>
+            <div class="account-item">
+                <a asp-controller="OrderIade" asp-action="OrderIadeListClient">İade Taleplerim</a>
+            </div>
+            <div class="account-item">
+                <a asp-controller="UserAccount" asp-action="AccountEdit">Kişisel Bilgilerim</a>
+            </div>
+            <div class="account-item">
+                <a asp-controller="Adres" asp-action="AdresList">Adreslerim</a>
+            </div>
+            <div class="account-item">
+                <a asp-controller="Favorite" asp-action="FavoriteList">Favorilerim</a>
+            </div>
+            <div class="account-item">
+                <a asp-controller="Support" asp-action="SupportListClient">Destek Taleplerim</a>
+            </div>
+            <div class="account-item">
+                <a asp-controller="EftHavale" asp-action="EftHavaleForm">Havale Bildirimi</a>
+            </div>
+            <div class="account-item">
+                <a asp-controller="GiftCard" asp-action="GiftCardListClient">Hediye Çeklerim</a>
+            </div>
+            <div class="account-item">
+                <a asp-controller="UserAccount" asp-action="AccountLogout">Çıkış Yap</a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,128 @@
+@model OrderIadeModel
+
+<div class="title">
+    <h2>İADE LİSTESİ</h2>
+</div>
+<div class="content">
+    <div class="table-container">
+        <form class="form-container-alt" asp-controller="OrderIade" asp-action="OrderIadeList" method="get" style="margin-bottom: 10px;">
+            <div class="form-item-1">
+                <label>E Mail</label>
+                <input name="searchEmail" type="email">
+            </div>
+            <div class="form-btn-kaydet-box">
+                <button class="form-btn-kaydet" type="submit">Ara</button>
+            </div>
+        </form>
+        <div class="table-btn-geri-box">
+            <a class="table-btn-geri" asp-controller="Order" asp-action="OrderList">Geri</a>
+        </div>
+        @if (Model.OrderIades.Count() > 0)
+        {
+            <div class="table-container-alt">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="th-w-75 mobil-display-none">Id</th>
+                            <th class="th-w-auto">İade Tarihi</th>
+                            <th class="th-w-75">İade Onay</th>
+                            <th class="th-w-75 mobil-display-none">Okundu</th>
+                            <th colspan="2"></th>
+                            @* <th></th> *@
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.OrderIades) {
+                            <tr>
+                                <td class="slice mobil-display-none">@item.OrderIadeId</td>
+                                <td class="slice">@item.OrderIadeDate</td>
+                                <td class="slice">@item.OrderIadeApproval</td>
+                                @if (item.OrderIadeOkundu) {
+                                    <td class="mobil-display-none">
+                                        <img src="/img/admin-img/check.png" alt="">
+                                    </td>
+                                } else {
+                                    <td class="mobil-display-none">
+                                        <img src="/img/admin-img/xmark.png" alt="">
+                                    </td>
+                                }
+
+                                <td class="td-buton-edit">
+                                    <form asp-controller="OrderIade" asp-action="OrderIadeEdit" asp-route-id="@item.OrderIadeId" method="get">
+                                        <button type="submit">
+                                            <img src="/img/admin-img/pencil.png" alt="">
+                                        </button>
+                                    </form>
+                                </td>
+
+                                <td class="td-buton-del">
+                                    <form asp-controller="OrderIade" asp-action="OrderIadeDelete" asp-route-orderIadeId="@item.OrderIadeId" method="post">
+                                        <button type="submit" onclick="return silOnayla();">
+                                            <img src="/img/admin-img/delete.png" alt="">
+                                        </button>
+                                    </form>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        } else
+        {
+            if (Model.UserOrderIades.Count() > 0)
+            {
+                <div class="table-container-alt">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="th-w-75 mobil-display-none">Id</th>
+                                <th class="th-w-auto">İade Tarihi</th>
+                                <th class="th-w-75">İade Onay</th>
+                                <th class="th-w-75 mobil-display-none">Okundu</th>
+                                <th colspan="2"></th>
+                                @* <th></th> *@
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model.UserOrderIades) {
+                                <tr>
+                                    <td class="slice mobil-display-none">@item.OrderIadeId</td>
+                                    <td class="slice">@item.OrderIadeDate</td>
+                                    <td class="slice">@item.OrderIadeApproval</td>
+                                    @if (item.OrderIadeOkundu) {
+                                        <td class="mobil-display-none">
+                                            <img src="/img/admin-img/check.png" alt="">
+                                        </td>
+                                    } else {
+                                        <td class="mobil-display-none">
+                                            <img src="/img/admin-img/xmark.png" alt="">
+                                        </td>
+                                    }
+
+                                    <td class="td-buton-edit">
+                                        <form asp-controller="OrderIade" asp-action="OrderIadeEdit" asp-route-id="@item.OrderIadeId" method="get">
+                                            <button type="submit">
+                                                <img src="/img/admin-img/pencil.png" alt="">
+                                            </button>
+                                        </form>
+                                    </td>
+
+                                    <td class="td-buton-del">
+                                        <form asp-controller="OrderIade" asp-action="OrderIadeDelete" asp-route-orderIadeId="@item.OrderIadeId" method="post">
+                                            <button type="submit" onclick="return silOnayla();">
+                                                <img src="/img/admin-img/delete.png" alt="">
+                                            </button>
+                                        </form>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            } else
+            {
+                <h4>Listelenecek İade Bulunamadı</h4>
+            }
+        }
+    </div>
+</div>

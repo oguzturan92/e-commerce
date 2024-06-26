@@ -1,0 +1,116 @@
+@model OrderModel
+
+<div class="order-container">
+    <div class="order-box">
+        <div class="order-list-box">
+        <div class="order-list-back">
+            <a asp-controller="UserAccount" asp-action="AccountIndex">Geri</a>
+        </div>
+        @if (Model.Orders.Count() > 0)
+        {
+            @foreach (var order in Model.Orders)
+            {
+                <div class="order-list-item">
+                    <div class="order-list-item-title">
+                        <div class="order-liste-item-title-2">
+                            <div class="order-liste-item-title-3">
+                                <p>Sipariş No</p>
+                                <p>@order.OrderNumber</p>
+                            </div>
+                            <div class="order-liste-item-title-3">
+                                <p>Sipariş Tarihi</p>
+                                <p>@order.OrderDateTime</p>
+                            </div>
+                            <div class="order-liste-item-title-3">
+                                <p>Sipariş Tutarı</p>
+                                <p>@order.OrderGenelPrice.ToString("c")</p>
+                            </div>
+                            <div class="order-liste-item-title-3">
+                                <p>Ödeme Tipi</p>
+                                <p>@order.OrderPaymentType</p>
+                            </div>
+                            <div class="order-liste-item-title-3">
+                                <p>Sipariş Durumu</p>
+                                <p>@order.OrderState</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="order-list-item-content">
+
+                        <table>
+                            <tbody>
+
+                                @foreach (var orderLine in order.OrderLines)
+                                {
+                                    <tr>
+                                        <th style="width: 150px;"><img src="/img/@orderLine.ProductImage" alt=""></th>
+                                        <th><a asp-controller="Product" asp-action="ProductDetail" asp-route-url="@orderLine.ProductUrl" class="product-name" target="_blank">@orderLine.ProductName</a></th>
+                                        <th style="width: 250px;">
+                                            <p>Özellik : <span>@orderLine.ProductSize</span></p>
+                                            <p>Adet : <span>@orderLine.OrderLineQuantity</span></p>
+                                            @if (orderLine.OrderLineCampaignPrice == 0)
+                                            {
+                                                <p>Birim Fiyat : <span>@orderLine.OrderLineProductPrice.ToString("c")</span></p>
+                                                <p>Toplam Fiyat : <span>@((orderLine.OrderLineProductPrice * orderLine.OrderLineQuantity).ToString("c"))</span></p>
+                                            } else
+                                            {
+                                                <p>Birim Fiyat : <span>@orderLine.OrderLineCampaignPrice.ToString("c")</span></p>
+                                                <p>Toplam Fiyat : <span>@((orderLine.OrderLineCampaignPrice * orderLine.OrderLineQuantity).ToString("c"))</span></p>
+                                            }
+                                        </th>
+                                        <th style="width: 250px;">
+                                            <a class="kolay-iade" asp-controller="OrderIade" asp-action="OrderIadeCreate" asp-route-orderId="@order.OrderId">Kolay İade</a>
+                                            @if (orderLine.IadeEdilebilirAdet != orderLine.OrderLineQuantity)
+                                            {
+                                                <p style="margin-top: 15px; font-weight: 400;">
+                                                    @(orderLine.OrderLineQuantity-orderLine.IadeEdilebilirAdet) adet ürünün iadesi talep edilmiştir.
+                                                </p>
+                                            }
+                                        </th>
+                                    </tr>
+                                }
+                                
+                            </tbody>
+                        </table>
+
+                        <div class="order-list-item-özet">
+                            <div class="order-list-item-özet-box">
+                                <div class="order-list-item-özet-box-item">
+                                    <p><span>Teslimat Adresi</span></p>
+                                    <p>@order.OrderAndAdresJuncs[0].OrderAdres.OrderAdresTitle</p>
+                                    <p>@order.OrderAndAdresJuncs[0].OrderAdres.OrderAdresNameSurname</p>
+                                    <p>@order.OrderAndAdresJuncs[0].OrderAdres.OrderAdresPhoneNumber</p>
+                                    <p>@order.OrderAndAdresJuncs[0].OrderAdres.OrderAdresContent</p>
+                                    <p>@order.OrderAndAdresJuncs[0].OrderAdres.OrderAdresCounty / @order.OrderAndAdresJuncs[0].OrderAdres.OrderAdresCity</p>
+                                </div>
+                                <div class="order-list-item-özet-box-item">
+                                    <p><span>Fatura Adresi</span></p>
+                                    <p>@order.OrderAndAdresJuncs[1].OrderAdres.OrderAdresTitle</p>
+                                    <p>@order.OrderAndAdresJuncs[1].OrderAdres.OrderAdresNameSurname</p>
+                                    <p>@order.OrderAndAdresJuncs[1].OrderAdres.OrderAdresPhoneNumber</p>
+                                    <p>@order.OrderAndAdresJuncs[1].OrderAdres.OrderAdresContent</p>
+                                    <p>@order.OrderAndAdresJuncs[1].OrderAdres.OrderAdresCounty / @order.OrderAndAdresJuncs[1].OrderAdres.OrderAdresCity</p>
+                                </div>
+                                <div class="order-list-item-özet-box-item">
+                                    <p><span>Sipariş Özeti</span></p>
+                                    <p><span>Ara Toplam : @order.OrderTotalPrice.ToString("c")</span> </p>
+                                    <p><span>Kdv Hariç : @(((order.OrderGenelPrice - order.CargoPrice) - order.OrderKdv).ToString("c"))</span> </p>
+                                    <p><span>Toplam KDV : @order.OrderKdv.ToString("c")</span> </p>
+                                    <p><span>Kargo Ücreti : @order.CargoPrice.ToString("c")</span> </p>
+                                    <p><span>Toplam : @order.OrderGenelPrice.ToString("c")</span> </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            }
+        } else
+        {
+            <p>Sipariş Kaydınız Bulunmamaktadır</p>
+        }
+        </div>
+    </div>
+</div>

@@ -1,0 +1,173 @@
+@model ProductListModel
+
+@if (Model.Category.CategoryListType == "Urun")
+{
+    @if (Model.Category.CategoryImage != null)
+    {
+        <img class="product-list-image" src="/img/@Model.Category.CategoryImage" alt="">
+    }
+
+    <div class="product-list-container" id="product-list-container">
+
+        <div class="product-list-filters">
+
+            <div class="list-filter-box">
+
+                <div class="filter-box-title">
+                    <p>@Model.CategoryFilters.CategoryName</p>
+                    <img src="/img/img-icon-sabit/up-filter.png" alt="">
+                </div>
+
+                <ul class="filter-category-ul-1">
+                @foreach (var item in Model.CategoryFilters.Category2s)
+                {
+                    <li class="filter-category-li-1">
+                        <a asp-controller="Category2" asp-action="Category2ListClient" asp-route-urlUst="@item.Category.CategoryUrl" asp-route-url="@item.Category2Url">@item.Category2Name</a>
+                        
+                        <ul class="filter-category-ul-2">
+                        @foreach (var item2 in item.Category3s)
+                        {
+                            <li class="filter-category-li-2"><a asp-controller="Category3" asp-action="Category3ListClient" asp-route-urlUst="@item.Category.CategoryUrl" asp-route-urlUst2="@item2.Category2.Category2Url" asp-route-url="@item2.Category3Url">@item2.Category3Name</a></li>
+                        }
+                        </ul>
+                    </li>
+                }
+                </ul>
+
+            </div>
+
+            <form asp-controller="Category" asp-action="CategoryListClient" asp-route-url="@Model.Category.CategoryUrl" method="get">
+            @foreach (var item in Model.SizeTypes)
+            {
+                <div class="list-filter-box">
+
+                    <div class="filter-box-title">
+                        <p>@item.SizeTypeName</p>
+                        <img src="/img/img-icon-sabit/up-filter.png" alt="">
+                    </div>
+
+                    <div class="filter-checkbox-box">
+                        @foreach (var item2 in item.Sizes)
+                        {
+                        <button type="submit" class="filter-checkbox">
+                            <input type="checkbox" type="submit"
+                                    name="filters"
+                                    value="@item2.SizeId"
+                                    class="custom-control-input"
+                                    id="Size@(item2.SizeId)"
+                                    @(Model.SelectedFilters.Any(i => i == item2.SizeId) ? "checked" : "")
+                            >
+                            <span class="checkbox"></span>
+                            <label for="Size@(item2.SizeId)" class="filterFormLabel">@item2.SizeTitle</label>
+                        </button>
+                        }
+                    </div>
+                </div>
+            }
+            </form>
+
+        </div>
+
+        <div id="product-list-box" class="product-list-box">
+
+            <div class="product-list-line">
+                <div class="product-list-line-filter">
+                    <img id="product-list-line-filter-img" src="/img/img-icon-sabit/filter.png" alt="">
+                </div>
+                <div class="product-list-line-grid">
+                    <div id="product-list-line-1"><img src="/img/img-icon-sabit/grid-1.png" alt=""></div>
+                    <div id="product-list-line-2"><img src="/img/img-icon-sabit/grid-2.png" alt=""></div>
+                    <div id="product-list-line-3"><img src="/img/img-icon-sabit/grid-3.png" alt=""></div>
+                    <div id="product-list-line-4"><img src="/img/img-icon-sabit/grid-4.png" alt=""></div>
+                </div>
+            </div>
+
+            @if (Model.Products.Count() > 0)
+            {
+                <div class="product-list">
+                    @foreach (var item in Model.Products)
+                    {
+                        <a asp-controller="Product" asp-action="ProductDetail" asp-route-url="@item.ProductUrl" asp-route-id="@item.ProductId" class="product-list-card">
+                            <div class="product-list-card-img">
+                                @if (item.ProductImages.Count() == 1)
+                                {
+                                    <img style="display: block;" class="img-1" src="/img/@item.ProductImages[0].ProductImageName" alt="@item.ProductImages[0].ProductImageName">
+                                }
+                                @if (item.ProductImages.Count() > 1)
+                                {
+                                    <img class="img-1" src="/img/@item.ProductImages[0].ProductImageName" alt="@item.ProductImages[0].ProductImageName">
+                                    <img class="img-2" src="/img/@item.ProductImages[1].ProductImageName" alt="@item.ProductImages[1].ProductImageName">
+                                }
+                            </div>
+                            <div class="product-list-info">
+                                    @if (item.ProductNew != false)
+                                    {
+                                        <div class="product-list-new">
+                                            <p>Yeni</p>
+                                        </div>
+                                    }
+                                    @if (item.ProductSale != false)
+                                    {
+                                        <div class="product-list-sale">
+                                            <p>İndirim</p>
+                                        </div>
+                                    }
+                            </div>
+                            <div class="product-list-card-content">
+                                <p class="product-list-productname slice-100-50">@item.ProductName</p>
+                                <div class="product-list-card-price-box">
+                                    @if (item.ProductSalePrice == 0)
+                                    {
+                                        <p class="product-list-card-price">@((item.ProductPrice).ToString("c"))</p>
+                                    } else
+                                    {
+                                        <p class="product-list-card-price">@((item.ProductSalePrice).ToString("c"))</p>
+                                        <p class="product-list-card-price-sale">@((item.ProductPrice).ToString("c"))</p>
+                                    }
+                                </div>
+                            </div>
+                        </a>
+                    }
+                </div>
+            }
+            
+        </div>
+    </div>
+}
+
+@if (Model.Category.CategoryListType == "Icerik")
+{
+    <div>
+        <div class="content-container">
+            <div class="content-box">
+                
+                @if (Model.Category.CategoryVisibility != "Link")
+                {
+                    <div class="content-left">
+                        <div class="content-left-menu">
+                            @foreach (var category in Model.Categories)
+                            {
+                                <a asp-controller="Category"
+                                    asp-action="CategoryListClient"
+                                    asp-route-url="@category.CategoryUrl">@category.CategoryName</a>
+                                @foreach (var category2 in category.Category2s)
+                                {
+                                    <a asp-controller="Category2"
+                                        asp-action="Category2ListClient"
+                                        asp-route-urlUst="@category.CategoryUrl"
+                                        asp-route-url="@category2.Category2Url"
+                                        style="padding-left: 30px; font-size: 12px;">- @category2.Category2Name</a>
+                                }
+                            }
+                        </div>
+                    </div>
+                }
+
+                <div class="content-right">
+                    @Html.Raw(Model.Category.CategoryDescription)
+                </div>
+
+            </div>
+        </div>
+    </div>
+}

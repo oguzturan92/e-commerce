@@ -1,0 +1,33 @@
+@model BankAccountModel
+
+<div class="title">
+    <h2>BANKA HESABI EKLE</h2>
+</div>
+<div class="content">
+    <div class="form-container">
+        <div class="table-btn-geri-box">
+            <a class="table-btn-geri" asp-controller="BankAccount" asp-action="BankAccountList">Geri</a>
+        </div>
+        <form class="form-container-alt" asp-controller="BankAccount" asp-action="BankAccountCreate" method="post">
+            <div class="form-item-3">
+                <div class="form-item-1">
+                    <span class="validation" asp-validation-for="BankAccountName"></span>
+                    <label>Ad *</label>
+                    <input asp-for="BankAccountName" type="text">
+                </div>
+                <div class="form-item-1">
+                    <span class="validation" asp-validation-for="BankAccountIban"></span>
+                    <label>Iban *</label>
+                    <input asp-for="BankAccountIban" type="text">
+                </div>
+                <div class="form-item-1">
+                    <label>Sıra Numarası</label>
+                    <input asp-for="BankAccountSort" type="text">
+                </div>
+            </div>
+            <div class="form-btn-kaydet-box">
+                <button class="form-btn-kaydet" type="submit">Kaydet</button>
+            </div>
+        </form>
+    </div>
+</div>

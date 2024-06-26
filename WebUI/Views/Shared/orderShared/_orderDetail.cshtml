@@ -1,0 +1,144 @@
+@model OrderModel
+ 
+<div class="title">
+    <h2>SİPARİŞ DETAYI</h2>
+</div>
+<div class="content">
+    <div class="form-container">
+        <div class="table-btn-geri-box">
+            <a class="table-btn-geri" asp-controller="Order" asp-action="OrderList">Geri</a>
+        </div>
+        <form class="form-container-alt">
+            <div class="form-item-2">
+                <div class="form-item-1">
+                    <label for="Order.OrderDateTime">Sipariş Tarihi</label>
+                    <input asp-for="Order.OrderDateTime" type="text" disabled>
+                </div>
+                <div class="form-item-1">
+                    <label for="Order.OrderNumber">Sipariş Numarası</label>
+                    <input asp-for="Order.OrderNumber" type="text" disabled>
+                </div>
+            </div>
+            <div class="form-item-2">
+                <div class="form-item-1">
+                    <label for="Order.OrderState">Sipariş Durumu</label>
+                    <input asp-for="Order.OrderState" type="text" disabled>
+                </div>
+                <div class="form-item-1">
+                    <label for="Order.OrderPaymentType">Ödeme Tipi</label>
+                    <input asp-for="Order.OrderPaymentType" type="text" disabled>
+                </div>
+            </div>
+            <div class="form-item-2">
+                <div class="form-item-1">
+                    <label for="Order.OrderGiftCard">Hediye Çeki</label>
+                    <input asp-for="Order.OrderGiftCard" type="text" disabled>
+                </div>
+                <div class="form-item-1">
+                    <label for="Order.CargoPrice">Kargo Ücreti</label>
+                    <input value="@((Model.Order.CargoPrice).ToString("c"))" type="text" disabled>
+                </div>
+            </div>
+            <div class="form-item-2">
+                <div class="form-item-1">
+                    <label for="Order.OrderTotalPrice">Kdv Hariç</label>
+                    <input value="@((((Model.Order.OrderGenelPrice)-(Model.Order.CargoPrice))-(Model.Order.OrderKdv)).ToString("c"))" type="text" disabled>
+                </div>
+                <div class="form-item-1">
+                    <label for="Order.OrderGenelPrice">Kdv</label>
+                    <input value="@((Model.Order.OrderKdv).ToString("c"))" type="text" disabled>
+                </div>
+            </div>
+            <div class="form-item-2">
+                <div class="form-item-1">
+                    <label for="Order.OrderTotalPrice">Sipariş Tutarı</label>
+                    <input value="@((Model.Order.OrderTotalPrice).ToString("c"))" type="text" disabled>
+                </div>
+                <div class="form-item-1">
+                    <label for="Order.OrderGenelPrice">Genel Toplam</label>
+                    <input value="@((Model.Order.OrderGenelPrice).ToString("c"))" type="text" disabled>
+                </div>
+            </div>
+            <div class="form-item-1">
+                <label for="Order.OrderNote">Not</label>
+                <div class="form-content">
+                    <p>@Model.Order.OrderNote</p>
+                </div>
+            </div>
+        </form>
+
+        <div class="table-container-alt" style="margin: 10px 0px;">
+            <table>
+                <thead>
+                    <tr>
+                        <th class="th-w-75 mobil-display-none">Ürün Kodu</th>
+                        <th class="th-w-auto">Ürün Adı</th>
+                        <th class="th-w-75">Özellik</th>
+                        <th class="th-w-75">Adet</th>
+                        <th class="th-w-100 mobil-display-none">Birim Fiyatı</th>
+                        <th class="th-w-100 mobil-display-none">İ. Fiyatı</th>
+                        <th class="th-w-100 mobil-display-none">Kdv Hariç</th>
+                        <th class="th-w-100 mobil-display-none">Kdv Tutarı</th>
+                        <th class="th-w-100">Toplam Fiyat</th>
+                        <th class="th-w-50">İade Adet</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.Order.OrderLines) {
+                        <tr>
+                            <td class="mobil-display-none">@item.ProductCode</td>
+                            <td class="td-yazi">
+                                <a asp-controller="Product" asp-action="ProductDetail" asp-route-url="@item.ProductUrl" asp-route-id="@item.ProductId" target="_blank">@item.ProductName</a>
+                            </td>
+                            <td>@item.ProductSize</td>
+                            <td>@item.OrderLineQuantity</td>
+                            <td class="mobil-display-none">@item.OrderLineProductPrice.ToString("c")</td>
+                            <td class="mobil-display-none">@item.OrderLineCampaignPrice.ToString("c")</td>
+                            @if (item.OrderLineCampaignPrice != 0)
+                            {
+                                <td class="mobil-display-none">@(((item.OrderLineQuantity * item.OrderLineCampaignPrice)-(item.OrderLineKdv)).ToString("c"))</td>
+                            } else
+                            {
+                                <td class="mobil-display-none">@(((item.OrderLineQuantity * item.OrderLineProductPrice)-(item.OrderLineKdv)).ToString("c"))</td>
+                            }
+                            <td class="mobil-display-none">@item.OrderLineKdv.ToString("c")</td>
+                            @if (item.OrderLineCampaignPrice != 0)
+                            {
+                                <td>@((item.OrderLineQuantity * item.OrderLineCampaignPrice).ToString("c"))</td>
+                            } else
+                            {
+                                <td>@((item.OrderLineQuantity * item.OrderLineProductPrice).ToString("c"))</td>
+                            }
+                            <td>@(item.OrderLineQuantity - item.IadeEdilebilirAdet)</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        <form class="form-container-alt">
+            <div class="form-item-2">
+                <div class="form-item-1">
+                    <label for="Order.OrderNote">Teslimat Bilgisi</label>
+                    <div class="form-content">
+                        <p>@Model.Order.OrderAndAdresJuncs[0].OrderAdres.OrderAdresTitle</p>
+                        <p>@Model.Order.OrderAndAdresJuncs[0].OrderAdres.OrderAdresNameSurname</p>
+                        <p>@Model.Order.OrderAndAdresJuncs[0].OrderAdres.OrderAdresPhoneNumber</p>
+                        <p>@Model.Order.OrderAndAdresJuncs[0].OrderAdres.OrderAdresContent</p>
+                        <p>@Model.Order.OrderAndAdresJuncs[0].OrderAdres.OrderAdresCounty / @Model.Order.OrderAndAdresJuncs[0].OrderAdres.OrderAdresCity</p>
+                    </div>
+                </div>
+                <div class="form-item-1">
+                    <label for="Order.OrderNote">Fatura Bilgisi</label>
+                    <div class="form-content">
+                        <p>@Model.Order.OrderAndAdresJuncs[1].OrderAdres.OrderAdresTitle</p>
+                        <p>@Model.Order.OrderAndAdresJuncs[1].OrderAdres.OrderAdresNameSurname</p>
+                        <p>@Model.Order.OrderAndAdresJuncs[1].OrderAdres.OrderAdresPhoneNumber</p>
+                        <p>@Model.Order.OrderAndAdresJuncs[1].OrderAdres.OrderAdresContent</p>
+                        <p>@Model.Order.OrderAndAdresJuncs[1].OrderAdres.OrderAdresCounty / @Model.Order.OrderAndAdresJuncs[1].OrderAdres.OrderAdresCity</p>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

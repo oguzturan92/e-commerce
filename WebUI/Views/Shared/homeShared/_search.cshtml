@@ -1,0 +1,132 @@
+@model ProductListModel
+
+    <div class="product-list-container" id="product-list-container">
+
+        @* <div class="product-list-filters">
+
+            <div class="list-filter-box">
+
+                <div class="filter-box-title">
+                    <p>@Model.CategoryFilters.CategoryName</p>
+                    <img src="/img/img-icon-sabit/up-filter.png" alt="">
+                </div>
+
+                <ul class="filter-category-ul-1">
+                @foreach (var item in Model.CategoryFilters.Category2s)
+                {
+                    <li class="filter-category-li-1">
+                        <a asp-controller="Category2" asp-action="Category2ListClient" asp-route-url="@item.Category2Url">@item.Category2Name</a>
+
+                        <ul class="filter-category-ul-2">
+                        @foreach (var item2 in item.Category3s)
+                        {
+                            <li class="filter-category-li-2"><a asp-controller="Category3" asp-action="Category3ListClient" asp-route-url="@item2.Category3Url">@item2.Category3Name</a></li>
+                        }
+                        </ul>
+                    </li>
+                }
+                </ul>
+
+            </div>
+
+            <form asp-controller="Category" asp-action="CategoryListClient" method="get" id="filterForm">
+                @foreach (var item in Model.SizeTypes)
+                {
+                    <div class="list-filter-box">
+                        <input type="hidden" name="url" value="@Model.Category.CategoryUrl">
+
+                        <div class="filter-box-title">
+                            <p>@item.SizeTypeName</p>
+                            <img src="/img/img-icon-sabit/up-filter.png" alt="">
+                        </div>
+
+                        <div class="filter-checkbox-box">
+                            @foreach (var item2 in item.Sizes)
+                            {
+                            <div class="filter-checkbox">
+                                <input type="checkbox" type="submit"
+                                        name="filters"
+                                        value="@item2.SizeId"
+                                        class="custom-control-input"
+                                        id="Size@(item2.SizeId)"
+                                        @(Model.SelectedFilters.Any(i => i == item2.SizeId) ? "checked" : "")
+                                >
+                                <span class="checkbox"></span>
+                                <label for="Size@(item2.SizeId)" class="filterFormLabel">@item2.SizeTitle</label>
+                            </div>
+                            }
+                        </div>
+                    </div>
+                }
+            </form>
+
+        </div> *@
+
+        <div id="product-list-box" class="product-list-box">
+
+            <div class="product-list-line">
+                <div class="product-list-line-filter">
+                    @* <img id="product-list-line-filter-img" src="/img/img-icon-sabit/filter.png" alt=""> *@
+                </div>
+                <div class="product-list-line-grid">
+                    <div id="product-list-line-1"><img src="/img/img-icon-sabit/grid-1.png" alt=""></div>
+                    <div id="product-list-line-2"><img src="/img/img-icon-sabit/grid-2.png" alt=""></div>
+                    <div id="product-list-line-3"><img src="/img/img-icon-sabit/grid-3.png" alt=""></div>
+                    <div id="product-list-line-4"><img src="/img/img-icon-sabit/grid-4.png" alt=""></div>
+                </div>
+            </div>
+
+            @if (Model.Products.Count() > 0)
+            {
+                <div class="product-list">
+                    @foreach (var item in Model.Products)
+                    {
+                        <a asp-controller="Product" asp-action="ProductDetail" asp-route-id="@item.ProductId" asp-route-url="@item.ProductUrl" class="product-list-card">
+                            <div class="product-list-card-img">
+                                @if (item.ProductImages.Count() == 1)
+                                {
+                                    <img style="display: block;" class="img-1" src="/img/@item.ProductImages[0].ProductImageName" alt="@item.ProductImages[0].ProductImageName">
+                                }
+                                @if (item.ProductImages.Count() > 1)
+                                {
+                                    <img class="img-1" src="/img/@item.ProductImages[0].ProductImageName" alt="@item.ProductImages[0].ProductImageName">
+                                    <img class="img-2" src="/img/@item.ProductImages[1].ProductImageName" alt="@item.ProductImages[1].ProductImageName">
+                                }
+                            </div>
+                            <div class="product-list-info">
+                                    @if (item.ProductNew != false)
+                                    {
+                                        <div class="product-list-new">
+                                            <p>Yeni</p>
+                                        </div>
+                                    }
+                                    @if (item.ProductSale != false)
+                                    {
+                                        <div class="product-list-sale">
+                                            <p>İndirim</p>
+                                        </div>
+                                    }
+                            </div>
+                            <div class="product-list-card-content">
+                                <p class="product-list-productname slice-100-50">@item.ProductName</p>
+                                <div class="product-list-card-price-box">
+                                    @if (item.ProductSalePrice == 0)
+                                    {
+                                        <p class="product-list-card-price">@((item.ProductPrice).ToString("c"))</p>
+                                    } else
+                                    {
+                                        <p class="product-list-card-price">@((item.ProductSalePrice).ToString("c"))</p>
+                                        <p class="product-list-card-price-sale">@((item.ProductPrice).ToString("c"))</p>
+                                    }
+                                </div>
+                            </div>
+                        </a>
+                    }
+                </div>
+            } else
+            {
+                <p style="text-align: center;">Arama yaptğınız kelime içeren bir ürün bulunamadı. Lütfen tekrar deneyin.</p>
+            }
+            
+        </div>
+    </div>

@@ -1,0 +1,52 @@
+@model GiftCardModel
+
+<div class="giftCard-container">
+    <div class="giftCard-box">
+        <div class="giftCard-list-box">
+            <div class="giftCard-back">
+                <a asp-controller="UserAccount" asp-action="AccountIndex">Geri</a>
+            </div>
+            @if (Model.GiftCards.Count() > 0)
+            {
+                @foreach (var giftCard in Model.GiftCards)
+                {
+                    <div class="giftCard-list-item">
+                        <div class="giftCard-list-item-title">
+                            <div class="giftCard-liste-item-title-2">
+                                <div class="giftCard-liste-item-title-3">
+                                    <p>Hediye Çeki Adı</p>
+                                    <p>@giftCard.GiftCardTitle</p>
+                                </div>
+                                @if (giftCard.GiftCardOran > 0)
+                                {
+                                    <div class="giftCard-liste-item-title-3">
+                                        <p>İndirim Oranı %</p>
+                                        <p>@giftCard.GiftCardOran %</p>
+                                    </div>
+                                } else
+                                {
+                                    <div class="giftCard-liste-item-title-3">
+                                        <p>İndirim Tutarı ₺</p>
+                                        <p>@giftCard.GiftCardMiktar ₺</p>
+                                    </div>
+                                }
+                                <div class="giftCard-liste-item-title-3">
+                                    <p>Kullanım Hakkı Adedi</p>
+                                    <p>@giftCard.GiftCardLimit</p>
+                                </div>
+                                <div class="giftCard-liste-item-title-3">
+                                    <p>Son Kullanım Tarihi</p>
+                                    <p>xx.xx.xxxx xx:xx</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            } else
+            {
+                <p>Tanımlı hediye çeki bulunamadı.</p>
+            }
+
+        </div>
+    </div>
+</div>

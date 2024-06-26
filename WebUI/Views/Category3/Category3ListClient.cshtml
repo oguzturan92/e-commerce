@@ -1,0 +1,21 @@
+@model ProductListModel
+@{
+    ViewData["Title"] = @Model.Category3.Category3SeoTitle;
+    ViewData["Description"] = @Model.Category3.Category3SeoDescription;
+    ViewData["Keyword"] = @Model.Category3.Category3SeoKeyword;
+    Layout = "_Layout";
+}
+
+    <partial name="~/Views/Shared/category3Shared/_category3ListClient.cshtml"/>
+
+    @section Scripts
+    {
+        <script src="~/js/proje-list.js"></script>
+        <script src="~/js/proje-list-filter.js"></script>
+    }
+
+    @section Css
+    {
+        <link rel="stylesheet" href="~/ClientCss/style-list.css" />
+        <link rel="stylesheet" href="~/ClientCss/style-list-filter.css" />
+    }

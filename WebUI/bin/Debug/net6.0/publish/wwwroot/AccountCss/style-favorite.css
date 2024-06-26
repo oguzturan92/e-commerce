@@ -1,0 +1,123 @@
+
+
+.favorite-list-container {
+    width: 100%;
+    padding-top: 100px;
+}
+.favorite-box {
+    max-width: 600px;
+    width: 100%;
+    margin: 0px auto;
+}
+
+.favorite-list-back {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    margin-bottom: 10px;
+}
+.favorite-list-back a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+    background-color: #000;
+    font-size: 13px;
+}
+
+
+
+
+.favorite-filter-box {
+    width: 100%;
+    box-shadow: 0px 5px 10px 3px #f7f7f7;
+    margin-bottom: 10px;
+}
+
+.favorite-box-title {
+    padding: 10px;
+    margin: 0px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+}
+.favorite-box-title p {
+    margin: 0px;
+    font-weight: 300;
+}
+.favorite-box-title-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.favorite-box-title-buttons a {
+    color: #000;
+    text-decoration: none;
+    font-weight: 300;
+}
+.favorite-box-title-buttons a:hover {
+    text-decoration: underline;
+}
+.favorite-title-img {
+    transition: .3s;
+    transition-timing-function: linear;
+    cursor: pointer;
+    height: 15px;
+}
+.favorite-box-title-buttons a img {
+    height: 20px;
+}
+
+
+
+
+.favorite-box-list {
+    overflow: hidden;
+    max-height: 0px;
+    transition: .3s;
+    transition-timing-function: linear;
+}
+
+.favorite-box-list table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.favorite-box-list table tr {
+    height: 120px;
+    border-bottom: 1px solid #eee;
+}
+.favorite-box-list table tr th {
+    font-weight: 300;
+}
+.favorite-box-list table tr th img {
+    height: 100px;
+}
+.favorite-box-list table tr th a img {
+    height: 12px;
+}
+.favorite-box-list table a {
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+}
+
+.favorite-product-name:hover {
+    text-decoration: underline;
+}
+
+@media (max-width:1000px) {
+    .favorite-list-box {
+        padding: 0px 10px;
+    }
+}
+
+@media (max-width:768px) {
+    .favorite-box-title p {
+        font-size: 14px;
+    }
+    .favorite-box-list table th {
+        font-size: 14px;
+    }
+}

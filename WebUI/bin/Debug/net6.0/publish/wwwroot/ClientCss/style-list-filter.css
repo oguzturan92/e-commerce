@@ -1,0 +1,175 @@
+
+
+.product-list-filters {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 300px;
+    transition: .5s;
+    height: 0px;
+}
+
+.list-filter-box {
+    width: 100%;
+    box-shadow: 0px 5px 10px 3px #f7f7f7;
+}
+
+.filter-box-title {
+    border-bottom: 1px solid #000;
+    padding: 10px;
+    margin: 0px 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.filter-box-title p {
+    margin: 0px;
+    font-size: 14px;
+}
+.filter-box-title img {
+    transform: rotate(180deg);
+    transition: .3s;
+    transition-timing-function: linear;
+    cursor: pointer;
+}
+
+/* KATEGORİ AĞACI ------------------------------------------------------- */
+.filter-category-ul-1 {
+    margin: 10px 0px;
+    padding: 0px;
+
+    overflow: hidden;
+    max-height: auto;
+    transition: .3s;
+    transition-timing-function: linear;
+}
+.filter-category-li-1 {
+    list-style: none;
+    text-decoration: none;
+    margin: 10px 0px 10px 20px;
+    font-weight: 300;
+}
+.filter-category-ul-1 a {
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+}
+.filter-category-ul-1 a:hover {
+    text-decoration: underline;
+}
+
+.filter-category-ul-2 {
+    margin: 10px 0px;
+    padding: 0px;
+}
+.filter-category-li-2 {
+    list-style: none;
+    text-decoration: none;
+    margin: 10px 0px 10px 20px;
+    font-weight: 300;
+}
+.filter-category-ul-2 a {
+    text-decoration: none;
+    color: #000;
+    font-size: 15px;
+}
+.filter-category-ul-2 a:hover {
+    text-decoration: underline;
+}
+
+/* BACK */
+.filter-category-back {
+    /* margin: 10px 0px; */
+}
+.filter-category-back img {
+    margin-left: 20px;
+}
+.filter-category-back a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 300;
+    margin-left: 10px;
+}
+.filter-category-back a:hover {
+    text-decoration: underline;
+}
+
+
+/* CHECKBOX ----------------------------------------------------- */
+.filter-checkbox-box {
+    margin: 10px 0px;
+
+    overflow: hidden;
+    max-height: auto;
+    transition: .3s;
+    transition-timing-function: linear;
+
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.filter-checkbox {
+    margin: 0px 0px 3px 20px;
+    position: relative;
+    cursor: pointer;
+    background-color: #ffffff00;
+    border: none;
+}
+
+.filter-checkbox label {
+    cursor: pointer;
+    font-weight: 300;
+    font-size: 12px;
+}
+.filter-checkbox:hover label {
+    text-decoration: underline;
+}
+
+.filter-checkbox input {
+    margin: 0px;
+}
+
+.checkbox {
+    position: absolute;
+    top: 1px;
+    left: 6px;
+    height: 11px;
+    width: 11px;
+    background-color: #fff;
+    border: 1px solid #000;
+}
+.filter-checkbox:hover input ~ .checkbox {
+    background-color: #fbfbfb;
+}
+.filter-checkbox input:checked ~ .checkbox {
+    background-color: #fff;
+}
+
+/* CHECKBOX DESIGN */
+.checkbox:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+.filter-checkbox input:checked ~ .checkbox:after {
+    display: block;
+}
+.filter-checkbox .checkbox:after {
+    left: 4px;
+    top: 1px;
+    width: 2px;
+    height: 6px;
+    border: solid #000;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+@media (max-width:1000px) {
+    .product-list-filters {
+        width: auto!important;
+        opacity: 0;
+        transition: none;
+    }
+}

@@ -1,0 +1,100 @@
+@model UserEditModel
+
+<div class="title">
+    <h2>KULLANICI DÜZENLE</h2>
+</div>
+<div class="content">
+    <div class="form-container">
+        <div class="table-btn-geri-box">
+            <a class="table-btn-geri" asp-controller="AdminAccount" asp-action="IndexAccount">Geri</a>
+        </div>
+        <form class="form-container-alt" asp-controller="AdminAccount" asp-action="Edit" method="post">
+            <input type="hidden" asp-for="UserRegisterDate">
+            <input type="hidden" asp-for="UserId">
+            <div class="form-item-2">
+                <div class="form-item-1">
+                    <span class="validation" asp-validation-for="UserAdi"></span>
+                    <label>Ad *</label>
+                    <input asp-for="UserAdi" type="text">
+                </div>
+                <div class="form-item-1">
+                    <span class="validation" asp-validation-for="UserSoyadi"></span>
+                    <label>Soyad *</label>
+                    <input asp-for="UserSoyadi" type="text">
+                </div>
+            </div>
+            <div class="form-item-2">
+                <div class="form-item-1">
+                    <span class="validation" asp-validation-for="UserName"></span>
+                    <label>Kullanıcı Adı *</label>
+                    <input asp-for="UserName" type="text">
+                </div>
+                <div class="form-item-1">
+                    <span class="validation" asp-validation-for="UserCinsiyet"></span>
+                    <label>Cinsiyet</label>
+                    <select asp-for="UserCinsiyet" class="select">
+                        @if (Model.UserCinsiyet == "Kadın") {
+                            <option selected value="Kadın">Kadın</option>
+                            <option value="Erkek">Erkek</option>
+                        } else {
+                            <option value="Kadın">Kadın</option>
+                            <option selected value="Erkek">Erkek</option>
+                        }
+                    </select>
+                </div>
+            </div>
+            <div class="form-item-2">
+                <div class="form-item-1">
+                    <span class="validation" asp-validation-for="Email"></span>
+                    <label>e Mail *</label>
+                    <input asp-for="Email" type="text">
+                </div>
+                <div class="form-item-1">
+                    <span class="validation" asp-validation-for="EmailConfirmed"></span>
+                    <label>e Mail Onay</label>
+                    <select asp-for="EmailConfirmed" class="select">
+                        @if (Model.EmailConfirmed) {
+                            <option selected value="True">Evet</option>
+                            <option disabled value="False">Hayır</option>
+                        } else {
+                            <option value="True">Evet</option>
+                            <option selected value="False">Hayır</option>
+                        }
+                    </select>
+                </div>
+            </div>
+            <div class="form-item-2">
+                <div class="form-item-1">
+                    <span class="validation" asp-validation-for="PhoneNumber"></span>
+                    <label>Telefon Numarası</label>
+                    <input asp-for="PhoneNumber" type="text" placeholder="0(xxx) xxx xx xx">
+                </div>
+                <div class="form-item-1">
+                    <span class="validation" asp-validation-for="UserRegisterDate"></span>
+                    <label>Kayıt Tarihi</label>
+                    <input name="UserDate" value="@Model.UserRegisterDate" disabled>
+                </div>
+            </div>
+            <div class="form-item-1">
+                <div>Rol Seçiniz (Admin rolü, tüm alanları gösterir.)</div>
+                <div class="form-checkbox">
+                    @foreach (var rolName in Model.TumRoller) {
+                        <div class="checkbox">
+                            <input  type="checkbox"
+                                    name="SeciliRoller"
+                                    value="@rolName"
+                                    class="custom-control-input"
+                                    id="@rolName"
+                                    @(Model.SeciliRoller.Any(i => i == rolName) ? "checked" : "")
+                            >
+                            <label for="@rolName">@rolName</label>
+                        </div>
+                    }
+                </div>
+            </div>
+            <div class="form-btn-kaydet-box">
+                <button class="form-btn-kaydet" type="submit">Kaydet</button>
+            </div>
+        </form>
+    </div>
+</div>

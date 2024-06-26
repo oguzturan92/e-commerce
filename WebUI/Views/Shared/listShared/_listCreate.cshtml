@@ -1,0 +1,59 @@
+@model ListModel
+
+<div class="title">
+    <h2>LİSTE EKLE</h2>
+</div>
+<div class="content">
+    <div class="form-container">
+        <div class="table-btn-geri-box">
+            <a class="table-btn-geri" asp-controller="List" asp-action="ListList" asp-route-id="@Model.ProductId">Geri</a>
+        </div>
+        <form class="form-container-alt" asp-controller="List" asp-action="ListCreate" method="post">
+            <input type="hidden" asp-for="ProductId">
+            <div class="form-item-3">
+                <div class="form-item-1">
+                    <span class="validation" asp-validation-for="ListTitle"></span>
+                    <label>Başlık</label>
+                    <input asp-for="ListTitle" type="text">
+                </div>
+                <div class="form-item-1">
+                    <span class="validation" asp-validation-for="ListSort"></span>
+                    <label>Sıra Numarası</label>
+                    <input asp-for="ListSort" type="text">
+                </div>
+                <div class="form-item-1">
+                    <label>Listeleme Konumu</label>
+                    <select asp-for="ListLocation" class="select">
+                        <option value="Ozel">Ürüne Özel</option>
+                        <option value="Genel" selected>Tüm Ürünler</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-item-3">
+                <div class="form-item-1">
+                    <label>Listeleme Tipi</label>
+                    <select asp-for="ListType" class="select">
+                        <option value="Kaydirmali">Kaydırma var</option>
+                        <option value="Standart" selected>Kaydırma yok</option>
+                    </select>
+                </div>
+                <div class="form-item-1">
+                    <span class="validation" asp-validation-for="ListColumn"></span>
+                    <label>Kolon Sayısı</label>
+                    <input asp-for="ListColumn" type="text">
+                </div>
+                <div class="form-item-1">
+                    <span class="validation" asp-validation-for="ListApproval"></span>
+                    <label>Onay Durumu</label>
+                    <select asp-for="ListApproval" class="select">
+                        <option value="True">Evet</option>
+                        <option value="False" selected>Hayır</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-btn-kaydet-box">
+                <button class="form-btn-kaydet" type="submit">Kaydet</button>
+            </div>
+        </form>
+    </div>
+</div>

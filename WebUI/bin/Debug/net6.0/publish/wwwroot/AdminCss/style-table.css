@@ -1,0 +1,265 @@
+.content {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.table-container {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 50px 20px;
+}
+
+
+/* EKLEME BUTONU ------------------------------------------------------------------------ */
+.table-btn-ekle-box {
+    width: 100%;
+    display: flex;
+    margin-bottom: 10px;
+}
+.table-btn-ekle {
+    background-color: #198754;
+    color: #fff;
+    display: block;
+    text-decoration: none;
+    padding: 10px 30px;
+}
+.table-btn-ekle-geri-box {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.table-btn-ekle-img {
+    background-color: #198754;
+    color: #fff;
+    display: block;
+    text-decoration: none;
+    padding: 10px 30px;
+    border-color: #ffffff00;
+    cursor: pointer;
+}
+.vitrin-btn-off {
+    background-color: #f8f9fa;
+    color: #000;
+    display: block;
+    margin: 0px auto;
+    text-decoration: none;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}
+.vitrin-btn-on {
+    background-color: #198754;
+    color: #fff;
+    display: block;
+    margin: 0px auto;
+    text-decoration: none;
+    padding: 5px 10px;
+    border: none;
+}
+.table-btn-off:hover {
+    background-color: #e1e1e1;
+}
+.table-btn-tumu-sil {
+    background-color: #E6644A;
+    border: 1px solid #E6644A;
+    color: #fff;
+    display: block;
+    text-decoration: none;
+    padding: 10px 10px;
+    cursor: pointer;
+}
+.table-btn-beyaz {
+    background-color: #fff;
+    color: #000;
+    display: block;
+    text-decoration: none;
+    padding: 10px 30px;
+    border: 1px solid #dddddd;
+}
+
+/* FORM ALANI ------------------------------------------------------------------------ */
+.form-img-ekle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: auto;
+}
+
+.table-btn-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* TABLO ALANI ------------------------------------------------------------------------ */
+.table-container-alt {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.table-container-alt table {
+    background-color: #fff;
+    border-collapse: collapse;
+    width: 100%;
+}
+th,
+td {
+    border: 1px solid #dddddd;
+    padding: 0px;text-align: center;
+}
+table img {
+    max-height: 30px;
+    max-width: 75px;
+}
+tr:hover {
+    background-color: #f5f5f5;
+}
+thead tr th{
+    height: 40px;
+}
+tbody tr td{
+    height: 40px;
+}
+.input-sort {
+    width: 15px;
+    border: none;
+    outline: none;
+    text-align: center;
+    width: 50px;
+    height: 30px;
+}
+tr:hover:hover .input-sort {
+    background-color: #f5f5f5;
+}
+.input-sort:focus,
+.input-sort:hover {
+    outline: 1px solid #000;
+}
+
+
+/* BAŞLIK ALANLARI ------------------------------------------------------------------------ */
+.th-w-50 {
+    width: 50px;
+}
+.th-w-75 {
+    width: 75px;
+}
+.th-w-100 {
+    width: 100px;
+}
+.th-w-120 {
+    width: 120px;
+}
+.th-w-auto {
+    width: auto;
+}
+
+/* İÇERİK ALANLARI ------------------------------------------------------------------------ */
+.td-w-75 {
+    max-width: 75px;
+}
+.td-yazi a {
+    text-decoration: none;
+    color: #000;
+}
+.td-yazi a:hover {
+    text-decoration: underline;
+}
+
+
+/* BUTON ALANLARI ------------------------------------------------------------------------ */
+.fa-circle-xmark {
+    color: #E6644A;
+}
+.fa-circle-check {
+    color: #6fda6a;
+}
+.fa-message {
+    color: #a45eff;
+}
+.fa-image {
+    color: #ffc107;
+}
+.td-buton-category-detail {
+    width: 40px;
+}
+.td-buton-category-detail button {
+    width: 100%;
+    height: 100%;
+    color: #bb00c8;
+    background-color: #ffffff00;
+    border: none;
+    cursor: pointer;
+    display: inline;
+}
+.td-buton-img {
+    width: 40px;
+}
+.td-buton-img button {
+    width: 100%;
+    height: 100%;
+    color: #0000C8;
+    background-color: #ffffff00;
+    border: none;
+    cursor: pointer;
+    display: inline;
+}
+.td-buton-edit {
+    width: 40px;
+}
+.td-buton-edit button {
+    width: 100%;
+    height: 100%;
+    color: #0000C8;
+    background-color: #ffffff00;
+    border: none;
+    cursor: pointer;
+    display: inline;
+}
+.td-buton-del {
+    width: 40px;
+}
+.td-buton-del button {
+    width: 100%;
+    height: 100%;
+    color: #E6644A;
+    background-color: #ffffff00;
+    border: none;
+    cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+    .table-container {
+        margin: 50px 20px;
+    }
+    .table-btn-ekle-box {
+        text-align: center;
+        display: block;
+    }
+    .table-btn-ekle-geri-box {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .table-btn-geri {
+        text-align: center;
+    }
+    .table-btn-2 {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .table-btn-ekle {
+        text-align: center;
+    }
+    tbody tr td{
+        font-size: 13px;
+    }
+}

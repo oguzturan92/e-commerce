@@ -1,0 +1,132 @@
+
+/* ADMİN ACCOUNT FORMLARI */
+
+.form-login-container {
+    width: 100%;
+    height: 100vh;
+    /* background-color: aliceblue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form-login-container-alt {
+    border: 1px solid #dddddd;
+    background-color: #fff;
+    width: 500px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+    padding: 20px;
+    margin: 0px 20px;
+}
+.validation {
+    color: #dc3545;
+}
+
+
+/* KOLON AYARLARI -------------------------------------------------------------- */
+.form-login-item-1 {
+    display: grid;
+    grid-template-rows: repeat(1, 1fr);
+    gap: 5px;
+}
+.form-login-item-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+}
+.form-login-item-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+}
+
+
+/* İNPUT AYARLARI -------------------------------------------------------------- */
+.form-login-item-1 input {
+    border: 1px solid #000;
+    border-radius: 0px;
+    height: 40px;
+
+    /* Focus olduğunda borderı kaybeder */
+    outline: none;
+}
+.form-login-item-1 input:focus {
+    border: 1px solid #000;
+    border-radius: 0px;
+}
+.form-login-item-1 input:-webkit-autofill  {
+    /* Seçim yapıldığında arka plan rengi değiştirir */
+    transition: background-color 9999s ease-in-out 0s;
+}
+.form-login-item-1 input[type=email],
+.form-login-item-1 input[type=password],
+.form-login-item-1 input[type=text] {
+    padding-left: 20px;
+}
+.form-login-item-1 .resim-input {
+    height: 21px;
+}
+
+
+/* BAŞLIK AYARLARI -------------------------------------------------------------- */
+.admin-h1 {
+    text-align: center;
+    margin: 0px;
+    font-size: 20px;
+}
+
+
+/* BUTON AYARLARI -------------------------------------------------------------- */
+.form-login-btn-giris {
+    background-color: #0d6efd;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    padding: 10px 30px;
+}
+.form-login-btn-sifremi-unuttum {
+    background-color: #6c757d;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    padding: 10px 30px;
+}
+.form-login-btn-gonder {
+    background-color: #198754;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    padding: 10px 30px;
+}
+.form-yetkisiz-alan-btn {
+    background-color: #198754;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 30px;
+    margin-top: 10px;
+}
+.form-yetkisiz-alan-btn:hover {
+    color: #fff;
+}
+.form-login-container-alt a {
+    text-decoration: none;
+    text-align: center;
+}
+.form-login-container-alt a:hover {
+    color: #fff;
+}
+
+
+@media (max-width:768px) {
+    .form-login-item-1 {
+        text-align: center;
+    }
+    .form-login-item-2 {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .form-login-item-3 {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

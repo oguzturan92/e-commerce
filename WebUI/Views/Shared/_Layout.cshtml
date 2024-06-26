@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <title>@ViewData["Title"]</title>
+    <meta name="description" content="@ViewData["Description"]"/>
+    <meta name="keyword" content="@ViewData["Keyword"]"/>
+
+    @* FONT *@
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Asap+Condensed:wght@200;300;400;500;600&family=Josefin+Sans:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    
+    @RenderSection("Css", false)
+
+    @* ANIMATE CSS LİNKLER *@
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <link rel="stylesheet" href="~/css/sweetalert2.min.css" />
+
+    @* HOME CSS *@
+    <link rel="stylesheet" href="~/HomeCss/all.css" />
+    <link rel="stylesheet" href="~/HomeCss/style-navbar-mobil.css" /> 
+    <link rel="stylesheet" href="~/HomeCss/style-navbar-web.css" /> 
+    <link rel="stylesheet" href="~/HomeCss/style-footer.css" />
+    <link rel="stylesheet" href="~/HomeCss/style-search.css" />
+
+    @* HOME CSS ESKİ *@
+    @* <link rel="stylesheet" href="~/HomeCss/style-pagination.css" />
+    <link rel="stylesheet" href="~/HomeCss/style-error.css" /> *@
+
+</head>
+@* <body id="body" class="animate__animated animate__fadeIn"> *@
+<body id="body">
+    <noscript>
+        <div>
+            <h3>Tarayıcınızda JavaScript Devredışıdır</h3>
+            <p>Bu siteyi doğru ve eksiksiz bir şekilde kullanabilmek için, JavaScript'i tarayıcınızdan aktifleştirmeniz gerekmektedir.</p>
+        </div>
+    </noscript>
+
+    <partial name="~/Views/Shared/homeShared/_navbarMobil.cshtml"/>
+    <partial name="~/Views/Shared/homeShared/_navbarWeb.cshtml"/>
+    
+    <main>
+        @if (TempData["icon"] != null)
+        {
+            <script type="text/javascript">
+                window.onload = function () { 
+                    Swal.fire({
+                        icon: '@TempData["icon"]',
+                        title: '@TempData["title"]',
+                        html: '@TempData["text"]',
+                        showConfirmButton: false,
+                        timer: 1500
+                    })
+                };
+            </script>
+        }
+        @if (TempData["iconOK"] != null)
+        {
+            <script type="text/javascript">
+                window.onload = function () { 
+                    Swal.fire({
+                        icon: '@TempData["iconOK"]',
+                        title: '@TempData["iconTitle"]',
+                        html: '@TempData["iconText"]',
+                        confirmButtonText: "Tamam",
+                        confirmButtonColor: "#5c5c5c"
+                        @* footer: '<a href="">Why do I have this issue?</a>' *@
+                    })
+                };  
+            </script>
+        }
+        @if (TempData["iconSuccess"] != null)
+        {
+            <script type="text/javascript">
+                window.onload = function () {
+                    Swal.fire({
+                        icon: '@TempData["iconSuccess"]',
+                        title: '@TempData["iconSuccessText"]',
+                        showConfirmButton: false,
+                        timer: 1500,
+                        showClass: {
+                            popup: 'animate__animated animate__fadeInDown animate__fast'
+                        }
+                    })
+                };  
+            </script>
+        }
+        @if (TempData["iconError"] != null)
+        {
+            <script type="text/javascript">
+                window.onload = function () { 
+                    Swal.fire({
+                        icon: '@TempData["iconError"]',
+                        html: '@TempData["iconErrorText"]',
+                        confirmButtonText: "Tamam",
+                        confirmButtonColor: "#5c5c5c"
+                        @* footer: '<a href="">Why do I have this issue?</a>' *@
+                    })
+                };  
+            </script>
+        }
+        @RenderBody()
+    </main>
+
+    <partial name="~/Views/Shared/homeShared/_footer.cshtml"/>
+
+    <a href="#body" id="backtotop">
+        <img src="~/img/img-icon-sabit/scroll-up.png" alt="">
+    </a>
+
+
+    @* jquery Her Zaman Js Dosyalarından Üstte Olacak. Yoksa $() İle Başlayan Js Kodları Çalışmaz *@
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/js/sweetalert2.min.js"></script>
+
+    @RenderSection("Scripts", false)
+
+    @* Validation Js için gerekli jquery linki (Proje içinde, validation dosyasında vardı. Buraya aldık) *@
+    @* <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script> *@
+
+    @* Tüm Sayfalarda Kullanılacak Olanlar *@
+    <script src="~/js/proje-home.js"></script>
+    <script src="~/js/proje-search.js"></script>
+    <script src="~/js/proje-slice.js"></script>
+    <script src="~/js/proje-navbar-mobil.js"></script>
+    
+    @* <script src="wow.min.js"></script>
+    <script>
+        wow = new WOW(
+            {
+                boxClass:     'wow',      // Class adı
+                animateClass: 'animated',
+                offset:       0,
+                mobile:       true,
+                live:         true
+            }
+        )
+        wow.init();
+    </script> *@
+</body>
+</html>
