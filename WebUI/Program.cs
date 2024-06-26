@@ -671,11 +671,38 @@ var builder = WebApplication.CreateBuilder(args);
             pattern: "hesabim/adres-duzenle/{id}",
             defaults: new { controller="Adres", action="AdresEdit"}
         );
+        // FAVORİ START --------------------------------------------------
         endpoints.MapControllerRoute(
             name: "favoriteList",
             pattern: "hesabim/favori-listem",
             defaults: new { controller="Favorite", action="FavoriteList"}
         );
+        endpoints.MapControllerRoute(
+            name: "favoriteDelete",
+            pattern: "hesabim/favori-sil",
+            defaults: new { controller="Favorite", action="FavoriteDelete"}
+        );
+        endpoints.MapControllerRoute(
+            name: "favoriteGroupDelete",
+            pattern: "hesabim/favori-grup-sil",
+            defaults: new { controller="Favorite", action="FavoriGroupDelete"}
+        );
+        endpoints.MapControllerRoute(
+            name: "favoriteGetList",
+            pattern: "hesabim/favori-get-list",
+            defaults: new { controller="Favorite", action="FavoriteGetList"}
+        );
+        endpoints.MapControllerRoute(
+            name: "FavoriteCreateAndAdd",
+            pattern: "hesabim/favori-olustur-ekle",
+            defaults: new { controller="Favorite", action="FavoriteCreateAndAdd"}
+        );
+        endpoints.MapControllerRoute(
+            name: "favoriteDefaultAdnAdd",
+            pattern: "hesabim/favori-varsayilan-ekle",
+            defaults: new { controller="Favorite", action="FavoriteDefaultAdnAdd"}
+        );
+        // FAVORİ END --------------------------------------------------
         endpoints.MapControllerRoute(
             name: "supportListClient",
             pattern: "hesabim/destek-taleplerim",

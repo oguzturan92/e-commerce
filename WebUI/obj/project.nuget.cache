@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "41kN3IfSddvGoeY5U7N3gdjQ4RUZvki0sy5DzXzqVTWdInMQk7ZYHdUgiHyUOpiIYt3DrkqSTRFPr3nrpvgpQQ==",
+  "dgSpecHash": "MLDnHPjXG1I6cF2ufjnd5BvocAMAaxa8GfVenghmj3q4QLoHU1PKIKcsLYon254vmTqmaXAI6dRvVWQOwr9dZA==",
   "success": true,
   "projectFilePath": "C:\\Users\\oğuzhan\\Desktop\\Tamamlananlar\\E-Ticaret\\WebUI\\WebUI.csproj",
   "expectedPackageFiles": [
@@ -44,7 +44,7 @@
     "C:\\Users\\oğuzhan\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\oğuzhan\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "C:\\Users\\oğuzhan\\.nuget\\packages\\mysqlconnector\\2.0.0\\mysqlconnector.2.0.0.nupkg.sha512",
-    "C:\\Users\\oğuzhan\\.nuget\\packages\\newtonsoft.json\\13.0.2\\newtonsoft.json.13.0.2.nupkg.sha512",
+    "C:\\Users\\oğuzhan\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\oğuzhan\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\newtonsoft.json.bson.1.0.2.nupkg.sha512",
     "C:\\Users\\oğuzhan\\.nuget\\packages\\pomelo.entityframeworkcore.mysql\\6.0.0\\pomelo.entityframeworkcore.mysql.6.0.0.nupkg.sha512",
     "C:\\Users\\oğuzhan\\.nuget\\packages\\system.collections.immutable\\6.0.0\\system.collections.immutable.6.0.0.nupkg.sha512",

@@ -484,7 +484,7 @@
 
         $.ajax({
             type: "Get",
-            url: "/Favorite/FavoriteGetList/",
+            url: "/hesabim/favori-get-list",
             success: function(func1) {
                 let sonuc = jQuery.parseJSON(func1);
                 $("#favorite-tbody").html("");
@@ -576,7 +576,7 @@
                                     };
                                     setTimeout(timeMessagePassword, 1500);
                                 } else {
-                                    window.location.href = "/UserAccount/AccountLogin";
+                                    window.location.href = "/hesabim/giris";
                                 }
                             }
                         }
@@ -595,7 +595,7 @@
         
         $.ajax({
             type: "Get",
-            url: "/Favorite/FavoriteCreateAndAdd/",
+            url: "/hesabim/favori-olustur-ekle/",
             data: { proId: proId,
                     favoriteName: $(favoriteName).val()
             },
@@ -622,7 +622,7 @@
         
         $.ajax({
             type: "Get",
-            url: "/Favorite/FavoriteDefaultAdnAdd/",
+            url: "/hesabim/favori-varsayilan-ekle/",
             data: { proId: proId },
             success: function(e) {
                 let sonuc = jQuery.parseJSON(e);

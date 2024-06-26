@@ -70,3 +70,15 @@ C:\Users\proje\e-ticaret_sepet-session\ProjeEntity\obj\Debug\net6.0\ProjeEntity.
 C:\Users\proje\e-ticaret_sepet-session\ProjeEntity\obj\Debug\net6.0\ref\ProjeEntity.dll
 C:\Users\proje\e-ticaret_sepet-session\ProjeEntity\obj\Debug\net6.0\ProjeEntity.pdb
 C:\Users\proje\E-Ticaret\ProjeEntity\obj\Debug\net6.0\refint\ProjeEntity.dll
+C:\Users\oğuzhan\Desktop\Tamamlananlar\E-Ticaret\ProjeEntity\bin\Debug\net6.0\ProjeEntity.deps.json
+C:\Users\oğuzhan\Desktop\Tamamlananlar\E-Ticaret\ProjeEntity\bin\Debug\net6.0\ProjeEntity.dll
+C:\Users\oğuzhan\Desktop\Tamamlananlar\E-Ticaret\ProjeEntity\bin\Debug\net6.0\ref\ProjeEntity.dll
+C:\Users\oğuzhan\Desktop\Tamamlananlar\E-Ticaret\ProjeEntity\bin\Debug\net6.0\ProjeEntity.pdb
+C:\Users\oğuzhan\Desktop\Tamamlananlar\E-Ticaret\ProjeEntity\obj\Debug\net6.0\ProjeEntity.csproj.AssemblyReference.cache
+C:\Users\oğuzhan\Desktop\Tamamlananlar\E-Ticaret\ProjeEntity\obj\Debug\net6.0\ProjeEntity.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\oğuzhan\Desktop\Tamamlananlar\E-Ticaret\ProjeEntity\obj\Debug\net6.0\ProjeEntity.AssemblyInfoInputs.cache
+C:\Users\oğuzhan\Desktop\Tamamlananlar\E-Ticaret\ProjeEntity\obj\Debug\net6.0\ProjeEntity.AssemblyInfo.cs
+C:\Users\oğuzhan\Desktop\Tamamlananlar\E-Ticaret\ProjeEntity\obj\Debug\net6.0\ProjeEntity.csproj.CoreCompileInputs.cache
+C:\Users\oğuzhan\Desktop\Tamamlananlar\E-Ticaret\ProjeEntity\obj\Debug\net6.0\ProjeEntity.dll
+C:\Users\oğuzhan\Desktop\Tamamlananlar\E-Ticaret\ProjeEntity\obj\Debug\net6.0\ref\ProjeEntity.dll
+C:\Users\oğuzhan\Desktop\Tamamlananlar\E-Ticaret\ProjeEntity\obj\Debug\net6.0\ProjeEntity.pdb
