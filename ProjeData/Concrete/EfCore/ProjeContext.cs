@@ -17,21 +17,6 @@ namespace ProjeData.Concrete
             
                     // MsSqlServer PC
                 // .UseSqlServer(@"Server=.\SQLEXPRESS;Database=e-ticaret;Integrated Security=True;");
-
-                    // MsSqlServer HOSTİNG
-                // .UseSqlServer("server=77.245.159.27\\MSSQLSERVER2019;database=blog;user=e-ticaret;password=hw45l?44H");
-
-                    // PC
-                .UseMySql("server=localhost;port=3306;database=e-ticaret;user=root;password=Ot962962;",
-                        new MySqlServerVersion(new Version(10, 3, 36)
-                    )
-                );
-
-                    // HOSTING
-                // .UseMySql("server=localhost;port=3306;database=sablon5soft;user=sablon5soft;password=fVo6t58#7;",
-                //         new MySqlServerVersion(new Version(10, 6, 9)
-                //     )
-                // );
         }
 
         // ENTİTY/CONCRETE içinde oluşturulan tabloların isimlerini, buraya ekliyoruz.
@@ -70,7 +55,6 @@ namespace ProjeData.Concrete
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            // JUNCTION tablo düzenlemesi. Çoka Çok Tabloların ID'lerini ProductCategory adında tek bir tabloda birleştireceğimizi belirtiyoruz.
             modelBuilder.Entity<ProductCategory>()
                         .HasKey(c => new {c.CategoryId, c.ProductId});
 
