@@ -55,7 +55,6 @@ namespace ProjeData.Concrete
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            // JUNCTION tablo düzenlemesi. Çoka Çok Tabloların ID'lerini ProductCategory adında tek bir tabloda birleştireceğimizi belirtiyoruz.
             modelBuilder.Entity<ProductCategory>()
                         .HasKey(c => new {c.CategoryId, c.ProductId});
 
