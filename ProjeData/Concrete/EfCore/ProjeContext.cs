@@ -16,7 +16,9 @@ namespace ProjeData.Concrete
             optionsBuilder
             
                     // MsSqlServer PC
-                // .UseSqlServer(@"Server=.\SQLEXPRESS;Database=e-ticaret;Integrated Security=True;");
+                .UseSqlServer(@"Server=.\SQLEXPRESS;Database=e-ticaret;Integrated Security=True;");
+
+
         }
 
         // ENTİTY/CONCRETE içinde oluşturulan tabloların isimlerini, buraya ekliyoruz.
