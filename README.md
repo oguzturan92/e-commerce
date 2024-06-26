@@ -1,4 +1,11 @@
 
+
+- Ürün listeleme, filtreleme, favoriye ekleme
+- Kullanıcı bilgileri kontrolü, siparişlerim, iade taleplerim, destek taleplerim, hediye çeklerim, adreslerim, favorilerim
+- Kayıtlı olmayan kullanıcı, session ile sepete ekleme yapar
+- Giriş yaptığında, giriş yapan kullanıcının sepetine sessiondaki sepet çekilir ve veritabanına eklenir
+- Ödeme işlemi IYZICO alt yapısı kullanılarak gerçekleştirilmiştir
+
 # Ana Sayfa
 ![Ekran görüntüsü 2024-06-26 191705](https://github.com/oguzturan92/e-commerce/assets/157590022/6d9b6f0d-356c-43da-a850-09a2f9987521)
 
